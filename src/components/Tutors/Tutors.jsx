@@ -1,75 +1,18 @@
 import React from "react";
-import avatar1 from "../../assets/img/avatar1.png";
-import avatar2 from "../../assets/img/avatar2.png";
-import avatar3 from "../../assets/img/avatar3.png";
-import avatar4 from "../../assets/img/avatar4.png";
 import twitterIcon from "../../assets/img/twitterIcon.png";
 import linkedInIcon from "../../assets/img/linkedInIcon.png";
 import CustomButton from "../CustomButton/CustomButton";
 import pencil from "../../assets/img/pencil.png";
 import { motion } from "framer-motion";
+import { tutors } from "../../data/data";
 
 const Tutors = () => {
-  const tutors = [
-    {
-      icon: avatar1,
-      name: "Theresa Webb",
-      subject: "Physics",
-      experience: "15 Years",
-      grade: "70% A grades",
-    },
-    {
-      icon: avatar2,
-      name: "Courtney Henry",
-      subject: "metathetic",
-
-      experience: "15 Years",
-      grade: "70% A grades",
-    },
-    {
-      icon: avatar3,
-      name: "Albert Flores",
-      subject: "Career Educator",
-
-      experience: "15 Years",
-      grade: "70% A grades",
-    },
-    {
-      icon: avatar4,
-      name: "Marvin McKinney",
-      subject: "English",
-
-      experience: "15 Years",
-      grade: "70% A grades",
-    },
-    {
-      icon: avatar4,
-      name: "Marvin McKinney",
-      subject: "English",
-
-      experience: "15 Years",
-      grade: "70% A grades",
-    },
-    // {
-    //   icon: tutor5,
-    //   title: "Professional Teachers",
-    //   description:
-    //     "Our team is made up of experienced educators proficient in a variety of curricula including GCSE, IGCSE, A-levels, IB, AP, and CBSE.",
-    // },
-    // {
-    //   icon: tutor6,
-    //   title: "Language Maestros",
-    //   description:
-    //     "Unlock the power of global communication with our language tutors. Whether you're keen on mastering English, delving into the intricacies of French, ",
-    // },
-  ];
-
   return (
     <div className="md:py-20 py-12 px-6 max-w-full relative">
       <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out blur-md "></div>
 
       <motion.div
-        className="absolute md:top-10 md:left-10 sm:top-8 sm:left-8 top-2 left-4 md:w-24 sm:w-12 w-10 z-10"
+        className="absolute md:top-10 md:left-10 sm:top-8 sm:left-8 top-2 left-4  z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={true}
@@ -81,7 +24,11 @@ const Tutors = () => {
           delay: 0.2,
         }}
       >
-        <img src={pencil} alt="" className="object-contain" />
+        <img
+          src={pencil}
+          alt=""
+          className="md:w-16 sm:w-16 w-10 object-contain"
+        />
       </motion.div>
 
       {/* <div className="absolute top-10 left-0 w-36 -z-10">

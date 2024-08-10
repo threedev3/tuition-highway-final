@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import "./App.css";
-import Choose from "./components/Choose/Choose";
 import ContactForm from "./components/ContactForm/ContactForm";
 import Faq from "./components/Faq/Faq";
 import Footer from "./components/Footer/Footer";
@@ -28,7 +27,6 @@ function App() {
       <Testimonials />
       <Working />
       <Tutors />
-      {/* <Choose /> */}
       <div ref={demoRef}>
         <ContactForm demoRef={demoRef} />
       </div>

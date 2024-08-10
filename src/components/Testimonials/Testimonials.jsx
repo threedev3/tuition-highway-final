@@ -5,30 +5,16 @@ import Slider from "react-slick";
 import StarRating from "react-star-ratings";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
+import { testimonials } from "../../data/data";
 
 const Testimonials = () => {
   const sliderRef = useRef(null);
-
-  const testimonials = [
-    {
-      name: "Emily R.",
-      review:
-        "The strategies I learned at Tuition Highway boosted my score by 200 points!The strategies I learned at Tuition Highway boosted my score by 200 points!",
-    },
-    {
-      name: "Emily R.",
-      review:
-        "The strategies I learned at Tuition Highway boosted my score by 200 points!",
-    },
-  ];
 
   var settings = {
     dots: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
     arrows: false,
     responsive: [
       {

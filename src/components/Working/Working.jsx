@@ -1,25 +1,47 @@
 import React, { useState, useEffect } from "react";
-import step from "../../assets/img/step.png";
-import firstStep from "../../assets/img/firstStep.png";
-import step2 from "../../assets/img/step2.png";
-import lastStep from "../../assets/img/lastStep.png";
+
 import aGrade from "../../assets/img/aGrade.png";
 import sprinklesGif from "../../assets/img/sprinkles.gif";
 import Slider from "react-slick";
 import { motion, AnimatePresence } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { stepsContent } from "../../data/data";
 
 const Working = () => {
   const [showSteps, setShowSteps] = useState(true);
   const [showImage, setShowImage] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setShowSteps((prev) => !prev);
-      setShowImage((prev) => !prev);
-    }, 6000); // Adjust timing here for how long steps/images are shown
-    return () => clearInterval(interval);
+    const stepDuration = 10000; // Show steps for 8 seconds
+    const imageDuration = 4000; // Show images for 4 seconds
+
+    let showStepsTimeout;
+    let showImageTimeout;
+
+    const toggleDisplay = () => {
+      setShowSteps(true);
+      setShowImage(false);
+
+      showStepsTimeout = setTimeout(() => {
+        setShowSteps(false);
+        setShowImage(true);
+      }, stepDuration);
+
+      showImageTimeout = setTimeout(() => {
+        setShowSteps(true);
+        setShowImage(false);
+      }, stepDuration + imageDuration);
+    };
+
+    toggleDisplay();
+    const interval = setInterval(toggleDisplay, stepDuration + imageDuration);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(showStepsTimeout);
+      clearTimeout(showImageTimeout);
+    };
   }, []);
 
   const stepVariants = {
@@ -71,54 +93,6 @@ const Working = () => {
       },
     },
   };
-
-  const stepsContent = [
-    {
-      img: firstStep,
-      title: "Assessment",
-      description: "We evaluate your current academic standing and goals.",
-      style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-      imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
-    },
-    {
-      img: step,
-      title: "Tutor Matching",
-      description:
-        "We pair you with an expert tutor specialized in your subject and curriculum.",
-      style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-      imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
-    },
-    {
-      img: step2,
-      title: "Personalized Learning Plan",
-      description:
-        "Your tutor creates a tailored strategy to address your specific needs.",
-      style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-      imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
-    },
-    {
-      img: step,
-      title: "Regular Sessions",
-      description:
-        "Attend flexible, one-on-one online sessions at times that suit you.",
-      style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-      imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
-    },
-    {
-      img: step2,
-      title: "Progress Tracking",
-      description: "We continuously monitor and report on your improvement.",
-      style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-      imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
-    },
-    {
-      img: lastStep,
-      title: "Achieve Your Goals",
-      description: "Watch your grades improve and confidence soar.",
-      style: "min-[769px]:w-[80%]  w-[90%]",
-      imgStyle: "min-[480px]:w-[220px] w-[270px] h-[280px]",
-    },
-  ];
 
   var settings = {
     dots: false,

@@ -1,44 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import computer from "../../assets/img/computer.gif";
-import maths from "../../assets/img/maths.gif";
-import physics from "../../assets/img/physics.gif";
-import brownBook from "../../assets/img/brownBook.png";
+import React from "react";
 import CustomButton from "../CustomButton/CustomButton";
 import heroIcon1 from "../../assets/img/heroIcon1.png";
 import { motion } from "framer-motion";
+import { subjects } from "../../data/data";
 
 const Subjects = () => {
-  const subjects = [
-    {
-      title: "Mathematics",
-      img: maths,
-    },
-    {
-      title: "Physics",
-      img: physics,
-    },
-    {
-      title: "Chemistry",
-      img: computer,
-    },
-    {
-      title: "English",
-      img: maths,
-    },
-    {
-      title: "Biology",
-      img: physics,
-    },
-    {
-      title: "Modern Languages",
-      img: computer,
-    },
-  ];
-
   return (
     <div className="md:py-20 py-12 px-6 max-w-full relative bg-heroBg">
-      {/* <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out blur-md "></div> */}
-
       <motion.div
         className="absolute md:top-10 md:left-10 sm:top-8 sm:left-8 top-4 left-4 md:w-24 w-16 z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}

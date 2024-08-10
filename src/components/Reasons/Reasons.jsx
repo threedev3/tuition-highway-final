@@ -1,34 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import icon1 from "../../assets/img/icon1.png";
-import icon2 from "../../assets/img/icon2.png";
+
 import elearning from "../../assets/img/elearning.png";
 import CustomButton from "../CustomButton/CustomButton";
 import { motion } from "framer-motion";
+import { reasons } from "../../data/data.js";
 
 const Reasons = ({ demoRef }) => {
-  const reasons = [
-    {
-      title: "Qualified Expert Tutors",
-      icon: icon1,
-    },
-    {
-      title: "Personalized Learning",
-      icon: icon2,
-    },
-    {
-      title: "Flexible Scheduling",
-      icon: icon1,
-    },
-    {
-      title: "Comprehensive Curriculum",
-      icon: icon2,
-    },
-    {
-      title: "Proven Results",
-      icon: icon2,
-    },
-  ];
-
   const sections = {
     Demo: demoRef,
   };
@@ -95,11 +72,6 @@ const Reasons = ({ demoRef }) => {
                   {item.title}
                 </p>
               </div>
-              {/* <div className="overflow-hidden">
-                <p className="text-base text-headingColor opacity-0 transition-opacity duration-300 ease-linear group-hover:opacity-100">
-                  {item.description}
-                </p>
-              </div> */}
             </div>
           ))}
         </div>
@@ -112,35 +84,6 @@ const Reasons = ({ demoRef }) => {
         >
           <CustomButton text="Get A Free Demo" />
         </motion.div>
-
-        {/* <div className="w-full bg-gradient-to-r from-startgrad to-endGrad rounded-xl lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-8 py-6 sm:px-12 px-6 lg:pr-24 lg:mt-12 mt-4">
-          <div className="flex flex-col gap-4  lg:max-w-2xl max-w-full">
-            <h3 className="text-white lg:text-3xl sm:text-2xl text-xl">
-              Nurturing Academic Excellence
-            </h3>
-
-            <p className="text-white sm:text-base text-sm">
-              In today's competitive academic landscape, classroom learning
-              isn't always enough. At Tuition Highway, we provide the one-on-one
-              attention and tailored support your child needs to truly excel.
-              Watch as their confidence grows, grades improve, and future
-              opportunities expand.
-            </p>
-            <div className="">
-              <button
-                className="bg-white py-2 px-6 rounded-full sm:text-base text-sm font-bold flex gap-1 items-center"
-                onClick={() => handleNavClick("Demo")}
-              >
-                Free Demo
-                <ChevronRightIcon className="sm:w-5 w-4 text-[#2165EE] font-bold" />
-              </button>
-            </div>
-          </div>
-
-          <div className="lg:block flex md:justify-end justify-start">
-            <img src={aGrade} alt="" className="w-36 object-cover" />
-          </div>
-        </div> */}
       </div>
     </div>
   );

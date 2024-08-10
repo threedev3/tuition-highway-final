@@ -199,6 +199,12 @@ h6 {
   animation: move4 3s ease-in-out infinite;
 }
 
+.react-international-phone-country-selector-button,
+.react-international-phone-input-container .react-international-phone-input {
+  border: none;
+  background-color: transparent;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

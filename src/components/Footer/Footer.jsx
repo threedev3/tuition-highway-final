@@ -3,12 +3,9 @@ import footerLogo from "../../assets/img/footerLogo.png";
 import xIcon from "../../assets/img/xIcon.png";
 import fbIcon from "../../assets/img/fbIcon.png";
 import instaIcon from "../../assets/img/instaIcon.png";
+import { products, company, resources } from "../../data/data";
 
 const Footer = () => {
-  const products = ["Features", "Integration", "Changelog", "Roadmap"];
-  const company = ["Our Team", "Our Value", "Blog"];
-  const resources = ["Download", "Documentation", "Contact"];
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -71,7 +68,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <h3 className="text-white text-xl">Join Our Newletter</h3>
             <p className="text-footerText sm:text-base text-sm">
-              keep up with everything krostovest
+              keep up with everything Tuition Highway
             </p>
           </div>
 
@@ -98,7 +95,7 @@ const Footer = () => {
 
           <div>
             <p className="text-white sm:text-base text-sm">
-              © {currentYear} krostovest. All rights reserved.
+              © {currentYear} Tuition Highway. All rights reserved.
             </p>
           </div>
         </div>

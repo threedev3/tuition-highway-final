@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import contactImg from "../../assets/img/contactimg.png";
 import heroIcon2 from "../../assets/img/heroIcon2.png";
 import { motion } from "framer-motion";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 const ContactForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -9,6 +11,8 @@ const ContactForm = () => {
   const handleNext = () => {
     if (currentStep < 2) setCurrentStep(currentStep + 1);
   };
+
+  const [phone, setPhone] = useState("");
 
   // const handlePrev = () => {
   //   if (currentStep > 1) setCurrentStep(currentStep - 1);
@@ -46,7 +50,7 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-8 flex flex-col items-center gap-12 px-4">
+        <div className="lg:flex lg:flex-row lg:justify-between lg:items-start lg:gap-8 flex flex-col items-center gap-12 px-4">
           <div className="w-auto">
             <img src={contactImg} alt="" className="w-[500px] object-cover" />
           </div>
@@ -105,6 +109,14 @@ const ContactForm = () => {
                           placeholder="WhatsApp/Mobile Number"
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm"
                         />
+                        {/* <div className="py-0.5 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm">
+                          <PhoneInput
+                            defaultCountry="pk"
+                            value={phone}
+                            onChange={(phone) => setPhone(phone)}
+                            placeholder="Country"
+                          />
+                        </div> */}
                       </div>
                     </div>
                     <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">

@@ -6,9 +6,6 @@ import arrowDots2 from "../../assets/img/arrowDots2.png";
 import plane from "../../assets/img/plane.png";
 
 const FreeDemo = ({ demoRef }) => {
-  const controlsPlane = useAnimation();
-  const controlsArrowDots = useAnimation();
-  const [isInView, setIsInView] = useState(false);
   const ref = useRef(null);
 
   const sections = {
@@ -46,13 +43,6 @@ const FreeDemo = ({ demoRef }) => {
           delay: 0.2,
         }}
       />
-      {/* <motion.img
-        src={plane}
-        alt=""
-        className="absolute lg:top-28 md:bottom-28 bottom-10 right-[131px]"
-        // initial={{ rotate: 0, x: "0%", y: "0%" }}
-        // animate={controlsPlane}
-      /> */}
 
       <motion.img
         src={demoArrow}
@@ -71,10 +61,14 @@ const FreeDemo = ({ demoRef }) => {
       />
       <div className="max-w-[1300px] mx-auto flex flex-col gap-8 justify-center items-center">
         <div className="max-w-3xl mx-auto flex flex-col gap-8 justify-center items-center z-10">
-          <h3 className="text-white xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl text-center">
-            Want Top Grades?
-            <h3 className="block">Start Now!</h3>
-          </h3>
+          <div>
+            <h3 className="text-white xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl text-center">
+              Want Top Grades?
+            </h3>
+            <h3 className="text-white xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl text-center">
+              Start Now!
+            </h3>
+          </div>
 
           <motion.button
             className="bg-white rounded-[13px] w-full py-2 sm:text-lg text-base font-bold text-headingColor cursor-pointer"

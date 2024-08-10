@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Accordian from "../Accordian/Accordian";
 import faqImg from "../../assets/img/faqimg.png";
+import { faqs } from "../../data/data";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -9,29 +10,6 @@ const Faq = () => {
   const handleAccordionClick = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
-  const faqs = [
-    {
-      question: "Can I use the modem/router I already have?",
-      answer:
-        "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
-    },
-    {
-      question: "Will speeds go up and down?",
-      answer:
-        "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
-    },
-    {
-      question: "When will my service go live?",
-      answer:
-        "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
-    },
-    {
-      question: "I already have broadband, how do I switch?",
-      answer:
-        "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
-    },
-  ];
 
   return (
     <div className="sm:py-20 py-12 px-6 max-w-full ">
