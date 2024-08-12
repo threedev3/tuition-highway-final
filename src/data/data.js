@@ -1,8 +1,12 @@
 import icon1 from "../assets/img/icon1.png";
 import icon2 from "../assets/img/icon2.png";
+import icon3 from "../assets/img/icon3.png";
+import icon4 from "../assets/img/icon4.png";
 import computer from "../assets/img/computer.gif";
-import maths from "../assets/img/maths.gif";
+import maths from "../assets/img/mathematics.gif";
 import physics from "../assets/img/physics.gif";
+import chemistry from "../assets/img/chemistry.gif";
+import biology from "../assets/img/biology.gif";
 import step from "../assets/img/step.png";
 import firstStep from "../assets/img/firstStep.png";
 import step2 from "../assets/img/step2.png";
@@ -11,6 +15,10 @@ import avatar1 from "../assets/img/avatar1.png";
 import avatar2 from "../assets/img/avatar2.png";
 import avatar3 from "../assets/img/avatar3.png";
 import avatar4 from "../assets/img/avatar4.png";
+import xIcon from "../assets/img/xIcon.png";
+import fbIcon from "../assets/img/fbIcon.png";
+import instaIcon from "../assets/img/instaIcon.png";
+import linkedInIcon from "../assets/img/linkedInIcon.png";
 
 const navigation = [
   "Home",
@@ -45,15 +53,15 @@ const reasons = [
   },
   {
     title: "Flexible Scheduling",
-    icon: icon1,
+    icon: icon3,
   },
   {
     title: "Comprehensive Curriculum",
-    icon: icon2,
+    icon: icon4,
   },
   {
     title: "Proven Results",
-    icon: icon2,
+    icon: icon4,
   },
 ];
 
@@ -95,7 +103,7 @@ const subjects = [
   },
   {
     title: "Chemistry",
-    img: computer,
+    img: chemistry,
   },
   {
     title: "English",
@@ -103,10 +111,45 @@ const subjects = [
   },
   {
     title: "Biology",
-    img: physics,
+    img: biology,
   },
   {
     title: "Modern Languages",
+    img: computer,
+  },
+];
+
+const curricula = [
+  {
+    title: "British Curriculum",
+    img: maths,
+  },
+  {
+    title: "American Curriculum",
+    img: physics,
+  },
+  {
+    title: "International Baccalaureate",
+    img: computer,
+  },
+  {
+    title: "French Curriculum",
+    img: maths,
+  },
+  {
+    title: "Indian CBSE",
+    img: physics,
+  },
+  {
+    title: "Online Homeschooling",
+    img: computer,
+  },
+  {
+    title: "IELTS",
+    img: computer,
+  },
+  {
+    title: "SAT",
     img: computer,
   },
 ];
@@ -167,8 +210,8 @@ const stepsContent = [
     img: lastStep,
     title: "Achieve Your Goals",
     description: "Watch your grades improve and confidence soar.",
-    style: "min-[769px]:w-[80%]  w-[90%]",
-    imgStyle: "min-[480px]:w-[220px] w-[270px] h-[280px]",
+    style: "min-[769px]:w-[80%]  w-[100%]",
+    imgStyle: "min-[480px]:w-[200px] w-[270px] h-[280px]",
   },
 ];
 
@@ -183,7 +226,7 @@ const tutors = [
   {
     icon: avatar2,
     name: "Courtney Henry",
-    subject: "metathetic",
+    subject: "Metathetic",
 
     experience: "15 Years",
     grade: "70% A grades",
@@ -452,6 +495,24 @@ const ourCurriculum = [
   "FBISE",
 ];
 
+const socialIcons = [
+  {
+    icon: fbIcon,
+    alt: "facebook",
+    to: "https://www.facebook.com/tuitionhighway",
+  },
+  {
+    icon: linkedInIcon,
+    alt: "linkedIn",
+    to: "https://www.linkedin.com/company/tuition-highway",
+  },
+  {
+    icon: instaIcon,
+    alt: "instagram",
+    to: "https://www.instagram.com/tuitionhighway/",
+  },
+];
+
 export {
   navigation,
   reasons,
@@ -467,4 +528,6 @@ export {
   selectedCountries,
   subjectsOffer,
   ourCurriculum,
+  socialIcons,
+  curricula,
 };

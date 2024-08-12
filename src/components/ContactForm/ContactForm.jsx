@@ -128,7 +128,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-6 items-center text-headingColor ">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center sm:mt-0 mt-2">
             Request a Free{" "}
-            <span className="text-orangeHeading font-MontserratBold">Demo</span>
+            <span className="text-blueHeading font-MontserratBold">Demo</span>
           </h3>
           <p className="lg:text-lg sm:text-base text-sm text-center max-w-sm mx-auto">
             Secure your child's academic future with Tuition Highway.
@@ -280,7 +280,7 @@ const ContactForm = () => {
                     <div className="text-right">
                       <button
                         onClick={handleNext}
-                        className="bg-orangeHeading mt-8 text-white px-6 py-2 rounded-full shadow-lg hover:bg-orange-600"
+                        className="bg-blueBtn mt-8 text-white px-6 py-2 rounded-full shadow-lg "
                       >
                         Next
                       </button>
@@ -368,7 +368,7 @@ const ContactForm = () => {
                       >
                         Previous
                       </button> */}
-                      <button className="bg-orangeHeading  mt-8 text-white px-6 py-2 rounded-lg shadow-lg hover:bg-orange-600">
+                      <button className="bg-orangeHeading  mt-8 text-white px-6 py-2 rounded-full shadow-lg hover:bg-orange-600">
                         Submit
                       </button>
                     </div>

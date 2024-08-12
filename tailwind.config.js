@@ -10,6 +10,7 @@ export default {
         toOrange: "#9F431A",
         blueHeading: "#34ACD4",
         blueBtn: "#008FBF",
+        activeBlueBtn: "#247793",
         contactBg: "#F2F2F2",
         contactBg2: "#E1E1E1",
         borderColor: "#38383856",
@@ -29,7 +30,7 @@ export default {
       },
 
       backgroundPosition: {
-        movedown: "0px 260px",
+        movedown: "0px 350px",
       },
 
       fontFamily: {

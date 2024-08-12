@@ -100,6 +100,10 @@ const Working = () => {
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "ease",
     responsive: [
       {
         breakpoint: 1280,
@@ -139,7 +143,10 @@ const Working = () => {
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 h-full w-full">
         <div className="flex flex-col gap-6 items-center text-headingColor">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
-            Easy Steps Towards Top Grades
+            Easy Steps Towards{" "}
+            <span className="text-blueHeading font-MontserratBold">
+              Top Grades
+            </span>
           </h3>
         </div>
 

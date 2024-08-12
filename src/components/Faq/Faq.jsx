@@ -16,7 +16,10 @@ const Faq = () => {
       <div className="max-w-[1400px] mx-auto flex flex-col justify-center gap-12">
         <div className="flex flex-col gap-6 items-center text-headingColor">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
-            Frequently Asked Question
+            Frequently Asked{" "}
+            <span className="text-blueHeading font-MontserratBold">
+              Question
+            </span>
           </h3>
         </div>
 

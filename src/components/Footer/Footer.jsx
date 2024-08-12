@@ -1,12 +1,18 @@
 import React from "react";
 import footerLogo from "../../assets/img/footerLogo.png";
-import xIcon from "../../assets/img/xIcon.png";
-import fbIcon from "../../assets/img/fbIcon.png";
-import instaIcon from "../../assets/img/instaIcon.png";
-import { products, company, resources } from "../../data/data";
+
+import { products, company, resources, socialIcons } from "../../data/data.js";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="bg-headingColor relative py-20 px-6 max-w-full overflow-x-hidden">
@@ -18,12 +24,19 @@ const Footer = () => {
                 src={footerLogo}
                 alt=""
                 className="object-cover cursor-pointer"
+                onClick={scrollToTop}
               />
             </div>
             <div className="flex gap-5 items-center ml-6">
-              <img src={xIcon} alt="" className="cursor-pointer" />
-              <img src={fbIcon} alt="" className="cursor-pointer" />
-              <img src={instaIcon} alt="" className="cursor-pointer" />
+              {socialIcons.map((item, index) => (
+                <Link to={item.to} target="_blank" key={index}>
+                  <img
+                    src={item.icon}
+                    alt={item.alt}
+                    className="cursor-pointer"
+                  />
+                </Link>
+              ))}
             </div>
           </div>
 

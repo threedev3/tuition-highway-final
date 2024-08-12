@@ -12,26 +12,29 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import TutorNumbers from "./components/TutorNumbers/TutorNumbers";
 import Tutors from "./components/Tutors/Tutors";
 import Working from "./components/Working/Working";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   const demoRef = useRef(null);
 
   return (
     <>
-      <Navbar demoRef={demoRef} />
-      <HeroSection />
-      <Reasons demoRef={demoRef} />
-      <TutorNumbers />
-      <Subjects />
-      <FreeDemo demoRef={demoRef} />
-      <Testimonials />
-      <Working />
-      <Tutors />
-      <div ref={demoRef}>
-        <ContactForm demoRef={demoRef} />
-      </div>
-      <Faq />
-      <Footer />
+      <Router>
+        <Navbar demoRef={demoRef} />
+        <HeroSection />
+        <Reasons demoRef={demoRef} />
+        <TutorNumbers />
+        <Subjects />
+        <FreeDemo demoRef={demoRef} />
+        <Testimonials />
+        <Working />
+        <Tutors />
+        <div ref={demoRef}>
+          <ContactForm demoRef={demoRef} />
+        </div>
+        <Faq />
+        <Footer />
+      </Router>
     </>
   );
 }

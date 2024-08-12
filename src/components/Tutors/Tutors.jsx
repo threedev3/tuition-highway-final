@@ -37,7 +37,10 @@ const Tutors = () => {
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 z-10 relative">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
-            Our Top Rated Faculty
+            Our Top Rated{" "}
+            <span className="text-blueHeading font-MontserratBold">
+              Faculty
+            </span>
           </h3>
           <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             We unite you with the world's finest educators. Our meticulously
@@ -51,7 +54,10 @@ const Tutors = () => {
           {tutors.slice(0, 4).map((tutor, index) => (
             <div
               key={index}
-              className="bg-chooseBg p-6 flex flex-col gap-6 items-center  shadow-md rounded-[30px] hover:shadow-xl transition-shadow duration-300 relative "
+              className="bg-chooseBg p-6 flex flex-col gap-6 items-center shadow-md rounded-[30px] hover:shadow-xl transition-shadow duration-300 relative
+       after:border-orangeHeading after:absolute after:top-0 after:left-0 after:rounded-tl-[2800px] after:rounded-br-full after:content-[''] 
+      after:opacity-0 hover:after:opacity-100 after:transition-all after:duration-500 
+      after:border-[0px] hover:after:border-[40px] after:translate-x-0 hover:after:translate-x-0"
             >
               <div className="w-auto">
                 <img src={tutor.icon} alt="" className="object-cover" />
@@ -75,11 +81,6 @@ const Tutors = () => {
                   <p className="flex-1">Grade: </p>
                   <p>{tutor.grade}</p>
                 </div>
-              </div>
-
-              <div className="flex gap-4 items-center">
-                <img src={twitterIcon} alt="" className="cursor-pointer" />
-                <img src={linkedInIcon} alt="" className="cursor-pointer" />
               </div>
             </div>
           ))}

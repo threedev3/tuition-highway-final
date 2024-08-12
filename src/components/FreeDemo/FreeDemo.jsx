@@ -26,13 +26,13 @@ const FreeDemo = ({ demoRef }) => {
   return (
     <div
       ref={ref}
-      className="py-28 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad overflow-hidden min-h-[40vh]"
+      className="px-6 max-w-full relative flex justify-center items-center bg-gradient-to-r from-startgrad to-endGrad overflow-hidden lg:min-h-[349px] min-h-[300px]"
     >
       <motion.img
         src={demoArrow}
-        alt=""
-        className="absolute lg:bottom-4 md:bottom-28 bottom-10 md:left-2 w-[93%]  object-contain"
-        initial={{ opacity: 0, y: 50 }}
+        alt="arrow1"
+        className="absolute xl:-bottom-2 lg:bottom-10 md:bottom-28 sm:bottom-28 bottom-32 md:-left-[13%] -left-[13%] sm:w-[93%] w-[100%] object-contain"
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={true}
         transition={{
@@ -40,14 +40,14 @@ const FreeDemo = ({ demoRef }) => {
           stiffness: 70,
           damping: 10,
           duration: 0.6,
-          delay: 0.2,
+          delay: 0.5,
         }}
       />
 
       <motion.img
         src={demoArrow}
-        alt=""
-        className="absolute xl:bottom-20 lg:bottom-16 md:bottom-36 sm:bottom-48 bottom-48 xl:-left-80 lg:-left-60 md:-left-40 sm:-left-28 -left-16 md:w-[93%] w-[97%] object-contain"
+        alt="arrow2"
+        className="absolute xl:bottom-10 lg:bottom-10 md:bottom-24 sm:bottom-28 bottom-28 xl:-left-[25%] lg:-left-[21%] md:-left-[23%] sm:-left-[22%] -left-[22%] md:w-[93%] w-[97%] object-contain"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={true}
@@ -73,7 +73,11 @@ const FreeDemo = ({ demoRef }) => {
           <motion.button
             className="bg-white rounded-[13px] w-full py-2 sm:text-lg text-base font-bold text-headingColor cursor-pointer"
             onClick={() => handleNavClick("Demo")}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#F46322",
+              color: "#FFFFFF",
+            }}
             transition={{ type: "spring", damping: 17 }}
           >
             Take A Free Demo

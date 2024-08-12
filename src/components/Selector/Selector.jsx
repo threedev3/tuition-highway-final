@@ -51,9 +51,9 @@ export default function Selector({ data, selected, setSelected, placeholder }) {
           "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 h-32"
         )}
       >
-        {filteredItems.map((item) => (
+        {filteredItems.map((item, index) => (
           <ComboboxOption
-            key={item.id}
+            key={index}
             value={item}
             className="group flex items-center gap-2 rounded-md py-1.5 px-3 select-none  cursor-pointer hover:bg-gray-100"
           >
