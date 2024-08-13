@@ -130,7 +130,7 @@ const ContactForm = () => {
             Request a Free{" "}
             <span className="text-blueHeading font-MontserratBold">Demo</span>
           </h3>
-          <p className="lg:text-lg sm:text-base text-sm text-center max-w-sm mx-auto">
+          <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             Secure your child's academic future with Tuition Highway.
           </p>
         </div>

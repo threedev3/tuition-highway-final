@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CustomButton from "../CustomButton/CustomButton";
 import heroIcon1 from "../../assets/img/heroIcon1.png";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { subjects, curricula } from "../../data/data";
 
 const Subjects = () => {
@@ -14,9 +14,13 @@ const Subjects = () => {
   const renderItems = () => {
     if (activeView === "subjects") {
       return subjects.slice(0, 6).map((item, index) => (
-        <div
+        <motion.div
           key={index}
           className="p-3 lg:px-3 px-3 rounded-[30px] shadow-lg flex items-center gap-3 hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="flex-shrink-0 sm:w-[90px] w-[80px]">
             <img src={item.img} alt="" className="object-cover w-full h-auto" />
@@ -25,13 +29,17 @@ const Subjects = () => {
             <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
             <p className="sm:text-base text-sm">{item.subtitle}</p>
           </div>
-        </div>
+        </motion.div>
       ));
     } else {
       return curricula.slice(0, 6).map((item, index) => (
-        <div
+        <motion.div
           key={index}
-          className="p-3 lg:px-5 px-5 rounded-[30px] shadow-lg flex items-center gap-6 hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px]"
+          className="p-3 lg:px-7 px-5 rounded-[30px] shadow-lg flex items-center gap-7 hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="flex-shrink-0 sm:w-[60px]  w-[60px]">
             <img src={item.img} alt="" className="object-cover w-full h-auto" />
@@ -40,7 +48,7 @@ const Subjects = () => {
             <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
             <p className="sm:text-base text-sm">{item.subtitle}</p>
           </div>
-        </div>
+        </motion.div>
       ));
     }
   };
@@ -67,7 +75,7 @@ const Subjects = () => {
           <h3 className="lg:text-[46px] sm:text-4xl text-[28px] leading-9 font-bold tracking-wide text-center">
             Curricula & Subjects
           </h3>
-          <p className="lg:text-xl md:text-lg text-base text-center">
+          <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             At Tuition Highway, we offer expert tutoring across a wide range of
             curricula and subjects, ensuring your child gets the specific
             support they need.
@@ -100,10 +108,11 @@ const Subjects = () => {
             </motion.button>
           </div>
         </div>
-
-        <div className="lg:grid lg:grid-cols-3 lg:gap-10 md:grid md:grid-cols-2 md:gap-10 grid grid-cols-1 gap-10">
-          {renderItems()}
-        </div>
+        <AnimatePresence>
+          <div className="lg:grid lg:grid-cols-3 lg:gap-10 md:grid md:grid-cols-2 md:gap-10 grid grid-cols-1 gap-10">
+            {renderItems()}
+          </div>
+        </AnimatePresence>
 
         <motion.div
           className="flex justify-center w-fit mx-auto rounded-full"

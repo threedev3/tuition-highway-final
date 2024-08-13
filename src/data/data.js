@@ -53,22 +53,30 @@ const navigation = [
 const reasons = [
   {
     title: "Qualified Expert Tutors",
+    description:
+      "Specialized in British (IGCSE, GCSE, A-levels), American, IB, and CBSE curriculum.",
     icon: icon1,
   },
   {
     title: "Personalized Learning",
+    description: "Tailored lessons to suit individual student needs.",
     icon: icon2,
   },
   {
     title: "Flexible Scheduling",
+    description: "Experience our teaching style before committing.",
     icon: icon3,
   },
   {
     title: "Comprehensive Curriculum",
+    description:
+      "Over 90,000 live lessons in Maths, Physics, Computer Science, and more.",
     icon: icon5,
   },
   {
     title: "Proven Results",
+    description:
+      "Over 90,000 live lessons in Maths, Physics, Computer Science, and more.",
     icon: icon4,
   },
 ];

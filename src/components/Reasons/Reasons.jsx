@@ -4,8 +4,20 @@ import elearning from "../../assets/img/elearning.png";
 import CustomButton from "../CustomButton/CustomButton";
 import { motion } from "framer-motion";
 import { reasons } from "../../data/data.js";
+import ReactCardFlip from "react-card-flip";
 
 const Reasons = ({ demoRef }) => {
+  // Initialize state to keep track of flip state for each card
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const handleMouseEnter = (index) => {
+    setFlippedCards((prev) => ({ ...prev, [index]: true }));
+  };
+
+  const handleMouseLeave = (index) => {
+    setFlippedCards((prev) => ({ ...prev, [index]: false }));
+  };
+
   const sections = {
     Demo: demoRef,
   };
@@ -49,7 +61,7 @@ const Reasons = ({ demoRef }) => {
               Top Grades
             </span>
           </h3>
-          <p className="lg:text-xl sm:text-lg text-base text-center max-w-5xl mx-auto font-medium">
+          <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto font-medium">
             Tuition Highway: Where expert tutors, personalized learning, and
             flexible scheduling meet comprehensive curriculum coverage. Our
             proven approach fast-tracks students to A* grades across IGCSE,
@@ -57,7 +69,7 @@ const Reasons = ({ demoRef }) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {reasons.map((item, index) => (
             <div
               key={index}
@@ -72,6 +84,45 @@ const Reasons = ({ demoRef }) => {
                 </p>
               </div>
             </div>
+          ))}
+        </div> */}
+
+        <div className="flip-card-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+          {reasons.map((item, index) => (
+            <ReactCardFlip
+              isFlipped={flippedCards[index] || false}
+              flipDirection="vertical"
+              key={index}
+            >
+              <div
+                className="p-6 bg-white shadow-lg rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-52"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              >
+                <div className="p-3 bg-blueHeading rounded-full w-14 h-14 flex justify-center items-center">
+                  <img src={item.icon} alt={item.title} className="" />
+                </div>
+                <div>
+                  <p className="sm:text-xl text-lg text-headingColor font-semibold">
+                    {item.title}
+                  </p>
+                </div>
+              </div>
+              <div
+                className="p-6 bg-flipBg shadow-lg rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-52"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              >
+                <div className="flex flex-col gap-4">
+                  <p className="sm:text-xl text-lg text-headingColor font-semibold min-h-14">
+                    {item.title}
+                  </p>
+                  <p className="sm:text-base text-sm text-headingColor ">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </ReactCardFlip>
           ))}
         </div>
 

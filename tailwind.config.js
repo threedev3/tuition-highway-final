@@ -27,6 +27,7 @@ export default {
         blueArrows: "#309EC3",
         hamburgerColor: "#D9D9D9",
         tutorText: "#667085",
+        flipBg: "#32A6CC4A",
       },
 
       backgroundPosition: {

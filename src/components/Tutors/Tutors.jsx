@@ -91,7 +91,7 @@ const Tutors = () => {
             {tutors.slice(0, 4).map((tutor, index) => (
               <div key={index}>
                 <div
-                  className="bg-chooseBg p-6 flex flex-col gap-6 items-center shadow-md rounded-[30px] hover:shadow-xl transition-shadow duration-300 relative
+                  className="bg-chooseBg p-6 flex flex-col gap-6 items-center shadow-md rounded-[30px] transition-shadow duration-300 relative
        after:border-orangeHeading after:absolute after:top-0 after:left-0 after:rounded-tl-[2800px] after:rounded-br-full after:content-[''] 
       after:opacity-0 hover:after:opacity-100 after:transition-all after:duration-500 
       after:border-[0px] hover:after:border-[40px] after:translate-x-0 hover:after:translate-x-0 my-4 mx-2"
