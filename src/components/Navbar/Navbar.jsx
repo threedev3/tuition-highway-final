@@ -8,11 +8,7 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const Navbar = ({ demoRef }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState({
-    "Main Pages": false,
-    "What We Teach": false,
-    "Subjects Offering": false,
-  });
+  const [expandedSection, setExpandedSection] = useState(null);
 
   const sections = {
     Demo: demoRef,
@@ -37,10 +33,9 @@ const Navbar = ({ demoRef }) => {
   };
 
   const toggleSection = (section) => {
-    setExpandedSections((prevState) => ({
-      ...prevState,
-      [section]: !prevState[section],
-    }));
+    setExpandedSection((prevSection) =>
+      prevSection === section ? null : section
+    );
   };
 
   useEffect(() => {
@@ -56,6 +51,17 @@ const Navbar = ({ demoRef }) => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    const contentSections = document.querySelectorAll(".content-section");
+    contentSections.forEach((section) => {
+      if (section.dataset.section === expandedSection) {
+        section.style.height = section.scrollHeight + "px";
+      } else {
+        section.style.height = "0px";
+      }
+    });
+  }, [expandedSection]);
 
   // Combined navigation data
   const navigationData = {
@@ -147,7 +153,7 @@ const Navbar = ({ demoRef }) => {
               &times;
             </button>
           </div>
-          <div className="flex flex-col gap-3 h-full">
+          <div className="flex flex-col gap-8 h-full">
             {/* Grid layout for medium and larger screens */}
             <div className="hidden md:grid lg:grid-cols-3 md:grid-cols-3 gap-6">
               {Object.entries(navigationData).map(([section, items]) => (
@@ -160,10 +166,13 @@ const Navbar = ({ demoRef }) => {
                       <li key={item.title}>
                         <Link
                           to={item.to}
-                          className="text-headingColor font-semibold text-base "
+                          className="text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out"
                           onClick={() => setIsOpen(false)}
                         >
-                          {item.title}
+                          <span className="group-hover:text-orangeHeading transition-all duration-300 ease-in-out">
+                            {item.title}
+                          </span>
+                          <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-orangeHeading transition-all duration-300 ease-in-out group-hover:w-full"></span>
                         </Link>
                       </li>
                     ))}
@@ -174,65 +183,63 @@ const Navbar = ({ demoRef }) => {
 
             {/* Accordion layout for smaller screens */}
             <div className="md:hidden">
-              {Object.entries(navigationData).map(([section, items]) => (
-                <div
-                  key={section}
-                  className="border-b-2 border-b-headingColor pt-6 pb-3"
-                >
+              {Object.entries(navigationData).map(
+                ([section, items], index, array) => (
                   <div
-                    className="flex justify-between items-center cursor-pointer"
-                    onClick={() => toggleSection(section)}
+                    key={section}
+                    className={`pt-6 pb-6 ${
+                      index !== array.length - 1
+                        ? "border-b-2 border-b-headingColor"
+                        : ""
+                    }`}
                   >
-                    <h3 className="text-xl text-headingColor capitalize">
-                      {section}
-                    </h3>
-                    {expandedSections[section] ? (
-                      <ChevronUpIcon className="w-6 h-6 text-headingColor" />
-                    ) : (
-                      <ChevronDownIcon className="w-6 h-6 text-headingColor" />
-                    )}
+                    <button
+                      className="flex justify-between items-center w-full text-left focus:outline-none cursor-pointer"
+                      onClick={() => toggleSection(section)}
+                    >
+                      <h3 className="text-xl text-headingColor capitalize">
+                        {section}
+                      </h3>
+                      {expandedSection === section ? (
+                        <ChevronUpIcon className="w-6 h-6 text-headingColor" />
+                      ) : (
+                        <ChevronDownIcon className="w-6 h-6 text-headingColor" />
+                      )}
+                    </button>
+                    <div
+                      className="content-section overflow-hidden transition-all duration-500 ease-in-out"
+                      data-section={section}
+                      style={{ height: "0px" }}
+                    >
+                      <ul className="space-y-6 pt-3">
+                        {items.map((item) => (
+                          <li key={item.title}>
+                            <Link
+                              to={item.to}
+                              className="text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out"
+                              onClick={() => setExpandedSection(null)}
+                            >
+                              <span className="group-hover:text-orangeHeading transition-all duration-300 ease-in-out">
+                                {item.title}
+                              </span>
+                              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-orangeHeading transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <Transition
-                    show={expandedSections[section]}
-                    enter="transition-max-height duration-500 ease-in-out"
-                    enterFrom="max-h-0"
-                    enterTo="max-h-screen"
-                    leave="transition-max-height duration-500 ease-in-out"
-                    leaveFrom="max-h-screen"
-                    leaveTo="max-h-0"
-                    className="overflow-hidden"
-                  >
-                    <ul className="space-y-6 pt-3">
-                      {items.map((item) => (
-                        <li key={item.title}>
-                          <Link
-                            to={item.to}
-                            className="text-headingColor font-semibold text-base"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {item.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </Transition>
-                  {/* {expandedSections[section] && (
-                    <ul className="space-y-6 pt-3">
-                      {items.map((item) => (
-                        <li key={item.title}>
-                          <Link
-                            to={item.to}
-                            className="text-headingColor font-semibold text-base"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {item.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )} */}
-                </div>
-              ))}
+                )
+              )}
+            </div>
+
+            <div className="md:hidden flex gap-3 items-center">
+              <div onClick={() => handleNavClick("Demo")}>
+                <CustomButton text="Book A Free Trial" />
+              </div>
+              <button className="bg-blueBtn py-1.5 px-6 text-white rounded-full sm:text-base text-sm">
+                Portal Login
+              </button>
             </div>
           </div>
         </div>

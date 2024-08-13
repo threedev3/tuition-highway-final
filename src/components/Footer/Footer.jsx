@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import footerLogo from "../../assets/img/footerLogo.png";
 
 import { products, company, resources, socialIcons } from "../../data/data.js";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState("");
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -27,7 +28,7 @@ const Footer = () => {
                 onClick={scrollToTop}
               />
             </div>
-            <div className="flex gap-5 items-center ml-6">
+            <div className="flex gap-5 items-center ml-4">
               {socialIcons.map((item, index) => (
                 <Link to={item.to} target="_blank" key={index}>
                   <img
@@ -86,16 +87,22 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-row  gap-3 items-center">
-            <div className="w-full flex gap-3 items-center">
+            <form className="w-full flex gap-3 items-center">
               <input
                 type="email"
+                required
                 placeholder="Enter Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="bg-transparent border-2 border-footerBorder rounded-full sm:py-2 sm:px-6 py-2 px-3 focus:outline-none text-white w-[80%] sm:text-base text-sm sm:placeholder:text-base placeholder:text-sm "
               />
-              <button className="bg-gradient-to-b from-orangeHeading to-toOrange sm:py-2 sm:px-6 py-2 px-3 sm:text-base text-sm rounded-full text-white">
+              <button
+                type="submit"
+                className="bg-gradient-to-b from-orangeHeading to-toOrange sm:py-2 sm:px-6 py-2 px-3 sm:text-base text-sm rounded-full text-white"
+              >
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
 

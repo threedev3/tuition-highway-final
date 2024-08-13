@@ -104,7 +104,7 @@ const ContactForm = () => {
   // };
 
   return (
-    <div className="sm:py-20 py-12 px-6 max-w-full relative">
+    <div className="sm:py-12 py-12 px-6 max-w-full relative">
       <motion.div
         className="absolute md:top-20 md:left-16 sm:top-8 sm:left-8 top-2 left-4  z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}
@@ -121,7 +121,7 @@ const ContactForm = () => {
         <img
           src={heroIcon2}
           alt=""
-          className="md:w-16 sm:w-16 w-10 object-contain"
+          className="lg:w-16 md:w-14 sm:w-12 w-10 object-contain"
         />
       </motion.div>
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8">
@@ -280,7 +280,7 @@ const ContactForm = () => {
                     <div className="text-right">
                       <button
                         onClick={handleNext}
-                        className="bg-blueBtn mt-8 text-white px-6 py-2 rounded-full shadow-lg "
+                        className="bg-blueHeading mt-8 text-white px-6 py-2 rounded-full shadow-lg "
                       >
                         Next
                       </button>

@@ -24,13 +24,13 @@ const HeroSection = () => {
 
   return (
     <div
-      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat sm:bg-cover bg-contain sm:bg-movedown bg-bottom max-w-full py-12 px-6 overflow-hidden bg-heroBg relative"
+      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat lg:bg-cover bg-contain lg:bg-movedown bg-bottom max-w-full py-12 px-6 overflow-hidden bg-heroBg relative"
       style={{ height: heroHeight }}
     >
       <div className="max-w-[1400px] mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col justify-center items-center gap-8 h-full">
         <div className="max-w-full mx-auto flex flex-col sm:gap-6 gap-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-headingColor xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-[26px] leading-9 font-extrabold text-center capitalize">
+            <h2 className="text-headingColor lg:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-9 font-extrabold text-center capitalize">
               Want to score top grades in your{" "}
               <span className="text-blueHeading font-MontserratBold">
                 exams
@@ -40,7 +40,7 @@ const HeroSection = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <p className="text-headingColor lg:text-xl md:text-lg sm:text-base text-base text-center">
+            <p className="text-headingColor lg:text-xl sm:text-lg text-base text-center">
               We all want to score top grades in our exams. Our expert tutors
               help students worldwide achieve their dreams of A* grades.
             </p>

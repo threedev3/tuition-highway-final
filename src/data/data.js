@@ -2,11 +2,13 @@ import icon1 from "../assets/img/icon1.png";
 import icon2 from "../assets/img/icon2.png";
 import icon3 from "../assets/img/icon3.png";
 import icon4 from "../assets/img/icon4.png";
+import icon5 from "../assets/img/icon5.png";
 import computer from "../assets/img/computer.gif";
 import maths from "../assets/img/mathematics.gif";
 import physics from "../assets/img/physics.gif";
 import chemistry from "../assets/img/chemistry.gif";
 import biology from "../assets/img/biology.gif";
+import english from "../assets/img/english.gif";
 import step from "../assets/img/step.png";
 import firstStep from "../assets/img/firstStep.png";
 import step2 from "../assets/img/step2.png";
@@ -19,6 +21,12 @@ import xIcon from "../assets/img/xIcon.png";
 import fbIcon from "../assets/img/fbIcon.png";
 import instaIcon from "../assets/img/instaIcon.png";
 import linkedInIcon from "../assets/img/linkedInIcon.png";
+import curricula1 from "../assets/img/curricula1.png";
+import curricula2 from "../assets/img/curricula2.png";
+import curricula3 from "../assets/img/curricula3.png";
+import curricula4 from "../assets/img/curricula4.png";
+import curricula5 from "../assets/img/curricula5.png";
+import heroIcon1 from "../assets/img/heroIcon1.png";
 
 const navigation = [
   "Home",
@@ -57,7 +65,7 @@ const reasons = [
   },
   {
     title: "Comprehensive Curriculum",
-    icon: icon4,
+    icon: icon5,
   },
   {
     title: "Proven Results",
@@ -107,7 +115,7 @@ const subjects = [
   },
   {
     title: "English",
-    img: maths,
+    img: english,
   },
   {
     title: "Biology",
@@ -122,35 +130,35 @@ const subjects = [
 const curricula = [
   {
     title: "British Curriculum",
-    img: maths,
+    img: curricula1,
   },
   {
     title: "American Curriculum",
-    img: physics,
+    img: curricula2,
   },
   {
     title: "International Baccalaureate",
-    img: computer,
+    img: curricula3,
   },
   {
     title: "French Curriculum",
-    img: maths,
+    img: curricula4,
   },
   {
     title: "Indian CBSE",
-    img: physics,
+    img: curricula5,
   },
   {
     title: "Online Homeschooling",
-    img: computer,
+    img: heroIcon1,
   },
   {
     title: "IELTS",
-    img: computer,
+    img: curricula2,
   },
   {
     title: "SAT",
-    img: computer,
+    img: curricula3,
   },
 ];
 
@@ -170,48 +178,61 @@ const testimonials = [
 const stepsContent = [
   {
     img: firstStep,
-    title: "Assessment",
+    title: "Student",
+    subtitle: "Assessment",
     description: "We evaluate your current academic standing and goals.",
-    style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
+    style:
+      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[464px]:w-[55%] min-[429px]:w-[60%] min-[375px]:w-[70%] min-[334px]:w-[80%] w-[90%]",
+    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     img: step,
-    title: "Tutor Matching",
+    title: "Tutor",
+    subtitle: "Matching",
     description:
       "We pair you with an expert tutor specialized in your subject and curriculum.",
-    style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
+    style:
+      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[449px]:w-[54%] min-[409px]:w-[60%] min-[358px]:w-[70%] min-[319px]:w-[80%] w-[90%]",
+    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     img: step2,
-    title: "Personalized Learning Plan",
+    title: "Personalized",
+    subtitle: "Learning Plan",
     description:
       "Your tutor creates a tailored strategy to address your specific needs.",
-    style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
+    style:
+      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[476px]:w-[54%] min-[466px]:w-[58%] min-[421px]:w-[65%] min-[395px]:w-[70%] min-[372px]:w-[75%] min-[352px]:w-[80%] w-[85%]",
+    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     img: step,
-    title: "Regular Sessions",
+    title: "Regular",
+    subtitle: "Sessions",
     description:
       "Attend flexible, one-on-one online sessions at times that suit you.",
-    style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
+    style:
+      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[471px]:w-[54%] min-[401px]:w-[60%] min-[350px]:w-[70%] min-[303px]:w-[80%] w-[90%]",
+    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     img: step2,
-    title: "Progress Tracking",
+    title: "Progress",
+    subtitle: "Tracking",
     description: "We continuously monitor and report on your improvement.",
-    style: "min-[481px]:w-[80%] min-[430px]:w-[60%] w-[72%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[280px]",
+    style:
+      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[467px]:w-[55%] min-[432px]:w-[60%] min-[377px]:w-[70%] min-[336px]:w-[80%] w-[90%]",
+    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     img: lastStep,
-    title: "Achieve Your Goals",
+    title: "Achieve Your",
+    subtitle: "Goals",
     description: "Watch your grades improve and confidence soar.",
-    style: "min-[769px]:w-[80%]  w-[100%]",
-    imgStyle: "min-[480px]:w-[200px] w-[270px] h-[280px]",
+    style:
+      "min-[641px]:w-[86%] min-[481px]:w-[86%] min-[420px]:w-[60%] min-[367px]:w-[70%] min-[327px]:w-[80%] w-[90%]",
+    imgStyle:
+      "min-[1200px]:w-[190px] min-[1100px]:w-[180px] min-[1025px]:w-[170px] min-[960px]:w-[200px] min-[841px]:w-[175px] min-[801px]:w-[160px] min-[750px]:w-[200px] min-[641px]:w-[180px] min-[570px]:w-[230px] min-[510px]:w-[210px] min-[481px]:w-[190px] w-[230px] h-[270px]",
   },
 ];
 

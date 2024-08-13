@@ -1,12 +1,48 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React from "react";
-import twitterIcon from "../../assets/img/twitterIcon.png";
-import linkedInIcon from "../../assets/img/linkedInIcon.png";
 import CustomButton from "../CustomButton/CustomButton";
 import pencil from "../../assets/img/pencil.png";
 import { motion } from "framer-motion";
 import { tutors } from "../../data/data";
+import Slider from "react-slick";
 
 const Tutors = () => {
+  var settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    // cssEase: "ease",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="md:py-20 py-12 px-6 max-w-full relative">
       <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out blur-md "></div>
@@ -27,7 +63,7 @@ const Tutors = () => {
         <img
           src={pencil}
           alt=""
-          className="md:w-16 sm:w-16 w-10 object-contain"
+          className="lg:w-16 md:w-14 sm:w-12 w-10 object-contain"
         />
       </motion.div>
 
@@ -50,40 +86,43 @@ const Tutors = () => {
           </p>
         </div>
 
-        <div className="lg:grid lg:grid-cols-4 lg:gap-10 md:grid md:grid-cols-2 md:gap-10 grid grid-cols-1 gap-10">
-          {tutors.slice(0, 4).map((tutor, index) => (
-            <div
-              key={index}
-              className="bg-chooseBg p-6 flex flex-col gap-6 items-center shadow-md rounded-[30px] hover:shadow-xl transition-shadow duration-300 relative
+        <div className="slider-container cursor-pointer">
+          <Slider {...settings}>
+            {tutors.slice(0, 4).map((tutor, index) => (
+              <div key={index}>
+                <div
+                  className="bg-chooseBg p-6 flex flex-col gap-6 items-center shadow-md rounded-[30px] hover:shadow-xl transition-shadow duration-300 relative
        after:border-orangeHeading after:absolute after:top-0 after:left-0 after:rounded-tl-[2800px] after:rounded-br-full after:content-[''] 
       after:opacity-0 hover:after:opacity-100 after:transition-all after:duration-500 
-      after:border-[0px] hover:after:border-[40px] after:translate-x-0 hover:after:translate-x-0"
-            >
-              <div className="w-auto">
-                <img src={tutor.icon} alt="" className="object-cover" />
-              </div>
+      after:border-[0px] hover:after:border-[40px] after:translate-x-0 hover:after:translate-x-0 my-4 mx-2"
+                >
+                  <div className="w-auto mx-auto">
+                    <img src={tutor.icon} alt="" className="object-cover" />
+                  </div>
 
-              <div className="max-w-[246px] flex flex-col gap-1">
-                <p className="md:text-xl text-xl text-headingColor text-center min-h-[56px] font-semibold">
-                  {tutor.name}
-                </p>
-                <p className="sm:text-base text-sm text-orangeHeading text-center">
-                  {tutor.subject}
-                </p>
-              </div>
+                  <div className="max-w-[246px] flex flex-col gap-1">
+                    <p className="md:text-xl text-xl text-headingColor text-center min-h-[56px] font-semibold">
+                      {tutor.name}
+                    </p>
+                    <p className="sm:text-base text-sm text-orangeHeading text-center">
+                      {tutor.subject}
+                    </p>
+                  </div>
 
-              <div className="flex flex-col gap-3 w-full">
-                <div className="flex flex-row  items-center gap-1 text-tutorText text-base">
-                  <p className="flex-1">Experience: </p>
-                  <p>{tutor.experience}</p>
-                </div>
-                <div className="flex flex-row items-center gap-1 text-tutorText text-base">
-                  <p className="flex-1">Grade: </p>
-                  <p>{tutor.grade}</p>
+                  <div className="flex flex-col gap-3 w-full">
+                    <div className="flex flex-row  items-center gap-1 text-tutorText text-base">
+                      <p className="flex-1">Experience: </p>
+                      <p>{tutor.experience}</p>
+                    </div>
+                    <div className="flex flex-row items-center gap-1 text-tutorText text-base">
+                      <p className="flex-1">Grade: </p>
+                      <p>{tutor.grade}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </Slider>
         </div>
         <motion.div
           className="flex justify-center"

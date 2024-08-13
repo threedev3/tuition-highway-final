@@ -6,7 +6,7 @@ const TutorNumbers = () => {
   return (
     <div className="py-12 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 justify-center items-center">
-        <div className="lg:grid lg:grid-cols-4 lg:gap-32 md:grid md:grid-cols-2 md:gap-32 grid grid-cols-1 gap-6">
+        <div className="lg:grid lg:grid-cols-4 lg:gap-32 min-[500px]:grid min-[500px]:grid-cols-2 min-[500px]:gap-12 grid grid-cols-1 gap-6">
           {numbers.map((item, index) => {
             const motionValue = useMotionValue(0);
             const [displayValue, setDisplayValue] = useState(0);

@@ -12,7 +12,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="sm:py-20 py-12 px-6 max-w-full ">
+    <div className="sm:py-12 py-12 px-6 max-w-full ">
       <div className="max-w-[1400px] mx-auto flex flex-col justify-center gap-12">
         <div className="flex flex-col gap-6 items-center text-headingColor">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">

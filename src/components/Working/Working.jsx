@@ -11,6 +11,8 @@ import { stepsContent } from "../../data/data";
 const Working = () => {
   const [showSteps, setShowSteps] = useState(true);
   const [showImage, setShowImage] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(6); // Default slides to show
 
   useEffect(() => {
     const stepDuration = 10000; // Show steps for 8 seconds
@@ -34,15 +36,21 @@ const Working = () => {
       }, stepDuration + imageDuration);
     };
 
-    toggleDisplay();
-    const interval = setInterval(toggleDisplay, stepDuration + imageDuration);
+    const lastVisibleSlide = currentSlide + slidesToShow - 1;
+    if (lastVisibleSlide >= stepsContent.length - 1) {
+      toggleDisplay();
+      const interval = setInterval(toggleDisplay, stepDuration + imageDuration);
+      return () => {
+        clearInterval(interval);
+        clearTimeout(showStepsTimeout);
+        clearTimeout(showImageTimeout);
+      };
+    }
+  }, [currentSlide, slidesToShow]);
 
-    return () => {
-      clearInterval(interval);
-      clearTimeout(showStepsTimeout);
-      clearTimeout(showImageTimeout);
-    };
-  }, []);
+  const handleAfterChange = (index) => {
+    setCurrentSlide(index);
+  };
 
   const stepVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -62,14 +70,12 @@ const Working = () => {
       scale: 1,
       transition: {
         duration: 1,
-        ease: "easeInOut",
       },
     },
     exit: {
       scale: 0,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
       },
     },
   };
@@ -81,7 +87,6 @@ const Working = () => {
       scale: 1,
       transition: {
         duration: 1,
-        ease: "easeInOut",
       },
     },
     exit: {
@@ -89,7 +94,6 @@ const Working = () => {
       scale: 0.5,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
       },
     },
   };
@@ -97,9 +101,10 @@ const Working = () => {
   var settings = {
     dots: false,
     infinite: false,
-    slidesToShow: 6,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     arrows: false,
+    afterChange: handleAfterChange,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 3000,
@@ -108,39 +113,67 @@ const Working = () => {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 800,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
         },
       },
     ],
   };
 
+  useEffect(() => {
+    const updateSlidesToShow = () => {
+      if (window.innerWidth >= 1280) {
+        setSlidesToShow(6);
+      } else if (window.innerWidth >= 1024) {
+        setSlidesToShow(5);
+      } else if (window.innerWidth >= 800) {
+        setSlidesToShow(4);
+      } else if (window.innerWidth >= 640) {
+        setSlidesToShow(3);
+      } else if (window.innerWidth >= 480) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(1);
+      }
+    };
+
+    window.addEventListener("resize", updateSlidesToShow);
+    updateSlidesToShow();
+
+    return () => window.removeEventListener("resize", updateSlidesToShow);
+  }, []);
+
   return (
-    <div className="sm:py-20 py-12 px-6 max-w-full relative h-[572px] flex items-center overflow-x-hidden">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 h-full w-full">
+    <div className="sm:py-12 py-8 px-6 max-w-full relative h-[572px] flex items-center overflow-x-hidden">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 justify-center h-full w-full">
         <div className="flex flex-col gap-6 items-center text-headingColor">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
             Easy Steps Towards{" "}
@@ -165,7 +198,7 @@ const Working = () => {
                       key={i}
                       custom={i}
                       variants={stepVariants}
-                      className={`relative ${step.style}`} // Apply custom styling
+                      className={`relative `} // Apply custom styling
                     >
                       <img
                         src={step.img}
@@ -173,13 +206,18 @@ const Working = () => {
                         className={`${step.imgStyle}`}
                       />
                       <div
-                        className={`flex flex-col ${step.style} max-h-[100%] absolute top-0 p-6`}
+                        className={`flex flex-col ${step.style} max-h-[90%] absolute top-0 py-6 min-[480px]:pr-4 min-[480px]:pl-4 pl-5 pr-8`}
                       >
                         <p className="font-semibold">Step {i + 1}</p>
-                        <h3 className="min-[1210px]:text-[18px] min-[480px]:text-[16px] text-xl min-h-14">
-                          {step.title}
+                        <h3 className="min-[1210px]:text-[18px] min-[480px]:text-[16px] min-[420px]:text-xl text-[18px] leading-6 min-h-14">
+                          {step.title}{" "}
+                          <span className="block font-MontserratBold">
+                            {step.subtitle}
+                          </span>
                         </h3>
-                        <p className="mt-5  text-[15px]">{step.description}</p>
+                        <p className="mt-4  min-[1034px]:text-[15px] min-[754px]:text-[14px] min-[641px]:text-[13px] min-[471px]:text-[15px] text-[14px] min-[1034px]:leading-6 leading-5">
+                          {step.description}
+                        </p>
                       </div>
                     </motion.div>
                   ))}
@@ -189,7 +227,7 @@ const Working = () => {
 
             {showImage && (
               <motion.div
-                className="flex items-center justify-center gap-8 relative"
+                className="flex items-center justify-center  relative"
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
@@ -198,14 +236,14 @@ const Working = () => {
                   key="sprinklesGif"
                   src={sprinklesGif}
                   alt="Sprinkles GIF"
-                  className="w-96 h-96 object-contain"
+                  className="min-[480px]:w-[17rem] min-[480px]:h-[17rem] w-[18rem] h-[18rem] object-contain"
                   variants={gifVariants}
                 />
                 <motion.img
                   key="aGrade"
                   src={aGrade}
                   alt="Additional Image"
-                  className="w-48 h-48 object-contain absolute "
+                  className="w-36 h-36 object-contain absolute "
                   variants={imageVariants}
                 />
               </motion.div>

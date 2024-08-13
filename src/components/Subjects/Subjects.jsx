@@ -16,14 +16,10 @@ const Subjects = () => {
       return subjects.slice(0, 6).map((item, index) => (
         <div
           key={index}
-          className="p-3 lg:px-3 px-3 rounded-[30px] shadow-lg flex items-center gap-3 hover:shadow-2xl transition-shadow duration-300 bg-white h-fit"
+          className="p-3 lg:px-3 px-3 rounded-[30px] shadow-lg flex items-center gap-3 hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px]"
         >
-          <div>
-            <img
-              src={item.img}
-              alt=""
-              className="sm:w-[90px] w-[90px] object-cover"
-            />
+          <div className="flex-shrink-0 sm:w-[90px] w-[80px]">
+            <img src={item.img} alt="" className="object-cover w-full h-auto" />
           </div>
           <div className="flex flex-col gap-1">
             <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
@@ -35,14 +31,10 @@ const Subjects = () => {
       return curricula.slice(0, 6).map((item, index) => (
         <div
           key={index}
-          className="p-3 lg:px-3 px-3 rounded-[30px] shadow-lg flex items-center gap-3 hover:shadow-2xl transition-shadow duration-300 bg-white h-fit"
+          className="p-3 lg:px-5 px-5 rounded-[30px] shadow-lg flex items-center gap-6 hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px]"
         >
-          <div>
-            <img
-              src={item.img}
-              alt=""
-              className="sm:w-[90px] w-[90px] object-cover"
-            />
+          <div className="flex-shrink-0 sm:w-[60px]  w-[60px]">
+            <img src={item.img} alt="" className="object-cover w-full h-auto" />
           </div>
           <div className="flex flex-col gap-1">
             <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
@@ -110,25 +102,6 @@ const Subjects = () => {
         </div>
 
         <div className="lg:grid lg:grid-cols-3 lg:gap-10 md:grid md:grid-cols-2 md:gap-10 grid grid-cols-1 gap-10">
-          {/* {subjects.map((item, index) => (
-            <div
-              key={index}
-              className="p-3 lg:px-3 px-3 rounded-[30px] shadow-lg flex items-center gap-3 hover:shadow-2xl transition-shadow duration-300 bg-white h-fit"
-            >
-              <div className="">
-                <img
-                  src={item.img}
-                  alt=""
-                  className="sm:w-[90px] w-[90px] object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
-                <p className="sm:text-base text-sm">{item.subtitle}</p>
-              </div>
-            </div>
-          ))} */}
-
           {renderItems()}
         </div>
 
