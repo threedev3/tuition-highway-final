@@ -95,7 +95,7 @@ const Reasons = ({ demoRef }) => {
               key={index}
             >
               <div
-                className="p-6 bg-white md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-[216px]"
+                className="p-6 bg-white md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group xl:min-h-[216px] min-h-[180px]"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
               >
@@ -103,19 +103,27 @@ const Reasons = ({ demoRef }) => {
                   <img src={item.icon} alt={item.title} className="" />
                 </div>
                 <div>
-                  <p className="sm:text-xl text-lg text-headingColor font-semibold">
-                    {item.title}
+                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:block hidden">
+                    {item.firstTitle}{" "}
+                    <span className="block">{item.secondTitle}</span>
+                  </p>
+                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:hidden block">
+                    {item.wholeTitle}
                   </p>
                 </div>
               </div>
               <div
-                className="p-6 bg-flipBg md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-[216px]"
+                className="p-6 bg-flipBg md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group xl:min-h-[216px] min-h-[180px]"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
               >
                 <div className="flex flex-col gap-4">
-                  <p className="sm:text-xl text-lg text-headingColor font-semibold min-h-14">
-                    {item.title}
+                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:block hidden">
+                    {item.firstTitle}{" "}
+                    <span className="block">{item.secondTitle}</span>
+                  </p>
+                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:hidden block">
+                    {item.wholeTitle}
                   </p>
                   <p className="sm:text-base text-sm text-headingColor ">
                     {item.description}
