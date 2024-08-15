@@ -53,7 +53,7 @@ const Reasons = ({ demoRef }) => {
       >
         <img src={elearning} alt="" className="object-contain" />
       </motion.div>
-      <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col gap-12 ">
+      <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 ">
         <div className="flex flex-col sm:gap-6 gap-4 items-center text-headingColor ">
           <h3 className="lg:text-[46px] sm:text-4xl text-3xl font-bold tracking-wide text-center">
             Your Fast Track to{" "}
@@ -95,7 +95,7 @@ const Reasons = ({ demoRef }) => {
               key={index}
             >
               <div
-                className="p-6 bg-white shadow-lg rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-52"
+                className="p-6 bg-white md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-[216px]"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
               >
@@ -109,7 +109,7 @@ const Reasons = ({ demoRef }) => {
                 </div>
               </div>
               <div
-                className="p-6 bg-flipBg shadow-lg rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-52"
+                className="p-6 bg-flipBg md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group min-h-[216px]"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
               >

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CustomButton from "../CustomButton/CustomButton";
 
-const HeroSection = () => {
+const HeroSection = ({ demoRef }) => {
   const [heroHeight, setHeroHeight] = useState("100vh");
 
   useEffect(() => {
@@ -12,15 +12,28 @@ const HeroSection = () => {
       setHeroHeight(`${availableHeight}px`);
     };
 
-    // Adjust the height on component mount and window resize
     adjustHeroHeight();
     window.addEventListener("resize", adjustHeroHeight);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", adjustHeroHeight);
     };
   }, []);
+
+  const sections = {
+    Demo: demoRef,
+  };
+
+  const handleNavClick = (section) => {
+    const targetRef = sections[section];
+
+    if (targetRef && targetRef.current) {
+      window.scrollTo({
+        top: targetRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <div
@@ -50,6 +63,7 @@ const HeroSection = () => {
             className="mx-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", damping: 17 }}
+            onClick={() => handleNavClick("Demo")}
           >
             <CustomButton text="Book A Free Demo" />
           </motion.div>

@@ -172,7 +172,7 @@ const Working = () => {
   }, []);
 
   return (
-    <div className="sm:py-12 py-8 px-6 max-w-full relative h-[572px] flex items-center overflow-x-hidden">
+    <div className="sm:py-12 py-8 px-6 max-w-full relative h-fit flex items-center overflow-x-hidden">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12  h-full w-full">
         <div className="flex flex-col gap-6 items-center text-headingColor">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
@@ -236,7 +236,7 @@ const Working = () => {
                   key="sprinklesGif"
                   src={sprinklesGif}
                   alt="Sprinkles GIF"
-                  className="min-[480px]:w-[18rem] min-[480px]:h-[18rem] w-[19rem] h-[19rem] object-contain"
+                  className="min-[480px]:w-[277px] min-[480px]:h-[277px] w-[277px] h-[277px] object-contain"
                   variants={gifVariants}
                 />
                 <motion.img

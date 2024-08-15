@@ -11,47 +11,82 @@ const Subjects = () => {
     setActiveView(view);
   };
 
+  // const renderItems = () => {
+  //   const items = activeView === "subjects" ? subjects : curricula;
+
+  //   return items.slice(0, 6).map((item) => (
+  //     <motion.div
+  //       key={item.title} // use a unique key
+  //       className={`p-3 rounded-[30px] shadow-lg flex items-center hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px] ${
+  //         activeView === "subjects"
+  //           ? "lg:px-3 px-3 gap-3"
+  //           : "lg:px-7 px-5 gap-7"
+  //       }`}
+  //       initial={{ opacity: 0, y: 20 }}
+  //       animate={{ opacity: 1, y: 0 }}
+  //       exit={{ opacity: 0, y: 20 }}
+  //       whileHover={{ scale: 1.1 }}
+  //       transition={{ duration: 0.5 }}
+  //     >
+  //       <div
+  //         className={`flex-shrink-0 ${
+  //           activeView === "subjects"
+  //             ? "sm:w-[90px] w-[80px]"
+  //             : "sm:w-[60px] w-[60px]"
+  //         }`}
+  //       >
+  //         <img
+  //           src={item.img}
+  //           alt={item.title}
+  //           className="object-cover w-full h-auto"
+  //         />
+  //       </div>
+  //       <div className="flex flex-col gap-1">
+  //         <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
+  //         <p className="sm:text-base text-sm">{item.subtitle}</p>
+  //       </div>
+  //     </motion.div>
+  //   ));
+  // };
+
   const renderItems = () => {
-    if (activeView === "subjects") {
-      return subjects.slice(0, 6).map((item, index) => (
-        <motion.div
-          key={index}
-          className="p-3 lg:px-3 px-3 rounded-[30px] shadow-lg flex items-center gap-3 hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px]"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+    const items = activeView === "subjects" ? subjects : curricula;
+
+    return items.slice(0, 6).map((item) => (
+      <motion.div
+        key={item.title}
+        className={`p-3 rounded-[30px] md:shadow-lg shadow-md flex items-center hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px] ${
+          activeView === "subjects"
+            ? "lg:px-3 px-3 gap-3"
+            : "lg:px-3 px-3 gap-3"
+        }`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div
+          className={`flex-shrink-0 flex justify-center items-center ${
+            activeView === "subjects"
+              ? "sm:w-[90px] w-[80px] h-[90px] sm:h-[90px]"
+              : "sm:w-[90px] w-[80px] h-[90px] sm:h-[90px] p-3"
+          }`}
         >
-          <div className="flex-shrink-0 sm:w-[90px] w-[80px]">
-            <img src={item.img} alt="" className="object-cover w-full h-auto" />
-          </div>
-          <div className="flex flex-col gap-1">
-            <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
-            <p className="sm:text-base text-sm">{item.subtitle}</p>
-          </div>
-        </motion.div>
-      ));
-    } else {
-      return curricula.slice(0, 6).map((item, index) => (
-        <motion.div
-          key={index}
-          className="p-3 lg:px-7 px-5 rounded-[30px] shadow-lg flex items-center gap-7 hover:shadow-2xl transition-shadow duration-300 bg-white h-[120px]"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex-shrink-0 sm:w-[60px]  w-[60px]">
-            <img src={item.img} alt="" className="object-cover w-full h-auto" />
-          </div>
-          <div className="flex flex-col gap-1">
-            <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
-            <p className="sm:text-base text-sm">{item.subtitle}</p>
-          </div>
-        </motion.div>
-      ));
-    }
+          <img
+            src={item.img}
+            alt={item.title}
+            className="object-contain w-full h-full"
+          />
+        </div>
+        <div className="flex flex-col gap-1 w-full">
+          <p className="sm:text-xl text-lg font-semibold">{item.title}</p>
+          <p className="sm:text-base text-sm">{item.subtitle}</p>
+        </div>
+      </motion.div>
+    ));
   };
+
   return (
     <div className="md:py-20 py-12 px-6 max-w-full relative bg-heroBg">
       <motion.div
@@ -70,7 +105,7 @@ const Subjects = () => {
         <img src={heroIcon1} alt="" className="object-contain" />
       </motion.div>
 
-      <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col justify-center sm:gap-20 gap-8">
+      <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col justify-center sm:gap-12 gap-8">
         <div className="flex flex-col sm:gap-6 gap-4 items-center text-headingColor max-w-5xl mx-auto">
           <h3 className="lg:text-[46px] sm:text-4xl text-[28px] leading-9 font-bold tracking-wide text-center">
             Curricula & Subjects
@@ -83,14 +118,14 @@ const Subjects = () => {
 
           <div className="flex sm:flex-row flex-col justify-between items-center gap-6">
             <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", damping: 17 }}
               onClick={() => handleViewChange("curricula")}
               className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 ${
                 activeView === "curricula"
                   ? "bg-activeBlueBtn text-white"
                   : "bg-subjectBtn text-white"
               }`}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", damping: 17 }}
             >
               Curricula Coverage
             </motion.button>
@@ -108,8 +143,8 @@ const Subjects = () => {
             </motion.button>
           </div>
         </div>
-        <AnimatePresence>
-          <div className="lg:grid lg:grid-cols-3 lg:gap-10 md:grid md:grid-cols-2 md:gap-10 grid grid-cols-1 gap-10">
+        <AnimatePresence mode="wait">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-10 md:grid md:grid-cols-2 md:gap-10 grid grid-cols-1 gap-6">
             {renderItems()}
           </div>
         </AnimatePresence>

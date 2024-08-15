@@ -187,7 +187,7 @@ const Navbar = ({ demoRef }) => {
                 ([section, items], index, array) => (
                   <div
                     key={section}
-                    className={`pt-6 pb-6 ${
+                    className={`pt-6 pb-4 ${
                       index !== array.length - 1
                         ? "border-b-2 border-b-headingColor"
                         : ""
@@ -197,13 +197,13 @@ const Navbar = ({ demoRef }) => {
                       className="flex justify-between items-center w-full text-left focus:outline-none cursor-pointer"
                       onClick={() => toggleSection(section)}
                     >
-                      <h3 className="text-xl text-headingColor capitalize">
+                      <h3 className="text-lg text-headingColor capitalize">
                         {section}
                       </h3>
                       {expandedSection === section ? (
-                        <ChevronUpIcon className="w-6 h-6 text-headingColor" />
+                        <ChevronUpIcon className="w-5 h-5 text-headingColor" />
                       ) : (
-                        <ChevronDownIcon className="w-6 h-6 text-headingColor" />
+                        <ChevronDownIcon className="w-5 h-5 text-headingColor" />
                       )}
                     </button>
                     <div
@@ -234,7 +234,12 @@ const Navbar = ({ demoRef }) => {
             </div>
 
             <div className="md:hidden flex gap-3 items-center">
-              <div onClick={() => handleNavClick("Demo")}>
+              <div
+                onClick={() => {
+                  setIsOpen(false);
+                  handleNavClick("Demo");
+                }}
+              >
                 <CustomButton text="Book A Free Trial" />
               </div>
               <button className="bg-blueBtn py-1.5 px-6 text-white rounded-full sm:text-base text-sm">

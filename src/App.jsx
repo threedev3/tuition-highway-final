@@ -21,7 +21,7 @@ function App() {
     <>
       <Router>
         <Navbar demoRef={demoRef} />
-        <HeroSection />
+        <HeroSection demoRef={demoRef} />
         <Reasons demoRef={demoRef} />
         <TutorNumbers />
         <Subjects />

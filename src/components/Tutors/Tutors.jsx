@@ -70,7 +70,7 @@ const Tutors = () => {
       {/* <div className="absolute top-10 left-0 w-36 -z-10">
         <img src={homework} alt="" className="object-contain" />
       </div> */}
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 z-10 relative">
+      <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 z-10 relative">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
             Our Top Rated{" "}
