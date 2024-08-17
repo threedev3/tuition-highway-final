@@ -205,6 +205,18 @@ h6 {
   background-color: transparent;
 }
 
+/* .custom-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: -20px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  background-color: black;
+} */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

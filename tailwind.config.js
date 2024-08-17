@@ -29,6 +29,9 @@ export default {
         tutorText: "#667085",
         flipBg: "#32A6CC4A",
         placeholderText: "#9ea3af",
+        subHeroStart: "#34ACD4",
+        subHeroEnd: "#1B596E",
+        subjectsBg: "#F7F7F7",
       },
 
       backgroundPosition: {

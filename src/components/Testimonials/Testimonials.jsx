@@ -2,10 +2,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import StarRating from "react-star-ratings";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import { testimonials } from "../../data/data";
+import TestimonialsCard from "../TestimonialsCard/TestimonialsCard";
 
 const Testimonials = () => {
   const sliderRef = useRef(null);
@@ -70,41 +70,7 @@ const Testimonials = () => {
           <div className="slider-container w-auto cursor-pointer ">
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((item, index) => (
-                <div className="" key={index}>
-                  <div
-                    className="flex flex-col gap-6 w-[300px] md:p-0 p-6"
-                    key={index}
-                  >
-                    <div className="flex flex-col gap-3">
-                      <div className="flex gap-3 min-h-16">
-                        <div
-                          className={`${item.circleColor} w-12 h-12 rounded-full flex-shrink-0`}
-                        ></div>
-
-                        <div className="flex flex-col gap-1">
-                          <h3 className="text-headingColor md:text-[22px] text-xl">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs font-normal">{item.class}</p>
-                        </div>
-                      </div>
-                      <div className="text-headingColor  flex flex-col gap-2">
-                        <StarRating
-                          name="course-rating"
-                          caption="Rate your stay!"
-                          totalStars={5}
-                          starRatedColor="#FAB437"
-                          rating={item.stars}
-                          starDimension="18px"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="text-headingColor text-base min-h-44 font-medium">
-                      {item.review}
-                    </div>
-                  </div>
-                </div>
+                <TestimonialsCard item={item} key={index} />
               ))}
             </Slider>
           </div>

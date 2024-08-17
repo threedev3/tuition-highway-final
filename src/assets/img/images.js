@@ -37,6 +37,16 @@ import curricula3 from "./curricula3.png";
 import curricula4 from "./curricula4.png";
 import curricula5 from "./curricula5.png";
 
+// Subjects Offering Images
+import sub1 from "./sub1.png";
+import sub2 from "./sub2.png";
+import sub3 from "./sub3.png";
+import sub4 from "./sub4.png";
+import sub5 from "./sub5.png";
+import sub6 from "./sub6.png";
+import sub7 from "./sub7.png";
+import sub8 from "./sub8.png";
+
 // Hero Icons
 import heroIcon1 from "./heroIcon1.png";
 
@@ -71,6 +81,14 @@ export {
   curricula3,
   curricula4,
   curricula5,
+  sub1,
+  sub2,
+  sub3,
+  sub4,
+  sub5,
+  sub6,
+  sub7,
+  sub8,
   heroIcon1,
   learnImg,
 };

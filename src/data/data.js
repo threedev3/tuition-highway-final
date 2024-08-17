@@ -26,30 +26,51 @@ import {
   curricula3,
   curricula4,
   curricula5,
+  sub1,
+  sub2,
+  sub3,
+  sub4,
+  sub5,
+  sub6,
+  sub7,
+  sub8,
   heroIcon1,
 } from "../assets/img/images";
 
-const navigation = [
-  "Home",
-  "About",
-  {
-    name: "What we Teach",
-    dropdown: [
-      { name: "British Curriculum", dropdown: ["IGCSE/A-Level Courses"] },
-      "American Curriculum",
-      "International Baccalaureate",
-      "French Curriculum",
-      "Indian CBSE",
-      "FBISE",
-      "Online Homeschooling",
-      "SAT",
-      "IELTS",
-      "Coding",
-    ],
-  },
-  "Testimonials",
-  "Join as a Tutor",
-];
+const navigationData = {
+  "Main Pages": [
+    { title: "Home", to: "/" },
+    { title: "About Us", to: "/about" },
+    { title: "Subjects", to: "/subjects" },
+    { title: "Testimonials", to: "/testimonials" },
+    { title: "Join As a Tutor", to: "/joinastutor" },
+    { title: "Taking a Demo", to: "/takingdemo" },
+    { title: "Blogs", to: "/blogs" },
+    { title: "Privacy Policy", to: "/privacypolicy" },
+  ],
+  "What We Teach": [
+    { title: "British Curriculum", to: "/british-curriculum" },
+    { title: "American Curriculum", to: "/american-curriculum" },
+    { title: "International Baccalaureate", to: "/ib" },
+    { title: "Online / Homeschooling", to: "/online-home" },
+    { title: "Indian CBSE", to: "/indian-cbse" },
+    { title: "French Curriculum", to: "/french-curriculum" },
+  ],
+  "Subjects Offering": [
+    { title: "Mathematics", to: "/maths" },
+    { title: "Chemistry", to: "/chemistry" },
+    { title: "Biology", to: "/bio" },
+    { title: "Physics", to: "/physics" },
+    { title: "Economics", to: "/economics" },
+    { title: "Accounts", to: "/accounts" },
+    { title: "Business Studies", to: "/business" },
+    { title: "English", to: "/english" },
+    { title: "Sociology", to: "/sociology" },
+    { title: "Psychology", to: "/psychology" },
+    { title: "Business Law", to: "/business-law" },
+    { title: "Computer Science", to: "/computer-science" },
+  ],
+};
 
 const reasons = [
   {
@@ -155,6 +176,64 @@ const subjects = [
   {
     title: "Modern Languages",
     img: computer,
+  },
+];
+const subjectsOffering = [
+  {
+    title: "Mathematics",
+    img: sub1,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+  },
+  {
+    title: "Physics",
+    img: sub2,
+    bg: "bg-[#F46322]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+  },
+  {
+    title: "Chemistry",
+    img: sub3,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+  },
+  {
+    title: "Biology",
+    img: sub4,
+    bg: "bg-[#F46322]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+  },
+  {
+    title: "English",
+    img: sub8,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+  },
+  {
+    title: "Business Studies",
+    img: sub7,
+    bg: "bg-[#F46322]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+  },
+  {
+    title: "Economics",
+    img: sub6,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+  },
+  {
+    title: "Accounts",
+    img: sub5,
+    bg: "bg-[#F46322]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
   },
 ];
 
@@ -694,10 +773,11 @@ const socialIcons = [
 ];
 
 export {
-  navigation,
+  navigationData,
   reasons,
   numbers,
   subjects,
+  subjectsOffering,
   testimonials,
   stepsContent,
   tutors,

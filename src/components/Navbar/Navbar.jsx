@@ -5,6 +5,7 @@ import CustomButton from "../CustomButton/CustomButton";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import { navigationData } from "../../data/data";
 
 const Navbar = ({ demoRef }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,39 +65,6 @@ const Navbar = ({ demoRef }) => {
   }, [expandedSection]);
 
   // Combined navigation data
-  const navigationData = {
-    "Main Pages": [
-      { title: "Home", to: "/" },
-      { title: "About Us", to: "/about" },
-      { title: "Testimonials", to: "/testimonials" },
-      { title: "Join As a Tutor", to: "/joinastutor" },
-      { title: "Taking a Demo", to: "/takingdemo" },
-      { title: "Blogs", to: "/blogs" },
-      { title: "Privacy Policy", to: "/privacypolicy" },
-    ],
-    "What We Teach": [
-      { title: "British Curriculum", to: "/british-curriculum" },
-      { title: "American Curriculum", to: "/american-curriculum" },
-      { title: "International Baccalaureate", to: "/ib" },
-      { title: "Online / Homeschooling", to: "/online-home" },
-      { title: "Indian CBSE", to: "/indian-cbse" },
-      { title: "French Curriculum", to: "/french-curriculum" },
-    ],
-    "Subjects Offering": [
-      { title: "Mathematics", to: "/maths" },
-      { title: "Chemistry", to: "/chemistry" },
-      { title: "Biology", to: "/bio" },
-      { title: "Physics", to: "/physics" },
-      { title: "Economics", to: "/economics" },
-      { title: "Accounts", to: "/accounts" },
-      { title: "Business Studies", to: "/business" },
-      { title: "English", to: "/english" },
-      { title: "Sociology", to: "/sociology" },
-      { title: "Psychology", to: "/psychology" },
-      { title: "Business Law", to: "/business-law" },
-      { title: "Computer Science", to: "/computer-science" },
-    ],
-  };
 
   return (
     <nav
@@ -106,12 +74,14 @@ const Navbar = ({ demoRef }) => {
       <div className="">
         <div className="flex justify-between items-center max-w-[1400px] mx-auto">
           <div className="w-[164px] cursor-pointer">
-            <img
-              src={mainLogo}
-              alt="Logo"
-              className="object-cover"
-              onClick={scrollToTop}
-            />
+            <Link to={"/"}>
+              <img
+                src={mainLogo}
+                alt="Logo"
+                className="object-cover"
+                onClick={scrollToTop}
+              />
+            </Link>
           </div>
 
           <div className="md:flex md:justify-between md:items-center md:gap-16">

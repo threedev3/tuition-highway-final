@@ -21,12 +21,14 @@ const Footer = () => {
         <div className="md:flex md:flex-row md:justify-between md:items-center md:gap-4 flex flex-col gap-8 border-b-2 border-b-footerBorder pb-8">
           <div className="flex flex-col items-start gap-6">
             <div className="w-48">
-              <img
-                src={footerLogo}
-                alt=""
-                className="object-cover cursor-pointer"
-                onClick={scrollToTop}
-              />
+              <Link to={"/"}>
+                <img
+                  src={footerLogo}
+                  alt=""
+                  className="object-cover cursor-pointer"
+                  onClick={scrollToTop}
+                />
+              </Link>
             </div>
             <div className="flex gap-5 items-center ml-4">
               {socialIcons.map((item, index) => (
