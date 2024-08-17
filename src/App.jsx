@@ -13,6 +13,8 @@ import TutorNumbers from "./components/TutorNumbers/TutorNumbers";
 import Tutors from "./components/Tutors/Tutors";
 import Working from "./components/Working/Working";
 import { BrowserRouter as Router } from "react-router-dom";
+import CurriculumSection from "./components/CurriculumSection/CurriculumSection";
+import Learn from "./components/Learn/Learn";
 
 function App() {
   const demoRef = useRef(null);
@@ -22,13 +24,15 @@ function App() {
       <Router>
         <Navbar demoRef={demoRef} />
         <HeroSection demoRef={demoRef} />
-        <Reasons demoRef={demoRef} />
         <TutorNumbers />
+        <Reasons demoRef={demoRef} />
         <Subjects />
-        <FreeDemo demoRef={demoRef} />
+        <CurriculumSection demoRef={demoRef} />
+        {/* <FreeDemo demoRef={demoRef} /> */}
+        <Tutors />
+        <Learn />
         <Testimonials />
         <Working />
-        <Tutors />
         <div ref={demoRef}>
           <ContactForm demoRef={demoRef} />
         </div>

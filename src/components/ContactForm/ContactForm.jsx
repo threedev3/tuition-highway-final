@@ -4,7 +4,6 @@ import heroIcon2 from "../../assets/img/heroIcon2.png";
 import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
-import { City, Country, State } from "country-state-city";
 import Selector from "../Selector/Selector";
 import {
   ourCurriculum,
@@ -60,15 +59,10 @@ const ContactForm = () => {
     }
   };
 
-  let countryData = Country.getAllCountries();
-
-  // Filter the countryData to only include selected countries
-  let filteredCountryData = countryData.filter((country) =>
-    selectedCountries.includes(country.name)
-  );
-
-  const [country, setCountry] = useState(filteredCountryData);
-  const [selectedSubject, setSelectedSubject] = useState(null);
+  const countryObjects = selectedCountries.map((country, index) => ({
+    id: index + 1, // Ensure IDs are unique and start from 1
+    name: country,
+  }));
 
   const subjectOptions = subjectsOffer.map((subject, index) => ({
     id: index,
@@ -76,15 +70,10 @@ const ContactForm = () => {
   }));
 
   const grades = Array.from({ length: 13 }, (_, i) => (i + 1).toString());
-
-  const [selectedGrade, setSelectedGrade] = useState(null);
-
   const gradeOptions = grades.map((grade, index) => ({
     id: index,
     name: grade,
   }));
-
-  const [selectedCurriculum, setSelectedCurriculum] = useState(null);
 
   const curriculumOptions = ourCurriculum.map((subject, index) => ({
     id: index,
@@ -97,15 +86,13 @@ const ContactForm = () => {
     if (currentStep < 2) setCurrentStep(currentStep + 1);
   };
 
-  const [phone, setPhone] = useState("");
-
   // const handlePrev = () => {
   //   if (currentStep > 1) setCurrentStep(currentStep - 1);
   // };
 
   return (
     <div className="sm:py-12 py-12 px-6 max-w-full relative">
-      <motion.div
+      {/* <motion.div
         className="absolute md:top-20 md:left-16 sm:top-8 sm:left-8 top-2 left-4  z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -123,7 +110,7 @@ const ContactForm = () => {
           alt=""
           className="lg:w-16 md:w-14 sm:w-12 w-10 object-contain"
         />
-      </motion.div>
+      </motion.div> */}
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
           <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center sm:mt-0 mt-2">
@@ -173,7 +160,7 @@ const ContactForm = () => {
                           type="text"
                           name="parentName"
                           placeholder="Parent Name"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
+                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
                           value={formValues.parentName}
                           onChange={handleInputChange}
                         />
@@ -188,7 +175,7 @@ const ContactForm = () => {
                           type="text"
                           name="studentName"
                           placeholder="Student Name"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
+                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
                           value={formValues.studentName}
                           onChange={handleInputChange}
                         />
@@ -205,7 +192,7 @@ const ContactForm = () => {
                           type="email"
                           name="email"
                           placeholder="Email"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
+                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
                           value={formValues.email}
                           onChange={handleInputChange}
                         />
@@ -220,7 +207,7 @@ const ContactForm = () => {
                           type="text"
                           name="phone"
                           placeholder="WhatsApp/Mobile Number"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
+                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
                           value={formValues.phone}
                           onChange={handleInputChange}
                         />
@@ -245,7 +232,7 @@ const ContactForm = () => {
                           type="text"
                           name="city"
                           placeholder="City"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
+                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
                           value={formValues.city}
                           onChange={handleInputChange}
                         />
@@ -263,7 +250,7 @@ const ContactForm = () => {
                         /> */}
 
                         <Selector
-                          data={filteredCountryData}
+                          data={countryObjects}
                           selected={formValues.country}
                           setSelected={(country) =>
                             handleSelectorChange("country", country)

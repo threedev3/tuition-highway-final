@@ -13,21 +13,22 @@ const Tutors = () => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    swipeToSlide: true,
     arrows: false,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // speed: 1000,
+    // autoplaySpeed: 5000,
     // cssEase: "ease",
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1120,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 846,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -45,9 +46,9 @@ const Tutors = () => {
 
   return (
     <div className="md:py-20 py-12 px-6 max-w-full relative">
-      <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out blur-md "></div>
+      <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out "></div>
 
-      <motion.div
+      {/* <motion.div
         className="absolute md:top-10 md:left-10 sm:top-8 sm:left-8 top-2 left-4  z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -65,7 +66,7 @@ const Tutors = () => {
           alt=""
           className="lg:w-16 md:w-14 sm:w-12 w-10 object-contain"
         />
-      </motion.div>
+      </motion.div> */}
 
       {/* <div className="absolute top-10 left-0 w-36 -z-10">
         <img src={homework} alt="" className="object-contain" />
@@ -112,7 +113,7 @@ const Tutors = () => {
                   <div className="flex flex-col gap-3 w-full">
                     <div className="flex flex-row  items-center gap-1 text-tutorText text-base">
                       <p className="flex-1">Experience: </p>
-                      <p>{tutor.experience}</p>
+                      <p className="min-w-[107px]">{tutor.experience}</p>
                     </div>
                     <div className="flex flex-row items-center gap-1 text-tutorText text-base">
                       <p className="flex-1">Grade: </p>
@@ -125,8 +126,9 @@ const Tutors = () => {
           </Slider>
         </div>
         <motion.div
-          className="flex justify-center"
+          className="mx-auto"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1.1 }}
           transition={{ type: "spring", damping: 17 }}
         >
           <CustomButton text="More Tutor" />

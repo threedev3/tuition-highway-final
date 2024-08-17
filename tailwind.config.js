@@ -28,6 +28,7 @@ export default {
         hamburgerColor: "#D9D9D9",
         tutorText: "#667085",
         flipBg: "#32A6CC4A",
+        placeholderText: "#9ea3af",
       },
 
       backgroundPosition: {

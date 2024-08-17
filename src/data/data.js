@@ -1,32 +1,33 @@
-import icon1 from "../assets/img/icon1.png";
-import icon2 from "../assets/img/icon2.png";
-import icon3 from "../assets/img/icon3.png";
-import icon4 from "../assets/img/icon4.png";
-import icon5 from "../assets/img/icon5.png";
-import computer from "../assets/img/computer.gif";
-import maths from "../assets/img/mathematics.gif";
-import physics from "../assets/img/physics.gif";
-import chemistry from "../assets/img/chemistry.gif";
-import biology from "../assets/img/biology.gif";
-import english from "../assets/img/english.gif";
-import step from "../assets/img/step.png";
-import firstStep from "../assets/img/firstStep.png";
-import step2 from "../assets/img/step2.png";
-import lastStep from "../assets/img/lastStep.png";
-import avatar1 from "../assets/img/avatar1.png";
-import avatar2 from "../assets/img/avatar2.png";
-import avatar3 from "../assets/img/avatar3.png";
-import avatar4 from "../assets/img/avatar4.png";
-import xIcon from "../assets/img/xIcon.png";
-import fbIcon from "../assets/img/fbIcon.png";
-import instaIcon from "../assets/img/instaIcon.png";
-import linkedInIcon from "../assets/img/linkedInIcon.png";
-import curricula1 from "../assets/img/curricula1.png";
-import curricula2 from "../assets/img/curricula2.png";
-import curricula3 from "../assets/img/curricula3.png";
-import curricula4 from "../assets/img/curricula4.png";
-import curricula5 from "../assets/img/curricula5.png";
-import heroIcon1 from "../assets/img/heroIcon1.png";
+import {
+  icon1,
+  icon2,
+  icon3,
+  icon4,
+  icon5,
+  computer,
+  math,
+  physics,
+  chemistry,
+  biology,
+  english,
+  step,
+  firstStep,
+  step2,
+  lastStep,
+  avatar1,
+  avatar2,
+  avatar3,
+  avatar4,
+  fbIcon,
+  instaIcon,
+  linkedInIcon,
+  curricula1,
+  curricula2,
+  curricula3,
+  curricula4,
+  curricula5,
+  heroIcon1,
+} from "../assets/img/images";
 
 const navigation = [
   "Home",
@@ -121,7 +122,7 @@ const numbers = [
 const subjects = [
   {
     title: "Mathematics",
-    img: maths,
+    img: math,
   },
   {
     title: "Physics",
@@ -143,53 +144,193 @@ const subjects = [
     title: "Modern Languages",
     img: computer,
   },
+  {
+    title: "English",
+    img: english,
+  },
+  {
+    title: "Biology",
+    img: biology,
+  },
+  {
+    title: "Modern Languages",
+    img: computer,
+  },
 ];
 
 const curricula = [
   {
     title: "British Curriculum",
+    firstTitle: "British",
+    secondTitle: "Curriculum",
     img: curricula1,
   },
   {
     title: "American Curriculum",
+    firstTitle: "American",
+    secondTitle: "Curriculum",
     img: curricula2,
   },
   {
     title: "International Baccalaureate",
+    firstTitle: "International",
+    secondTitle: "Baccalaureate",
     img: curricula3,
   },
   {
     title: "French Curriculum",
+    firstTitle: "French",
+    secondTitle: "Curriculum",
     img: curricula4,
   },
   {
     title: "Indian CBSE",
+    firstTitle: "Indian",
+    secondTitle: "CBSE",
     img: curricula5,
   },
   {
     title: "Online Homeschooling",
+    firstTitle: "Online",
+    secondTitle: "Homeschooling",
     img: heroIcon1,
   },
   {
     title: "IELTS",
+    firstTitle: "IELTS",
     img: curricula2,
   },
   {
     title: "SAT",
+    firstTitle: "SAT",
     img: curricula3,
   },
 ];
 
 const testimonials = [
   {
-    name: "Emily R.",
+    name: "Mrs. Raghda",
     review:
-      "The strategies I learned at Tuition Highway boosted my score by 200 points!The strategies I learned at Tuition Highway boosted my score by 200 points!",
+      "The feedback is good. What I highly appreciate and that was the key reason for our satisfaction is communication with u and fast response and actions this makes a big difference. Overall it's going well thank u very much",
+    class: "AP",
+    stars: 5,
+    circleColor: "bg-[#00D1FF]",
   },
   {
-    name: "Emily R.",
+    name: "Kashif Javed",
     review:
-      "The strategies I learned at Tuition Highway boosted my score by 200 points!",
+      "It has been ready pleasure using your services and indeed our daughter Mariam has benefited a lot.  We will most definitely recommend your platform to other families",
+    class: "GCSE Economics, IGCSE Maths, IGCSE Chemistry, IGCSE Arabic",
+    stars: 4,
+    circleColor: "bg-[#F46322]",
+  },
+  {
+    name: "Mr. Arif",
+    review:
+      "My daughter really likes and fees comfortable. Plus it is online so it's really convenient for her. Above all the classes are really informative",
+    class: "IGCSE",
+    stars: 4.5,
+    circleColor: "bg-[#00D1FF]",
+  },
+  {
+    name: "Mrs. Sajid",
+    review:
+      "I am very happy with your services and I have recommended your institution to a couple of friends and shared your number.",
+    class: "IGCSE Maths",
+    stars: 4.5,
+    circleColor: "bg-[#F46322]",
+  },
+  {
+    name: "Mrs. Sadia",
+    review:
+      "It's been going really well. Both my daughters have benefited from tuitions over the years and have built a solid foundation.",
+    class: "Maths IGCSE, Physics IGCSE, Arabic IGCSE",
+    stars: 4.5,
+    circleColor: "bg-[#00D1FF]",
+  },
+  {
+    name: "Mr. Suresh",
+    review:
+      "Yes, we are satisfied with the classes Siddhi is understanding very well. Please continue to help her",
+    class: "Maths Grade 8, CBSE",
+    stars: 4,
+    circleColor: "bg-[#F46322]",
+  },
+  {
+    name: "Zainab Tariq",
+    review:
+      "Thank you. It was really good experience. I have given your number to my other friends",
+    class: "IGCSE Maths",
+    stars: 5,
+    circleColor: "bg-[#00D1FF]",
+  },
+  {
+    name: "Mrs. Saba",
+    review:
+      "I fully acknowledge the services, quick response, quality teacher, well managed throughout.",
+    class: "AS Level Physics & AS Level Stats",
+    stars: 4.5,
+    circleColor: "bg-[#F46322]",
+  },
+  {
+    name: "Mr. Ahmed Zaid",
+    review:
+      "We are very satisfied and already recommended your academy to many colleagues.",
+    class: "IGCSE Biology, IGCSE Physics",
+    stars: 4,
+    circleColor: "bg-[#00D1FF]",
+  },
+  {
+    name: "Mr. Elwaleed",
+    review:
+      "My daughter like studying with your academy. Teachers are cooperative. Thank you. ",
+    class: "Maths IGCSE, Physics IGCSE, Chemistry IGCSE",
+    stars: 5,
+    circleColor: "bg-[#F46322]",
+  },
+  {
+    name: "Mrs. Maryam Abbasi",
+    review:
+      "Your services are impressive, and I do expect good services in future as well.",
+    class: "Maths & Physics IGCSE",
+    stars: 4,
+    circleColor: "bg-[#00D1FF]",
+  },
+  {
+    name: "Mrs. Sumera",
+    review: "Excellent experience. Tuition Highway team is very professional.",
+    class: "ICT IGCSE Economics IGCSE, Islamic Studies IGCSE",
+    stars: 4,
+    circleColor: "bg-[#F46322]",
+  },
+  {
+    name: "Mrs. Ammara",
+    review: "Ammar got A* in CS and Economic and A in bio chemistry physics.",
+    class: "Grade 11, AQA Board",
+    stars: 4,
+    circleColor: "bg-[#00D1FF]",
+  },
+  {
+    name: "Mr. Amir Habib",
+    review: "Habiba got very good Marks in Maths. Thanks for your support.",
+    class: "SAT",
+    stars: 5,
+    circleColor: "bg-[#F46322]",
+  },
+  {
+    name: "Mariea Fernandess",
+    review: "My daughter is happy.",
+    class: "Maths grade 7",
+    stars: 4.5,
+    circleColor: "bg-[#00D1FF]",
+  },
+
+  {
+    name: "Mrs. Lina",
+    review: "Bravo thank you so much.",
+    class: "Kindergarten",
+    stars: 5,
+    circleColor: "bg-[#F46322]",
   },
 ];
 

@@ -99,7 +99,7 @@ const Navbar = ({ demoRef }) => {
   };
 
   return (
-    <div
+    <nav
       id="navbar"
       className="bg-white p-4 max-w-full shadow-md sticky top-0 z-20"
     >
@@ -249,7 +249,7 @@ const Navbar = ({ demoRef }) => {
           </div>
         </div>
       </Transition>
-    </div>
+    </nav>
   );
 };
 
