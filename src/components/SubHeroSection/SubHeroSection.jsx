@@ -18,11 +18,11 @@ const SubHeroSection = ({ demoRef, title, description }) => {
   };
 
   return (
-    <div className="sm:py-20 py-12 px-6 max-w-full relative bg-gradient-to-r from-subHeroStart to-subHeroEnd">
+    <div className="sm:py-20 py-12 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-6 justify-center items-center">
         <div className="flex flex-col gap-2 justify-center items-center">
           <div>
-            <h3 className="text-white lg:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-9 font-extrabold max-w-3xl text-center">
+            <h3 className="text-white lg:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold max-w-3xl text-center">
               {title}
             </h3>
           </div>

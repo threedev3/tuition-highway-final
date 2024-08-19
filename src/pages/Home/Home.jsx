@@ -21,7 +21,13 @@ const Home = ({ demoRef }) => {
       <CurriculumSection demoRef={demoRef} />
       {/* <FreeDemo demoRef={demoRef} /> */}
       <Tutors />
-      <Learn />
+      <Learn
+        firstHead="Learn with 100%"
+        secondHead="Satisfaction guaranteed"
+        description="If your lesson doesn't take place, or you are not satisfied with
+            your tutor, we will do our best to ensure that your learning goals
+            are achieved!"
+      />
       <Testimonials />
       <Working />
       <div ref={demoRef}>

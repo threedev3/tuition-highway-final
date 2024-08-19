@@ -51,6 +51,7 @@ import sub8 from "./sub8.png";
 import heroIcon1 from "./heroIcon1.png";
 
 import learnImg from "./learnImg.png";
+import aboutImg from "./aboutImg.png";
 
 // Export all images as an object
 export {
@@ -91,4 +92,5 @@ export {
   sub8,
   heroIcon1,
   learnImg,
+  aboutImg,
 };

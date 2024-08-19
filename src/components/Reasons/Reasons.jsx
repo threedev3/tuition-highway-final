@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-
-import elearning from "../../assets/img/elearning.png";
 import CustomButton from "../CustomButton/CustomButton";
 import { motion } from "framer-motion";
 import { reasons } from "../../data/data.js";
 import ReactCardFlip from "react-card-flip";
+import TypewriterComp from "../Typewriter/Typewriter.jsx";
 
 const Reasons = ({ demoRef }) => {
   // Initialize state to keep track of flip state for each card
@@ -55,12 +54,18 @@ const Reasons = ({ demoRef }) => {
       </motion.div> */}
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 ">
         <div className="flex flex-col sm:gap-6 gap-4 items-center text-headingColor ">
-          <h3 className="lg:text-[46px] sm:text-4xl text-3xl font-bold tracking-wide text-center">
+          {/* <h3 className="lg:text-[46px] sm:text-4xl text-3xl font-bold tracking-wide text-center">
             Your Fast Track to{" "}
             <span className="text-blueHeading font-MontserratBold">
               Top Grades
             </span>
-          </h3>
+          </h3> */}
+
+          <TypewriterComp
+            firstString="Your Fast Track to"
+            secondString="Top Grades"
+          />
+
           <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto font-medium">
             Tuition Highway: Where expert tutors, personalized learning, and
             flexible scheduling meet comprehensive curriculum coverage. Our

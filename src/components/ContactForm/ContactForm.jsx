@@ -11,6 +11,7 @@ import {
   subjectsOffer,
 } from "../../data/data";
 import useFormValidation from "../../hooks/useFormValidation";
+import TypewriterComp from "../Typewriter/Typewriter";
 
 const ContactForm = () => {
   const { errors, validate } = useFormValidation();
@@ -113,10 +114,7 @@ const ContactForm = () => {
       </motion.div> */}
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
-          <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center sm:mt-0 mt-2">
-            Request a Free{" "}
-            <span className="text-blueHeading font-MontserratBold">Demo</span>
-          </h3>
+          <TypewriterComp firstString="Request a Free" secondString="Demo" />
           <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             Secure your child's academic future with Tuition Highway.
           </p>

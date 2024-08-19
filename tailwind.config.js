@@ -17,7 +17,7 @@ export default {
         footerBg: "#00295B",
         footerText: "#A9A8A8",
         footerBorder: "#9B9B9B",
-        startgrad: "#27CDF3",
+        startgrad: "#0AA9CD",
         endGrad: "#041741",
         faqBg: "#F8F8F8",
         faqIcon: "#E55D20",

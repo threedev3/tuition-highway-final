@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CustomButton from "../CustomButton/CustomButton";
+import Typewriter from "typewriter-effect";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = ({ demoRef }) => {
   const [heroHeight, setHeroHeight] = useState("100vh");
@@ -43,12 +45,43 @@ const HeroSection = ({ demoRef }) => {
       <div className="max-w-[1400px] mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col justify-center items-center gap-8 h-full">
         <div className="max-w-full mx-auto flex flex-col sm:gap-6 gap-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-headingColor lg:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-9 font-extrabold text-center capitalize">
-              Want to score top grades in your{" "}
+            <h2 className="text-headingColor lg:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-9 font-extrabold text-center capitalize ">
+              {/* Want to score top grades in your{" "}
               <span className="text-blueHeading font-MontserratBold">
                 exams
               </span>
-              ?
+              ? */}
+              {/* <div className="font-MontserratBold">
+                Want to score top grades in your
+                <TypeAnimation
+                  sequence={[" Exams"]}
+                  speed={50}
+                  style={{ color: "#34ACD4" }}
+                  repeat={Infinity}
+                />
+                ?
+              </div> */}
+              Want to score top grades in your{" "}
+              <span>
+                {/* Static Text */}
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString(
+                        "<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'>Exams </span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>"
+                      )
+
+                      .pauseFor(1000)
+                      .start();
+                  }}
+                  options={{
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 20,
+                    delay: 50,
+                  }}
+                />
+              </span>
             </h2>
           </div>
 

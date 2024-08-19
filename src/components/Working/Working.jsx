@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { stepsContent } from "../../data/data";
+import TypewriterComp from "../Typewriter/Typewriter";
 
 const Working = () => {
   const [showSteps, setShowSteps] = useState(true);
@@ -175,12 +176,10 @@ const Working = () => {
     <div className="sm:py-12 py-8 px-6 max-w-full relative h-fit flex items-center overflow-x-hidden">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12  h-full w-full">
         <div className="flex flex-col gap-6 items-center text-headingColor">
-          <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
-            Easy Steps Towards{" "}
-            <span className="text-blueHeading font-MontserratBold">
-              Top Grades
-            </span>
-          </h3>
+          <TypewriterComp
+            firstString="Easy Steps Towards"
+            secondString="Top Grades"
+          />
         </div>
 
         <div className="slider-container w-auto cursor-pointer relative">

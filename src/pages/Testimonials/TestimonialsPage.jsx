@@ -2,6 +2,7 @@ import React from "react";
 import SubHeroSection from "../../components/SubHeroSection/SubHeroSection";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import TestimonialsList from "../../components/TestimonialsList/TestimonialsList";
+import SubjectSlider from "../../components/SubjectSlider/SubjectSlider";
 
 const TestimonialsPage = ({ demoRef }) => {
   return (
@@ -12,6 +13,7 @@ const TestimonialsPage = ({ demoRef }) => {
         description="Recommended by hundreds of delighted parents"
       />
       <TestimonialsList />
+      <SubjectSlider />
       <div ref={demoRef}>
         <ContactForm demoRef={demoRef} />
       </div>

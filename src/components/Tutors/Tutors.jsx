@@ -6,6 +6,7 @@ import pencil from "../../assets/img/pencil.png";
 import { motion } from "framer-motion";
 import { tutors } from "../../data/data";
 import Slider from "react-slick";
+import TypewriterComp from "../Typewriter/Typewriter";
 
 const Tutors = () => {
   var settings = {
@@ -73,12 +74,7 @@ const Tutors = () => {
       </div> */}
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 z-10 relative">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
-          <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
-            Our Top Rated{" "}
-            <span className="text-blueHeading font-MontserratBold">
-              Faculty
-            </span>
-          </h3>
+          <TypewriterComp firstString="Our Top Rated" secondString="Faculty" />
           <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             We unite you with the world's finest educators. Our meticulously
             selected, top-rated faculty brings unparalleled expertise and

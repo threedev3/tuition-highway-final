@@ -3,6 +3,7 @@ import CustomButton from "../CustomButton/CustomButton";
 import heroIcon1 from "../../assets/img/heroIcon1.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { subjects, curricula } from "../../data/data";
+import TypewriterComp from "../Typewriter/Typewriter";
 
 const Subjects = () => {
   const [showAllSubjects, setShowAllSubjects] = useState(false);
@@ -114,9 +115,7 @@ const Subjects = () => {
 
       <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col justify-center sm:gap-12 gap-8">
         <div className="flex flex-col sm:gap-6 gap-4 items-center text-headingColor max-w-5xl mx-auto">
-          <h3 className="lg:text-[46px] sm:text-4xl text-[28px] leading-9 font-bold tracking-wide text-center">
-            Popular Subjects
-          </h3>
+          <TypewriterComp firstString="Popular" secondString="Subjects" />
           <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             At Tuition Highway, we offer expert tutoring across a wide range of
             curricula and subjects, ensuring your child gets the specific

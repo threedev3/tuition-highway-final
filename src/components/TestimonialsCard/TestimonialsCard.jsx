@@ -30,7 +30,7 @@ const TestimonialsCard = ({ item }) => {
           </div>
         </div>
 
-        <div className="text-headingColor text-base min-h-44 font-medium">
+        <div className="text-headingColor text-base  font-medium">
           {item.review}
         </div>
       </div>

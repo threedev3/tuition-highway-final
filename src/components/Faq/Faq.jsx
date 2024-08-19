@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import Accordian from "../Accordian/Accordian";
 import faqImg from "../../assets/img/faqimg.png";
 import { faqs } from "../../data/data";
+import TypewriterComp from "../Typewriter/Typewriter";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -15,12 +16,10 @@ const Faq = () => {
     <div className="sm:py-12 py-12 px-6 max-w-full ">
       <div className="max-w-[1400px] mx-auto flex flex-col justify-center gap-12">
         <div className="flex flex-col gap-6 items-center text-headingColor">
-          <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl font-bold tracking-wide text-center">
-            Frequently Asked{" "}
-            <span className="text-blueHeading font-MontserratBold">
-              Question
-            </span>
-          </h3>
+          <TypewriterComp
+            firstString="Frequently Asked"
+            secondString="Question"
+          />
         </div>
 
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-12 flex flex-col items-center gap-5">

@@ -287,14 +287,14 @@ const curricula = [
 ];
 
 const testimonials = [
-  {
-    name: "Mrs. Raghda",
-    review:
-      "The feedback is good. What I highly appreciate and that was the key reason for our satisfaction is communication with u and fast response and actions this makes a big difference. Overall it's going well thank u very much",
-    class: "AP",
-    stars: 5,
-    circleColor: "bg-[#00D1FF]",
-  },
+  // {
+  //   name: "Mrs. Raghda",
+  //   review:
+  //     "The feedback is good. What I highly appreciate and that was the key reason for our satisfaction is communication with u and fast response and actions this makes a big difference. Overall it's going well thank u very much",
+  //   class: "AP",
+  //   stars: 5,
+  //   circleColor: "bg-[#00D1FF]",
+  // },
   {
     name: "Kashif Javed",
     review:

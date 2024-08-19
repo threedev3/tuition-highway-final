@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import { useRef } from "react";
 import TestimonialsPage from "./pages/Testimonials/TestimonialsPage";
 import SubjectsPage from "./pages/Subjects/SubjectsPage";
+import About from "./pages/About/About";
 
 function App() {
   const demoRef = useRef(null);
@@ -24,6 +25,7 @@ function App() {
             path="/subjects"
             element={<SubjectsPage demoRef={demoRef} />}
           />
+          <Route path="/about" element={<About demoRef={demoRef} />} />
         </Routes>
         <Footer />
       </Router>
