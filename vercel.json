@@ -1,0 +1,21 @@
+{
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/subjects",
+      "destination": "/index.html"
+    },
+
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
