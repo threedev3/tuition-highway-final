@@ -33,7 +33,7 @@ const SubjectSlider = () => {
         },
       },
       {
-        breakpoint: 650,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -52,9 +52,7 @@ const SubjectSlider = () => {
         <div className="slider-container w-auto cursor-pointer ">
           <Slider {...settings}>
             {subjectsOffering.map((item, index) => (
-              <div>
-                <SubjectsCard item={item} key={index} />
-              </div>
+              <SubjectsCard item={item} key={index} />
             ))}
           </Slider>
         </div>

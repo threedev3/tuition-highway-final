@@ -5,9 +5,9 @@ import { CheckIcon } from "@heroicons/react/24/outline";
 const AboutSection = () => {
   return (
     <div className="relative md:py-20 py-12 px-6 max-w-full ">
-      <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-8 gap-4 ">
-        <div className="lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col gap-3">
-          <div className="flex flex-col gap-2 max-w-4xl">
+      <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 ">
+        <div className="md:flex md:flex-row md:justify-between md:items-center flex flex-col gap-8">
+          <div className="flex flex-col gap-2 md:max-w-[65%]">
             <div className="flex flex-row gap-4 items-center ml-3">
               <div className="h-4 w-4 bg-orangeHeading"></div>
               <h4 className="text-headingColor text-lg">
@@ -44,25 +44,27 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div>
+          <div className="md:mx-0 mx-auto">
             <img
               src={aboutImg}
               alt="aboutImg"
-              className="w-80 object-contain"
+              className="md:w-96 w-80 object-contain"
             />
           </div>
         </div>
 
-        {/* <div className="md:grid md:grid-col-2 md:gap-4">
-          <div className="flex gap-3">
-            <div className="rounded-full bg-orangeHeading p-1 h-4 flex-shrink-0">
-              <CheckIcon className="w-4 text-white font-bold flex-shrink-0" />
+        <div className="md:grid md:grid-cols-2 md:gap-8 grid grid-cols-1 gap-4">
+          <div className="flex gap-3 items-start border-2 border-black p-3">
+            <div className="mt-0.5">
+              <div className="rounded-full bg-orangeHeading p-0.5  flex-shrink-0">
+                <CheckIcon className="w-4 text-white font-bold flex-shrink-0" />
+              </div>
             </div>
 
-            <div className="flex flex-col">
-              <h3>Our Mission</h3>
+            <div className="flex flex-col gap-6 text-headingColor">
+              <h3 className="text-lg">Our Mission</h3>
 
-              <p>
+              <p className="font-semibold">
                 Our mission is to bridge the gap between students and quality
                 education regardless of their geographical location. Through
                 personalized online tutoring, we aim to empower each student
@@ -71,7 +73,27 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-        </div> */}
+          <div className="flex gap-3 items-start border-2 border-black p-3">
+            <div className="mt-0.5">
+              <div className="rounded-full bg-orangeHeading p-0.5  flex-shrink-0">
+                <CheckIcon className="w-4 text-white font-bold flex-shrink-0" />
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-6 text-headingColor">
+              <h3 className="text-lg">Our Vision</h3>
+
+              <p className="font-semibold">
+                Our vision is to be a leading online tutoring service,
+                recognized for our excellence in education and commitment to
+                fostering academic success. We strive to adapt and evolve in
+                response to the ever-changing needs of students and parents,
+                ensuring accessible, innovative, and effective learning
+                solutions for all.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

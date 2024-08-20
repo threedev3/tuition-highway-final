@@ -44,7 +44,7 @@ const HeroSection = ({ demoRef }) => {
     >
       <div className="max-w-[1400px] mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col justify-center items-center gap-8 h-full">
         <div className="max-w-full mx-auto flex flex-col sm:gap-6 gap-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="sm:max-w-3xl sm:mx-auto">
             <h2 className="text-headingColor lg:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-9 font-extrabold text-center capitalize ">
               {/* Want to score top grades in your{" "}
               <span className="text-blueHeading font-MontserratBold">
@@ -61,14 +61,15 @@ const HeroSection = ({ demoRef }) => {
                 />
                 ?
               </div> */}
-              Want to score top grades in your{" "}
-              <span>
+              Want to score top grades in{" "}
+              <span className="block font-MontserratBold">
                 {/* Static Text */}
+                your
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        "<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'>Exams </span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>"
+                        "<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Exams</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>"
                       )
 
                       .pauseFor(1000)

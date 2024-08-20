@@ -27,6 +27,8 @@ const Home = ({ demoRef }) => {
         description="If your lesson doesn't take place, or you are not satisfied with
             your tutor, we will do our best to ensure that your learning goals
             are achieved!"
+        style="text-white xl:text-lg min-[896px]:text-base sm:text-sm text-sm md:text-start text-center"
+        textStyle="min-[1140px]:max-w-xl min-[896px]:max-w-md min-[836px]:max-w-sm md:max-w-xs max-w-sm"
       />
       <Testimonials />
       <Working />

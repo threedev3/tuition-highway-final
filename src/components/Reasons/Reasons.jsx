@@ -62,7 +62,7 @@ const Reasons = ({ demoRef }) => {
           </h3> */}
 
           <TypewriterComp
-            firstString="Your Fast Track to"
+            firstString="Your Fast Track To"
             secondString="Top Grades"
           />
 

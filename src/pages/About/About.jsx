@@ -14,11 +14,13 @@ const About = ({ demoRef }) => {
         description="Paving the way with smart online tutoring solutions for IGCSE, A-Levels, IB & other Curriculums"
       />
       <AboutSection />
-      {/* <Learn
+      <Learn
         firstHead="Online Tutoring"
         secondHead="With Real Teachers"
-        description="Instant online tutoring - all subjects, anytime, anywhere"
-      /> */}
+        description="Instant Online Tutoring - All Subjects, Anytime, Anywhere"
+        style="font-semibold text-white lg:text-xl min-[896px]:text-lg sm:text-base text-sm tracking-wider md:text-start text-center"
+        textStyle="min-[1140px]:max-w-md min-[896px]:max-w-md min-[836px]:max-w-sm md:max-w-xs max-w-sm"
+      />
       <div ref={demoRef}>
         <ContactForm demoRef={demoRef} />
       </div>

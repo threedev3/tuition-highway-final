@@ -21,11 +21,11 @@ const SubjectsCard = ({ item, demoRef }) => {
 
   return (
     <div
-      className="cursor-pointer mx-1 lg:min-h-[260px] sm:min-h-[240px] min-[450px]:min-h-[200px] min-h-[220px]"
+      className="cursor-pointer mx-1 lg:min-h-[260px] md:min-h-[240px] sm:min-h-[250px] min-[450px]:min-h-[200px] min-[346px]:min-h-[220px] min-h-[240px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex flex-col justify-between gap-4 lg:max-w-[300px] max-w-[400px] md:p-0 sm:p-3 p-0">
+      <div className="flex flex-col justify-between gap-4 lg:max-w-[300px] max-w-[400px] md:p-0 sm:p-3 p-0 min-[600px]:mx-0 mx-auto">
         <div className="flex flex-col gap-3">
           <div className="flex items-center lg:gap-4 gap-2 min-h-16">
             <div
@@ -40,7 +40,7 @@ const SubjectsCard = ({ item, demoRef }) => {
             </div>
           </div>
         </div>
-        <div className="text-headingColor md:text-base text-sm md:min-h-28 min-h-[70px] font-medium">
+        <div className="text-headingColor md:text-base text-sm md:min-h-28 sm:min-h-[70px] min-[346px]:min-h-[60px] min-h-[70px] font-medium">
           {item.description}
         </div>
         {/* Conditional rendering with animation */}

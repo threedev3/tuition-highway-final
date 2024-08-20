@@ -137,7 +137,10 @@ const Navbar = ({ demoRef }) => {
                         <Link
                           to={item.to}
                           className="text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out"
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => {
+                            setIsOpen(false);
+                            scrollToTop();
+                          }}
                         >
                           <span className="group-hover:text-orangeHeading transition-all duration-300 ease-in-out">
                             {item.title}
@@ -187,7 +190,11 @@ const Navbar = ({ demoRef }) => {
                             <Link
                               to={item.to}
                               className="text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out"
-                              onClick={() => setExpandedSection(null)}
+                              onClick={() => {
+                                setExpandedSection(null);
+                                setIsOpen(false);
+                                scrollToTop();
+                              }}
                             >
                               <span className="group-hover:text-orangeHeading transition-all duration-300 ease-in-out">
                                 {item.title}
