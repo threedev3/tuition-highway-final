@@ -8,6 +8,8 @@ import { useRef } from "react";
 import TestimonialsPage from "./pages/Testimonials/TestimonialsPage";
 import SubjectsPage from "./pages/Subjects/SubjectsPage";
 import About from "./pages/About/About";
+import SubjectDetails from "./pages/SubjectDetails/SubjectDetails";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 
 function App() {
   const demoRef = useRef(null);
@@ -25,7 +27,12 @@ function App() {
             path="/subjects"
             element={<SubjectsPage demoRef={demoRef} />}
           />
+          <Route
+            path="/subjects/:slug"
+            element={<SubjectDetails demoRef={demoRef} />}
+          />
           <Route path="/about" element={<About demoRef={demoRef} />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </Router>

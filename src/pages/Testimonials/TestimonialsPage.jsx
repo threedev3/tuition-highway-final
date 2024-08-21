@@ -13,7 +13,7 @@ const TestimonialsPage = ({ demoRef }) => {
         description="Recommended by hundreds of delighted parents"
       />
       <TestimonialsList />
-      <SubjectSlider />
+      <SubjectSlider demoRef={demoRef} />
       <div ref={demoRef}>
         <ContactForm demoRef={demoRef} />
       </div>

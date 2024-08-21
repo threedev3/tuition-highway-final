@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const SubjectsCard = ({ item, demoRef }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   const sections = {
     Demo: demoRef,
@@ -19,6 +21,18 @@ const SubjectsCard = ({ item, demoRef }) => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleSubjectClick = () => {
+    navigate(`/subjects/${item.slug}`);
+    scrollToTop();
+  };
+
   return (
     <div
       className="cursor-pointer mx-1 lg:min-h-[260px] md:min-h-[240px] sm:min-h-[250px] min-[450px]:min-h-[200px] min-[346px]:min-h-[220px] min-h-[240px]"
@@ -31,7 +45,7 @@ const SubjectsCard = ({ item, demoRef }) => {
             <div
               className={`${item.bg} w-12 h-12 rounded-full flex-shrink-0 flex justify-center items-center`}
             >
-              <img src={item.img} alt="" className="w-5 object-contain" />
+              <img src={item.img} alt="" className="w-6 object-contain" />
             </div>
             <div>
               <h3 className="text-headingColor md:text-[21px] text-xl">
@@ -44,27 +58,49 @@ const SubjectsCard = ({ item, demoRef }) => {
           {item.description}
         </div>
         {/* Conditional rendering with animation */}
-        <AnimatePresence>
-          {isHovered && (
-            <motion.div
-              className="flex gap-3"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border">
-                Read More
-              </div>
-              <div
-                className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
-                onClick={() => handleNavClick("Demo")}
+        <div className="lg:block hidden">
+          <AnimatePresence>
+            {isHovered && (
+              <motion.div
+                className="flex gap-3"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.3 }}
               >
-                Book A Free Demo
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                <div
+                  className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+                  onClick={handleSubjectClick}
+                >
+                  Read More
+                </div>
+                <div
+                  className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+                  onClick={() => handleNavClick("Demo")}
+                >
+                  Book A Free Demo
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        <div className="lg:hidden block">
+          <div className="flex gap-3">
+            <div
+              className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+              onClick={handleSubjectClick}
+            >
+              Read More
+            </div>
+            <div
+              className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+              onClick={() => handleNavClick("Demo")}
+            >
+              Book A Free Demo
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

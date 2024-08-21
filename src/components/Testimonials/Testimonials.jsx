@@ -12,7 +12,7 @@ const Testimonials = () => {
 
   var settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     swipeToSlide: true,

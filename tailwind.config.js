@@ -29,8 +29,8 @@ export default {
         tutorText: "#667085",
         flipBg: "#32A6CC4A",
         placeholderText: "#9ea3af",
-        subHeroStart: "#34ACD4",
-        subHeroEnd: "#1B596E",
+        subHeroStart: "#31A3CA",
+        subHeroEnd: "#216C86",
         subjectsBg: "#F7F7F7",
       },
 
@@ -47,6 +47,9 @@ export default {
           "0 35px 35px rgba(0, 0, 0, 0.25)",
           "0 45px 65px rgba(0, 0, 0, 0.15)",
         ],
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
     },
   },

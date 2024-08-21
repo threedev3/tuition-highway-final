@@ -46,12 +46,19 @@ import sub5 from "./sub5.png";
 import sub6 from "./sub6.png";
 import sub7 from "./sub7.png";
 import sub8 from "./sub8.png";
+import sub9 from "./sub9.png";
+import sub10 from "./sub10.png";
+import sub11 from "./sub11.png";
+import sub12 from "./sub12.png";
 
 // Hero Icons
 import heroIcon1 from "./heroIcon1.png";
 
 import learnImg from "./learnImg.png";
 import aboutImg from "./aboutImg.png";
+
+import fadedCircle from "./fadedCircle.png";
+import subjectImg from "./subjectImg.png";
 
 // Export all images as an object
 export {
@@ -90,7 +97,13 @@ export {
   sub6,
   sub7,
   sub8,
+  sub9,
+  sub10,
+  sub11,
+  sub12,
   heroIcon1,
   learnImg,
   aboutImg,
+  fadedCircle,
+  subjectImg,
 };

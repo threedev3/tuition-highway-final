@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { subjectsOffering } from "../../data/data";
 import SubjectsCard from "../SubjectsCard/SubjectsCard";
 
-const SubjectSlider = () => {
+const SubjectSlider = ({ demoRef }) => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -43,7 +43,7 @@ const SubjectSlider = () => {
   };
 
   return (
-    <div className="relative md:py-12 pt-8 px-6 max-w-full bg-subjectsBg min-[856px]:min-h-[440px] min-[841px]:min-h-[460px] sm:min-h-[420px] min-h-[380px]">
+    <div className="relative md:py-12 py-8  px-6 max-w-full bg-subjectsBg min-[856px]:min-h-[440px] min-[841px]:min-h-[460px] sm:min-h-[420px] min-h-[380px]">
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 ">
         <h3 className="lg:text-[46px] sm:text-4xl text-3xl font-bold tracking-wide text-headingColor">
           Popular Subjects
@@ -52,7 +52,7 @@ const SubjectSlider = () => {
         <div className="slider-container w-auto cursor-pointer ">
           <Slider {...settings}>
             {subjectsOffering.map((item, index) => (
-              <SubjectsCard item={item} key={index} />
+              <SubjectsCard item={item} key={index} demoRef={demoRef} />
             ))}
           </Slider>
         </div>

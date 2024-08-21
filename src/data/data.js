@@ -34,6 +34,10 @@ import {
   sub6,
   sub7,
   sub8,
+  sub9,
+  sub10,
+  sub11,
+  sub12,
   heroIcon1,
 } from "../assets/img/images";
 
@@ -57,18 +61,18 @@ const navigationData = {
     { title: "French Curriculum", to: "/french-curriculum" },
   ],
   "Subjects Offering": [
-    { title: "Mathematics", to: "/maths" },
-    { title: "Chemistry", to: "/chemistry" },
-    { title: "Biology", to: "/bio" },
-    { title: "Physics", to: "/physics" },
-    { title: "Economics", to: "/economics" },
-    { title: "Accounts", to: "/accounts" },
-    { title: "Business Studies", to: "/business" },
-    { title: "English", to: "/english" },
-    { title: "Sociology", to: "/sociology" },
-    { title: "Psychology", to: "/psychology" },
-    { title: "Business Law", to: "/business-law" },
-    { title: "Computer Science", to: "/computer-science" },
+    { title: "Mathematics", to: "/subjects/maths" },
+    { title: "Chemistry", to: "/subjects/chemistry" },
+    { title: "Biology", to: "/subjects/biology" },
+    { title: "Physics", to: "/subjects/physics" },
+    { title: "Economics", to: "/subjects/economics" },
+    { title: "Accounts", to: "/subjects/accounts" },
+    { title: "Business Studies", to: "/subjects/business-studies" },
+    { title: "English", to: "/subjects/english" },
+    { title: "Sociology", to: "/subjects/sociology" },
+    { title: "Psychology", to: "/subjects/psychology" },
+    { title: "Business Law", to: "/subjects/business-law" },
+    { title: "Computer Science", to: "/subjects/computer" },
   ],
 };
 
@@ -185,6 +189,7 @@ const subjectsOffering = [
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "maths",
   },
   {
     title: "Physics",
@@ -192,6 +197,7 @@ const subjectsOffering = [
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "physics",
   },
   {
     title: "Chemistry",
@@ -199,6 +205,7 @@ const subjectsOffering = [
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "chemistry",
   },
   {
     title: "Biology",
@@ -206,6 +213,7 @@ const subjectsOffering = [
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "biology",
   },
   {
     title: "English",
@@ -213,6 +221,7 @@ const subjectsOffering = [
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "english",
   },
   {
     title: "Business Studies",
@@ -220,6 +229,7 @@ const subjectsOffering = [
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "business-studies",
   },
   {
     title: "Economics",
@@ -227,6 +237,7 @@ const subjectsOffering = [
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "economics",
   },
   {
     title: "Accounts",
@@ -234,6 +245,39 @@ const subjectsOffering = [
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "accounts",
+  },
+  {
+    title: "Computer Science",
+    img: sub9,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "computer",
+  },
+  {
+    title: "Business Law",
+    img: sub10,
+    bg: "bg-[#F46322]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "business-law",
+  },
+  {
+    title: "Sociology",
+    img: sub11,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "sociology",
+  },
+  {
+    title: "Psychology",
+    img: sub12,
+    bg: "bg-[#F46322]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "psychology",
   },
 ];
 
