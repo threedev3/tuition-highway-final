@@ -10,6 +10,10 @@ import SubjectsPage from "./pages/Subjects/SubjectsPage";
 import About from "./pages/About/About";
 import SubjectDetails from "./pages/SubjectDetails/SubjectDetails";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
+import TakingDemoPage from "./pages/TakingDemoPage/TakingDemoPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService/TermsOfService";
+import JoinTutor from "./pages/JoinTutor/JoinTutor";
 
 function App() {
   const demoRef = useRef(null);
@@ -32,6 +36,22 @@ function App() {
             element={<SubjectDetails demoRef={demoRef} />}
           />
           <Route path="/about" element={<About demoRef={demoRef} />} />
+          <Route
+            path="/takingdemo"
+            element={<TakingDemoPage demoRef={demoRef} />}
+          />
+          <Route
+            path="/joinastutor"
+            element={<JoinTutor demoRef={demoRef} />}
+          />
+          <Route
+            path="/privacypolicy"
+            element={<PrivacyPolicy demoRef={demoRef} />}
+          />
+          <Route
+            path="/termsofservice"
+            element={<TermsOfService demoRef={demoRef} />}
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />

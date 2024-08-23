@@ -22,7 +22,11 @@ const About = ({ demoRef }) => {
         textStyle="min-[1140px]:max-w-md min-[896px]:max-w-md min-[836px]:max-w-sm md:max-w-xs max-w-sm"
       />
       <div ref={demoRef}>
-        <ContactForm demoRef={demoRef} />
+        <ContactForm
+          demoRef={demoRef}
+          firstString={"Request a Free "}
+          secondString={"Demo"}
+        />
       </div>
       <Faq />
     </div>

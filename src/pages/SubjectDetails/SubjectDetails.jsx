@@ -29,7 +29,11 @@ const SubjectDetails = ({ demoRef }) => {
       <SubjectSlider demoRef={demoRef} />
 
       <div ref={demoRef}>
-        <ContactForm demoRef={demoRef} />
+        <ContactForm
+          demoRef={demoRef}
+          firstString={"Request a Free "}
+          secondString={"Demo"}
+        />
       </div>
     </div>
   );

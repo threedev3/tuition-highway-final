@@ -1056,6 +1056,163 @@ const socialIcons = [
   },
 ];
 
+const privacyPolicyData = [
+  {
+    title: "Introduction",
+    content:
+      "This document provides an overview of the privacy practices for https://tuitionhighway.com, managed by Tuition Highway, part of ASE Global UAE, in compliance with applicable UAE laws.",
+  },
+  {
+    title: "User Privacy",
+    content:
+      "We prioritize user privacy, ensuring that proactive measures are in place to protect personal data throughout the user’s interaction with our services.",
+  },
+  {
+    title: "Cookies Usage",
+    content:
+      "Our website utilizes cookies to enhance the user experience, with the option for users to consent or decline the use of cookies on their initial visit, in line with recent legislative requirements.",
+  },
+  {
+    title: "Data Storage and Tracking",
+    content:
+      "Cookies track user interactions for a personalized web experience. Users may opt out by modifying browser settings. Google Analytics is used for understanding website usage without storing personal information. External vendors may also use cookies for conversion and referral tracking.",
+  },
+  {
+    title: "Communication Security",
+    content:
+      "User-provided information during website interactions is kept secure. Users engage with the website and its communication tools at their own risk. Information may be used to inform users about services or for email newsletters, with explicit consent.",
+  },
+  {
+    title: "External Links and Adverts",
+    content:
+      "Users should exercise caution with external links and adverts. The website is not liable for the content or any potential damage arising from visiting such external sites.",
+  },
+  {
+    title: "Social Media and Sharing",
+    content:
+      "Interactions on social media platforms are governed by the terms of those platforms. Users should be cautious when sharing personal information. Social media sharing buttons are provided for convenience but are used at the user's discretion.",
+  },
+  {
+    title: "Shortened Social Media Links",
+    content:
+      "Care should be taken with shortened URLs on social media, as they may be prone to spam or hacking. The website is not liable for damages related to these links.",
+  },
+  {
+    title: "Governing Law",
+    content:
+      "This privacy policy is governed by the laws of the United Arab Emirates.",
+  },
+  {
+    title: "Miscellaneous",
+    content:
+      "All credit/debit cards' details and personally identifiable information will NOT be stored, sold, shared, rented or leased to any third parties https://tuitionhighway.com will not pass any debit/credit card details to third parties. https://tuitionhighway.com takes appropriate steps to ensure data privacy and security including through various hardware and software methodologies. However, https://tuitionhighway.com cannot guarantee the security of any information that is disclosed online. The https://tuitionhighway.com is not responsible for the privacy policies of websites to which it links. If you provide any information to such third parties different rules regarding the collection and use of your personal information may apply. You should contact these entities directly if you have any questions about their use of the information that they collect.",
+  },
+];
+
+const termsAndConditionsData = [
+  {
+    title: "Introduction",
+    content: [
+      "ASE GLOBAL L.L.C-FZ maintains the https://tuitionhighway.com/ Website (“Site”).",
+      "These Terms and Conditions govern the use of our online tuition services.",
+    ],
+    contactInformation: [
+      "Email: hello@tuitionhighway.com",
+      "Address: Business Suite, Meydan Hotel, Nad Al Sheeba, Dubai, UAE",
+      "Contact Number: +971563511722",
+    ],
+  },
+  {
+    title: "Service Provision",
+    content: [
+      "Tuition Highway provides experienced tutors and arranges a free trial class for new students.",
+      "If the student wishes to proceed, regular classes are scheduled.",
+      "Tuition Highway does not guarantee any specific results or grades.",
+      "Customers using the website who are Minor /under the age of 18 shall not register as a User of the website and shall not transact on or use the website. Instead their parents must create an account on their behalf and they will take all the responsibility as per terms and conditions.",
+    ],
+  },
+  {
+    title: "Class Scheduling and Availability",
+    content: [
+      "Tuition Highway reserves the right to release the slots of teachers to other students if a student takes an extended break.",
+      "The schedule of classes is subject to availability and may be adjusted with prior notice.",
+    ],
+  },
+  {
+    title: "Payments",
+    content: [
+      "Customers can use varied payment options provided by Tuition Highway through its payment partners. This includes bank transfers and payment through credit/debit card.",
+      "Visa or MasterCard debit and credit cards in AED will be accepted for payment.",
+      "Cardholders must retain a copy of transaction records and Merchant policies and rules.",
+    ],
+  },
+  {
+    title: "Payment Terms",
+    content: [
+      "If a student does not attend a scheduled class, it will be considered a charged class.",
+      "Payment is mandatory for all lessons taken.",
+      "Tuition Highway provides different payment options including payment via credit/debit card through payment partners.",
+      "Our onboarding team will communicate all options upon enrollment.",
+      "Payment confirmation will be made through email, SMS, or WhatsApp upon transfer of funds within 24 to 48 hours.",
+    ],
+  },
+  {
+    title: "Refund/Cancellation Policy",
+    content: [
+      "Tuition Highway has no refund policy if the classes are taken.",
+      "Refund is only possible if there was an advance payment made by the customer and Tuition Highway was unable to provide the tutor with whom the demo was conducted.",
+      "Refunds will be done only through the Original Mode of Payment.",
+      "Customer can cancel their requested services within 24 hours; refunds in case of advance payment will be made back to the payment solution used initially by the customer. Please allow for up to 45 days for the refund transfer to be completed.",
+    ],
+  },
+  {
+    title: "Use of Technology",
+    content: [
+      "Parents/guardians give consent for their children to open their camera during online classes.",
+      "Students are expected to have a stable internet connection and the necessary equipment for online learning.",
+    ],
+  },
+  {
+    title: "Limitation of Liability",
+    content: [
+      "Tuition Highway is not liable for any indirect, incidental, or consequential damages arising out of or in connection with the use of our services.",
+    ],
+  },
+  {
+    title: "Governing Law",
+    content: [
+      "These Terms and Conditions are governed by the laws of the United Arab Emirates. Any disputes will be subject to the exclusive jurisdiction of the courts of the UAE.",
+      "We will not trade with or provide any services to OFAC (Office of Foreign Assets Control) and sanctioned countries in accordance with the law of UAE.",
+    ],
+  },
+  {
+    title: "Amendments",
+    content: [
+      "Tuition Highway reserves the right to amend these Terms and Conditions at any time.",
+      "Continued use of the services after such changes will constitute acceptance of the new Terms and Conditions.",
+    ],
+  },
+  {
+    title: "Contact and Communication",
+    content: [
+      "For any queries or concerns regarding these Terms and Conditions, please contact us at the provided email and phone number.",
+    ],
+  },
+];
+
+const enrollDetails = [
+  "Welcome to Tuition Highway, your trusted partner in personalised online tutoring. We understand that every child is unique, and so should be their learning journey.",
+  "Our experienced tutors are ready to meet your child's individual academic needs, whether it's building a solid foundation in a new subject or preparing for crucial examinations.",
+  "Don't let the stress of today's competitive education system hold your child back. Take the first step towards academic success with Tuition Highway.",
+  "Complete the form to schedule a free consultation and trial lessons with our expert tutors. Remember, this initial step is completely free and it could be the turning point in your child's academic journey.",
+];
+const joinTutorDetails = [
+  "Tuition Highway is committed to providing quality education, and a significant part of that commitment involves our careful and thorough process for selecting and verifying tutors.",
+  "We understand the importance of having skilled, knowledgeable, and reliable tutors, hence, we implement a robust selection process.",
+  "All prospective tutors submit an application which includes their educational background, qualifications, teaching experience, and areas of expertise.",
+  "We thoroughly review these applications to shortlist candidates who meet our initial criteria.",
+];
+
 export {
   navigationData,
   reasons,
@@ -1073,4 +1230,8 @@ export {
   ourCurriculum,
   socialIcons,
   curricula,
+  privacyPolicyData,
+  termsAndConditionsData,
+  enrollDetails,
+  joinTutorDetails,
 };

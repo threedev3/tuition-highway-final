@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import footerLogo from "../../assets/img/footerLogo.png";
 
 import { products, company, resources, socialIcons } from "../../data/data.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -110,8 +111,24 @@ const Footer = () => {
 
         <div className="md:flex md:flex-row md:justify-between md:items-center md:gap-4 flex flex-col gap-8 py-2">
           <div className="flex gap-4 items-center flex-wrap text-white sm:text-base text-sm">
-            <p className="cursor-pointer">Terms of Service</p>
-            <p className="cursor-pointer">Policy Service</p>
+            <p
+              className="cursor-pointer"
+              onClick={() => {
+                navigate("/termsofservice");
+                scrollToTop();
+              }}
+            >
+              Terms of Service
+            </p>
+            <p
+              className="cursor-pointer"
+              onClick={() => {
+                navigate("/privacypolicy");
+                scrollToTop();
+              }}
+            >
+              Policy Service
+            </p>
             <p className="cursor-pointer">Cookie Policy</p>
           </div>
 

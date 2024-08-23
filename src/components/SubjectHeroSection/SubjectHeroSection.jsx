@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
-const SubjectHeroSection = ({ demoRef, title, description }) => {
+const SubjectHeroSection = ({ demoRef, title, description, btnText }) => {
   const sections = {
     Demo: demoRef,
   };
@@ -38,7 +38,7 @@ const SubjectHeroSection = ({ demoRef, title, description }) => {
           onClick={() => handleNavClick("Demo")}
         >
           <button className="text-white font-semibold">
-            Book A Free Trial
+            {btnText || "Book A Free Trial"}
           </button>
         </div>
       </div>

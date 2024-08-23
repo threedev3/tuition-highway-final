@@ -12,6 +12,18 @@
       "source": "/subjects",
       "destination": "/index.html"
     },
+    {
+      "source": "/subjects/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/takingdemo",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacypolicy",
+      "destination": "/index.html"
+    },
 
     {
       "source": "/:path*",
