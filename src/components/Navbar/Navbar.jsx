@@ -90,9 +90,13 @@ const Navbar = ({ demoRef }) => {
                 <div onClick={() => handleNavClick("Demo")}>
                   <CustomButton text="Book A Free Trial" />
                 </div>
-                <button className="bg-blueBtn py-1.5 px-6 text-white rounded-full sm:text-base text-sm">
+                <Link
+                  to="https://portal.tuitionhighway.com/"
+                  target="_blank"
+                  className="bg-blueBtn py-1.5 px-6 text-white rounded-full sm:text-base text-sm"
+                >
                   Portal Login
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -219,9 +223,14 @@ const Navbar = ({ demoRef }) => {
               >
                 <CustomButton text="Book A Free Trial" />
               </div>
-              <button className="bg-blueBtn py-1.5 px-6 text-white rounded-full sm:text-base text-sm">
+              <Link
+                to="https://portal.tuitionhighway.com/"
+                target="_blank"
+                className="bg-blueBtn py-1.5 px-6 text-white rounded-full sm:text-base text-sm"
+                onClick={() => setIsOpen(false)}
+              >
                 Portal Login
-              </button>
+              </Link>
             </div>
           </div>
         </div>

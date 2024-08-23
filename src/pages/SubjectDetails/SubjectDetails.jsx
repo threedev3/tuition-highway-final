@@ -24,7 +24,7 @@ const SubjectDetails = ({ demoRef }) => {
         title={subject.title}
         description="Give your child a head start by enrolling them in our comprehensive American Curriculum program, all from the comfort of your home."
       />
-      <SubjectDetailComp demoRef={demoRef} />
+      <SubjectDetailComp demoRef={demoRef} subject={subject} />
       <Testimonials />
       <SubjectSlider demoRef={demoRef} />
 

@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { fadedCircle, subjectImg } from "../../assets/img/images";
 import { motion, AnimatePresence } from "framer-motion";
 import Outcomes from "../Outcomes/Outcomes";
 
-const SubjectDetailComp = ({ demoRef }) => {
-  const [activeView, setActiveView] = useState("igcse");
+const SubjectDetailComp = ({ demoRef, subject }) => {
+  // const initialCurriculum = Object.keys(subject.content)[0];
+  const [activeView, setActiveView] = useState("");
+
+  useEffect(() => {
+    const initialCurriculum = Object.keys(subject.content || {})[0] || "";
+    setActiveView(initialCurriculum);
+  }, [subject]);
 
   const handleViewChange = (view) => {
     setActiveView(view);
@@ -26,22 +32,29 @@ const SubjectDetailComp = ({ demoRef }) => {
   };
 
   const renderItems = () => {
-    if (activeView === "igcse") {
-      return (
-        <motion.div
-          className=""
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
-            <div className="flex flex-col gap-8 max-w-3xl">
-              <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
-                About The Course
-              </h3>
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-row gap-4">
+    // const activeSubjectData = subject.content[activeView];
+
+    const activeSubjectData = subject.content?.[activeView] || [];
+
+    console.log("activeSubjectData", activeSubjectData);
+
+    console.log("Subject content", subject.content);
+
+    return (
+      <motion.div
+        className=""
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
+          <div className="flex flex-col gap-8 xl:max-w-3xl lg:max-w-xl max-w-full">
+            <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
+              About The Course
+            </h3>
+            <div className="flex flex-col gap-6">
+              {/* <div className="flex flex-row gap-4">
                   <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
                   <p className="lg:text-lg text-base font-semibold">
                     Engage Your Child: Foster creativity and critical thinking
@@ -69,56 +82,32 @@ const SubjectDetailComp = ({ demoRef }) => {
                     Global Recognition: The American Curriculum's SAT and ACT
                     tests are recognized by top universities worldwide.
                   </p>
+                </div> */}
+
+              {activeSubjectData.map((point, index) => (
+                <div key={index} className="flex flex-row gap-4">
+                  <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                  <p className="xl:text-lg sm:text-base text-sm font-semibold">
+                    {point}
+                  </p>
                 </div>
-              </div>
-
-              <button
-                className="text-white font-semibold py-2 px-5 bg-orangeHeading rounded-md max-w-48"
-                onClick={() => handleNavClick("Demo")}
-              >
-                Book A Free Trial
-              </button>
+              ))}
             </div>
 
-            <div>
-              <img
-                src={subjectImg}
-                alt=""
-                className="w-[500px] object-contain"
-              />
-            </div>
+            <button
+              className="text-white font-semibold py-2 px-5 bg-orangeHeading rounded-md max-w-48"
+              onClick={() => handleNavClick("Demo")}
+            >
+              Book A Free Trial
+            </button>
           </div>
-        </motion.div>
-      );
-    } else if (activeView === "alevel") {
-      return (
-        <motion.div
-          className=""
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div>
-            <h3>A-Level</h3>
+
+          <div className="lg:block flex justify-center">
+            <img src={subjectImg} alt="" className="w-[500px] object-contain" />
           </div>
-        </motion.div>
-      );
-    } else {
-      return (
-        <motion.div
-          className=""
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div>
-            <h3>Indian Curriculum</h3>
-          </div>
-        </motion.div>
-      );
-    }
+        </div>
+      </motion.div>
+    );
   };
 
   return (
@@ -129,19 +118,22 @@ const SubjectDetailComp = ({ demoRef }) => {
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-20 gap-8 ">
           <div className="flex sm:flex-row flex-col justify-center items-center gap-6">
-            <motion.button
-              onClick={() => handleViewChange("igcse")}
-              className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 ${
-                activeView === "igcse"
-                  ? "bg-activeBlueBtn text-white"
-                  : "bg-subjectBtn text-white"
-              }`}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", damping: 17 }}
-            >
-              IGCSE
-            </motion.button>
-            <motion.button
+            {Object.keys(subject.content || {}).map((curriculum, index) => (
+              <motion.button
+                key={index}
+                onClick={() => handleViewChange(curriculum)}
+                className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 ${
+                  activeView === curriculum
+                    ? "bg-activeBlueBtn text-white"
+                    : "bg-subjectBtn text-white"
+                }`}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", damping: 17 }}
+              >
+                {curriculum}
+              </motion.button>
+            ))}
+            {/* <motion.button
               onClick={() => handleViewChange("alevel")}
               className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 ${
                 activeView === "alevel"
@@ -164,7 +156,7 @@ const SubjectDetailComp = ({ demoRef }) => {
               transition={{ type: "spring", damping: 17 }}
             >
               Indian Curriculum
-            </motion.button>
+            </motion.button> */}
           </div>
 
           <AnimatePresence>

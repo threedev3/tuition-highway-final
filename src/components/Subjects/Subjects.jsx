@@ -2,17 +2,26 @@ import React, { useState } from "react";
 import CustomButton from "../CustomButton/CustomButton";
 import heroIcon1 from "../../assets/img/heroIcon1.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { subjects, curricula } from "../../data/data";
+import { subjectsOffering } from "../../data/data";
 import TypewriterComp from "../Typewriter/Typewriter";
+import { useNavigate } from "react-router-dom";
 
 const Subjects = () => {
   const [showAllSubjects, setShowAllSubjects] = useState(false);
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const handleToggleSubjects = () => {
     setShowAllSubjects(!showAllSubjects);
   };
 
-  const visibleSubjects = showAllSubjects ? subjects.length : 6;
+  const visibleSubjects = showAllSubjects ? subjectsOffering.length : 6;
   // const [activeView, setActiveView] = useState("subjects");
 
   // const handleViewChange = (view) => {
@@ -151,7 +160,7 @@ const Subjects = () => {
         </div>
         <AnimatePresence mode="wait">
           <div className="lg:grid lg:grid-cols-3 lg:gap-10 md:grid md:grid-cols-2 md:gap-10 grid grid-cols-1 gap-6">
-            {subjects.slice(0, visibleSubjects).map((item, index) => (
+            {subjectsOffering.slice(0, visibleSubjects).map((item, index) => (
               <motion.div
                 key={index}
                 className={`p-3 rounded-[30px] md:shadow-lg shadow-md flex items-center hover:shadow-2xl transition-shadow duration-300 bg-white cursor-pointer h-[120px] lg:px-3 px-3 gap-3`}
@@ -160,12 +169,16 @@ const Subjects = () => {
                 exit={{ opacity: 0, y: 20 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
+                onClick={() => {
+                  navigate(`${item.to}`);
+                  scrollToTop();
+                }}
               >
                 <div
                   className={`flex-shrink-0 flex justify-center items-center sm:w-[90px] w-[80px] h-[90px] sm:h-[90px]`}
                 >
                   <img
-                    src={item.img}
+                    src={item.mainImg}
                     alt={item.title}
                     className="object-contain w-full h-full"
                   />

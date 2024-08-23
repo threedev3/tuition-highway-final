@@ -144,140 +144,375 @@ const numbers = [
   },
 ];
 
-const subjects = [
-  {
-    title: "Mathematics",
-    img: math,
-  },
-  {
-    title: "Physics",
-    img: physics,
-  },
-  {
-    title: "Chemistry",
-    img: chemistry,
-  },
-  {
-    title: "English",
-    img: english,
-  },
-  {
-    title: "Biology",
-    img: biology,
-  },
-  {
-    title: "Modern Languages",
-    img: computer,
-  },
-  {
-    title: "English",
-    img: english,
-  },
-  {
-    title: "Biology",
-    img: biology,
-  },
-  {
-    title: "Modern Languages",
-    img: computer,
-  },
-];
 const subjectsOffering = [
   {
     title: "Mathematics",
+    mainImg: math,
     img: sub1,
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "maths",
+    to: "/subjects/maths",
+    content: {
+      IGCSE: [
+        "Students opting for O-Level Maths or IGCSE Maths courses will find the classes for this subject designed to help them understand complex mathematical concepts.",
+        "Our IGCSE maths tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Maths or IGSCE Maths, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Maths.",
+        "From additional IGCSE tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and IGCSE Maths in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Maths course? Or are you preparing to appear for an Edexcel A-Level maths paper?",
+        "At Tuition Highway, our online A-level maths tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level mathematics including calculus, algebra, statistics, and more.",
+        "Maths is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      "Indian Curriculum": [
+        "Are you seeking help with complex topics in your CBSE or ISC Maths course? Or are you preparing for your board exams in Mathematics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Maths provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Mathematics, including calculus, algebra, statistics, and more.",
+        "Mathematics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
   {
     title: "Physics",
+    mainImg: physics,
     img: sub2,
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "physics",
+    to: "/subjects/physics",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
+        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
+        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
+        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
+        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
   {
     title: "Chemistry",
+    mainImg: chemistry,
     img: sub3,
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "chemistry",
-  },
-  {
-    title: "Biology",
-    img: sub4,
-    bg: "bg-[#F46322]",
-    description:
-      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
-    slug: "biology",
+    to: "/subjects/chemistry",
+    content: {
+      "American Curriculum": [
+        "Students opting for O-Level Chemistry or American Curriculum Chemistry courses will find the classes for this subject designed to help them understand complex Chemistry concepts.",
+        "Our American Curriculum Chemistry tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Chemistry or American Curriculum Chemistry, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Chemistry.",
+        "From additional American Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and American Curriculum Chemistry in detail",
+      ],
+      SAT: [
+        "Do you need help in understanding complex topics for you're SAT Chemistry course? Or are you preparing to appear for an Edexcel SAT Chemistry paper?",
+        "At Tuition Highway, our online SAT Chemistry tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of SAT Chemistry including calculus, algebra, statistics, and more.",
+        "Chemistry is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Chemistry course? Or are you preparing for your board exams in Chemistry?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Chemistry, including calculus, algebra, statistics, and more.",
+        "Chemistry is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
   {
     title: "English",
+    mainImg: english,
     img: sub8,
-    bg: "bg-[#515151]",
+    bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "english",
+    to: "/subjects/english",
+    content: {
+      "International Baccalaureate": [
+        "Students opting for O-Level English or British Curriculum English courses will find the classes for this subject designed to help them understand complex English concepts.",
+        "Our British Curriculum English tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level English or British Curriculum English, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels English.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced English, our tutors are highly qualified to cover all topics of O-Level and British Curriculum English in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels English course? Or are you preparing to appear for an Edexcel A-Level English paper?",
+        "At Tuition Highway, our online A-level English tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level English including calculus, algebra, statistics, and more.",
+        "English is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IELTS: [
+        "Are you seeking help with complex topics in your IGCSE English course? Or are you preparing for your board exams in English?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 English provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of English, including calculus, algebra, statistics, and more.",
+        "English is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+      "French Curriculum": [
+        "Are you seeking help with complex topics in your French Curriculum English course? Or are you preparing for your board exams in English?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 English provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of English, including calculus, algebra, statistics, and more.",
+        "English is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
+  },
+  {
+    title: "Biology",
+    mainImg: biology,
+    img: sub4,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "biology",
+    to: "/subjects/biology",
+    content: {
+      "French Curriculum": [
+        "Students opting for O-Level Biology or French Curriculum Biology courses will find the classes for this subject designed to help them understand complex Biology concepts.",
+        "Our French Curriculum Biology tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Biology or French Curriculum Biology, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Biology.",
+        "From additional French Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and French Curriculum Biology in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Biology course? Or are you preparing to appear for an Edexcel A-Level Biology paper?",
+        "At Tuition Highway, our online A-level Biology tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Biology including calculus, algebra, statistics, and more.",
+        "Biology is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      SAT: [
+        "Are you seeking help with complex topics in your SAT Biology course? Or are you preparing for your board exams in Biology?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Biology provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Biology, including calculus, algebra, statistics, and more.",
+        "Biology is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
   {
     title: "Business Studies",
+    mainImg: math,
     img: sub7,
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "business-studies",
-  },
-  {
-    title: "Economics",
-    img: sub6,
-    bg: "bg-[#515151]",
-    description:
-      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
-    slug: "economics",
-  },
-  {
-    title: "Accounts",
-    img: sub5,
-    bg: "bg-[#F46322]",
-    description:
-      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
-    slug: "accounts",
+    to: "/subjects/business-studies",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
+        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
+        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
+        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
+        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
   {
     title: "Computer Science",
+    mainImg: computer,
     img: sub9,
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "computer",
+    to: "/subjects/computer",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Computer Science or British Curriculum Computer Science courses will find the classes for this subject designed to help them understand complex computing concepts.",
+        "Our British Curriculum Computer Science tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Computer Science or British Curriculum Computer Science, our online tutors will cover the subject in-depth, so you gain a clearer understanding of key topics such as programming, algorithms, and data structures.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as coding, network theory, and cybersecurity, our tutors are highly qualified to cover all topics in detail.",
+      ],
+      "A-Level": [
+        "Do you need help understanding complex topics for your A-Level Computer Science course? Or are you preparing to appear for an Edexcel A-Level Computer Science paper?",
+        "At Tuition Highway, our online A-level Computer Science tutors provide you with the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Computer Science, including programming languages, algorithms, and computational thinking.",
+        "Computer Science is an evolving field, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Computer Science course? Or are you preparing for your board exams in Computer Science?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Computer Science provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Computer Science, including programming, systems architecture, and databases.",
+        "Computer Science is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
+
+  {
+    title: "Accounts",
+    mainImg: math,
+    img: sub5,
+    bg: "bg-[#F46322]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "accounts",
+    to: "/subjects/accounts",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
+        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
+        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
+        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
+        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
+  },
+
+  {
+    title: "Economics",
+    mainImg: math,
+    img: sub6,
+    bg: "bg-[#515151]",
+    description:
+      "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
+    slug: "economics",
+    to: "/subjects/economics",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
+        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
+        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
+        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
+        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
+  },
+
   {
     title: "Business Law",
+    mainImg: math,
     img: sub10,
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "business-law",
+    to: "/subjects/business-law",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
+        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
+        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
+        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
+        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
   {
     title: "Sociology",
+    mainImg: math,
     img: sub11,
     bg: "bg-[#515151]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "sociology",
+    to: "/subjects/sociology",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
+        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
+        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
+        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
+        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
   {
     title: "Psychology",
+    mainImg: math,
     img: sub12,
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "psychology",
+    to: "/subjects/psychology",
+    content: {
+      "British Curriculum": [
+        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
+        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
+        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
+        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
+      ],
+      "A-Level": [
+        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
+        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
+        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
+        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
+      ],
+      IGCSE: [
+        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
+        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
+        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
+        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
+      ],
+    },
   },
 ];
 
@@ -778,24 +1013,29 @@ const selectedCountries = [
 ];
 
 const subjectsOffer = [
-  "English",
   "Mathematics",
-  "Science",
-  "Economics",
-  "Biology",
-  "Chemistry",
   "Physics",
-  "Business",
+  "Chemistry",
+  "English",
+  "Biology",
   "Computer Science",
+  "Business Studies",
+  "Economics",
+  "Accounts",
+  "Business Law",
+  "Sociology",
+  "Psychology",
 ];
 
 const ourCurriculum = [
-  "British",
-  "American",
-  "IB",
-  "French",
-  "Indian",
-  "FBISE",
+  "British Curriculum",
+  "American Curriculum",
+  "International Baccalaureate",
+  "French Curriculum",
+  "Indian CBSE",
+  "Online Homeschooling",
+  "SAT",
+  "IELTS",
 ];
 
 const socialIcons = [
@@ -820,7 +1060,6 @@ export {
   navigationData,
   reasons,
   numbers,
-  subjects,
   subjectsOffering,
   testimonials,
   stepsContent,

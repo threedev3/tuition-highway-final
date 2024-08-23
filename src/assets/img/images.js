@@ -60,6 +60,8 @@ import aboutImg from "./aboutImg.png";
 import fadedCircle from "./fadedCircle.png";
 import subjectImg from "./subjectImg.png";
 
+import arrowRight from "./arrowRight.png";
+
 // Export all images as an object
 export {
   icon1,
@@ -106,4 +108,5 @@ export {
   aboutImg,
   fadedCircle,
   subjectImg,
+  arrowRight,
 };
