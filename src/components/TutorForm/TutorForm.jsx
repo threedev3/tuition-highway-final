@@ -25,6 +25,7 @@ const TutorForm = () => {
     qualification: "",
     teachingExperience: "",
     remunerationPerHour: "",
+    uploadedResume: [],
     reasonforTeach: "",
   });
 
@@ -36,6 +37,18 @@ const TutorForm = () => {
 
   const handleSelectorChange = (field, value) => {
     setFormValues((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    console.log("Selected Files: ", files); // Debugging: Log the selected files as an array
+
+    if (files.length > 0) {
+      setFormValues((prev) => ({
+        ...prev,
+        uploadedResume: [...prev.uploadedResume, ...files], // Append the new files to the existing ones
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -56,6 +69,7 @@ const TutorForm = () => {
         qualification: "",
         teachingExperience: "",
         remunerationPerHour: "",
+        uploadedResume: [],
         reasonforTeach: "",
       });
     } else {
@@ -87,7 +101,7 @@ const TutorForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
 
   const handleNext = () => {
-    if (currentStep < 2) setCurrentStep(currentStep + 1);
+    if (currentStep < 3) setCurrentStep(currentStep + 1);
   };
 
   // const handlePrev = () => {
@@ -313,8 +327,11 @@ const TutorForm = () => {
                       >
                         Previous
                       </button> */}
-                <button className="bg-orangeHeading  mt-8 text-white px-6 py-2 rounded-full shadow-lg hover:bg-orange-600">
-                  Submit
+                <button
+                  onClick={handleNext}
+                  className="bg-blueHeading mt-8 text-white px-6 py-2 rounded-full shadow-lg "
+                >
+                  Next
                 </button>
               </div>
             </div>
@@ -329,17 +346,17 @@ const TutorForm = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] "
                         /> */}
 
-                  <Selector
-                    data={subjectOptions}
-                    selected={formValues.selectedSubject}
-                    setSelected={(subject) =>
-                      handleSelectorChange("selectedSubject", subject)
-                    }
-                    placeholder="Select Subject"
+                  <input
+                    type="text"
+                    name="qualification"
+                    placeholder="Your Qualification"
+                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
+                    value={formValues.qualification}
+                    onChange={handleInputChange}
                   />
-                  {errors.selectedSubject && (
+                  {errors.qualification && (
                     <span className="text-red-600 sm:text-base text-sm">
-                      {errors.selectedSubject}
+                      {errors.qualification}
                     </span>
                   )}
                 </div>
@@ -350,17 +367,17 @@ const TutorForm = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
                         /> */}
 
-                  <Selector
-                    data={gradeOptions}
-                    selected={formValues.selectedGrade}
-                    setSelected={(grade) =>
-                      handleSelectorChange("selectedGrade", grade)
-                    }
-                    placeholder="Select Grade"
+                  <input
+                    type="text"
+                    name="teachingExperience"
+                    placeholder="Teaching Experience"
+                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
+                    value={formValues.teachingExperience}
+                    onChange={handleInputChange}
                   />
-                  {errors.selectedGrade && (
+                  {errors.teachingExperience && (
                     <span className="text-red-600 sm:text-base text-sm">
-                      {errors.selectedGrade}
+                      {errors.teachingExperience}
                     </span>
                   )}
                 </div>
@@ -373,21 +390,64 @@ const TutorForm = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
                         /> */}
 
-                  <Selector
-                    data={curriculumOptions}
-                    selected={formValues.selectedCurriculum}
-                    setSelected={(curriculum) =>
-                      handleSelectorChange("selectedCurriculum", curriculum)
-                    }
-                    placeholder="Select Curriculum"
+                  <input
+                    type="text"
+                    name="remunerationPerHour"
+                    placeholder="Remuneration Per Hour"
+                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
+                    value={formValues.remunerationPerHour}
+                    onChange={handleInputChange}
                   />
-                  {errors.selectedCurriculum && (
+                  {errors.remunerationPerHour && (
                     <span className="text-red-600 sm:text-base text-sm">
-                      {errors.selectedCurriculum}
+                      {errors.remunerationPerHour}
                     </span>
                   )}
                 </div>
               </div>
+              <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
+                <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
+                  {/* <input
+                          type="email"
+                          placeholder="Curriculum"
+                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
+                        /> */}
+
+                  <textarea
+                    name="reasonforTeach"
+                    placeholder="Reason For Teach"
+                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
+                    value={formValues.reasonforTeach}
+                    onChange={handleInputChange}
+                    rows={3}
+                  ></textarea>
+                  {errors.reasonforTeach && (
+                    <span className="text-red-600 sm:text-base text-sm">
+                      {errors.reasonforTeach}
+                    </span>
+                  )}
+                </div>
+              </div>
+              <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
+                <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
+                  <label className="block text-gray-700 text-sm font-bold mb-2">
+                    Upload Your Resume and Cover Letter
+                  </label>
+                  <input
+                    type="file"
+                    name="uploadedResume"
+                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm"
+                    onChange={handleFileChange}
+                    multiple // Allow multiple file uploads
+                  />
+                  {errors.uploadedResume && (
+                    <span className="text-red-600 sm:text-base text-sm">
+                      {errors.uploadedResume}
+                    </span>
+                  )}
+                </div>
+              </div>
+
               {/* Add more fields as needed */}
               <div className="text-right">
                 {/* <button
