@@ -17,7 +17,7 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
   const isContactPage = location.pathname === "/contact";
 
   return (
-    <div className="sm:py-12 py-12 px-6 max-w-full relative">
+    <div className="sm:py-8 py-6 px-6 max-w-full relative">
       {/* <motion.div
         className="absolute md:top-20 md:left-16 sm:top-8 sm:left-8 top-2 left-4  z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}

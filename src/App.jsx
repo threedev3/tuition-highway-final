@@ -16,6 +16,7 @@ import TermsOfService from "./pages/TermsOfService/TermsOfService";
 import JoinTutor from "./pages/JoinTutor/JoinTutor";
 import Blogs from "./pages/Blogs/Blogs";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import WhatsappIcon from "./components/WhatsappIcon/WhatsappIcon";
 
 function App() {
   const demoRef = useRef(null);
@@ -58,6 +59,7 @@ function App() {
           />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        <WhatsappIcon />
         <Footer />
       </Router>
     </>

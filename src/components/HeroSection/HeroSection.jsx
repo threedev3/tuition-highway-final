@@ -41,13 +41,13 @@ const HeroSection = ({ demoRef }) => {
 
   return (
     <div
-      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat bg-contain xl:bg-movedown lg:bg-moveup bg-bottom max-w-full py-12 px-6 overflow-hidden bg-heroBg relative"
+      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat bg-contain xl:bg-movedown lg:bg-bottom bg-bottom max-w-full py-12 px-6 overflow-hidden bg-heroBg relative"
       style={{ height: heroHeight }}
     >
       <div className="max-w-[1400px] mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col justify-center items-center gap-16 h-full">
         <div className="max-w-full mx-auto flex flex-col sm:gap-6 gap-4">
-          <div className="sm:max-w-2xl ">
-            <h2 className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px]  font-extrabold capitalize ">
+          <div className="xl:max-w-2xl sm:max-w-3xl ">
+            <h2 className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize ">
               {/* Want to score top grades in your{" "}
               <span className="text-blueHeading font-MontserratBold">
                 exams
@@ -71,9 +71,14 @@ const HeroSection = ({ demoRef }) => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        "<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Exams</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>"
+                        `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Exams</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
                       )
-
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .start()
+                      .typeString(
+                        `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Assessments</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
+                      )
                       .pauseFor(1000)
                       .start();
                   }}
@@ -88,7 +93,7 @@ const HeroSection = ({ demoRef }) => {
             </h2>
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <p className="text-headingColor xl:text-xl sm:text-lg text-base ">
               We all want to score top grades in our exams. Our expert tutors
               help students worldwide achieve their dreams of A
@@ -130,8 +135,8 @@ const HeroSection = ({ demoRef }) => {
           </motion.div>
         </div>
 
-        <div>
-          <img src={heroImg} alt="" />
+        <div className="">
+          <img src={heroImg} alt="" className="" />
         </div>
       </div>
     </div>

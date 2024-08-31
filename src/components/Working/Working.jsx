@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import aGrade from "../../assets/img/aGrade.png";
 import sprinklesGif from "../../assets/img/sprinkles.gif";
 import Slider from "react-slick";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { stepsContent } from "../../data/data";
@@ -15,8 +15,11 @@ const Working = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(6); // Default slides to show
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   useEffect(() => {
-    const stepDuration = 10000; // Show steps for 8 seconds
+    const stepDuration = 8000; // Show steps for 8 seconds
     const imageDuration = 4000; // Show images for 4 seconds
 
     let showStepsTimeout;
@@ -53,17 +56,17 @@ const Working = () => {
     setCurrentSlide(index);
   };
 
-  const stepVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.5,
-      },
-    }),
-  };
+  // const stepVariants = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   visible: (i) => ({
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       delay: i * 0.2,
+  //       duration: 0.5,
+  //     },
+  //   }),
+  // };
 
   const imageVariants = {
     hidden: { scale: 0 },
@@ -99,65 +102,11 @@ const Working = () => {
     },
   };
 
-  var settings = {
-    dots: false,
-    infinite: false,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    arrows: false,
-    afterChange: handleAfterChange,
-    // autoplay: true,
-    // speed: 2000,
-    // autoplaySpeed: 3000,
-    // cssEase: "ease",
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: slidesToShow,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: slidesToShow,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: slidesToShow,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: slidesToShow,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: slidesToShow,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   useEffect(() => {
     const updateSlidesToShow = () => {
-      if (window.innerWidth >= 1280) {
+      if (window.innerWidth >= 1024) {
         setSlidesToShow(6);
-      } else if (window.innerWidth >= 1024) {
-        setSlidesToShow(5);
-      } else if (window.innerWidth >= 800) {
-        setSlidesToShow(4);
-      } else if (window.innerWidth >= 640) {
+      } else if (window.innerWidth >= 768) {
         setSlidesToShow(3);
       } else if (window.innerWidth >= 480) {
         setSlidesToShow(2);
@@ -172,52 +121,50 @@ const Working = () => {
     return () => window.removeEventListener("resize", updateSlidesToShow);
   }, []);
 
-  // const settings = {
-  //   dots: false,
-  //   infinite: false,
-  //   repeat: true,
-  //   yoyo: true,
-  //   slidesToShow: 6,
-  //   slidesToScroll: 1,
-  //   swipeToSlide: true,
-  //   autoplay: true,
-  //   speed: 1000,
-  //   autoplaySpeed: 2000,
-  //   cssEase: "ease",
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //         dots: true,
-  //         infinite: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //   ],
-  // };
+  const settings = {
+    dots: false,
+    infinite: false,
+    repeat: true,
+    yoyo: true,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    afterChange: handleAfterChange,
+    swipeToSlide: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 2000,
+    cssEase: "ease",
+    responsive: [
+      {
+        breakpoint: 1024, // Medium devices
+        settings: {
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // Small devices
+        settings: {
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // Extra small devices
+        settings: {
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
-    <div className="sm:py-12 py-8 px-6 max-w-full relative h-fit flex items-center overflow-x-hidden">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12  h-full w-full">
+    <div
+      className="sm:pt-8 xl:pb-4 py-6 px-6 max-w-full relative xl:h-[440px] lg:h-[450px] h-[400px] flex items-center overflow-x-hidden"
+      ref={ref}
+    >
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-4 justify-between  h-full w-full">
         <div className="flex flex-col gap-6 items-center text-headingColor">
           <TypewriterComp
             firstString="Easy Steps Towards"
@@ -225,7 +172,7 @@ const Working = () => {
           />
         </div>
 
-        <div className="slider-container w-auto cursor-pointer relative">
+        <div className="slider-container w-auto relative">
           <AnimatePresence>
             {showSteps && (
               <motion.div
@@ -235,32 +182,103 @@ const Working = () => {
                 variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
               >
                 <Slider {...settings}>
-                  {stepsContent.map((step, i) => (
+                  {stepsContent.map((step, index) => (
+                    // <motion.div
+                    //   key={index}
+                    //   // variants={stepVariants}
+                    //   className="relative flex flex-col items-start px-2 py-6 "
+                    // >
+                    //   {index >= 0 && (
+                    //     <motion.div
+                    //       className="absolute -left-6 right-0 top-12 border-t-2 border-orangeHeading z-0"
+                    //       initial={{ width: 0 }}
+                    //       animate={{ width: "100%" }}
+                    //       // transition={{ duration: 1, delay: index * 0.3 }}
+                    //     ></motion.div>
+                    //   )}
+                    //   <motion.div
+                    //     className="z-10 w-14 h-14 flex items-center justify-center rounded-full border-4 border-orangeHeading bg-white text-headingColor font-bold font-MontserratBold text-2xl relative hover:bg-gradient-to-r hover:from-orangeHeading hover:to-toOrange hover:border-0 hover:text-white transition-colors duration-500"
+                    //     initial={{ scale: 0 }}
+                    //     animate={{ scale: 1 }}
+                    //     transition={{
+                    //       type: "spring",
+                    //       duration: 0.5,
+                    //       delay: index * 0.3,
+                    //     }}
+                    //   >
+                    //     {step.stepNumber}
+                    //   </motion.div>
+
+                    //   <motion.div
+                    //     className="mt-4 flex flex-col gap-2"
+                    //     initial={{ opacity: 0, y: 10 }}
+                    //     animate={{ opacity: 1, y: 0 }}
+                    //     transition={{ duration: 0.5, delay: index * 0.3 }}
+                    //   >
+                    //     <div>
+                    //       <h3 className="font-bold text-lg text-headingColor">
+                    //         {step.title}
+                    //       </h3>
+                    //       <h3 className="font-bold text-lg text-headingColor">
+                    //         {step.subtitle}
+                    //       </h3>
+                    //     </div>
+                    //     <p className="text-sm text-headingColor">
+                    //       {step.description}
+                    //     </p>
+                    //   </motion.div>
+                    // </motion.div>
+
                     <motion.div
-                      key={i}
-                      custom={i}
-                      variants={stepVariants}
-                      className={`relative `} // Apply custom styling
+                      key={index}
+                      className="relative flex flex-col items-start px-4 py-8 "
                     >
-                      <img
-                        src={step.img}
-                        alt={`Step ${i + 1}`}
-                        className={`${step.imgStyle}`}
-                      />
-                      <div
-                        className={`flex flex-col ${step.style} max-h-[90%] absolute top-0 py-6 min-[480px]:pr-4 min-[480px]:pl-4 pl-5 pr-8`}
+                      {/* Horizontal line with smooth width expansion */}
+                      {index >= 0 && (
+                        <motion.div
+                          className="absolute -left-8 top-14 h-1 bg-orangeHeading z-0"
+                          initial={{ width: 0 }}
+                          animate={{ width: "100%" }}
+                          transition={{ duration: 1, delay: index * 0.3 }}
+                        />
+                      )}
+
+                      {/* Step Number with Gradient Background */}
+                      <motion.div
+                        className="z-10 xl:w-16 xl:h-16 md:h-14 md:w-14 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-orangeHeading to-toOrange text-white font-bold text-2xl relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-700 transition-colors duration-500 shadow-md"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{
+                          type: "spring",
+                          duration: 0.6,
+                          delay: index * 0.3,
+                        }}
                       >
-                        <p className="font-semibold">Step {i + 1}</p>
-                        <h3 className="min-[1210px]:text-[18px] min-[480px]:text-[16px] min-[420px]:text-xl text-[18px] leading-6 min-h-14">
-                          {step.title}{" "}
-                          <span className="block font-MontserratBold">
+                        {step.stepNumber}
+                      </motion.div>
+
+                      {/* Step Details */}
+                      <motion.div
+                        className="mt-6 flex flex-col gap-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.3 }}
+                      >
+                        {/* Title and Subtitle */}
+                        <div>
+                          <h3 className="font-bold text-lg text-headingColor mb-1 tracking-wide">
+                            {step.title}
+                          </h3>
+                          <h4 className="font-semibold text-lg text-headingColor">
                             {step.subtitle}
-                          </span>
-                        </h3>
-                        <p className="mt-4  min-[1034px]:text-[15px] min-[754px]:text-[14px] min-[641px]:text-[13px] min-[471px]:text-[15px] text-[14px] min-[1034px]:leading-6 leading-5">
+                          </h4>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-sm text-gray-600 leading-relaxed">
                           {step.description}
                         </p>
-                      </div>
+                      </motion.div>
                     </motion.div>
                   ))}
                 </Slider>
@@ -278,69 +296,19 @@ const Working = () => {
                   key="sprinklesGif"
                   src={sprinklesGif}
                   alt="Sprinkles GIF"
-                  className="min-[480px]:w-[277px] min-[480px]:h-[277px] w-[277px] h-[277px] object-contain"
+                  className="xl:h-[319px] lg:h-[341px] md:h-[288px] sm:h-[280px] h-[257px] object-contain"
                   variants={gifVariants}
                 />
                 <motion.img
                   key="aGrade"
                   src={aGrade}
                   alt="Additional Image"
-                  className="w-40 h-40 object-contain absolute "
+                  className="w-36 h-36 object-contain absolute "
                   variants={imageVariants}
                 />
               </motion.div>
             )}
           </AnimatePresence>
-          {/* <AnimatePresence>
-            <Slider {...settings}>
-              {stepsContent.map((step, index) => (
-                <div
-                  key={index}
-                  className="relative flex flex-col items-center px-2 py-6 "
-                >
-                  {index >= 0 && (
-                    <motion.div
-                      className="absolute -left-6 right-0 top-12 border-t-2 border-orangeHeading z-0"
-                      initial={{ width: 0 }}
-                      animate={{ width: "100%" }}
-                      transition={{ duration: 1, delay: index * 0.3 }}
-                    ></motion.div>
-                  )}
-                  <motion.div
-                    className="z-10 w-12 h-12 flex items-center justify-center rounded-full border-4 border-orangeHeading bg-white text-headingColor font-bold font-MontserratBold text-2xl relative"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{
-                      type: "spring",
-                      duration: 0.5,
-                      delay: index * 0.3,
-                    }}
-                  >
-                    {step.stepNumber}
-                  </motion.div>
-
-                  <motion.div
-                    className="mt-4 flex flex-col gap-2"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.3 }}
-                  >
-                    <div>
-                      <h3 className="font-bold text-lg text-headingColor">
-                        {step.title}
-                      </h3>
-                      <h3 className="font-bold text-lg text-headingColor">
-                        {step.subtitle}
-                      </h3>
-                    </div>
-                    <p className="text-sm text-headingColor">
-                      {step.description}
-                    </p>
-                  </motion.div>
-                </div>
-              ))}
-            </Slider>
-          </AnimatePresence> */}
         </div>
       </div>
     </div>
