@@ -7,12 +7,14 @@ import TypewriterComp from "../Typewriter/Typewriter";
 import DemoForm from "../DemoForm/DemoForm";
 import { useLocation } from "react-router-dom";
 import TutorForm from "../TutorForm/TutorForm";
+import ContactUs from "../ContactUs/ContactUs";
 
 const ContactForm = ({ firstString, secondString, tagLine }) => {
   const location = useLocation();
 
   // Check if the current route is the "Join as a Tutor" page
   const isTutorPage = location.pathname === "/joinastutor";
+  const isDemoPage = location.pathname === "/takingdemo";
 
   return (
     <div className="sm:py-12 py-12 px-6 max-w-full relative">
@@ -41,7 +43,7 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
             firstString={firstString}
             secondString={secondString}
           />
-          <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
+          <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             {tagLine ||
               "Secure your child's academic future with Tuition Highway."}
           </p>
@@ -53,7 +55,13 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
           </div>
 
           {/* Contact Form will be displayed here  */}
-          {isTutorPage ? <TutorForm /> : <DemoForm />}
+          {isTutorPage ? (
+            <TutorForm />
+          ) : isDemoPage ? (
+            <DemoForm />
+          ) : (
+            <ContactUs />
+          )}
         </div>
       </div>
     </div>

@@ -14,6 +14,8 @@ import TakingDemoPage from "./pages/TakingDemoPage/TakingDemoPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService/TermsOfService";
 import JoinTutor from "./pages/JoinTutor/JoinTutor";
+import Blogs from "./pages/Blogs/Blogs";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   const demoRef = useRef(null);
@@ -36,6 +38,8 @@ function App() {
             element={<SubjectDetails demoRef={demoRef} />}
           />
           <Route path="/about" element={<About demoRef={demoRef} />} />
+          <Route path="/contact" element={<ContactPage demoRef={demoRef} />} />
+          <Route path="/blogs" element={<Blogs demoRef={demoRef} />} />
           <Route
             path="/takingdemo"
             element={<TakingDemoPage demoRef={demoRef} />}

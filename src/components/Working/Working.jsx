@@ -106,10 +106,10 @@ const Working = () => {
     slidesToScroll: 1,
     arrows: false,
     afterChange: handleAfterChange,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
-    cssEase: "ease",
+    // autoplay: true,
+    // speed: 2000,
+    // autoplaySpeed: 3000,
+    // cssEase: "ease",
     responsive: [
       {
         breakpoint: 1280,

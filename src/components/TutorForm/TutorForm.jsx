@@ -407,6 +407,25 @@ const TutorForm = () => {
               </div>
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
+                  <label className="block text-headingColor sm:text-base text-sm mb-1">
+                    Upload Your Resume and Cover Letter
+                  </label>
+                  <input
+                    type="file"
+                    name="uploadedResume"
+                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm"
+                    onChange={handleFileChange}
+                    multiple // Allow multiple file uploads
+                  />
+                  {errors.uploadedResume && (
+                    <span className="text-red-600 sm:text-base text-sm">
+                      {errors.uploadedResume}
+                    </span>
+                  )}
+                </div>
+              </div>
+              <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
+                <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                   {/* <input
                           type="email"
                           placeholder="Curriculum"
@@ -424,25 +443,6 @@ const TutorForm = () => {
                   {errors.reasonforTeach && (
                     <span className="text-red-600 sm:text-base text-sm">
                       {errors.reasonforTeach}
-                    </span>
-                  )}
-                </div>
-              </div>
-              <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
-                <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  <label className="block text-gray-700 text-sm font-bold mb-2">
-                    Upload Your Resume and Cover Letter
-                  </label>
-                  <input
-                    type="file"
-                    name="uploadedResume"
-                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm"
-                    onChange={handleFileChange}
-                    multiple // Allow multiple file uploads
-                  />
-                  {errors.uploadedResume && (
-                    <span className="text-red-600 sm:text-base text-sm">
-                      {errors.uploadedResume}
                     </span>
                   )}
                 </div>

@@ -27,7 +27,7 @@ export default {
         blueArrows: "#309EC3",
         hamburgerColor: "#D9D9D9",
         tutorText: "#667085",
-        flipBg: "#32A6CC4A",
+        flipBg: "#ffefe7",
         placeholderText: "#9ea3af",
         subHeroStart: "#31A3CA",
         subHeroEnd: "#216C86",
@@ -35,7 +35,8 @@ export default {
       },
 
       backgroundPosition: {
-        movedown: "0px 350px",
+        movedown: "0px 360px",
+        moveup: "0px 260px",
       },
 
       fontFamily: {

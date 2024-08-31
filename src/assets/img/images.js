@@ -55,12 +55,15 @@ import sub12 from "./sub12.png";
 import heroIcon1 from "./heroIcon1.png";
 
 import learnImg from "./learnImg.png";
+import learningImg2 from "./learningImg2.png";
 import aboutImg from "./aboutImg.png";
 
 import fadedCircle from "./fadedCircle.png";
 import subjectImg from "./subjectImg.png";
 
 import arrowRight from "./arrowRight.png";
+
+import heroImg from "./heroImg.png";
 
 // Export all images as an object
 export {
@@ -105,8 +108,10 @@ export {
   sub12,
   heroIcon1,
   learnImg,
+  learningImg2,
   aboutImg,
   fadedCircle,
   subjectImg,
   arrowRight,
+  heroImg,
 };

@@ -19,7 +19,7 @@ const CurriculumSection = ({ demoRef }) => {
     cssEase: "ease",
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1281,
         settings: {
           slidesToShow: 3,
         },
@@ -55,14 +55,11 @@ const CurriculumSection = ({ demoRef }) => {
   };
 
   return (
-    <div className="relative  max-w-full overflow-hidden sm:h-72 h-52">
-      <div className="flex ">
-        <div className="  before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 min-[898px]:before:w-[47%] sm:before:w-[54%] min-[524px]:before:w-[58%] before:w-[62%] before:bg-orangeHeading before:-skew-x-[33deg] before:origin-top before:-z-10">
-          <div className=" flex flex-col justify-center items-start gap-2 min-[493px]:py-12 min-[393px]:py-6 py-6 md:pl-16 sm:pl-10 min-[393px]:pl-6 pl-3 z-10">
-            <h2 className="xl:text-[46px] xl:leading-tight min-[1047px]:text-4xl md:text-3xl sm:text-2xl text-xl leading-none text-white">
-              Popular Curriculum
-            </h2>
-            <h3 className="text-white xl:text-[46px] xl:leading-tight min-[1047px]:text-4xl md:text-3xl sm:text-2xl text-xl leading-none">
+    <div className="relative  max-w-full overflow-hidden sm:h-56 h-48">
+      <div className="flex sm:h-64 h-48">
+        <div className="  before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 min-[898px]:before:w-[47%] sm:before:w-[54%] min-[524px]:before:w-[58%] before:w-[62%] before:bg-orangeHeading before:-skew-x-[33deg] before:origin-top before:-z-10 sm:h-56 h-48">
+          <div className=" flex flex-col justify-center items-start gap-2 min-[493px]:py-12 min-[393px]:py-6 py-6 md:pl-16 sm:pl-10 min-[393px]:pl-6 pl-3 z-10 sm:h-56 h-48">
+            <h3 className="text-white xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] leading-none">
               Start Now!
             </h3>
             <button
@@ -93,8 +90,11 @@ const CurriculumSection = ({ demoRef }) => {
           </div>
         </div> */}
 
-        <div className="absolute w-full bg-gradient-to-r from-startgrad to-endGrad flex items-center sm:h-72 h-52 -z-20"></div>
-        <div className="w-full sm:max-w-[56%] min-[393px]:max-w-[50%] max-w-[53%] ml-auto flex items-center sm:h-72 h-52 relative">
+        <div className="absolute w-full bg-gradient-to-r from-startgrad to-endGrad flex items-center sm:h-56 h-48 -z-20"></div>
+        <div className="w-full sm:max-w-[56%] min-[393px]:max-w-[50%] max-w-[53%] ml-auto flex flex-col items-start justify-start sm:gap-10 gap-6 sm:h-56 h-48 relative py-6">
+          <h2 className="xl:text-[28px] xl:leading-tight min-[1047px]:text-2xl md:text-2xl sm:text-xl text-lg leading-none text-white lg:mx-auto sm:ml-20 min-[420px]:ml-10 ml-4 text-center">
+            Popular Curriculums
+          </h2>
           <div className="slider-container w-full cursor-pointer">
             <Slider {...settings}>
               {curricula.map((item, index) => (

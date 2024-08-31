@@ -302,7 +302,7 @@ const subjectsOffering = [
     },
   },
   {
-    title: "Business Studies",
+    title: "Business ",
     mainImg: math,
     img: sub7,
     bg: "bg-[#F46322]",
@@ -332,7 +332,7 @@ const subjectsOffering = [
     },
   },
   {
-    title: "Computer Science",
+    title: "Computer",
     mainImg: computer,
     img: sub9,
     bg: "bg-[#515151]",
@@ -818,9 +818,48 @@ const faqs = [
   },
 ];
 
-const products = ["Features", "Integration", "Changelog", "Roadmap"];
-const company = ["Our Team", "Our Value", "Blog"];
-const resources = ["Download", "Documentation", "Contact"];
+const products = [
+  {
+    title: "Join As Tutor",
+    to: "/joinastutor",
+  },
+  {
+    title: "Free Demo",
+    to: "/takingdemo",
+  },
+  {
+    title: "About Us",
+    to: "/about",
+  },
+];
+const company = [
+  {
+    title: "Subjects",
+    to: "/subjects",
+  },
+  {
+    title: "Testimonials",
+    to: "/testimonials",
+  },
+  {
+    title: "Blogs",
+    to: "/blogs",
+  },
+];
+const resources = [
+  {
+    title: "Privacy Policy",
+    to: "/privacypolicy",
+  },
+  {
+    title: "Terms of Service",
+    to: "/termsofservice",
+  },
+  {
+    title: "Contact Us",
+    to: "/contact",
+  },
+];
 
 const selectedCountries = [
   "Afghanistan",

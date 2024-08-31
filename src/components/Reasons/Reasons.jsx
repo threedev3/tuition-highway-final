@@ -1,11 +1,57 @@
 import React, { useEffect, useRef, useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import CustomButton from "../CustomButton/CustomButton";
 import { motion } from "framer-motion";
 import { reasons } from "../../data/data.js";
 import ReactCardFlip from "react-card-flip";
 import TypewriterComp from "../Typewriter/Typewriter.jsx";
+import Slider from "react-slick";
 
 const Reasons = ({ demoRef }) => {
+  var settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    arrows: false,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    cssEase: "ease",
+    responsive: [
+      {
+        breakpoint: 1110,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 890,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 690,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 444,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   // Initialize state to keep track of flip state for each card
   const [flippedCards, setFlippedCards] = useState({});
 
@@ -66,11 +112,14 @@ const Reasons = ({ demoRef }) => {
             secondString="Top Grades"
           />
 
-          <p className="lg:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto font-medium">
+          <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto font-medium">
             Tuition Highway: Where expert tutors, personalized learning, and
             flexible scheduling meet comprehensive curriculum coverage. Our
-            proven approach fast-tracks students to A* grades across IGCSE,
-            A-levels, American, and IB curriculums.
+            proven approach fast-tracks students to A
+            <sup className="text-headingColor lg:text-xl sm:text-lg text-base">
+              +
+            </sup>{" "}
+            grades across IGCSE, A-levels, American, and IB curriculums.
           </p>
         </div>
 
@@ -92,52 +141,60 @@ const Reasons = ({ demoRef }) => {
           ))}
         </div> */}
 
-        <div className="flip-card-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
-          {reasons.map((item, index) => (
-            <ReactCardFlip
-              isFlipped={flippedCards[index] || false}
-              flipDirection="vertical"
-              key={index}
-            >
-              <div
-                className="p-6 bg-white md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group xl:min-h-[216px] min-h-[180px]"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
+        {/* <div className="flip-card-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6"> */}
+        <div className="slider-container cursor-pointer w-auto">
+          <Slider {...settings}>
+            {reasons.map((item, index) => (
+              <ReactCardFlip
+                isFlipped={flippedCards[index] || false}
+                flipDirection="vertical"
+                key={index}
               >
-                <div className="p-3 bg-blueHeading rounded-full w-14 h-14 flex justify-center items-center">
-                  <img src={item.icon} alt={item.title} className="" />
+                <div>
+                  <div
+                    className="p-6 bg-white md:shadow-md shadow-md rounded-[30px] flex flex-col gap-6  transition-shadow duration-300 group xl:min-h-[200px] min-h-[200px] my-4 mx-2"
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={() => handleMouseLeave(index)}
+                  >
+                    <div className="p-3 bg-blueHeading rounded-full w-14 h-14 flex justify-center items-center">
+                      <img src={item.icon} alt={item.title} className="" />
+                    </div>
+                    <div>
+                      <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:block hidden">
+                        {item.firstTitle}{" "}
+                        <span className="block">{item.secondTitle}</span>
+                      </p>
+                      <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:hidden block">
+                        {item.wholeTitle}
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <div>
-                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:block hidden">
-                    {item.firstTitle}{" "}
-                    <span className="block">{item.secondTitle}</span>
-                  </p>
-                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:hidden block">
-                    {item.wholeTitle}
-                  </p>
+                  <div
+                    className="p-6 bg-flipBg md:shadow-md shadow-md rounded-[30px] flex flex-col gap-6  transition-shadow duration-300 group xl:min-h-[200px] min-h-[200px] my-4 mx-2"
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={() => handleMouseLeave(index)}
+                  >
+                    <div className="flex flex-col gap-4">
+                      <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:block hidden">
+                        {item.firstTitle}{" "}
+                        <span className="block">{item.secondTitle}</span>
+                      </p>
+                      <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:hidden block">
+                        {item.wholeTitle}
+                      </p>
+                      <p className="sm:text-sm text-sm text-headingColor ">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div
-                className="p-6 bg-flipBg md:shadow-lg shadow-md rounded-[30px] flex flex-col gap-6 hover:shadow-2xl transition-shadow duration-300 group xl:min-h-[216px] min-h-[180px]"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
-              >
-                <div className="flex flex-col gap-4">
-                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:block hidden">
-                    {item.firstTitle}{" "}
-                    <span className="block">{item.secondTitle}</span>
-                  </p>
-                  <p className="sm:text-xl text-lg text-headingColor font-semibold xl:hidden block">
-                    {item.wholeTitle}
-                  </p>
-                  <p className="sm:text-base text-sm text-headingColor ">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            </ReactCardFlip>
-          ))}
+              </ReactCardFlip>
+            ))}
+          </Slider>
         </div>
+        {/* </div> */}
 
         <motion.div
           className="mx-auto cursor-pointer"

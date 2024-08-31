@@ -46,35 +46,47 @@ const Footer = () => {
 
           <div className="flex flex-row items-start justify-between flex-wrap lg:gap-28 gap-12">
             <div className="flex flex-col gap-5">
-              <h3 className="text-white text-xl">Products</h3>
-              {products.map((product, index) => (
-                <p
-                  className="text-footerText cursor-pointer sm:text-base text-sm"
-                  key={index}
-                >
-                  {product}
-                </p>
-              ))}
-            </div>
-            <div className="flex flex-col gap-5">
-              <h3 className="text-white text-xl">Company</h3>
+              {/* <h3 className="text-white text-xl">Company</h3> */}
               {company.map((comp, index) => (
                 <p
                   className="text-footerText cursor-pointer sm:text-base text-sm"
                   key={index}
+                  onClick={() => {
+                    navigate(comp.to);
+                    scrollToTop();
+                  }}
                 >
-                  {comp}
+                  {comp.title}
                 </p>
               ))}
             </div>
             <div className="flex flex-col gap-5">
-              <h3 className="text-white text-xl">Resources</h3>
+              {/* <h3 className="text-white text-xl">Products</h3> */}
+              {products.map((product, index) => (
+                <p
+                  className="text-footerText cursor-pointer sm:text-base text-sm"
+                  key={index}
+                  onClick={() => {
+                    navigate(product.to);
+                    scrollToTop();
+                  }}
+                >
+                  {product.title}
+                </p>
+              ))}
+            </div>
+            <div className="flex flex-col gap-5">
+              {/* <h3 className="text-white text-xl">Resources</h3> */}
               {resources.map((resource, index) => (
                 <p
                   className="text-footerText cursor-pointer sm:text-base text-sm"
                   key={index}
+                  onClick={() => {
+                    navigate(resource.to);
+                    scrollToTop();
+                  }}
                 >
-                  {resource}
+                  {resource.title}
                 </p>
               ))}
             </div>
@@ -129,7 +141,15 @@ const Footer = () => {
             >
               Policy Service
             </p>
-            <p className="cursor-pointer">Cookie Policy</p>
+            <p
+              className="cursor-pointer"
+              onClick={() => {
+                navigate("/contact");
+                scrollToTop();
+              }}
+            >
+              Contact Us
+            </p>
           </div>
 
           <div>

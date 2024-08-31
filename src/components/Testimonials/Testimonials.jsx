@@ -49,7 +49,7 @@ const Testimonials = () => {
       <div className="relative z-10 max-w-[1400px] mx-auto md:flex md:flex-row md:items-center md:justify-between md:gap-10 flex flex-col gap-6 items-center justify-center ">
         <div className="flex flex-col gap-8 max-w-[500px]">
           <div>
-            <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
+            <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] leading-none text-headingColor">
               Testimonials and{" "}
               <span className="font-MontserratBold text-orangeHeading">
                 Success
