@@ -694,6 +694,7 @@ const testimonials = [
 
 const stepsContent = [
   {
+    stepNumber: 1,
     img: firstStep,
     title: "Student",
     subtitle: "Assessment",
@@ -703,6 +704,7 @@ const stepsContent = [
     imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
+    stepNumber: 2,
     img: step,
     title: "Tutor",
     subtitle: "Matching",
@@ -713,6 +715,7 @@ const stepsContent = [
     imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
+    stepNumber: 3,
     img: step2,
     title: "Personalized",
     subtitle: "Learning Plan",
@@ -723,6 +726,7 @@ const stepsContent = [
     imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
+    stepNumber: 4,
     img: step,
     title: "Regular",
     subtitle: "Sessions",
@@ -733,6 +737,7 @@ const stepsContent = [
     imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
+    stepNumber: 5,
     img: step2,
     title: "Progress",
     subtitle: "Tracking",
@@ -742,6 +747,7 @@ const stepsContent = [
     imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
+    stepNumber: 6,
     img: lastStep,
     title: "Achieve Your",
     subtitle: "Goals",

@@ -14,7 +14,7 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
 
   // Check if the current route is the "Join as a Tutor" page
   const isTutorPage = location.pathname === "/joinastutor";
-  const isDemoPage = location.pathname === "/takingdemo";
+  const isContactPage = location.pathname === "/contact";
 
   return (
     <div className="sm:py-12 py-12 px-6 max-w-full relative">
@@ -57,10 +57,10 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
           {/* Contact Form will be displayed here  */}
           {isTutorPage ? (
             <TutorForm />
-          ) : isDemoPage ? (
-            <DemoForm />
-          ) : (
+          ) : isContactPage ? (
             <ContactUs />
+          ) : (
+            <DemoForm />
           )}
         </div>
       </div>

@@ -172,6 +172,49 @@ const Working = () => {
     return () => window.removeEventListener("resize", updateSlidesToShow);
   }, []);
 
+  // const settings = {
+  //   dots: false,
+  //   infinite: false,
+  //   repeat: true,
+  //   yoyo: true,
+  //   slidesToShow: 6,
+  //   slidesToScroll: 1,
+  //   swipeToSlide: true,
+  //   autoplay: true,
+  //   speed: 1000,
+  //   autoplaySpeed: 2000,
+  //   cssEase: "ease",
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         dots: true,
+  //         infinite: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //   ],
+  // };
+
   return (
     <div className="sm:py-12 py-8 px-6 max-w-full relative h-fit flex items-center overflow-x-hidden">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12  h-full w-full">
@@ -248,6 +291,56 @@ const Working = () => {
               </motion.div>
             )}
           </AnimatePresence>
+          {/* <AnimatePresence>
+            <Slider {...settings}>
+              {stepsContent.map((step, index) => (
+                <div
+                  key={index}
+                  className="relative flex flex-col items-center px-2 py-6 "
+                >
+                  {index >= 0 && (
+                    <motion.div
+                      className="absolute -left-6 right-0 top-12 border-t-2 border-orangeHeading z-0"
+                      initial={{ width: 0 }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 1, delay: index * 0.3 }}
+                    ></motion.div>
+                  )}
+                  <motion.div
+                    className="z-10 w-12 h-12 flex items-center justify-center rounded-full border-4 border-orangeHeading bg-white text-headingColor font-bold font-MontserratBold text-2xl relative"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: "spring",
+                      duration: 0.5,
+                      delay: index * 0.3,
+                    }}
+                  >
+                    {step.stepNumber}
+                  </motion.div>
+
+                  <motion.div
+                    className="mt-4 flex flex-col gap-2"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.3 }}
+                  >
+                    <div>
+                      <h3 className="font-bold text-lg text-headingColor">
+                        {step.title}
+                      </h3>
+                      <h3 className="font-bold text-lg text-headingColor">
+                        {step.subtitle}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-headingColor">
+                      {step.description}
+                    </p>
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </AnimatePresence> */}
         </div>
       </div>
     </div>
