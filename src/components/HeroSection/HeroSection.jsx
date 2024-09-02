@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import CustomButton from "../CustomButton/CustomButton";
 import Typewriter from "typewriter-effect";
 import { TypeAnimation } from "react-type-animation";
@@ -39,6 +39,22 @@ const HeroSection = ({ demoRef }) => {
     }
   };
 
+  const [currentHeading, setCurrentHeading] = useState(0);
+  const [isHeadingDone, setIsHeadingDone] = useState(false);
+
+  // Function to switch to the next heading
+  const switchHeading = () => {
+    setCurrentHeading((prev) => (prev + 1) % 2);
+    setIsHeadingDone(false);
+  };
+
+  useEffect(() => {
+    if (isHeadingDone) {
+      const timer = setTimeout(switchHeading, 2000); // Wait for 1 second before switching
+      return () => clearTimeout(timer);
+    }
+  }, [isHeadingDone]);
+
   return (
     <div
       className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat bg-contain xl:bg-movedown lg:bg-bottom bg-bottom max-w-full py-12 px-6 overflow-hidden bg-heroBg relative"
@@ -47,50 +63,84 @@ const HeroSection = ({ demoRef }) => {
       <div className="max-w-[1400px] mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col justify-center items-center gap-16 h-full">
         <div className="max-w-full mx-auto flex flex-col sm:gap-6 gap-4">
           <div className="xl:max-w-2xl sm:max-w-3xl ">
-            <h2 className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize ">
-              {/* Want to score top grades in your{" "}
-              <span className="text-blueHeading font-MontserratBold">
-                exams
-              </span>
-              ? */}
-              {/* <div className="font-MontserratBold">
-                Want to score top grades in your
-                <TypeAnimation
-                  sequence={[" Exams"]}
-                  speed={50}
-                  style={{ color: "#34ACD4" }}
-                  repeat={Infinity}
-                />
-                ?
-              </div> */}
-              Want to score top grades in{" "}
-              <span className="font-MontserratBold">
-                {/* Static Text */}
-                your
-                <Typewriter
-                  onInit={(typewriter) => {
-                    typewriter
-                      .typeString(
-                        `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Exams</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
-                      )
-                      .pauseFor(1000)
-                      .deleteAll()
-                      .start()
-                      .typeString(
-                        `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Assessments</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
-                      )
-                      .pauseFor(1000)
-                      .start();
-                  }}
-                  options={{
-                    autoStart: true,
-                    loop: true,
-                    deleteSpeed: 20,
-                    delay: 50,
-                  }}
-                />
-              </span>
-            </h2>
+            <AnimatePresence mode="wait">
+              {currentHeading === 0 ? (
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize"
+                >
+                  Want to score top grades in{" "}
+                  <span className="font-MontserratBold">
+                    {/* Static Text */}
+                    your
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
+                          .typeString(
+                            `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Exams</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
+                          )
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .start()
+                          .typeString(
+                            `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Assessments</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
+                          )
+                          .pauseFor(1000)
+                          .callFunction(() => {
+                            setIsHeadingDone(true); // Set heading done to true when done typing
+                          })
+                          .start();
+                      }}
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        deleteSpeed: 20,
+                        delay: 50,
+                      }}
+                    />
+                  </span>
+                </motion.h2>
+              ) : (
+                <motion.h2
+                  key="heading2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize"
+                >
+                  Reach new heights in your academic{" "}
+                  <Typewriter
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString(
+                          `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'>Goals</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
+                        )
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .start()
+                        .typeString(
+                          `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'>Career</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
+                        )
+                        .pauseFor(1000)
+                        .callFunction(() => {
+                          setIsHeadingDone(true); // Set heading done to true when done typing
+                        })
+                        .start();
+                    }}
+                    options={{
+                      autoStart: true,
+                      loop: false,
+                      deleteSpeed: 20,
+                      delay: 50,
+                    }}
+                  />
+                </motion.h2>
+              )}
+            </AnimatePresence>
           </div>
 
           <div className="max-w-3xl mx-auto">

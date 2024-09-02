@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { tutors } from "../../data/data";
 import Slider from "react-slick";
 import TypewriterComp from "../Typewriter/Typewriter";
+import { useNavigate } from "react-router-dom";
 
 const Tutors = () => {
   var settings = {
@@ -44,6 +45,15 @@ const Tutors = () => {
       },
     ],
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const navigate = useNavigate();
 
   return (
     <div className="md:py-20 py-12 px-6 max-w-full relative">
@@ -126,8 +136,12 @@ const Tutors = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1.1 }}
           transition={{ type: "spring", damping: 17 }}
+          onClick={() => {
+            navigate("/joinastutor");
+            scrollToTop();
+          }}
         >
-          <CustomButton text="More Tutor" />
+          <CustomButton text="Join as Tutor" />
         </motion.div>
       </div>
     </div>
