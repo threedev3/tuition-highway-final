@@ -11,18 +11,15 @@ import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
 
 const ContactUs = () => {
-  const { errors, validateDemo } = useFormValidation();
+  const { errors, validateContactForm } = useFormValidation();
 
   const [formValues, setFormValues] = useState({
-    parentName: "",
-    studentName: "",
+    fullName: "",
     email: "",
     phone: "",
     city: "",
     country: null,
-    selectedSubject: null,
-    selectedGrade: null,
-    selectedCurriculum: null,
+    message: "",
   });
 
   // Handle input changes
@@ -38,19 +35,16 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (validateDemo(formValues)) {
+    if (validateContactForm(formValues)) {
       // Form is valid, proceed with submission
       console.log("Form Submitted", formValues);
       setFormValues({
-        parentName: "",
-        studentName: "",
+        fullName: "",
         email: "",
         phone: "",
         city: "",
         country: null,
-        selectedSubject: null,
-        selectedGrade: null,
-        selectedCurriculum: null,
+        message: "",
       });
     } else {
       console.log("Validation errors", errors);
@@ -74,35 +68,18 @@ const ContactUs = () => {
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                 <input
                   type="text"
-                  name="parentName"
-                  placeholder="Parent Name"
+                  name="fullName"
+                  placeholder="Full Name"
                   className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
-                  value={formValues.parentName}
+                  value={formValues.fullName}
                   onChange={handleInputChange}
                 />
-                {errors.parentName && (
+                {errors.fullName && (
                   <span className="text-red-600 sm:text-base text-sm">
-                    {errors.parentName}
+                    {errors.fullName}
                   </span>
                 )}
               </div>
-              <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                <input
-                  type="text"
-                  name="studentName"
-                  placeholder="Student Name"
-                  className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
-                  value={formValues.studentName}
-                  onChange={handleInputChange}
-                />
-                {errors.studentName && (
-                  <span className="text-red-600 sm:text-base text-sm">
-                    {errors.studentName}
-                  </span>
-                )}
-              </div>
-            </div>
-            <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                 <input
                   type="email"
@@ -118,6 +95,8 @@ const ContactUs = () => {
                   </span>
                 )}
               </div>
+            </div>
+            <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                 <input
                   type="text"
@@ -141,8 +120,6 @@ const ContactUs = () => {
                           />
                         </div> */}
               </div>
-            </div>
-            <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                 <input
                   type="text"
@@ -158,6 +135,8 @@ const ContactUs = () => {
                   </span>
                 )}
               </div>
+            </div>
+            <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                 {/* <input
                           type="text"
@@ -176,6 +155,29 @@ const ContactUs = () => {
                 {errors.country && (
                   <span className="text-red-600 sm:text-base text-sm">
                     {errors.country}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
+              <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
+                {/* <input
+                          type="email"
+                          placeholder="Curriculum"
+                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
+                        /> */}
+
+                <textarea
+                  name="message"
+                  placeholder="Any Message"
+                  className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
+                  value={formValues.message}
+                  onChange={handleInputChange}
+                  rows={3}
+                ></textarea>
+                {errors.message && (
+                  <span className="text-red-600 sm:text-base text-sm">
+                    {errors.message}
                   </span>
                 )}
               </div>

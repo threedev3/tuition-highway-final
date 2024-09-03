@@ -12,12 +12,12 @@ import physics from "./physics.gif";
 import chemistry from "./chemistry.gif";
 import biology from "./biology.gif";
 import english from "./english.gif";
-
-// Steps
-import step from "./step.png";
-import firstStep from "./firstStep.png";
-import step2 from "./step2.png";
-import lastStep from "./lastStep.png";
+import businessLaw from "./businessLaw.gif";
+import accounts from "./accounts.gif";
+import sociology from "./sociology.gif";
+import psychology from "./psychology.gif";
+import stats from "./Stats.gif";
+import business from "./business.gif";
 
 // Avatars
 import avatar1 from "./avatar1.png";
@@ -54,7 +54,6 @@ import sub12 from "./sub12.png";
 // Hero Icons
 import heroIcon1 from "./heroIcon1.png";
 
-import learnImg from "./learnImg.png";
 import learningImg2 from "./learningImg2.png";
 import aboutImg from "./aboutImg.png";
 
@@ -78,10 +77,12 @@ export {
   chemistry,
   biology,
   english,
-  step,
-  firstStep,
-  step2,
-  lastStep,
+  businessLaw,
+  accounts,
+  sociology,
+  psychology,
+  stats,
+  business,
   avatar1,
   avatar2,
   avatar3,
@@ -107,7 +108,6 @@ export {
   sub11,
   sub12,
   heroIcon1,
-  learnImg,
   learningImg2,
   aboutImg,
   fadedCircle,

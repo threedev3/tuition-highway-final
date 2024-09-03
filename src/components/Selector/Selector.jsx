@@ -13,7 +13,7 @@ export default function Selector({ data, selected, setSelected, placeholder }) {
           setSelected(selectedOption || null); // Ensure the selectedOption is set correctly
         }}
         className={clsx(
-          "w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent sm:placeholder:text-base placeholder:text-sm",
+          "w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs",
           "focus:outline-none appearance-none"
         )}
       >

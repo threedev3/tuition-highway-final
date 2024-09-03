@@ -126,7 +126,48 @@ const useFormValidation = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  return { errors, validateDemo, validateTutor };
+  const validateContactForm = (values) => {
+    const newErrors = {};
+
+    // Check if Parent Name is empty
+    if (!values.fullName) {
+      newErrors.fullName = "Full Name is required";
+    }
+
+    // Check if Email is valid
+    if (!values.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    // Check if Phone Number is valid (allow only digits)
+    if (!values.phone) {
+      newErrors.phone = "Phone Number is required";
+    } else if (!/^\d+$/.test(values.phone)) {
+      newErrors.phone = "Phone Number is invalid";
+    }
+
+    // Check if City is empty
+    if (!values.city) {
+      newErrors.city = "City is required";
+    }
+
+    // Check if Country is selected
+    if (!values.country) {
+      newErrors.country = "Country is required";
+    }
+
+    // Check if message is empty
+    if (!values.message) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  return { errors, validateDemo, validateTutor, validateContactForm };
 };
 
 export default useFormValidation;

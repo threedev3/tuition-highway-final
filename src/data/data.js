@@ -10,10 +10,12 @@ import {
   chemistry,
   biology,
   english,
-  step,
-  firstStep,
-  step2,
-  lastStep,
+  businessLaw,
+  accounts,
+  sociology,
+  psychology,
+  business,
+  stats,
   avatar1,
   avatar2,
   avatar3,
@@ -303,7 +305,7 @@ const subjectsOffering = [
   },
   {
     title: "Business ",
-    mainImg: math,
+    mainImg: business,
     img: sub7,
     bg: "bg-[#F46322]",
     description:
@@ -364,7 +366,7 @@ const subjectsOffering = [
 
   {
     title: "Accounts",
-    mainImg: math,
+    mainImg: accounts,
     img: sub5,
     bg: "bg-[#F46322]",
     description:
@@ -395,7 +397,7 @@ const subjectsOffering = [
 
   {
     title: "Economics",
-    mainImg: math,
+    mainImg: stats,
     img: sub6,
     bg: "bg-[#515151]",
     description:
@@ -426,7 +428,7 @@ const subjectsOffering = [
 
   {
     title: "Business Law",
-    mainImg: math,
+    mainImg: businessLaw,
     img: sub10,
     bg: "bg-[#F46322]",
     description:
@@ -456,7 +458,7 @@ const subjectsOffering = [
   },
   {
     title: "Sociology",
-    mainImg: math,
+    mainImg: sociology,
     img: sub11,
     bg: "bg-[#515151]",
     description:
@@ -486,7 +488,7 @@ const subjectsOffering = [
   },
   {
     title: "Psychology",
-    mainImg: math,
+    mainImg: psychology,
     img: sub12,
     bg: "bg-[#F46322]",
     description:
@@ -695,67 +697,42 @@ const testimonials = [
 const stepsContent = [
   {
     stepNumber: 1,
-    img: firstStep,
     title: "Student",
     subtitle: "Assessment",
     description: "We evaluate your current academic standing and goals.",
-    style:
-      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[464px]:w-[55%] min-[429px]:w-[60%] min-[375px]:w-[70%] min-[334px]:w-[80%] w-[90%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     stepNumber: 2,
-    img: step,
     title: "Tutor",
     subtitle: "Matching",
     description:
       "We pair you with an expert tutor specialized in your subject and curriculum.",
-    style:
-      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[449px]:w-[54%] min-[409px]:w-[60%] min-[358px]:w-[70%] min-[319px]:w-[80%] w-[90%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     stepNumber: 3,
-    img: step2,
     title: "Personalized",
     subtitle: "Learning Plan",
     description:
       "Your tutor creates a tailored strategy to address your specific needs.",
-    style:
-      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[476px]:w-[54%] min-[466px]:w-[58%] min-[421px]:w-[65%] min-[395px]:w-[70%] min-[372px]:w-[75%] min-[352px]:w-[80%] w-[85%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     stepNumber: 4,
-    img: step,
     title: "Regular",
     subtitle: "Sessions",
     description:
       "Attend flexible, one-on-one online sessions at times that suit you.",
-    style:
-      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[471px]:w-[54%] min-[401px]:w-[60%] min-[350px]:w-[70%] min-[303px]:w-[80%] w-[90%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     stepNumber: 5,
-    img: step2,
     title: "Progress",
     subtitle: "Tracking",
     description: "We continuously monitor and report on your improvement.",
-    style:
-      "min-[641px]:w-[80%] min-[481px]:w-[75%] min-[467px]:w-[55%] min-[432px]:w-[60%] min-[377px]:w-[70%] min-[336px]:w-[80%] w-[90%]",
-    imgStyle: "min-[480px]:w-[280px] w-[300px] h-[270px]",
   },
   {
     stepNumber: 6,
-    img: lastStep,
     title: "Achieve Your",
     subtitle: "Goals",
     description: "Watch your grades improve and confidence soar.",
-    style:
-      "min-[641px]:w-[86%] min-[481px]:w-[86%] min-[420px]:w-[60%] min-[367px]:w-[70%] min-[327px]:w-[80%] w-[90%]",
-    imgStyle:
-      "min-[1200px]:w-[190px] min-[1100px]:w-[180px] min-[1025px]:w-[170px] min-[960px]:w-[200px] min-[841px]:w-[175px] min-[801px]:w-[160px] min-[750px]:w-[200px] min-[641px]:w-[180px] min-[570px]:w-[230px] min-[510px]:w-[210px] min-[481px]:w-[190px] w-[230px] h-[270px]",
   },
 ];
 

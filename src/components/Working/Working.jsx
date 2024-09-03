@@ -50,7 +50,7 @@ const Working = () => {
         clearTimeout(showImageTimeout);
       };
     }
-  }, [currentSlide, slidesToShow]);
+  }, [currentSlide, slidesToShow, isInView]);
 
   const handleAfterChange = (index) => {
     setCurrentSlide(index);
@@ -174,7 +174,7 @@ const Working = () => {
 
         <div className="slider-container w-auto relative">
           <AnimatePresence>
-            {showSteps && (
+            {showSteps && isInView && (
               <motion.div
                 initial="hidden"
                 animate="visible"

@@ -111,7 +111,7 @@ const TutorForm = () => {
     <div>
       <div className="flex ">
         <div
-          className={`py-4 px-8 text-center cursor-pointer rounded-t-xl font-semibold ${
+          className={`py-4 sm:px-8 min-[375px]:px-6 px-4 text-center cursor-pointer rounded-t-xl font-semibold ${
             currentStep === 1 ? "bg-contactBg" : "bg-contactBg2"
           }`}
           onClick={() => setCurrentStep(1)}
@@ -119,7 +119,7 @@ const TutorForm = () => {
           Step 1
         </div>
         <div
-          className={`py-4 px-8 text-center cursor-pointer rounded-t-xl font-semibold ${
+          className={`py-4 sm:px-8 min-[375px]:px-6 px-4 text-center cursor-pointer rounded-t-xl font-semibold ${
             currentStep === 2 ? "bg-contactBg" : "bg-contactBg2"
           }`}
           onClick={() => setCurrentStep(2)}
@@ -127,7 +127,7 @@ const TutorForm = () => {
           Step 2
         </div>
         <div
-          className={`py-4 px-8 text-center cursor-pointer rounded-t-xl font-semibold ${
+          className={`py-4 sm:px-8 min-[375px]:px-6 px-4 text-center cursor-pointer rounded-t-xl font-semibold ${
             currentStep === 3 ? "bg-contactBg" : "bg-contactBg2"
           }`}
           onClick={() => setCurrentStep(3)}
@@ -266,7 +266,7 @@ const TutorForm = () => {
                     setSelected={(subject) =>
                       handleSelectorChange("selectedSubject", subject)
                     }
-                    placeholder="Select Subject You Teach"
+                    placeholder="Subject You Teach"
                   />
                   {errors.selectedSubject && (
                     <span className="text-red-600 sm:text-base text-sm">
@@ -287,7 +287,7 @@ const TutorForm = () => {
                     setSelected={(grade) =>
                       handleSelectorChange("selectedGrade", grade)
                     }
-                    placeholder="Select Grade You Teach"
+                    placeholder="Grade You Teach"
                   />
                   {errors.selectedGrade && (
                     <span className="text-red-600 sm:text-base text-sm">
@@ -310,7 +310,7 @@ const TutorForm = () => {
                     setSelected={(curriculum) =>
                       handleSelectorChange("selectedCurriculum", curriculum)
                     }
-                    placeholder="Select Curriculum You Teach"
+                    placeholder="Curriculum You Teach"
                   />
                   {errors.selectedCurriculum && (
                     <span className="text-red-600 sm:text-base text-sm">

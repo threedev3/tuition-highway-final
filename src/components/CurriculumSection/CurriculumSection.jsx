@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import { curricula } from "../../data/data";
 
 const CurriculumSection = ({ demoRef }) => {
-  // Slider settings
   const settings = {
     dots: false,
     infinite: true,
@@ -70,25 +69,6 @@ const CurriculumSection = ({ demoRef }) => {
             </button>
           </div>
         </div>
-        {/* <div className="absolute w-full bg-gradient-to-r from-startgrad to-endGrad flex items-center h-72  -z-20">
-          {" "}
-        </div>
-        <div className="w-full max-w-[56%] ml-auto flex items-center h-72  relative">
-          <div className="slider-container w-full cursor-pointer ">
-            <Slider {...settings}>
-              {curricula.map((item, index) => (
-                <div key={index} className="">
-                  <div className="p-4 mx-4 ">
-                    <div className="text-white text-2xl font-semibold w-48">
-                      {item.firstTitle}
-                      <span className="block">{item.secondTitle}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div> */}
 
         <div className="absolute w-full bg-gradient-to-r from-startgrad to-endGrad flex items-center sm:h-56 h-48 -z-20"></div>
         <div className="w-full sm:max-w-[56%] min-[393px]:max-w-[50%] max-w-[53%] ml-auto flex flex-col items-start justify-start sm:gap-10 gap-6 sm:h-56 h-48 relative py-6">
@@ -100,11 +80,9 @@ const CurriculumSection = ({ demoRef }) => {
               {curricula.map((item, index) => (
                 <div key={index} className="min-[493px]:px-2 lg:px-4">
                   {" "}
-                  {/* Added padding for spacing */}
                   <div className="min-[493px]:p-4 rounded-md">
                     <div className="text-white min-[1510px]:text-2xl sm:text-[22px] text-[17px] text-center font-semibold min-w-[200px]">
                       {" "}
-                      {/* Set minimum width */}
                       <span className="block">{item.firstTitle}</span>
                       <span className="block">{item.secondTitle}</span>
                     </div>
