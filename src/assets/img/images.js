@@ -30,13 +30,6 @@ import fbIcon from "./fbIcon.png";
 import instaIcon from "./instaIcon.png";
 import linkedInIcon from "./linkedInIcon.png";
 
-// Curricula Images
-import curricula1 from "./curricula1.png";
-import curricula2 from "./curricula2.png";
-import curricula3 from "./curricula3.png";
-import curricula4 from "./curricula4.png";
-import curricula5 from "./curricula5.png";
-
 // Subjects Offering Images
 import sub1 from "./sub1.png";
 import sub2 from "./sub2.png";
@@ -51,18 +44,24 @@ import sub10 from "./sub10.png";
 import sub11 from "./sub11.png";
 import sub12 from "./sub12.png";
 
-// Hero Icons
-import heroIcon1 from "./heroIcon1.png";
-
 import learningImg2 from "./learningImg2.png";
 import aboutImg from "./aboutImg.png";
 
 import fadedCircle from "./fadedCircle.png";
 import subjectImg from "./subjectImg.png";
 
-import arrowRight from "./arrowRight.png";
+import heroSectionImg from "./heroSectionImg.png";
 
-import heroImg from "./heroImg.png";
+// blog images
+import blogImg1 from "./blogImg1.png";
+import blogImg2 from "./blogImg2.png";
+import blogImg3 from "./blogImg3.png";
+import blogImg4 from "./blogImg4.png";
+import blogImg5 from "./blogImg5.png";
+import blogImg6 from "./blogImg6.png";
+import blogImg7 from "./blogImg7.png";
+import blogImg8 from "./blogImg8.png";
+import blogImg9 from "./blogImg9.png";
 
 // Export all images as an object
 export {
@@ -90,11 +89,6 @@ export {
   fbIcon,
   instaIcon,
   linkedInIcon,
-  curricula1,
-  curricula2,
-  curricula3,
-  curricula4,
-  curricula5,
   sub1,
   sub2,
   sub3,
@@ -107,11 +101,18 @@ export {
   sub10,
   sub11,
   sub12,
-  heroIcon1,
   learningImg2,
   aboutImg,
   fadedCircle,
   subjectImg,
-  arrowRight,
-  heroImg,
+  heroSectionImg,
+  blogImg1,
+  blogImg2,
+  blogImg3,
+  blogImg4,
+  blogImg5,
+  blogImg6,
+  blogImg7,
+  blogImg8,
+  blogImg9,
 };

@@ -14,6 +14,7 @@ export default {
         contactBg: "#F2F2F2",
         contactBg2: "#E1E1E1",
         borderColor: "#38383856",
+        blogBorder: "#ededed",
         footerBg: "#00295B",
         footerText: "#A9A8A8",
         footerBorder: "#9B9B9B",

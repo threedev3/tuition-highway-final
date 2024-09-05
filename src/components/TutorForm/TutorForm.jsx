@@ -6,7 +6,6 @@ import {
   subjectsOffer,
 } from "../../data/data";
 import useFormValidation from "../../hooks/useFormValidation";
-import heroIcon2 from "../../assets/img/heroIcon2.png";
 import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
 

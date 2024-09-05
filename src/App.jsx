@@ -17,6 +17,7 @@ import JoinTutor from "./pages/JoinTutor/JoinTutor";
 import Blogs from "./pages/Blogs/Blogs";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import WhatsappIcon from "./components/WhatsappIcon/WhatsappIcon";
+import CurriculumPage from "./pages/CurriculumPage/CurrculumPage";
 
 function App() {
   const demoRef = useRef(null);
@@ -38,6 +39,7 @@ function App() {
             path="/subjects/:slug"
             element={<SubjectDetails demoRef={demoRef} />}
           />
+          <Route path="/:slug" element={<CurriculumPage demoRef={demoRef} />} />
           <Route path="/about" element={<About demoRef={demoRef} />} />
           <Route path="/contact" element={<ContactPage demoRef={demoRef} />} />
           <Route path="/blogs" element={<Blogs demoRef={demoRef} />} />

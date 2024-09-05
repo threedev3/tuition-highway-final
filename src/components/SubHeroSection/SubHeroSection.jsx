@@ -22,12 +22,12 @@ const SubHeroSection = ({ demoRef, title, description }) => {
       <div className="max-w-[1400px] mx-auto flex flex-col gap-6 justify-center items-center">
         <div className="flex flex-col gap-2 justify-center items-center">
           <div>
-            <h3 className="text-white lg:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold max-w-3xl text-center">
+            <h3 className="text-white xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-[22px] text-[20px] font-extrabold max-w-3xl text-center">
               {title}
             </h3>
           </div>
           <div>
-            <p className="text-white text-center max-w-md capitalize">
+            <p className="xl:text-xl sm:text-lg min-[540px]:text-base text-sm text-white text-center max-w-md capitalize">
               {description}
             </p>
           </div>

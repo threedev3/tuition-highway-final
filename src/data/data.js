@@ -23,11 +23,6 @@ import {
   fbIcon,
   instaIcon,
   linkedInIcon,
-  curricula1,
-  curricula2,
-  curricula3,
-  curricula4,
-  curricula5,
   sub1,
   sub2,
   sub3,
@@ -40,7 +35,15 @@ import {
   sub10,
   sub11,
   sub12,
-  heroIcon1,
+  blogImg1,
+  blogImg2,
+  blogImg3,
+  blogImg4,
+  blogImg5,
+  blogImg6,
+  blogImg7,
+  blogImg8,
+  blogImg9,
 } from "../assets/img/images";
 
 const navigationData = {
@@ -69,7 +72,7 @@ const navigationData = {
     { title: "Physics", to: "/subjects/physics" },
     { title: "Economics", to: "/subjects/economics" },
     { title: "Accounts", to: "/subjects/accounts" },
-    { title: "Business Studies", to: "/subjects/business-studies" },
+    { title: "Business", to: "/subjects/business" },
     { title: "English", to: "/subjects/english" },
     { title: "Sociology", to: "/subjects/sociology" },
     { title: "Psychology", to: "/subjects/psychology" },
@@ -310,8 +313,8 @@ const subjectsOffering = [
     bg: "bg-[#F46322]",
     description:
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
-    slug: "business-studies",
-    to: "/subjects/business-studies",
+    slug: "business",
+    to: "/subjects/business",
     content: {
       "British Curriculum": [
         "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
@@ -518,52 +521,113 @@ const subjectsOffering = [
   },
 ];
 
+const curriculumOffering = [
+  {
+    title: "British Curriculum",
+    content: [
+      "The International General Certificate of Secondary Education (IGCSE) is the next step in your child’s educational journey, intended for students aged 14-16.",
+      "IGCSEs are two-year courses that culminate in external exams. They cover a broad range of subjects, providing learners the opportunity to tailor their education to their interests and future aspirations.",
+      "IGCSEs are internationally respected for their rigor and breadth, helping students develop key learning skills like recall of knowledge, oral skills, problem-solving, initiative, teamwork, and investigative skills.",
+      "IGCSE courses offer a flexible course of study that gives candidates the freedom to choose subjects that are right for them. They also provide excellent preparation for A-Level, BTEC Level 3, and other pathways.",
+    ],
+    slug: "british-curriculum",
+    to: "/british-curriculum",
+  },
+  {
+    title: "American Curriculum",
+    content: [
+      "The American Curriculum offers a well-rounded, diverse education with a particular focus on creativity and critical thinking. This curriculum encourages students to explore a wide variety of academic disciplines.",
+      "The American Curriculum is organised into elementary, middle, and high school stages. It provides a balanced combination of academic and co-curricular activities, encouraging holistic development.",
+      "One of the key strengths of the American Curriculum is its flexibility, which enables a personalised learning path based on individual student interests and talents. It also fosters the development of critical thinking, problem-solving, and creativity.",
+      "The American Curriculum is renowned for its emphasis on developing a broad range of skills and competencies. Its SAT or ACT tests are well-regarded by universities across the world.",
+    ],
+    slug: "american-curriculum",
+    to: "/american-curriculum",
+  },
+  {
+    title: "International Baccalaureate",
+    content: [
+      "The International Baccalaureate (IB) Curriculum is recognized worldwide for its rigorous and comprehensive program designed to develop inquiring, knowledgeable, and caring young people. It encourages students to think critically and challenge assumptions.",
+      "The IB curriculum is thoughtfully divided into three programmes: the Primary Years Programme (PYP), Middle Years Programme (MYP), and Diploma Programme (DP). ",
+      "The IB curriculum stands out for its emphasis on global awareness and inquiry-based learning. It encourages students to become active, compassionate, and lifelong learners",
+      "A distinguishing feature of the IB curriculum is its focus on developing well-rounded students, equipped with strong academic, social, and emotional characteristics.",
+    ],
+    slug: "ib",
+    to: "/ib",
+  },
+  {
+    title: "Online Homeschooling",
+    content: [
+      "Online or Home Schooling offers a flexible and personalised education that can be accessed from anywhere. It leverages digital technology to provide a diverse range of learning materials, encouraging interactive lessons, videos, quizzes, and more.",
+      "Online schooling can follow various curricula, including those mentioned above. ",
+      "The structure often allows for self-paced learning, with an emphasis on developing independent study skills.",
+      "Online Schooling offers unparalleled flexibility, accessibility, and personalised learning experiences. It allows students to learn at their own pace and provides a wider course",
+    ],
+    slug: "online-home",
+    to: "/online-home",
+  },
+  {
+    title: "Indian CBSE",
+    content: [
+      "The Indian Curriculum, split into CBSE and ICSE, emphasizes analytical skills and knowledge acquisition. Find your ideal CBSE tutor near you at Tuition Highway.",
+      "Both CBSE, with its science focus, and ICSE, balancing arts and science, offer a structured educational path. Whether you're seeking a CBSE Maths tutor or help in other subjects, we've got you covered.",
+      "Noted for its depth in mathematics and science, the Indian Curriculum equips students for competitive exams and technical fields. Our CBSE tutors specialize in these demanding areas.",
+      "Known for fostering deep understanding and analytical thinking, the curriculum's strength in STEM subjects stands out. From a CBSE Physics tutor to experts in other STEM areas, we have the tutors you need.",
+    ],
+    slug: "indian-cbse",
+    to: "/indian-cbse",
+  },
+  {
+    title: "French Curriculum",
+    content: [
+      "The French Curriculum, or the French National Curriculum, stands out with its highly structured and centralised educational approach. It offers a balanced and broad education, with special emphasis on literature, philosophy, maths, and science.",
+      "The French Curriculum is thoughtfully divided into cycles catering to different age groups, with a strong emphasis on mastering the French language. The final diploma, the Baccalaureate, is recognized globally and opens doors to universities worldwide.",
+      "The French Curriculum is renowned for its academic rigour, especially in mathematics and philosophy. It encourages analytical thinking and fosters an appreciation for cultural understanding and language skills.",
+      "The French Curriculum is distinctive for its focus on intellectual development through literature, philosophy, and advanced maths. It offers an excellent foundation for those wishing to achieve fluency in French",
+    ],
+    slug: "french-curriculum",
+    to: "/french-curriculum",
+  },
+];
+
 const curricula = [
   {
     title: "British Curriculum",
     firstTitle: "British",
     secondTitle: "Curriculum",
-    img: curricula1,
   },
   {
     title: "American Curriculum",
     firstTitle: "American",
     secondTitle: "Curriculum",
-    img: curricula2,
   },
   {
     title: "International Baccalaureate",
     firstTitle: "International",
     secondTitle: "Baccalaureate",
-    img: curricula3,
   },
   {
     title: "French Curriculum",
     firstTitle: "French",
     secondTitle: "Curriculum",
-    img: curricula4,
   },
   {
     title: "Indian CBSE",
     firstTitle: "Indian",
     secondTitle: "CBSE",
-    img: curricula5,
   },
   {
     title: "Online Homeschooling",
     firstTitle: "Online",
     secondTitle: "Homeschooling",
-    img: heroIcon1,
   },
   {
     title: "IELTS",
     firstTitle: "IELTS",
-    img: curricula2,
   },
   {
     title: "SAT",
     firstTitle: "SAT",
-    img: curricula3,
   },
 ];
 
@@ -1041,7 +1105,7 @@ const subjectsOffer = [
   "English",
   "Biology",
   "Computer Science",
-  "Business Studies",
+  "Business",
   "Economics",
   "Accounts",
   "Business Law",
@@ -1235,6 +1299,130 @@ const joinTutorDetails = [
   "We thoroughly review these applications to shortlist candidates who meet our initial criteria.",
 ];
 
+// const blogs = [
+//   {
+//     id: 1,
+//     featuredImg: blogImg1,
+//     title:
+//       "Is the American Curriculum Failing Our Students? Here's How We Can Fix It",
+//     content: [
+//       {
+//         heading: "Introduction",
+//         para: [
+//           "A major factor in opportunity and social mobility, the American educational system is coming under increasing scrutiny. The efficiency of the American curriculum in educating pupils for the twenty-first century is a subject of great concern. Even though the system has created many successful people, graduation rates frequently give rise to concerns.",
+//           "According to Brookings, among students aged between 18 and 24, the percentage of high school graduates has risen from 85% to 95% since early 2001. The graduation rate among black and Hispanic students is lower than that of white students, a figure that conceals more significant differences. Beyond graduation rates, there are still unanswered concerns regarding kids' readiness for either college or the workforce.",
+//           "So, are our pupils not succeeding in the American curriculum? The solution is intricate. The current situation is the result of a combination of causes rather than a single perpetrator.",
+//         ],
+//       },
+//       {
+//         heading: "Getting Around the American Curriculum's Challenges",
+//         para: [
+//           {
+//             text: "With its numerous advantages, the American educational system has a number of difficulties that affect the standard of instruction for children all over the country. These obstacles, which range from unfair resource distribution to standardized testing, have a significant impact on the nature of learning.",
+//             subHeading: "Overuse of Standardized Testing",
+//             subPara: [
+//               {
+//                 innerPara: [
+//                   "With its numerous advantages, the American educational system has a number of difficulties that affect the standard of instruction for children all over the country. These obstacles, which range from unfair resource distribution to standardized testing, have a significant impact on the nature of learning.",
+//                 ],
+//               },
+//             ],
+//           },
+//           {
+//             subHeading: "Absence of Personalized Instruction",
+//             subPara: [
+//               {
+//                 innerPara: [
+//                   "Every learner has different requirements, learning methods, and rates. Nevertheless, the existing system finds it difficult to efficiently handle this variety. Underserved students might include individuals with exceptional needs or those who perform better than expected in the curriculum. Personalized learning experiences that may better assist each student's progress are limited by the one-size-fits-all approach.",
+//                 ],
+//               },
+//             ],
+//           },
+//           {
+//             subHeading: "Relevance Gap",
+//             subPara: [
+//               {
+//                 innerPara: [
+//                   "There's a rising concern that the curriculum isn't keeping up with the fast-changing world of today. Some contend that conventional disciplines have little practical value, despite the fact that the abilities needed to succeed in the workforce are changing. It is essential to close this relevance gap in order to provide students with the information and abilities they need to prosper in a changing society.",
+//                 ],
+//               },
+//             ],
+//           },
+//           {
+//             subHeading: "Inequity and Socioeconomic Disparities",
+//             subPara: [
+//               {
+//                 innerPara: [
+//                   "The disparity in opportunities and resources among schools is perhaps one of the most urgent issues. Due to funding differences between wealthy and low-income regions, educational institutions in underprivileged areas frequently have smaller class sizes, fewer resources, and fewer qualified teachers. This creates an unfair playing field. These differences exacerbate already-existing socioeconomic inequality by maintaining attainment gaps and impeding social mobility.",
+//                   "It needs a comprehensive strategy that puts equality, creativity, and flexibility first to address these issues. We may strive toward a more inclusive and successful education system for all kids by reevaluating the function of standardized testing, adopting individualized learning practices, upgrading curriculum to match real-world demands, and tackling systemic injustices.",
+//                 ],
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         heading: "Rethinking the American Curriculum:",
+//         para:
+//       }
+//     ],
+//   },
+// ];
+
+const blogs = [
+  {
+    id: 1,
+    featuredImg: blogImg2,
+    title: "Who Really Holds the Title of “Father of Chemistry”?",
+    content:
+      "The quest to discover the fundamental nature of matter has fascinated curious minds for ages. The intriguing science of chemistry was created as a result of this engrossing voyage through the universe of atoms, molecules, and reactions. But who is truly deserving of the esteemed moniker “Father of Chemistry”? Like many historical questions, the solution is more complicated than one may think.",
+    publishDate: "June 11, 2023",
+  },
+  {
+    id: 2,
+    featuredImg: blogImg3,
+    title:
+      "What Does IGCSE Stand For? Far Beyond Attractive Letters—But We Won't Debate if You Think They're Cool",
+    content:
+      "On to your backpacks—the IGCSE Express is ready to arrive at the platform! Have you ever wished you were able to crack a frog's heart like a crime scene investigator? Or decipher the mysteries of space like a contemporary Galileo? You can accomplish all of these and much more with IGCSE! Discover the secrets of science, dig into the depths of history, and write sonnets that would make Shakespeare proud—all before lunch!",
+    publishDate: "August 22, 2023",
+  },
+  {
+    id: 3,
+    featuredImg: blogImg4,
+    title:
+      "Enormous Exploration of Electricity and Circuits in IGCSE Physics: Revealing the Spark",
+    content:
+      "Electricity and circuits are important ideas that greatly influence how we perceive the world around us, and IGCSE Physics provides an intriguing exploration of the basic elements of our existence. IGCSE Physics serves as a starting point, promoting an understanding of the basic principles that govern our universe. Beyond formulas and equations, it pushes students to investigate, challenge, and apply what they learn in order to solve cosmic riddles and use scientific knowledge to improve their daily lives. This blog post explores the fascinating realm of these ideas and emphasizes how important they are for both daily living and academic endeavors.",
+    publishDate: "February 16, 2023",
+  },
+  {
+    id: 4,
+    featuredImg: blogImg5,
+    title: "Confidently conquering the IGCSE Mathematics Storm!",
+    content:
+      "Do calculations give you the trembling? Does algebra make you cry? Is arithmetic making you feel a-log-rithmically lost? Worry not, brave learner; you are not lonely in your mathematics apprehension. As reported by medicalnewstoday.com, roughly 93% of all adults in the US suffer from some level of mathematics phobia. Furthermore, roughly seventeen percent of U.S. IGCSE Mathematics can be a powerful opponent, but like with any great fight, strategy and preparation are critical to winning success.",
+    publishDate: "September 19, 2023",
+  },
+  {
+    id: 5,
+    featuredImg: blogImg6,
+    title: "The Advantages of IGCSE Tuition: Advancing Your Academic Career",
+    content:
+      "The IGCSE, also referred to as the International General Certificate of Secondary Education, is an internationally renowned and widely respected credential for learners. As stated in medium, the IGCSE, developed over 25 years ago by Cambridge University International Examinations, now Cambridge Assessment International Education, is a globally recognized examination. A firm basis for both advanced study and continuing education is provided by the IGCSE tuition. The need for IGCSE tuition rises as the course becomes more and more well-known. We shall examine the several advantages of IGCSE tutoring in this article, illuminating how it may greatly improve your academic trajectory.",
+    publishDate: "October 9, 2023",
+  },
+  {
+    id: 6,
+    featuredImg: blogImg7,
+    title:
+      "Untangling the Mysterious Impact of A-Level Tutors on Student Success: Lighting Academic Excellence",
+    content:
+      "Achieving high academic grades is frequently considered an essential for subsequent achievement in the ever-changing field of education. A-levels, a demanding and widely respected credential, are crucial in determining a student's educational path. However, the difficulty of the A-level courses and the difficulty of the exams might be overwhelming. Plenty of learners seek the help of A-level tutors in overcoming these difficulties.A-level tutors are essential in helping students throughout a challenging stage of their schooling and guaranteeing that they not only pass but also do well in their A-level examinations. We are going to dive into the global field of A-level tutors in this blog, examining their importance, the benefits they provide, and the way they help students achieve scholastic greatness.",
+    publishDate: "May 24, 2023",
+  },
+];
+
 export {
   navigationData,
   reasons,
@@ -1256,4 +1444,6 @@ export {
   termsAndConditionsData,
   enrollDetails,
   joinTutorDetails,
+  blogs,
+  curriculumOffering,
 };

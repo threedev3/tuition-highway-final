@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomButton from "../CustomButton/CustomButton";
-import heroIcon1 from "../../assets/img/heroIcon1.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { subjectsOffering } from "../../data/data";
 import TypewriterComp from "../Typewriter/Typewriter";

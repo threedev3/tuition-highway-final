@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { arrowRight } from "../../assets/img/images";
 
 function OutcomeAccordian({ question, answer, isOpen, onClick }) {
   const contentRef = useRef(null);

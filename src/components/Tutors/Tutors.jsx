@@ -2,7 +2,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import CustomButton from "../CustomButton/CustomButton";
-import pencil from "../../assets/img/pencil.png";
 import { motion } from "framer-motion";
 import { tutors } from "../../data/data";
 import Slider from "react-slick";

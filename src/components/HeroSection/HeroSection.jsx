@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import CustomButton from "../CustomButton/CustomButton";
 import Typewriter from "typewriter-effect";
 import { TypeAnimation } from "react-type-animation";
-import { heroImg } from "../../assets/img/images";
+import { heroSectionImg } from "../../assets/img/images";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 const HeroSection = ({ demoRef }) => {
@@ -186,7 +186,7 @@ const HeroSection = ({ demoRef }) => {
         </div>
 
         <div className="">
-          <img src={heroImg} alt="" className="" />
+          <img src={heroSectionImg} alt="" className="" />
         </div>
       </div>
     </div>
