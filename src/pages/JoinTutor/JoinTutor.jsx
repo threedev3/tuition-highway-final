@@ -3,6 +3,7 @@ import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroS
 import ContactForm from "../../components/ContactForm/ContactForm";
 import EnrollDetails from "../../components/EnrollDetails/EnrollDetails";
 import { joinTutorDetails } from "../../data/data";
+import { joinTutor } from "../../assets/img/images";
 
 const JoinTutor = ({ demoRef }) => {
   return (
@@ -17,6 +18,7 @@ const JoinTutor = ({ demoRef }) => {
         demoRef={demoRef}
         title="Join As a Tutor Now"
         content={joinTutorDetails}
+        imgSrc={joinTutor}
       />
       <div ref={demoRef}>
         <ContactForm

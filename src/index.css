@@ -70,6 +70,21 @@ h6 {
   transition: opacity 0.5s ease-in-out;
 }
 
+.cursor-hero {
+  font-size: 17px;
+}
+
+@media (min-width: 340px) {
+  .typewriter-text {
+    font-size: 14px; /* Example size for medium screens */
+  }
+}
+@media (min-width: 768px) {
+  .typewriter-text {
+    font-size: 18px; /* Example size for medium screens */
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

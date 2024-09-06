@@ -27,7 +27,7 @@ const SubjectHeroSection = ({ demoRef, title, description, btnText }) => {
             </h3>
           </div>
           <div>
-            <p className="text-white text-center max-w-2xl capitalize">
+            <p className="text-white text-center max-w-xl capitalize">
               {description}
             </p>
           </div>

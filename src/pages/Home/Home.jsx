@@ -22,11 +22,8 @@ const Home = ({ demoRef }) => {
       {/* <FreeDemo demoRef={demoRef} /> */}
       <Tutors />
       <Learn
-        firstHead="Learn with 100%"
-        secondHead="Satisfaction guaranteed"
-        description="If your lesson doesn't take place, or you are not satisfied with
-            your tutor, we will do our best to ensure that your learning goals
-            are achieved!"
+        firstHead="Satisfaction Guaranteed!"
+        description="We're committed to your success. If you're not satisfied with your first session, we'll make it right. Your education is our top priority."
         style="text-white xl:text-lg min-[896px]:text-base sm:text-sm text-sm md:text-start text-center"
         textStyle="min-[1140px]:max-w-xl min-[896px]:max-w-md min-[836px]:max-w-sm md:max-w-xs max-w-sm"
       />
@@ -35,8 +32,8 @@ const Home = ({ demoRef }) => {
       <div ref={demoRef}>
         <ContactForm
           demoRef={demoRef}
-          firstString={"Request a Free "}
-          secondString={"Demo"}
+          firstString={"Book A Free Demo - "}
+          secondString={"Request a Call Back"}
         />
       </div>
       <Faq />

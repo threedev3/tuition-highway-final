@@ -166,10 +166,14 @@ const Working = () => {
     >
       <div className="max-w-[1400px] mx-auto flex flex-col gap-4 justify-between  h-full w-full">
         <div className="flex flex-col gap-6 items-center text-headingColor">
-          <TypewriterComp
+          {/* <TypewriterComp
             firstString="Easy Steps Towards"
             secondString="Top Grades"
-          />
+          /> */}
+
+          <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-blueHeading">
+            Easy Steps Towards Top Grades
+          </h3>
         </div>
 
         <div className="slider-container w-auto relative">

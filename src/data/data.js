@@ -22,7 +22,7 @@ import {
   avatar4,
   fbIcon,
   instaIcon,
-  linkedInIcon,
+  linkedIn,
   sub1,
   sub2,
   sub3,
@@ -844,24 +844,24 @@ const tutors = [
 
 const faqs = [
   {
-    question: "Can I use the modem/router I already have?",
+    question: "What subjects and curricula do you cover?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
+      "We cover all major subjects across IGCSE, A-levels, IB, and American curricula.",
   },
   {
-    question: "Will speeds go up and down?",
+    question: "How do your online tutoring sessions work?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
+      "Sessions are conducted via video conferencing, with interactive whiteboards and screen-sharing capabilities.",
   },
   {
-    question: "When will my service go live?",
+    question: "How are online tutoring sessions conducted?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
+      "All our classes are held on our proprietary Learning Management System (LMS).",
   },
   {
-    question: "I already have broadband, how do I switch?",
+    question: "What are your tutors' qualifications?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur. Sed dignissim sit aenean orci. Mollis nunc massa molestie ut eget egestas. Ipsum platea leo euismod mauris diam nunc quis. Ac eros a arcu amet viverra elementum elit.",
+      "All our tutors are experienced educators with advanced degrees in their respective fields.",
   },
 ];
 
@@ -1131,7 +1131,7 @@ const socialIcons = [
     to: "https://www.facebook.com/tuitionhighway",
   },
   {
-    icon: linkedInIcon,
+    icon: linkedIn,
     alt: "linkedIn",
     to: "https://www.linkedin.com/company/tuition-highway",
   },

@@ -58,9 +58,9 @@ import { numbers } from "../../data/data";
 
 const TutorNumbers = () => {
   return (
-    <div className="relative py-16 px-6 max-w-full bg-gradient-to-r from-startgrad to-endGrad">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 justify-center items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 sm:gap-8 gap-4">
+    <div className="relative sm:py-12 py-8 px-6 max-w-full bg-gradient-to-r from-startgrad to-endGrad">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 justify-center items-stretch">
+        <div className="sm:grid sm:grid-cols-4 lg:gap-32 md:gap-16 grid grid-cols-2 gap-4 place-content-between">
           {numbers.map((item, index) => {
             const motionValue = useMotionValue(0);
             const [displayValue, setDisplayValue] = useState(0);
@@ -86,23 +86,17 @@ const TutorNumbers = () => {
               <motion.div
                 ref={ref}
                 key={index}
-                className="relative sm:p-12 p-6 xl:min-w-60 lg:min-w-52 min-w-72 bg-white/15 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 backdrop-blur-md flex flex-col justify-center items-center gap-4"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{
-                  opacity: isInView ? 1 : 0,
-                  scale: isInView ? 1 : 0.8,
-                }}
-                transition={{ duration: 0.5 }}
+                className="p-3 flex flex-col justify-center items-center gap-2 "
               >
                 {/* Decorative Border */}
                 {/* <div className="absolute inset-0 rounded-xl opacity-60"></div> */}
 
                 {/* Main Content */}
-                <motion.h3 className="text-white xl:text-6xl lg:text-5xl md:text-6xl text-5xl font-extrabold text-center z-10">
+                <motion.h3 className="text-white xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl text-4xl font-extrabold text-center z-10">
                   {displayValue}
                   <span className="text-2xl">{item.suffix}</span>
                 </motion.h3>
-                <p className="text-white md:text-xl text-xl font-semibold text-center z-10">
+                <p className="text-white md:text-xl text-lg font-semibold text-center z-10">
                   {item.title} <span className="block">{item.spanTitle}</span>
                 </p>
 

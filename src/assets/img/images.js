@@ -28,7 +28,7 @@ import avatar4 from "./avatar4.png";
 // Social Icons
 import fbIcon from "./fbIcon.png";
 import instaIcon from "./instaIcon.png";
-import linkedInIcon from "./linkedInIcon.png";
+import linkedIn from "./linkedIn.png";
 
 // Subjects Offering Images
 import sub1 from "./sub1.png";
@@ -63,6 +63,9 @@ import blogImg7 from "./blogImg7.png";
 import blogImg8 from "./blogImg8.png";
 import blogImg9 from "./blogImg9.png";
 
+import joinTutor from "../../assets/img/joinTutor.png";
+import freeDemo from "../../assets/img/freeDemo.png";
+
 // Export all images as an object
 export {
   icon1,
@@ -88,7 +91,7 @@ export {
   avatar4,
   fbIcon,
   instaIcon,
-  linkedInIcon,
+  linkedIn,
   sub1,
   sub2,
   sub3,
@@ -115,4 +118,6 @@ export {
   blogImg7,
   blogImg8,
   blogImg9,
+  joinTutor,
+  freeDemo,
 };

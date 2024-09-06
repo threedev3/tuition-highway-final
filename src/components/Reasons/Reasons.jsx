@@ -85,19 +85,13 @@ const Reasons = ({ demoRef }) => {
     <div className="relative md:py-20 py-12 px-6 max-w-full">
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 ">
         <div className="flex flex-col sm:gap-6 gap-4 items-center text-headingColor ">
-          <TypewriterComp
-            firstString="Your Fast Track To"
-            secondString="Top Grades"
-          />
+          <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-blueHeading">
+            Your Fast Track To Top Grades
+          </h3>
 
           <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto font-medium">
-            Tuition Highway: Where expert tutors, personalized learning, and
-            flexible scheduling meet comprehensive curriculum coverage. Our
-            proven approach fast-tracks students to A
-            <sup className="text-headingColor lg:text-xl sm:text-lg text-base">
-              +
-            </sup>{" "}
-            grades across IGCSE, A-levels, American, and IB curriculums.
+            Personalized tutoring by experts in all subjects. Progress
+            monitoring and flexible scheduling ensure your academic success.
           </p>
         </div>
 
@@ -209,7 +203,7 @@ const Reasons = ({ demoRef }) => {
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", damping: 17 }}
         >
-          <CustomButton text="Get A Free Demo" />
+          <CustomButton text="Book A Free Trial Lesson" />
         </motion.div>
       </div>
     </div>

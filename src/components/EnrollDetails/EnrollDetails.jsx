@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { fadedCircle, subjectImg } from "../../assets/img/images";
+import { fadedCircle, joinTutor } from "../../assets/img/images";
 import { motion } from "framer-motion";
 import { enrollDetails } from "../../data/data";
 
-const EnrollDetails = ({ title, content }) => {
+const EnrollDetails = ({ title, content, imgSrc }) => {
   return (
     <div>
       <div className="relative md:py-12 py-8 px-6 max-w-full min-h-[40vh]">
@@ -29,20 +29,14 @@ const EnrollDetails = ({ title, content }) => {
                   {content.map((item, index) => (
                     <div className="flex flex-row gap-4" key={index}>
                       <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                      <p className="lg:text-lg text-base font-semibold">
-                        {item}
-                      </p>
+                      <p className="lg:text-lg text-base font-medium">{item}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="lg:block flex justify-center">
-                <img
-                  src={subjectImg}
-                  alt=""
-                  className="w-[500px] object-contain"
-                />
+                <img src={imgSrc} alt="" className="w-[450px] object-contain" />
               </div>
             </div>
           </div>

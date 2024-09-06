@@ -9,8 +9,8 @@ const AboutSection = () => {
         <div className="md:flex md:flex-row md:justify-between md:items-center flex flex-col gap-8">
           <div className="flex flex-col gap-2 md:max-w-[65%]">
             <div className="flex flex-row gap-4 items-center ml-3">
-              <div className="h-4 w-4 bg-orangeHeading"></div>
-              <h4 className="text-headingColor text-lg">
+              <div className="sm:h-4 sm:w-4 h-3 w-3 bg-orangeHeading"></div>
+              <h4 className="text-headingColor sm:text-lg text-base">
                 Welcome To Tuition Highway
               </h4>
             </div>
@@ -18,7 +18,7 @@ const AboutSection = () => {
               About the Company
             </h3>
 
-            <div className="flex flex-col gap-10 mt-4 font-semibold">
+            <div className="flex flex-col gap-10 mt-4 font-medium">
               <p className="text-headingColor">
                 Tuition Highway started in 2017 to meet the demand for flexible
                 online tutoring. With our experienced and qualified faculty from
@@ -54,7 +54,7 @@ const AboutSection = () => {
         </div>
 
         <div className="md:grid md:grid-cols-2 md:gap-8 grid grid-cols-1 gap-4">
-          <div className="flex gap-3 items-start border-2 border-black p-3">
+          <div className="flex gap-3 items-start border-2 border-borderColor p-3">
             <div className="mt-0.5">
               <div className="rounded-full bg-orangeHeading p-0.5  flex-shrink-0">
                 <CheckIcon className="w-4 text-white font-bold flex-shrink-0" />
@@ -64,7 +64,7 @@ const AboutSection = () => {
             <div className="flex flex-col gap-6 text-headingColor">
               <h3 className="text-lg">Our Mission</h3>
 
-              <p className="font-semibold">
+              <p className="font-medium">
                 Our mission is to bridge the gap between students and quality
                 education regardless of their geographical location. Through
                 personalized online tutoring, we aim to empower each student
@@ -73,7 +73,7 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-3 items-start border-2 border-black p-3">
+          <div className="flex gap-3 items-start border-2 border-borderColor p-3">
             <div className="mt-0.5">
               <div className="rounded-full bg-orangeHeading p-0.5  flex-shrink-0">
                 <CheckIcon className="w-4 text-white font-bold flex-shrink-0" />
@@ -83,7 +83,7 @@ const AboutSection = () => {
             <div className="flex flex-col gap-6 text-headingColor">
               <h3 className="text-lg">Our Vision</h3>
 
-              <p className="font-semibold">
+              <p className="font-medium">
                 Our vision is to be a leading online tutoring service,
                 recognized for our excellence in education and commitment to
                 fostering academic success. We strive to adapt and evolve in

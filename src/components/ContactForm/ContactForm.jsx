@@ -8,6 +8,7 @@ import DemoForm from "../DemoForm/DemoForm";
 import { useLocation } from "react-router-dom";
 import TutorForm from "../TutorForm/TutorForm";
 import ContactUs from "../ContactUs/ContactUs";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ContactForm = ({ firstString, secondString, tagLine }) => {
   const location = useLocation();
@@ -15,6 +16,17 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
   // Check if the current route is the "Join as a Tutor" page
   const isTutorPage = location.pathname === "/joinastutor";
   const isContactPage = location.pathname === "/contact";
+
+  const [showDemoText, setShowDemoText] = useState(true);
+
+  useEffect(() => {
+    // Toggle the state every 3 seconds (3000 milliseconds)
+    const interval = setInterval(() => {
+      setShowDemoText((prev) => !prev);
+    }, 3000);
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, []);
 
   return (
     <div className="sm:py-8 py-6 px-6 max-w-full relative">
@@ -39,13 +51,38 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
       </motion.div> */}
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
-          <TypewriterComp
+          {/* <TypewriterComp
             firstString={firstString}
             secondString={secondString}
-          />
+          /> */}
+          <AnimatePresence mode="wait">
+            {showDemoText ? (
+              <motion.h3
+                key="demo"
+                initial={{ rotateX: 90, opacity: 0 }}
+                animate={{ rotateX: 0, opacity: 1 }}
+                exit={{ rotateX: -90, opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center gap-3 text-blueHeading"
+              >
+                Book A Free Demo
+              </motion.h3>
+            ) : (
+              <motion.h3
+                key="callback"
+                initial={{ rotateX: 90, opacity: 0 }}
+                animate={{ rotateX: 0, opacity: 1 }}
+                exit={{ rotateX: -90, opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center gap-3 text-blueHeading"
+              >
+                Request a Call Back
+              </motion.h3>
+            )}
+          </AnimatePresence>
           <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
             {tagLine ||
-              "Secure your child's academic future with Tuition Highway."}
+              "Experience our top-notch tutoring firsthand. Schedule your free session today and see how we can transform your academic journey."}
           </p>
         </div>
 

@@ -44,7 +44,7 @@ const HeroSection = ({ demoRef }) => {
 
   // Function to switch to the next heading
   const switchHeading = () => {
-    setCurrentHeading((prev) => (prev + 1) % 2);
+    setCurrentHeading((prev) => (prev + 1) % 3);
     setIsHeadingDone(false);
   };
 
@@ -65,28 +65,64 @@ const HeroSection = ({ demoRef }) => {
           <div className="xl:max-w-2xl sm:max-w-3xl ">
             <AnimatePresence mode="wait">
               {currentHeading === 0 ? (
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize"
-                >
-                  Want to score top grades in{" "}
-                  <span className="font-MontserratBold">
-                    {/* Static Text */}
-                    your
+                <div className="flex flex-col sm:gap-6 gap-4">
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize"
+                  >
+                    Want to score top grades in{" "}
+                    <span className="text-blueHeading font-MontserratBold">
+                      your Exams ?
+                    </span>{" "}
+                  </motion.h2>
+                  <div className="max-w-3xl md:min-h-20 min-h-24">
                     <Typewriter
                       onInit={(typewriter) => {
                         typewriter
                           .typeString(
-                            `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Exams</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
+                            `<span style='color: #383838; font-family: Montserrat; font-weight: 600;' class='typewriter-text' >Excel with Tuition Highway's expert online tutoring. We cover all subjects and curricula, helping students worldwide achieve exam success!</span>`
                           )
+
                           .pauseFor(1000)
-                          .deleteAll()
-                          .start()
+                          .callFunction(() => {
+                            setIsHeadingDone(true); // Set heading done to true when done typing
+                          })
+                          .start();
+                      }}
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        deleteSpeed: 50,
+                        delay: 10,
+                        cursor: "|",
+                        cursorClassName: "cursor-hero",
+                      }}
+                    />
+                  </div>
+                </div>
+              ) : currentHeading === 1 ? (
+                <div className="flex flex-col sm:gap-6 gap-4" key="heading2">
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize"
+                  >
+                    Ace Your Assessments with{" "}
+                    <span className="text-blueHeading font-MontserratBold">
+                      Confidence!
+                    </span>
+                  </motion.h2>
+                  <div className="max-w-3xl md:min-h-20 min-h-24">
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
                           .typeString(
-                            `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'> Assessments</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
+                            `<span style='color: #383838; font-family: Montserrat; font-weight: 600' class='typewriter-text'>Say goodbye to academic stress! Our skilled tutors provide targeted online support for all assessments. From Sydney to London and beyond, we're here to boost your grades.</span>`
                           )
                           .pauseFor(1000)
                           .callFunction(() => {
@@ -97,53 +133,57 @@ const HeroSection = ({ demoRef }) => {
                       options={{
                         autoStart: true,
                         loop: false,
-                        deleteSpeed: 20,
-                        delay: 50,
+                        deleteSpeed: 50,
+                        delay: 10,
+                        cursor: "|",
+                        cursorClassName: "cursor-hero",
                       }}
                     />
-                  </span>
-                </motion.h2>
+                  </div>
+                </div>
               ) : (
-                <motion.h2
-                  key="heading2"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize"
-                >
-                  Reach new heights in your academic{" "}
-                  <Typewriter
-                    onInit={(typewriter) => {
-                      typewriter
-                        .typeString(
-                          `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'>Goals</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
-                        )
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .start()
-                        .typeString(
-                          `<span style='color: #34ACD4; font-weight: 900; font-family: Montserrat-bold;'>Career</span> <span style='color: #383838; font-weight: 900; font-family: Montserrat-bold;'>?</span>`
-                        )
-                        .pauseFor(1000)
-                        .callFunction(() => {
-                          setIsHeadingDone(true); // Set heading done to true when done typing
-                        })
-                        .start();
-                    }}
-                    options={{
-                      autoStart: true,
-                      loop: false,
-                      deleteSpeed: 20,
-                      delay: 50,
-                    }}
-                  />
-                </motion.h2>
+                <div className="flex flex-col sm:gap-6 gap-4" key="heading3">
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="text-headingColor xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[44px] md:leading-[3rem] min-[540px]:text-3xl min-[346px]:text-[22px] text-[22px]  font-extrabold capitalize"
+                  >
+                    Your One-Stop Solution for All{" "}
+                    <span className="text-blueHeading font-MontserratBold">
+                      Tutoring Needs
+                    </span>
+                  </motion.h2>
+                  <div className="max-w-3xl md:min-h-20 min-h-24">
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
+                          .typeString(
+                            `<span style='color: #383838; font-family: Montserrat; font-weight: 600' class='typewriter-text'>Tuition Highway offers comprehensive online tutoring for every subject and curriculum. Whether you're in Singapore or Houston, we're your partner in academic excellence.</span>`
+                          )
+                          .pauseFor(1000)
+                          .callFunction(() => {
+                            setIsHeadingDone(true); // Set heading done to true when done typing
+                          })
+                          .start();
+                      }}
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        deleteSpeed: 50,
+                        delay: 10,
+                        cursor: "|",
+                        cursorClassName: "cursor-hero",
+                      }}
+                    />
+                  </div>
+                </div>
               )}
             </AnimatePresence>
           </div>
 
-          <div className="max-w-3xl mx-auto">
+          {/* <div className="max-w-3xl mx-auto">
             <p className="text-headingColor xl:text-xl sm:text-lg text-base ">
               We all want to score top grades in our exams. Our expert tutors
               help students worldwide achieve their dreams of A
@@ -152,27 +192,6 @@ const HeroSection = ({ demoRef }) => {
               </sup>{" "}
               grades.
             </p>
-          </div>
-
-          {/* <div className="flex flex-col gap-3">
-            <div className="flex flex-row gap-2 items-center">
-              <CheckCircleIcon width={28} color="#F46322" />
-              <p className="xl:text-lg sm:text-base text-sm font-bold text-headingColor">
-                75% Students Score A<sup>+</sup> or A Grades
-              </p>
-            </div>
-            <div className="flex flex-row gap-2 items-center">
-              <CheckCircleIcon width={28} color="#F46322" />
-              <p className="xl:text-lg sm:text-base text-sm font-bold text-headingColor">
-                125000 Hours Live Lessons Delivered
-              </p>
-            </div>
-            <div className="flex flex-row gap-2 items-center">
-              <CheckCircleIcon width={28} color="#F46322" />
-              <p className="xl:text-lg sm:text-base text-sm font-bold text-headingColor">
-                95% Parents Satisfaction Ratio
-              </p>
-            </div>
           </div> */}
 
           <motion.div
@@ -185,8 +204,8 @@ const HeroSection = ({ demoRef }) => {
           </motion.div>
         </div>
 
-        <div className="">
-          <img src={heroSectionImg} alt="" className="" />
+        <div className="lg:w-[40%] w-[70%]">
+          <img src={heroSectionImg} alt="" className="w-full object-contain" />
         </div>
       </div>
     </div>

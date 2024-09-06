@@ -3,6 +3,7 @@ import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroS
 import ContactForm from "../../components/ContactForm/ContactForm";
 import EnrollDetails from "../../components/EnrollDetails/EnrollDetails";
 import { enrollDetails } from "../../data/data";
+import { freeDemo } from "../../assets/img/images";
 
 const TakingDemoPage = ({ demoRef }) => {
   return (
@@ -16,6 +17,7 @@ const TakingDemoPage = ({ demoRef }) => {
         demoRef={demoRef}
         title="Start Your Free Trial Now!"
         content={enrollDetails}
+        imgSrc={freeDemo}
       />
       <div ref={demoRef}>
         <ContactForm

@@ -157,6 +157,17 @@ const Subjects = () => {
     ],
   };
 
+  const [isPopular, setIsPopular] = useState(false);
+
+  useEffect(() => {
+    // Toggle the state every 3 seconds (3000 milliseconds)
+    const interval = setInterval(() => {
+      setIsPopular((prev) => !prev);
+    }, 3000);
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, []);
+
   return (
     <div className="md:py-20 py-12 px-6 max-w-full relative bg-heroBg">
       {/* <motion.div
@@ -178,31 +189,22 @@ const Subjects = () => {
       <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col justify-center sm:gap-12 gap-8">
         <div className="flex flex-col sm:gap-6 gap-4 items-center text-headingColor max-w-5xl mx-auto">
           {/* <TypewriterComp firstString="Popular" secondString="Subjects" /> */}
-          <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center gap-3">
-            Popular{" "}
-            <span className="">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      `<span style="color: #34ACD4; font-weight: 900; font-family: Montserrat-bold; display: inline" >Subjects</span>`
-                    )
-                    .pauseFor(1000)
-                    .start();
-                }}
-                options={{
-                  autoStart: true,
-                  loop: true,
-                  deleteSpeed: 20,
-                  delay: 50,
-                }}
-              />
-            </span>
-          </h3>
+          <AnimatePresence mode="wait">
+            <motion.h3
+              key={isPopular ? "Popular" : "In-Demand"}
+              initial={{ rotateX: 90, opacity: 0 }}
+              animate={{ rotateX: 0, opacity: 1 }}
+              exit={{ rotateX: -90, opacity: 0 }}
+              transition={{ duration: 0.6 }}
+              className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center gap-3 text-blueHeading"
+            >
+              {isPopular ? "Popular Subjects" : "In-Demand Subjects"}
+            </motion.h3>
+          </AnimatePresence>
           <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
-            At Tuition Highway, we offer expert tutoring across a wide range of
-            curricula and subjects, ensuring your child gets the specific
-            support they need.
+            Our expert tutors cover all subjects across major curricula. Get
+            personalized support to overcome academic challenges and excel in
+            your studies.
           </p>
 
           {/* <div className="flex sm:flex-row flex-col justify-between items-center gap-6">
