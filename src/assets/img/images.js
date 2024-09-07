@@ -5,6 +5,14 @@ import icon3 from "./icon3.png";
 import icon4 from "./icon4.png";
 import icon5 from "./icon5.png";
 
+import expertTutor from "./expertTutor.png";
+import personalizedLearning from "./personalizedLearning.png";
+import flexSchedule from "./flexSchedule.png";
+import compCurriculum from "./compCurriculum.png";
+import provenResults from "./provenResults.png";
+import compreCurriculum from "./compreCurriculum.png";
+import curriculaImg from "./curricula.png";
+
 // GIFs
 import computer from "./computer.gif";
 import math from "./math.gif";
@@ -97,6 +105,13 @@ export {
   icon3,
   icon4,
   icon5,
+  expertTutor,
+  personalizedLearning,
+  flexSchedule,
+  compCurriculum,
+  provenResults,
+  compreCurriculum,
+  curriculaImg,
   computer,
   math,
   physics,

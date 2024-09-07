@@ -97,27 +97,30 @@ const Reasons = ({ demoRef }) => {
         </div>
 
         <div className="slider-container cursor-pointer w-auto relative">
-          <motion.div className="absolute left-[12%] right-[10%] top-[10%]">
+          {/* <motion.div className="absolute left-[12%] right-[10%] top-[10%]">
             <img src={ropeImg} alt="" className="" />
-          </motion.div>
+          </motion.div> */}
           <Slider {...settings}>
             {reasons.map((item, index) => (
               <motion.div key={index} className="relative w-full h-full">
-                <motion.div
-                  className="flex flex-col gap-6 transition-shadow duration-300 group xl:min-h-[200px] min-h-[200px] my-4 mx-2 p-6"
-                  // animate={{ rotateY: flippedCards[index] ? 180 : 0 }}
-                  // transition={{ duration: 0.7 }}
-                  // style={{ backfaceVisibility: "hidden" }}
-                >
-                  <div className="p-3 bg-blueHeading rounded-full w-14 h-14 flex justify-center items-center mx-auto">
-                    <img src={item.icon} alt={item.title} className="" />
+                {/* {index >= 0 && (
+                  <motion.div className="absolute -left-8 top-14 h-1 border-2 border-headingColor border-dashed w-[100%] -z-10" />
+                )} */}
+
+                <motion.div className="flex flex-col gap-4 transition-shadow duration-300 group xl:min-h-[200px] min-h-[200px] my-4 mx-2 px-3">
+                  <div className=" mx-auto">
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      className="w-20 h-20 object-contain"
+                    />
                   </div>
-                  <div className="mx-auto">
-                    <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:block hidden mb-3 text-center">
+                  <div className="flex flex-col gap-4 justify-center items-center mx-auto">
+                    <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:block hidden text-center">
                       {item.firstTitle}{" "}
                       <span className="block">{item.secondTitle}</span>
                     </p>
-                    <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:hidden block mb-3 text-center">
+                    <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:hidden block text-center">
                       {item.wholeTitle}
                     </p>
                     <p className="sm:text-sm text-sm text-headingColor text-center">

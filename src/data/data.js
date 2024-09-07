@@ -4,6 +4,13 @@ import {
   icon3,
   icon4,
   icon5,
+  expertTutor,
+  personalizedLearning,
+  flexSchedule,
+  compCurriculum,
+  provenResults,
+  compreCurriculum,
+  curriculaImg,
   computer,
   math,
   physics,
@@ -106,21 +113,21 @@ const reasons = [
     secondTitle: "Expert Tutors",
     description:
       "Specialized in British (IGCSE, GCSE, A-levels), American, IB, and CBSE curriculum.",
-    icon: icon1,
+    icon: expertTutor,
   },
   {
     wholeTitle: "Personalized Learning",
     firstTitle: "Personalized",
     secondTitle: "Learning",
     description: "Tailored lessons to suit individual student needs.",
-    icon: icon2,
+    icon: personalizedLearning,
   },
   {
     wholeTitle: "Flexible Scheduling",
     firstTitle: "Flexible",
     secondTitle: "Scheduling",
     description: "Experience our teaching style before committing.",
-    icon: icon3,
+    icon: flexSchedule,
   },
   {
     wholeTitle: "Comprehensive Curriculum",
@@ -128,7 +135,7 @@ const reasons = [
     secondTitle: "Curriculum",
     description:
       "Over 90,000 live lessons in Maths, Physics, Computer Science, and more.",
-    icon: icon5,
+    icon: curriculaImg,
   },
   {
     wholeTitle: "Proven Results",
@@ -136,7 +143,7 @@ const reasons = [
     secondTitle: "Results",
     description:
       "Over 90,000 live lessons in Maths, Physics, Computer Science, and more.",
-    icon: icon4,
+    icon: provenResults,
   },
 ];
 
