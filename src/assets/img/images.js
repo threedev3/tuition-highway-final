@@ -97,6 +97,7 @@ import indianImg from "./indianImg.png";
 import frenchImg from "./frenchImg.png";
 
 import ropeImg from "./ropeImg.png";
+import thankYouImg from "./thankYouImg.png";
 
 // Export all images as an object
 export {
@@ -178,4 +179,5 @@ export {
   joinTutor,
   freeDemo,
   ropeImg,
+  thankYouImg,
 };

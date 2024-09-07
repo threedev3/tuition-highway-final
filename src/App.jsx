@@ -18,6 +18,7 @@ import Blogs from "./pages/Blogs/Blogs";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import WhatsappIcon from "./components/WhatsappIcon/WhatsappIcon";
 import CurriculumPage from "./pages/CurriculumPage/CurrculumPage";
+import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
 
 function App() {
   const demoRef = useRef(null);
@@ -59,6 +60,7 @@ function App() {
             path="/termsofservice"
             element={<TermsOfService demoRef={demoRef} />}
           />
+          <Route path="/thankyou" element={<ThankYouPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <WhatsappIcon />

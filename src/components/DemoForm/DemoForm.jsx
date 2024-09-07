@@ -8,9 +8,18 @@ import {
 import useFormValidation from "../../hooks/useFormValidation";
 import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
+import { useNavigate } from "react-router-dom";
 
 const DemoForm = () => {
   const { errors, validateDemo } = useFormValidation();
+  const naviagte = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const [formValues, setFormValues] = useState({
     parentName: "",
@@ -51,6 +60,8 @@ const DemoForm = () => {
         selectedGrade: null,
         selectedCurriculum: null,
       });
+      naviagte("/thankyou");
+      scrollToTop();
     } else {
       console.log("Validation errors", errors);
     }

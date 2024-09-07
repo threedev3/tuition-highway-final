@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
-const SubHeroSection = ({ demoRef, title, description }) => {
+const SubHeroSection = ({ demoRef, title, description, btnText }) => {
   const sections = {
     Demo: demoRef,
   };
@@ -37,8 +37,12 @@ const SubHeroSection = ({ demoRef, title, description }) => {
           className="py-3 px-5 bg-white flex gap-1 rounded-full cursor-pointer"
           onClick={() => handleNavClick("Demo")}
         >
-          <button className="text-headingColor font-semibold">Free Demo</button>
-          <ChevronRightIcon className="w-5 text-[#2165EE] font-bold" />
+          <button className="text-headingColor font-semibold">
+            {btnText ? btnText : "Free Demo"}
+          </button>
+          {!btnText && (
+            <ChevronRightIcon className="w-5 text-[#2165EE] font-bold" />
+          )}
         </div>
       </div>
     </div>
