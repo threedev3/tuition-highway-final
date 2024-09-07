@@ -3,13 +3,15 @@ import mainLogo from "../../assets/img/mainLogo.png";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import CustomButton from "../CustomButton/CustomButton";
 import { Transition } from "@headlessui/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { navigationData } from "../../data/data";
 
 const Navbar = ({ demoRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState(null);
+  const [activeItem, setActiveItem] = useState(null); // State to track the active item
+  const location = useLocation(); // Hook to get the current location
 
   const sections = {
     Demo: demoRef,
@@ -63,6 +65,17 @@ const Navbar = ({ demoRef }) => {
       }
     });
   }, [expandedSection]);
+
+  useEffect(() => {
+    // Set active item based on the current path
+    setActiveItem(location.pathname);
+  }, [location]);
+
+  const handleItemClick = (to) => {
+    setActiveItem(to); // Update the active item
+    scrollToTop(); // Scroll to the top
+    setIsOpen(false); // Close the menu
+  };
 
   // Combined navigation data
 
@@ -140,16 +153,19 @@ const Navbar = ({ demoRef }) => {
                       <li key={item.title}>
                         <Link
                           to={item.to}
-                          className="text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out"
-                          onClick={() => {
-                            setIsOpen(false);
-                            scrollToTop();
-                          }}
+                          className={`text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out ${
+                            activeItem === item.to ? "text-orangeHeading" : ""
+                          }`}
+                          onClick={() => handleItemClick(item.to)}
                         >
                           <span className="group-hover:text-orangeHeading transition-all duration-300 ease-in-out">
                             {item.title}
                           </span>
-                          <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-orangeHeading transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                          <span
+                            className={`absolute bottom-0 left-0 h-0.5 w-0 bg-orangeHeading transition-all duration-300 ease-in-out group-hover:w-full ${
+                              activeItem === item.to ? "w-full" : ""
+                            }`}
+                          ></span>
                         </Link>
                       </li>
                     ))}
@@ -193,17 +209,24 @@ const Navbar = ({ demoRef }) => {
                           <li key={item.title}>
                             <Link
                               to={item.to}
-                              className="text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out"
+                              className={`text-headingColor font-semibold text-base relative group transition-all duration-300 ease-in-out ${
+                                activeItem === item.to
+                                  ? "text-orangeHeading"
+                                  : ""
+                              }`}
                               onClick={() => {
+                                handleItemClick(item.to);
                                 setExpandedSection(null);
-                                setIsOpen(false);
-                                scrollToTop();
                               }}
                             >
                               <span className="group-hover:text-orangeHeading transition-all duration-300 ease-in-out">
                                 {item.title}
                               </span>
-                              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-orangeHeading transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                              <span
+                                className={`absolute bottom-0 left-0 h-0.5 w-0 bg-orangeHeading transition-all duration-300 ease-in-out ${
+                                  activeItem === item.to ? "w-full" : ""
+                                }`}
+                              ></span>
                             </Link>
                           </li>
                         ))}

@@ -84,7 +84,7 @@ const Tutors = () => {
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 z-10 relative">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
           {/* <TypewriterComp firstString="Our Top Rated" secondString="Faculty" /> */}
-          <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-blueHeading">
+          <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-headingColor">
             Our Top Rated Faculty
           </h3>
           <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">

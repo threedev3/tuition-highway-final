@@ -8,7 +8,7 @@ export default {
         headingColor: "#383838",
         orangeHeading: "#F46322",
         toOrange: "#9F431A",
-        blueHeading: "#34ACD4",
+        blueHeading: "#008fbf",
         blueBtn: "#008FBF",
         activeBlueBtn: "#247793",
         contactBg: "#F2F2F2",

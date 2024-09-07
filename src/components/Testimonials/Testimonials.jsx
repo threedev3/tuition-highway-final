@@ -95,7 +95,7 @@ const Testimonials = () => {
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 items-center justify-center ">
         <div className="flex flex-col gap-8 ">
           <div>
-            <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-blueHeading">
+            <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-headingColor">
               Testimonials and Success Stories
             </h3>
           </div>

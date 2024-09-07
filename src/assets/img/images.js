@@ -66,6 +66,30 @@ import blogImg9 from "./blogImg9.png";
 import joinTutor from "../../assets/img/joinTutor.png";
 import freeDemo from "../../assets/img/freeDemo.png";
 
+// Subjects hero images
+import mathsSubject from "./mathsSubject.png";
+import physicsSubject from "./physicsSubject.png";
+import chemistrySubject from "./chemistrySubject.png";
+import biologySubject from "./biologySubject.png";
+import englishSubject from "./englishSubject.png";
+import businessLawSubject from "./businessLawSubject.png";
+import accountsSubject from "./accountsSubject.png";
+import sociologySubject from "./sociologySubject.png";
+import psychologySubject from "./psychologySubject.png";
+import economicsSubject from "./economicsSubject.png";
+import businessSubject from "./businessSubject.png";
+import computerSubject from "./computerSubject.png";
+
+// Curriculum images
+import britishImg from "./britishImg.png";
+import americanImg from "./americanImg.png";
+import ibImg from "./ibImg.png";
+import onlineHomeImg from "./onlineHomeImg.png";
+import indianImg from "./indianImg.png";
+import frenchImg from "./frenchImg.png";
+
+import ropeImg from "./ropeImg.png";
+
 // Export all images as an object
 export {
   icon1,
@@ -85,6 +109,24 @@ export {
   psychology,
   stats,
   business,
+  mathsSubject,
+  physicsSubject,
+  chemistrySubject,
+  biologySubject,
+  englishSubject,
+  businessLawSubject,
+  accountsSubject,
+  sociologySubject,
+  psychologySubject,
+  businessSubject,
+  economicsSubject,
+  computerSubject,
+  britishImg,
+  americanImg,
+  ibImg,
+  onlineHomeImg,
+  indianImg,
+  frenchImg,
   avatar1,
   avatar2,
   avatar3,
@@ -120,4 +162,5 @@ export {
   blogImg9,
   joinTutor,
   freeDemo,
+  ropeImg,
 };

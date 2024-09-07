@@ -15,6 +15,18 @@ import {
   sociology,
   psychology,
   business,
+  mathsSubject,
+  physicsSubject,
+  chemistrySubject,
+  biologySubject,
+  englishSubject,
+  businessLawSubject,
+  accountsSubject,
+  sociologySubject,
+  psychologySubject,
+  businessSubject,
+  economicsSubject,
+  computerSubject,
   stats,
   avatar1,
   avatar2,
@@ -44,6 +56,12 @@ import {
   blogImg7,
   blogImg8,
   blogImg9,
+  britishImg,
+  americanImg,
+  ibImg,
+  onlineHomeImg,
+  indianImg,
+  frenchImg,
 } from "../assets/img/images";
 
 const navigationData = {
@@ -153,6 +171,7 @@ const subjectsOffering = [
   {
     title: "Mathematics",
     mainImg: math,
+    heroImg: mathsSubject,
     img: sub1,
     bg: "bg-[#515151]",
     description:
@@ -183,6 +202,7 @@ const subjectsOffering = [
   {
     title: "Physics",
     mainImg: physics,
+    heroImg: physicsSubject,
     img: sub2,
     bg: "bg-[#F46322]",
     description:
@@ -213,6 +233,7 @@ const subjectsOffering = [
   {
     title: "Chemistry",
     mainImg: chemistry,
+    heroImg: chemistrySubject,
     img: sub3,
     bg: "bg-[#515151]",
     description:
@@ -242,6 +263,7 @@ const subjectsOffering = [
   },
   {
     title: "English",
+    heroImg: englishSubject,
     mainImg: english,
     img: sub8,
     bg: "bg-[#F46322]",
@@ -279,6 +301,7 @@ const subjectsOffering = [
   {
     title: "Biology",
     mainImg: biology,
+    heroImg: biologySubject,
     img: sub4,
     bg: "bg-[#515151]",
     description:
@@ -309,6 +332,7 @@ const subjectsOffering = [
   {
     title: "Business ",
     mainImg: business,
+    heroImg: businessSubject,
     img: sub7,
     bg: "bg-[#F46322]",
     description:
@@ -339,6 +363,7 @@ const subjectsOffering = [
   {
     title: "Computer",
     mainImg: computer,
+    heroImg: computerSubject,
     img: sub9,
     bg: "bg-[#515151]",
     description:
@@ -370,6 +395,7 @@ const subjectsOffering = [
   {
     title: "Accounts",
     mainImg: accounts,
+    heroImg: accountsSubject,
     img: sub5,
     bg: "bg-[#F46322]",
     description:
@@ -401,6 +427,7 @@ const subjectsOffering = [
   {
     title: "Economics",
     mainImg: stats,
+    heroImg: economicsSubject,
     img: sub6,
     bg: "bg-[#515151]",
     description:
@@ -432,6 +459,7 @@ const subjectsOffering = [
   {
     title: "Business Law",
     mainImg: businessLaw,
+    heroImg: businessLawSubject,
     img: sub10,
     bg: "bg-[#F46322]",
     description:
@@ -462,6 +490,7 @@ const subjectsOffering = [
   {
     title: "Sociology",
     mainImg: sociology,
+    heroImg: sociologySubject,
     img: sub11,
     bg: "bg-[#515151]",
     description:
@@ -492,6 +521,7 @@ const subjectsOffering = [
   {
     title: "Psychology",
     mainImg: psychology,
+    heroImg: psychologySubject,
     img: sub12,
     bg: "bg-[#F46322]",
     description:
@@ -523,6 +553,7 @@ const subjectsOffering = [
 
 const curriculumOffering = [
   {
+    heroImg: britishImg,
     title: "British Curriculum",
     content: [
       "The International General Certificate of Secondary Education (IGCSE) is the next step in your child’s educational journey, intended for students aged 14-16.",
@@ -534,6 +565,7 @@ const curriculumOffering = [
     to: "/british-curriculum",
   },
   {
+    heroImg: americanImg,
     title: "American Curriculum",
     content: [
       "The American Curriculum offers a well-rounded, diverse education with a particular focus on creativity and critical thinking. This curriculum encourages students to explore a wide variety of academic disciplines.",
@@ -545,6 +577,7 @@ const curriculumOffering = [
     to: "/american-curriculum",
   },
   {
+    heroImg: ibImg,
     title: "International Baccalaureate",
     content: [
       "The International Baccalaureate (IB) Curriculum is recognized worldwide for its rigorous and comprehensive program designed to develop inquiring, knowledgeable, and caring young people. It encourages students to think critically and challenge assumptions.",
@@ -556,6 +589,7 @@ const curriculumOffering = [
     to: "/ib",
   },
   {
+    heroImg: onlineHomeImg,
     title: "Online Homeschooling",
     content: [
       "Online or Home Schooling offers a flexible and personalised education that can be accessed from anywhere. It leverages digital technology to provide a diverse range of learning materials, encouraging interactive lessons, videos, quizzes, and more.",
@@ -567,6 +601,7 @@ const curriculumOffering = [
     to: "/online-home",
   },
   {
+    heroImg: indianImg,
     title: "Indian CBSE",
     content: [
       "The Indian Curriculum, split into CBSE and ICSE, emphasizes analytical skills and knowledge acquisition. Find your ideal CBSE tutor near you at Tuition Highway.",
@@ -578,6 +613,7 @@ const curriculumOffering = [
     to: "/indian-cbse",
   },
   {
+    heroImg: frenchImg,
     title: "French Curriculum",
     content: [
       "The French Curriculum, or the French National Curriculum, stands out with its highly structured and centralised educational approach. It offers a balanced and broad education, with special emphasis on literature, philosophy, maths, and science.",
@@ -654,7 +690,7 @@ const testimonials = [
       "My daughter really likes and fees comfortable. Plus it is online so it's really convenient for her. Above all the classes are really informative",
     class: "IGCSE",
     stars: 4.5,
-    circleColor: "bg-[#00D1FF]",
+    circleColor: "bg-[#008FBF]",
   },
   {
     name: "Mrs. Sajid",
@@ -670,7 +706,7 @@ const testimonials = [
       "It's been going really well. Both my daughters have benefited from tuitions over the years and have built a solid foundation.",
     class: "Maths IGCSE, Physics IGCSE, Arabic IGCSE",
     stars: 4.5,
-    circleColor: "bg-[#00D1FF]",
+    circleColor: "bg-[#008FBF]",
   },
   {
     name: "Mr. Suresh",
@@ -686,7 +722,7 @@ const testimonials = [
       "Thank you. It was really good experience. I have given your number to my other friends",
     class: "IGCSE Maths",
     stars: 5,
-    circleColor: "bg-[#00D1FF]",
+    circleColor: "bg-[#008FBF]",
   },
   {
     name: "Mrs. Saba",
@@ -702,7 +738,7 @@ const testimonials = [
       "We are very satisfied and already recommended your academy to many colleagues.",
     class: "IGCSE Biology, IGCSE Physics",
     stars: 4,
-    circleColor: "bg-[#00D1FF]",
+    circleColor: "bg-[#008FBF]",
   },
   {
     name: "Mr. Elwaleed",
@@ -718,7 +754,7 @@ const testimonials = [
       "Your services are impressive, and I do expect good services in future as well.",
     class: "Maths & Physics IGCSE",
     stars: 4,
-    circleColor: "bg-[#00D1FF]",
+    circleColor: "bg-[#008FBF]",
   },
   {
     name: "Mrs. Sumera",
@@ -732,7 +768,7 @@ const testimonials = [
     review: "Ammar got A* in CS and Economic and A in bio chemistry physics.",
     class: "Grade 11, AQA Board",
     stars: 4,
-    circleColor: "bg-[#00D1FF]",
+    circleColor: "bg-[#008FBF]",
   },
   {
     name: "Mr. Amir Habib",
@@ -746,7 +782,7 @@ const testimonials = [
     review: "My daughter is happy.",
     class: "Maths grade 7",
     stars: 4.5,
-    circleColor: "bg-[#00D1FF]",
+    circleColor: "bg-[#008FBF]",
   },
 
   {

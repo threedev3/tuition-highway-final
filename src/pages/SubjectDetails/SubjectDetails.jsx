@@ -22,7 +22,7 @@ const SubjectDetails = ({ demoRef }) => {
       <SubjectHeroSection
         demoRef={demoRef}
         title={subject.title}
-        description="Give your child a head start by enrolling them in our comprehensive American Curriculum program, all from the comfort of your home."
+        description="Paving the way with smart online tutoring solutions for IGCSE & A-Levels"
       />
       <SubjectDetailComp demoRef={demoRef} subject={subject} />
       <Testimonials />

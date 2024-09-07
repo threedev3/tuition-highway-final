@@ -53,7 +53,11 @@ const CurriculumDetailComp = ({ demoRef, curriculum }) => {
           </div>
 
           <div className="lg:block flex justify-center">
-            <img src={subjectImg} alt="" className="w-[500px] object-contain" />
+            <img
+              src={curriculum.heroImg}
+              alt=""
+              className="w-[550px] object-contain"
+            />
           </div>
         </div>
       </motion.div>
