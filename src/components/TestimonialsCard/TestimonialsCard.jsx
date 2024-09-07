@@ -4,7 +4,7 @@ import StarRating from "react-star-ratings";
 const TestimonialsCard = ({ item }) => {
   return (
     <div className="">
-      <div className="flex flex-col gap-6 w-[300px] md:p-0 p-6">
+      <div className="flex flex-col gap-8 w-[300px] md:p-0 p-6  mx-auto">
         <div className="flex flex-col gap-3">
           <div className="flex gap-3 min-h-16">
             <div
@@ -29,8 +29,7 @@ const TestimonialsCard = ({ item }) => {
             />
           </div>
         </div>
-
-        <div className="text-headingColor text-base  font-medium">
+        <div className="text-headingColor text-base min-h-32 font-medium">
           {item.review}
         </div>
       </div>

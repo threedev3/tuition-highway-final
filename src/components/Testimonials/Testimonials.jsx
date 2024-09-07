@@ -11,9 +11,9 @@ const Testimonials = () => {
   const sliderRef = useRef(null);
 
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
     arrows: false,
@@ -23,12 +23,27 @@ const Testimonials = () => {
     cssEase: "ease",
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 560,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
         },
       },
     ],
@@ -46,12 +61,12 @@ const Testimonials = () => {
     <div className="relative md:py-20 py-10 px-6 max-w-full overflow-x-hidden">
       <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out blur-md "></div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto md:flex md:flex-row md:items-center md:justify-between md:gap-10 flex flex-col gap-6 items-center justify-center ">
+      {/* <div className="relative z-10 max-w-[1400px] mx-auto md:flex md:flex-row md:items-center md:justify-between md:gap-10 flex flex-col gap-6 items-center justify-center ">
         <div className="flex flex-col gap-8 max-w-[500px]">
           <div>
             <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] leading-none text-headingColor">
               Testimonials and{" "}
-              <span className="font-MontserratBold text-orangeHeading">
+              <span className="font-MontserratBold text-blueHeading">
                 Success
               </span>{" "}
               Stories
@@ -68,6 +83,25 @@ const Testimonials = () => {
         </div>
         <div className="min-[1200px]:max-w-3xl lg:max-w-2xl md:max-w-sm max-w-sm px-5">
           <div className="slider-container w-auto cursor-pointer ">
+            <Slider ref={sliderRef} {...settings}>
+              {testimonials.map((item, index) => (
+                <TestimonialsCard item={item} key={index} />
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 items-center justify-center ">
+        <div className="flex flex-col gap-8 ">
+          <div>
+            <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-blueHeading">
+              Testimonials and Success Stories
+            </h3>
+          </div>
+        </div>
+        <div className="min-[1200px]:max-w-7xl lg:max-w-[980px] md:max-w-[700px] max-w-[560px] px-5">
+          <div className="slider-container w-auto cursor-pointer sm:mx-0 mx-auto">
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((item, index) => (
                 <TestimonialsCard item={item} key={index} />
