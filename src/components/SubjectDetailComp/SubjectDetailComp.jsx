@@ -117,16 +117,16 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
   return (
     <div>
       <div className="relative md:py-12 py-8 px-6 max-w-full min-h-[40vh]">
-        <div className="absolute -top-56 left-0 -z-10 w-56">
+        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
           <img src={fadedCircle} alt="" className="object-contain" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-20 gap-8 ">
-          <div className="flex sm:flex-row flex-col justify-center items-center gap-6">
+          <div className="flex sm:flex-row flex-col justify-center items-center flex-wrap gap-6">
             {Object.keys(subject.content || {}).map((curriculum, index) => (
               <motion.button
                 key={index}
                 onClick={() => handleViewChange(curriculum)}
-                className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 ${
+                className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 sm:w-auto w-72 ${
                   activeView === curriculum
                     ? "bg-activeBlueBtn text-white"
                     : "bg-subjectBtn text-white"

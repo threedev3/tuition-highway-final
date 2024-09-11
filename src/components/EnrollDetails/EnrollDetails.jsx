@@ -7,7 +7,7 @@ const EnrollDetails = ({ title, content, imgSrc }) => {
   return (
     <div>
       <div className="relative md:py-12 py-8 px-6 max-w-full min-h-[40vh]">
-        <div className="absolute -top-56 left-0 -z-10 w-56">
+        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
           <img src={fadedCircle} alt="" className="object-contain" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-20 gap-8 ">

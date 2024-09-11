@@ -6,12 +6,12 @@ import icon4 from "./icon4.png";
 import icon5 from "./icon5.png";
 
 import expertTutor from "./expertTutor.png";
-import personalizedLearning from "./personalizedLearning.png";
 import flexSchedule from "./flexSchedule.png";
 import compCurriculum from "./compCurriculum.png";
-import provenResults from "./provenResults.png";
 import compreCurriculum from "./compreCurriculum.png";
 import curriculaImg from "./curricula.png";
+import personalLearning from "./online-learning.png";
+import proveResult from "./goal.png";
 
 // GIFs
 import computer from "./computer.gif";
@@ -87,6 +87,17 @@ import psychologySubject from "./psychologySubject.png";
 import economicsSubject from "./economicsSubject.png";
 import businessSubject from "./businessSubject.png";
 import computerSubject from "./computerSubject.png";
+import mathsSub from "./mathsSub.png";
+import chemistrySub from "./chemistrySub.png";
+import biologySub from "./biologySub.png";
+import physicsSub from "./physicsSub.png";
+import businessSub from "./businessSub.png";
+import businessLawSub from "./businessLawSub.png";
+import englishSub from "./englishSub.png";
+import accountsSub from "./accountsSub.png";
+import computerSub from "./computerSub.svg";
+import psychologySub from "./psychologySub.svg";
+import economicsSub from "./economicsSub.svg";
 
 // Curriculum images
 import britishImg from "./britishImg.png";
@@ -95,6 +106,8 @@ import ibImg from "./ibImg.png";
 import onlineHomeImg from "./onlineHomeImg.png";
 import indianImg from "./indianImg.png";
 import frenchImg from "./frenchImg.png";
+import frenchCurr from "./frenchCurr.png";
+import indianCurr from "./indianCurr.png";
 
 import ropeImg from "./ropeImg.png";
 import thankYouImg from "./thankYouImg.png";
@@ -107,12 +120,12 @@ export {
   icon4,
   icon5,
   expertTutor,
-  personalizedLearning,
   flexSchedule,
   compCurriculum,
-  provenResults,
   compreCurriculum,
   curriculaImg,
+  personalLearning,
+  proveResult,
   computer,
   math,
   physics,
@@ -137,12 +150,25 @@ export {
   businessSubject,
   economicsSubject,
   computerSubject,
+  mathsSub,
+  chemistrySub,
+  biologySub,
+  physicsSub,
+  businessSub,
+  businessLawSub,
+  englishSub,
+  accountsSub,
+  economicsSub,
+  computerSub,
+  psychologySub,
   britishImg,
   americanImg,
   ibImg,
   onlineHomeImg,
   indianImg,
   frenchImg,
+  frenchCurr,
+  indianCurr,
   avatar1,
   avatar2,
   avatar3,

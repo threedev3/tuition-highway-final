@@ -69,13 +69,13 @@ const SubjectsCard = ({ item, demoRef }) => {
                 transition={{ duration: 0.3 }}
               >
                 <div
-                  className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+                  className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs font-semibold custom-border"
                   onClick={handleSubjectClick}
                 >
                   Read More
                 </div>
                 <div
-                  className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+                  className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs font-semibold custom-border"
                   onClick={() => handleNavClick("Demo")}
                 >
                   Book A Free Demo
@@ -88,13 +88,13 @@ const SubjectsCard = ({ item, demoRef }) => {
         <div className="lg:hidden block">
           <div className="flex gap-3">
             <div
-              className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+              className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs font-semibold custom-border"
               onClick={handleSubjectClick}
             >
               Read More
             </div>
             <div
-              className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs  custom-border"
+              className="relative inline-block min-[680px]:py-1 py-1 min-[680px]:px-2 px-2 border-2 border-orangeHeading min-[877px]:text-sm min-[840px]:text-xs sm:text-xs min-[420px]:text-sm text-xs font-semibold custom-border"
               onClick={() => handleNavClick("Demo")}
             >
               Book A Free Demo

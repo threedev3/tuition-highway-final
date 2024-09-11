@@ -19,6 +19,8 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import WhatsappIcon from "./components/WhatsappIcon/WhatsappIcon";
 import CurriculumPage from "./pages/CurriculumPage/CurrculumPage";
 import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
+import FaqPage from "./pages/FaqPage/FaqPage";
+import BlogsDetails from "./pages/BlogsDetails/BlogsDetails";
 
 function App() {
   const demoRef = useRef(null);
@@ -44,6 +46,7 @@ function App() {
           <Route path="/about" element={<About demoRef={demoRef} />} />
           <Route path="/contact" element={<ContactPage demoRef={demoRef} />} />
           <Route path="/blogs" element={<Blogs demoRef={demoRef} />} />
+          <Route path="/blogs/:slug" element={<BlogsDetails />} />
           <Route
             path="/takingdemo"
             element={<TakingDemoPage demoRef={demoRef} />}
@@ -60,6 +63,7 @@ function App() {
             path="/termsofservice"
             element={<TermsOfService demoRef={demoRef} />}
           />
+          <Route path="/faqs" element={<FaqPage />} />
           <Route path="/thankyou" element={<ThankYouPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

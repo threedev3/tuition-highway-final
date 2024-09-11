@@ -65,7 +65,11 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
                 transition={{ duration: 0.6 }}
                 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center gap-3 text-headingColor"
               >
-                Book A Free Demo
+                {isTutorPage
+                  ? "Join As Tutor"
+                  : isContactPage
+                  ? "Contact Us For More Details"
+                  : "Book A Free Demo"}
               </motion.h3>
             ) : (
               <motion.h3
@@ -76,7 +80,11 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
                 transition={{ duration: 0.6 }}
                 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center gap-3 text-headingColor"
               >
-                Request a Call Back
+                {isTutorPage
+                  ? "Submit Your Resume"
+                  : isContactPage
+                  ? "Request For Any Query"
+                  : "Request a Call Back"}
               </motion.h3>
             )}
           </AnimatePresence>

@@ -28,6 +28,20 @@ h6 {
   background-color: transparent;
 }
 
+.custom-border::before {
+  content: "";
+  position: absolute;
+  /* top: 0; */
+  right: -8.5px;
+  top: -8.5px;
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+  background-color: #f7f7f7;
+  z-index: 10;
+  border-bottom: 2px solid #f46322;
+}
+
 .Typewriter {
   display: inline;
 }

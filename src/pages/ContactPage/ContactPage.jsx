@@ -19,6 +19,7 @@ const ContactPage = ({ demoRef }) => {
           demoRef={demoRef}
           firstString={"Contact Us For "}
           secondString={"More Details"}
+          tagLine="Paving the way with smart online tutoring solutions for IGCSE, A-Levels, IB & other Curriculums"
         />
       </div>
     </div>

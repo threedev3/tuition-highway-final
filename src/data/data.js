@@ -5,12 +5,12 @@ import {
   icon4,
   icon5,
   expertTutor,
-  personalizedLearning,
   flexSchedule,
   compCurriculum,
-  provenResults,
   compreCurriculum,
   curriculaImg,
+  personalLearning,
+  proveResult,
   computer,
   math,
   physics,
@@ -34,6 +34,17 @@ import {
   businessSubject,
   economicsSubject,
   computerSubject,
+  mathsSub,
+  chemistrySub,
+  biologySub,
+  physicsSub,
+  businessSub,
+  businessLawSub,
+  englishSub,
+  accountsSub,
+  psychologySub,
+  computerSub,
+  economicsSub,
   stats,
   avatar1,
   avatar2,
@@ -69,6 +80,8 @@ import {
   onlineHomeImg,
   indianImg,
   frenchImg,
+  frenchCurr,
+  indianCurr,
 } from "../assets/img/images";
 
 const navigationData = {
@@ -80,6 +93,8 @@ const navigationData = {
     { title: "Join As a Tutor", to: "/joinastutor" },
     { title: "Taking a Demo", to: "/takingdemo" },
     { title: "Blogs", to: "/blogs" },
+    { title: "Contact Us", to: "/contact" },
+    { title: "FAQs", to: "/faqs" },
     { title: "Privacy Policy", to: "/privacypolicy" },
   ],
   "What We Teach": [
@@ -120,7 +135,7 @@ const reasons = [
     firstTitle: "Personalized",
     secondTitle: "Learning",
     description: "Tailored lessons to suit individual student needs.",
-    icon: personalizedLearning,
+    icon: personalLearning,
   },
   {
     wholeTitle: "Flexible Scheduling",
@@ -143,7 +158,7 @@ const reasons = [
     secondTitle: "Results",
     description:
       "Over 90,000 live lessons in Maths, Physics, Computer Science, and more.",
-    icon: provenResults,
+    icon: proveResult,
   },
 ];
 
@@ -178,7 +193,7 @@ const subjectsOffering = [
   {
     title: "Mathematics",
     mainImg: math,
-    heroImg: mathsSubject,
+    heroImg: mathsSub,
     img: sub1,
     bg: "bg-[#515151]",
     description:
@@ -209,7 +224,7 @@ const subjectsOffering = [
   {
     title: "Physics",
     mainImg: physics,
-    heroImg: physicsSubject,
+    heroImg: physicsSub,
     img: sub2,
     bg: "bg-[#F46322]",
     description:
@@ -240,7 +255,7 @@ const subjectsOffering = [
   {
     title: "Chemistry",
     mainImg: chemistry,
-    heroImg: chemistrySubject,
+    heroImg: chemistrySub,
     img: sub3,
     bg: "bg-[#515151]",
     description:
@@ -270,7 +285,7 @@ const subjectsOffering = [
   },
   {
     title: "English",
-    heroImg: englishSubject,
+    heroImg: englishSub,
     mainImg: english,
     img: sub8,
     bg: "bg-[#F46322]",
@@ -308,7 +323,7 @@ const subjectsOffering = [
   {
     title: "Biology",
     mainImg: biology,
-    heroImg: biologySubject,
+    heroImg: biologySub,
     img: sub4,
     bg: "bg-[#515151]",
     description:
@@ -339,7 +354,7 @@ const subjectsOffering = [
   {
     title: "Business ",
     mainImg: business,
-    heroImg: businessSubject,
+    heroImg: businessSub,
     img: sub7,
     bg: "bg-[#F46322]",
     description:
@@ -370,7 +385,7 @@ const subjectsOffering = [
   {
     title: "Computer",
     mainImg: computer,
-    heroImg: computerSubject,
+    heroImg: computerSub,
     img: sub9,
     bg: "bg-[#515151]",
     description:
@@ -402,7 +417,7 @@ const subjectsOffering = [
   {
     title: "Accounts",
     mainImg: accounts,
-    heroImg: accountsSubject,
+    heroImg: accountsSub,
     img: sub5,
     bg: "bg-[#F46322]",
     description:
@@ -434,7 +449,7 @@ const subjectsOffering = [
   {
     title: "Economics",
     mainImg: stats,
-    heroImg: economicsSubject,
+    heroImg: economicsSub,
     img: sub6,
     bg: "bg-[#515151]",
     description:
@@ -466,7 +481,7 @@ const subjectsOffering = [
   {
     title: "Business Law",
     mainImg: businessLaw,
-    heroImg: businessLawSubject,
+    heroImg: businessLawSub,
     img: sub10,
     bg: "bg-[#F46322]",
     description:
@@ -528,7 +543,7 @@ const subjectsOffering = [
   {
     title: "Psychology",
     mainImg: psychology,
-    heroImg: psychologySubject,
+    heroImg: psychologySub,
     img: sub12,
     bg: "bg-[#F46322]",
     description:
@@ -608,7 +623,7 @@ const curriculumOffering = [
     to: "/online-home",
   },
   {
-    heroImg: indianImg,
+    heroImg: indianCurr,
     title: "Indian CBSE",
     content: [
       "The Indian Curriculum, split into CBSE and ICSE, emphasizes analytical skills and knowledge acquisition. Find your ideal CBSE tutor near you at Tuition Highway.",
@@ -620,7 +635,7 @@ const curriculumOffering = [
     to: "/indian-cbse",
   },
   {
-    heroImg: frenchImg,
+    heroImg: frenchCurr,
     title: "French Curriculum",
     content: [
       "The French Curriculum, or the French National Curriculum, stands out with its highly structured and centralised educational approach. It offers a balanced and broad education, with special emphasis on literature, philosophy, maths, and science.",
@@ -906,6 +921,21 @@ const faqs = [
     answer:
       "All our tutors are experienced educators with advanced degrees in their respective fields.",
   },
+  {
+    question: "How much does tutoring cost?",
+    answer:
+      "Our rates vary based on subject and level; contact us for a personalized quote.",
+  },
+  {
+    question: "Can I change my tutor if I'm not satisfied?",
+    answer:
+      "Yes, we're happy to match you with a different tutor to ensure your complete satisfaction.",
+  },
+  {
+    question: "Do you offer group tutoring sessions?",
+    answer:
+      "Yes, we provide both one-on-one and small group tutoring options to suit different needs and budgets",
+  },
 ];
 
 const products = [
@@ -948,6 +978,10 @@ const resources = [
   {
     title: "Contact Us",
     to: "/contact",
+  },
+  {
+    title: "FAQs",
+    to: "/faqs",
   },
 ];
 
@@ -1342,80 +1376,1684 @@ const joinTutorDetails = [
   "We thoroughly review these applications to shortlist candidates who meet our initial criteria.",
 ];
 
-// const blogs = [
-//   {
-//     id: 1,
-//     featuredImg: blogImg1,
-//     title:
-//       "Is the American Curriculum Failing Our Students? Here's How We Can Fix It",
-//     content: [
-//       {
-//         heading: "Introduction",
-//         para: [
-//           "A major factor in opportunity and social mobility, the American educational system is coming under increasing scrutiny. The efficiency of the American curriculum in educating pupils for the twenty-first century is a subject of great concern. Even though the system has created many successful people, graduation rates frequently give rise to concerns.",
-//           "According to Brookings, among students aged between 18 and 24, the percentage of high school graduates has risen from 85% to 95% since early 2001. The graduation rate among black and Hispanic students is lower than that of white students, a figure that conceals more significant differences. Beyond graduation rates, there are still unanswered concerns regarding kids' readiness for either college or the workforce.",
-//           "So, are our pupils not succeeding in the American curriculum? The solution is intricate. The current situation is the result of a combination of causes rather than a single perpetrator.",
-//         ],
-//       },
-//       {
-//         heading: "Getting Around the American Curriculum's Challenges",
-//         para: [
-//           {
-//             text: "With its numerous advantages, the American educational system has a number of difficulties that affect the standard of instruction for children all over the country. These obstacles, which range from unfair resource distribution to standardized testing, have a significant impact on the nature of learning.",
-//             subHeading: "Overuse of Standardized Testing",
-//             subPara: [
-//               {
-//                 innerPara: [
-//                   "With its numerous advantages, the American educational system has a number of difficulties that affect the standard of instruction for children all over the country. These obstacles, which range from unfair resource distribution to standardized testing, have a significant impact on the nature of learning.",
-//                 ],
-//               },
-//             ],
-//           },
-//           {
-//             subHeading: "Absence of Personalized Instruction",
-//             subPara: [
-//               {
-//                 innerPara: [
-//                   "Every learner has different requirements, learning methods, and rates. Nevertheless, the existing system finds it difficult to efficiently handle this variety. Underserved students might include individuals with exceptional needs or those who perform better than expected in the curriculum. Personalized learning experiences that may better assist each student's progress are limited by the one-size-fits-all approach.",
-//                 ],
-//               },
-//             ],
-//           },
-//           {
-//             subHeading: "Relevance Gap",
-//             subPara: [
-//               {
-//                 innerPara: [
-//                   "There's a rising concern that the curriculum isn't keeping up with the fast-changing world of today. Some contend that conventional disciplines have little practical value, despite the fact that the abilities needed to succeed in the workforce are changing. It is essential to close this relevance gap in order to provide students with the information and abilities they need to prosper in a changing society.",
-//                 ],
-//               },
-//             ],
-//           },
-//           {
-//             subHeading: "Inequity and Socioeconomic Disparities",
-//             subPara: [
-//               {
-//                 innerPara: [
-//                   "The disparity in opportunities and resources among schools is perhaps one of the most urgent issues. Due to funding differences between wealthy and low-income regions, educational institutions in underprivileged areas frequently have smaller class sizes, fewer resources, and fewer qualified teachers. This creates an unfair playing field. These differences exacerbate already-existing socioeconomic inequality by maintaining attainment gaps and impeding social mobility.",
-//                   "It needs a comprehensive strategy that puts equality, creativity, and flexibility first to address these issues. We may strive toward a more inclusive and successful education system for all kids by reevaluating the function of standardized testing, adopting individualized learning practices, upgrading curriculum to match real-world demands, and tackling systemic injustices.",
-//                 ],
-//               },
-//             ],
-//           },
-//         ],
-//       },
-//       {
-//         heading: "Rethinking the American Curriculum:",
-//         para:
-//       }
-//     ],
-//   },
-// ];
+const blogsMain = [
+  {
+    id: 1,
+    featuredImg: blogImg1,
+    slug: "american-curriculum-failing-our-students",
+    title:
+      "Is the American Curriculum Failing Our Students? Here's How We Can Fix It",
+    content: [
+      {
+        heading: "Introduction",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "A major factor in opportunity and social mobility, the American educational system is coming under increasing scrutiny. The efficiency of the ",
+            },
+            {
+              type: "link",
+              content: "American curriculum ",
+              url: "/american-curriculum",
+            },
+            {
+              type: "text",
+              content:
+                " in educating pupils for the twenty-first century is a subject of great concern. Even though the system has created many successful people, graduation rates frequently give rise to concerns.",
+            },
+          ],
+          [
+            {
+              type: "link",
+              content:
+                "According to Brookings, among students aged between 18 and 24, the percentage of high school graduates has risen from 85% to 95% since early 2001. ",
+              url: "https://www.brookings.edu/articles/are-americas-rising-high-school-graduation-rates-real-or-just-an-accountability-fueled-mirage/",
+            },
+            {
+              type: "text",
+              content:
+                "The graduation rate among black and Hispanic students is lower than that of white students, a figure that conceals more significant differences. Beyond graduation rates, there are still unanswered concerns regarding kids' readiness for either college or the workforce. ",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "So, are our pupils not succeeding in the American curriculum? The solution is intricate. The current situation is the result of a combination of causes rather than a single perpetrator.",
+            },
+          ],
+        ],
+      },
+      // },
+      {
+        heading: "Getting Around the American Curriculum's Challenges",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "With its numerous advantages, the American educational system has a number of difficulties that affect the standard of instruction for children all over the country. These obstacles, which range from unfair resource distribution to standardized testing, have a significant impact on the nature of learning.",
+            },
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Overuse of Standardized Testing",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "The overuse of standardized testing in the American curriculum constitutes one of its main problems. Although tests are a necessary tool for tracking students' academic development, a heavy reliance on them can inhibit critical thinking and innovation. Studies, like the one published in the Harvard Business Review in 2019, show that putting too much focus on assessment does not always translate into enhanced learning outcomes. Rather, it frequently promotes rote memory over profound comprehension.",
+            },
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Absence of Personalized Instruction",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "Every learner has different requirements, learning methods, and rates. Nevertheless, the existing system finds it difficult to efficiently handle this variety. Underserved students might include individuals with exceptional needs or those who perform better than expected in the curriculum. Personalized learning experiences that may better assist each student's progress are limited by the one-size-fits-all approach.",
+            },
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Relevance Gap",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "There's a rising concern that the curriculum isn't keeping up with the fast-changing world of today. Some contend that conventional disciplines have little practical value, despite the fact that the abilities needed to succeed in the workforce are changing. It is essential to close this relevance gap in order to provide students with the information and abilities they need to prosper in a changing society.",
+            },
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Inequity and Socioeconomic Disparities",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "The disparity in opportunities and resources among schools is perhaps one of the most urgent issues. Due to funding differences between wealthy and low-income regions, educational institutions in underprivileged areas frequently have smaller class sizes, fewer resources, and fewer qualified teachers. This creates an unfair playing field. These differences exacerbate already-existing socioeconomic inequality by maintaining attainment gaps and impeding social mobility.",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "It needs a comprehensive strategy that puts equality, creativity, and flexibility first to address these issues. We may strive toward a more inclusive and successful education system for all kids by reevaluating the function of standardized testing, adopting individualized learning practices, upgrading curriculum to match real-world demands, and tackling systemic injustices.",
+            },
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Rethinking the American Curriculum:",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "Despite the difficulties, there is cause for hope. Creative educators and legislators are putting forth suggestions for improving the American curriculum. Here are some suggestions:",
+            },
+          ],
+          [
+            {
+              type: "list",
+              content: [
+                "Eschewing the use of standardized testing as the exclusive indicator of achievement. Rather, put a focus on the growth of critical thinking, teamwork, communication, and creativity—skills necessary for surviving in the contemporary world.",
+                "Including students in practical assignments that let them use what they've learned to solve real-world issues. This stimulates critical thinking, cooperation, and a better understanding.",
+                "Using technology to tailor instruction, accommodate a range of learning preferences, and simplify difficult topics is known as technology integration.",
+                "Including social-emotional learning (SEL) in the curriculum gives children the skills they need to control their emotions, form wholesome relationships, and make moral judgments. Strong social-emotional abilities have been linked to both academic achievement and general well-being, according to studies.",
+                "Creating a curriculum that takes into account many cultural viewpoints and represents the variety of American society is known as culturally responsive education. Students can see themselves mirrored in the course materials and thus promote inclusion."
+              ],
+            },
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "The Path Ahead:"
+            }
+          ],
+
+          [
+            {
+              type: "text",
+              content: "It's not easy to revamp the American curriculum. Collaboration between educators, legislators, parents, and the community is necessary. It is imperative that schools receive more financing, especially in underprivileged communities. In order to keep current with best practices and incorporate novel teaching strategies, educators must have access to chances for continuous professional development."
+            }
+          ],
+
+          [
+            {
+              type: "text",
+              content: "The "
+            },
+            {
+              type: "link",
+              content: "Tuition Highway",
+              url: "/"
+            },
+            {
+              type: "text",
+              content: " provides a route ahead in overcoming the obstacles of the American Curriculum. Tuition Highway enables students to achieve academic achievement and cultivate the necessary skills for success in the twenty-first century by offering customized online tuition services. We can rethink education together and build a better future for all."
+            }
+          ],
+
+
+          // {
+          //   text: "With its numerous advantages, the American educational system has a number of difficulties that affect the standard of instruction for children all over the country. These obstacles, which range from unfair resource distribution to standardized testing, have a significant impact on the nature of learning.",
+          //   subHeading: "Overuse of Standardized Testing",
+          //   subPara: [
+          //     {
+          //       innerPara: [
+          //         "With its numerous advantages, the American educational system has a number of difficulties that affect the standard of instruction for children all over the country. These obstacles, which range from unfair resource distribution to standardized testing, have a significant impact on the nature of learning.",
+          //       ],
+          //     },
+          //   ],
+          // },
+          // {
+          //   subHeading: "Absence of Personalized Instruction",
+          //   subPara: [
+          //     {
+          //       innerPara: [
+          //         "Every learner has different requirements, learning methods, and rates. Nevertheless, the existing system finds it difficult to efficiently handle this variety. Underserved students might include individuals with exceptional needs or those who perform better than expected in the curriculum. Personalized learning experiences that may better assist each student's progress are limited by the one-size-fits-all approach.",
+          //       ],
+          //     },
+          //   ],
+          // },
+          // {
+          //   subHeading: "Relevance Gap",
+          //   subPara: [
+          //     {
+          //       innerPara: [
+          //         "There's a rising concern that the curriculum isn't keeping up with the fast-changing world of today. Some contend that conventional disciplines have little practical value, despite the fact that the abilities needed to succeed in the workforce are changing. It is essential to close this relevance gap in order to provide students with the information and abilities they need to prosper in a changing society.",
+          //       ],
+          //     },
+          //   ],
+          // },
+          // {
+          //   subHeading: "Inequity and Socioeconomic Disparities",
+          //   subPara: [
+          //     {
+          //       innerPara: [
+          //         "The disparity in opportunities and resources among schools is perhaps one of the most urgent issues. Due to funding differences between wealthy and low-income regions, educational institutions in underprivileged areas frequently have smaller class sizes, fewer resources, and fewer qualified teachers. This creates an unfair playing field. These differences exacerbate already-existing socioeconomic inequality by maintaining attainment gaps and impeding social mobility.",
+          //         "It needs a comprehensive strategy that puts equality, creativity, and flexibility first to address these issues. We may strive toward a more inclusive and successful education system for all kids by reevaluating the function of standardized testing, adopting individualized learning practices, upgrading curriculum to match real-world demands, and tackling systemic injustices.",
+          //       ],
+          //     },
+          //   ],
+          // },
+        ],
+      },
+      // {
+      //   heading: "Rethinking the American Curriculum:",
+      //   para: [
+      //     "Despite the difficulties, there is cause for hope. Creative educators and legislators are putting forth suggestions for improving the American curriculum. Here are some suggestions:",
+
+      //     "Eschewing the use of standardized testing as the exclusive indicator of achievement. Rather, put a focus on the growth of critical thinking, teamwork, communication, and creativity—skills necessary for surviving in the contemporary world.",
+      //     "Including students in practical assignments that let them use what they've learned to solve real-world issues. This stimulates critical thinking, cooperation, and a better understanding.",
+      //     "Using technology to tailor instruction, accommodate a range of learning preferences, and simplify difficult topics is known as technology integration.",
+      //     "Including social-emotional learning (SEL) in the curriculum gives children the skills they need to control their emotions, form wholesome relationships, and make moral judgments. Strong social-emotional abilities have been linked to both academic achievement and general well-being, according to studies.",
+      //     "Creating a curriculum that takes into account many cultural viewpoints and represents the variety of American society is known as culturally responsive education. Students can see themselves mirrored in the course materials and thus promote inclusion.",
+      //   ],
+      // },
+      // {
+      //   heading: "The Path Ahead:",
+      //   para: [
+      //     "It's not easy to revamp the American curriculum. Collaboration between educators, legislators, parents, and the community is necessary. It is imperative that schools receive more financing, especially in underprivileged communities. In order to keep current with best practices and incorporate novel teaching strategies, educators must have access to chances for continuous professional development.",
+      //     "The Tuition Highway provides a route ahead in overcoming the obstacles of the American Curriculum. Tuition Highway enables students to achieve academic achievement and cultivate the necessary skills for success in the twenty-first century by offering customized online tuition services. We can rethink education together and build a better future for all.",
+      //   ],
+      // },
+    ],
+  },
+  {
+    id: 2,
+    featuredImg: blogImg2,
+    slug: "title-of-father-of-chemistry",
+    title: "Who Really Holds the Title of “Father of Chemistry”?",
+    content: [
+      {
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "The quest to discover the fundamental nature of matter has fascinated curious minds for ages. The intriguing science of chemistry was created as a result of this engrossing voyage through the universe of atoms, molecules, and reactions. But who is truly deserving of the esteemed moniker “Father of Chemistry”? Like many historical questions, the solution is more complicated than one may think.",
+            },
+            
+            
+          ],
+          [
+            
+            {
+              type: "text",
+              content:
+                "Antoine Lavoisier and Jabir ibn Hayyan are two names that frequently come up in this discussion, despite the fact that numerous historical personalities have made important contributions to the topic. But giving any person the exclusive title of “Father of Chemistry” overlooks the vast array of contributions made throughout history and across cultural boundaries. ",
+            },
+          ],
+
+        ],
+      },
+      // },
+      {
+        heading: "The Contenders",
+        para: [
+          [
+            {
+              type: "link",
+              content:
+                "Lavoisier (1743-1794), often heralded as the Father of Chemistry a painstaking experimenter and the son of a rich Parisian lawyer, transformed chemistry.",
+                url: "https://www.sciencehistory.org/education/scientific-biographies/antoine-laurent-lavoisier/"
+            },
+            {
+              type: "text",
+              content:
+                " Among many other things, he helped organize chemical nomenclature, discovered that combustion and respiration are the result of chemical interactions with what he called “oxygen,” and developed the rule of conservation of mass.",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Jabir ibn Hayyan, attributing the sole title of “Father of Chemistry , a well-known individual in the Islamic Golden Age, made a substantial contribution to the advancement of alchemy, the science that preceded modern chemistry. He carried out a number of experiments, wrote up his results in lengthy works, and is recognized for having invented a great deal of chemical devices and procedures. His mystique is fueled by the ambiguity and mist around his name and image. ",
+            },
+            {
+              type: "link",
+              content: "Bbva states he was a writer between 300 and more than 1000 books.",
+              url: "https://www.bbvaopenmind.com/en/science/leading-figures/jabir-ibn-hayyan-great-arab-alchemist/"
+            }
+          ],
+          
+        ],
+      },
+      {
+        heading: "Past the Twin Foundations:",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "If we give the title to these two people alone, we are ignoring the innumerable others who set the stage:",
+            },
+           
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Ancient Greek philosophers:",
+            },
+            {
+              type: "text",
+              content: "The foundation of contemporary chemistry, atomic theory, was established by thinkers such as Aristotle and Democritus.",
+            }
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Alchemists:",
+            },
+            {
+              type: "text",
+              content: "A number of alchemists, including Mary the Alchemist and Zosimos of Panopolis, advanced experimental techniques and set the stage for ensuing discoveries.",
+            }
+          ],
+          [
+            {
+              type: "subHeading",
+              content: "Contributions from Different Civilizations:",
+            },
+            {
+              type: "text",
+              content: "The understanding of materials and transformations was greatly enhanced by the work of Chinese practitioners, Indian alchemists, and Ancient Egyptians, all of whom made significant contributions to the body of knowledge.",
+            }
+          ],
+          
+        ],
+      },
+      {
+        heading: "A Shared Heritage:",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "A more realistic image comes from considering the evolution of chemistry as a cooperative endeavor across cultures and ages, as opposed to looking for a singular “Father.” Every person, from early experimenters to ancient thinkers, added significant pieces to the jigsaw that laid the groundwork for the subject as we know it today.",
+            },
+           
+          ],
+        ],
+      },
+      {
+        heading: "Honoring the Combined Magnificence of a Common Heritage:",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Even though the title Father of Chemistry is alluring, putting it on one person eventually turns it into a limiting label. It ignores the many creative minds that have contributed to the complex web of this interesting field and fails to convey the collaborative nature of scientific advancement. Rather, we ought to see the development of chemistry as a shared adventure in which successive generations expand on the insights gained from the previous one. Lavoisier, Jabir ibn Hayyan, and several more individuals are indispensable to this expedition, each offering their distinct perspectives and inventive ideas. Maybe instead of looking for a single “father,” we need to honor the wide group of brains who have shed light on the mysteries of this constantly developing science and celebrate the “family of chemistry” as a whole.",
+            },
+           
+          ],
+        ],
+      },
+      {
+        heading: "Exposing the Real Magic of Chemistry",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Even if it might be intimidating to comprehend the foundations of A-Level Chemistry. At ",
+            },
+            {
+              type: "link",
+              content:
+                "Tuition Highway",
+                url: "/"
+            },
+            {
+              type: "text",
+              content:
+                ", we think that studying chemistry isn't enough; we also think that discovering its genuine magic is. With the assistance of our knowledgeable tutoring staff and individualized lesson plans, you may set out on a journey of exploration and turn challenging ideas into intriguing opportunities. Take the first step and join our encouraging group on the exciting journey of A-Level Chemistry.",
+            },
+           
+          ],
+        ],
+      },
+      {
+        heading: "In summary: ",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "The search for the “Father of Chemistry” concludes not with a single winner but rather with a tapestry made from the ideas of innumerable people from all backgrounds and times. The history of chemistry is a cooperative masterwork, spanning from the works of ancient thinkers and alchemists to Lavoisier's investigations and contemporary discoveries.",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Are you prepared to embark on this continuing journey? At Tuition Highway, we foster a love of inquiry and discovery in addition to teaching "
+            },
+            {
+              type: "link",
+              content: "Chemistry",
+              url: "/subjects/chemistry"
+            },
+            {
+              type: "text",
+              content: " Through our specialized advice and individualized assistance, you can unleash the power of chemistry and transform difficult ideas into thrilling chances.",
+            },
+          ],
+          [
+            {
+              type: "text",
+              content:
+                "Today, make the first move and become a part of our encouraging community. Let's solve the universe's riddles together, one atom at a time.",
+            },
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    featuredImg: blogImg3,
+    slug: "what-does-igcse-stand-for-far-beyond-attractive-letters-but-we-wont-debate-if-you-think-theyre-cool",
+    title:
+      "What Does IGCSE Stand For? Far Beyond Attractive Letters—But We Won't Debate if You Think They're Cool",
+      content: [
+        {
+          heading: "To future Einsteins and their guardians,",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "On to your backpacks—the ",
+              },
+              {
+                type: "link",
+                content: "IGCSE",
+                url: "/subjects",
+              },
+              {
+                type: "text",
+                content:
+                  " Express is ready to arrive at the platform! Have you ever wished you were able to crack a frog's heart like a crime scene investigator? Or decipher the mysteries of space like a contemporary Galileo? You can accomplish all of these and much more with IGCSE! Discover the secrets of science, dig into the depths of history, and write sonnets that would make Shakespeare proud—all before lunch!",
+              },
+            ],
+            [
+              {
+                type: "text",
+                content:
+                  "“Isn't taking the IGCSE like climbing Mount Everest in flip-flops?” is a common question, so bear with us. Unwind, daring explorers! This is not a summit that you must climb alone. ",
+              },
+              {
+                type: "link",
+                content:
+                  "Tuition Highway",
+                url: "/",
+              },
+              {
+                type: "text",
+                content: " is your dependable Sherpa, assisting you at every turn."
+              }
+            ],
+            
+          ],
+        },
+        // },
+        {
+          heading: "Are you prepared to let go of the typical and seize the extraordinary?",
+          para: [
+            [
+              {
+                type: "subHeading",
+                content:
+                  "So, what does IGCSE even stand for?",
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "The abbreviation IGCSE means ",
+              },
+              {
+                type: "link",
+                content: "International General Certificate of Secondary Education,",
+                url: "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-upper-secondary/cambridge-igcse/"
+              },
+              {
+                type: "text",
+                content: " and it designates a globally recognized credential for learners in grades 14 through 16.",
+              },
+            ],
+            [
+              {
+                type: "list",
+                content: [
+                  "That is not your typical certification from school. It serves as a widely accepted visa to highly regarded universities and professions,",
+                  "wherever your travels may lead you. Imagine getting quick academic street cred by flaunting your IGCSE to academics in Timbuktu or admissions officers in Tokyo!",
+                  "This is more than simply a piece of paper—it's a prize and a badge of pride for surviving the academic jungle.",
+                  "The IGCSE tests your critical thinking, problem-solving skills, and Shakespearean communication.",
+                  "IGCSE may sound fancy and lengthy, but keep in mind that it's really your pass to future success.s"
+                ]
+                  
+              },
+            ],
+           
+          ],
+        },
+        {
+          heading: "Why choose IGCSE? Get comfortable for these reasons!",
+          para: [
+            [
+              {
+                type: "subHeading",
+                content:
+                  "Expanded perspectives:",
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "IGCSE provides a diverse range of disciplines, ranging from math and physics to languages and the arts. It allows you to study a variety of subjects and find your hobbies, much like a smorgasbord for your inquisitive mind. You are free to select the academic path that best suits your needs rather than being forced to follow a set curriculum!",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Explore the ferocious realm of chemistry, analyze a phrase like a literary surgeon, or create a work of art that would make Van Gogh green with envy—the feast is all yours! IGCSE allows you to feast on information that sparks your spirit and piques your interest, so forget about preparing for subjects you don’t care about."    
+              },
+            ],
+            [
+              {
+                type: "subHeading",
+                content: "International recognition:"    
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "Employers and academic institutions across the world value the IGCSE. Anywhere you want to go in life, it's like having a golden ticket that unlocks doors to prestigious schools and lucrative employment."    
+              },
+            ],
+            [
+              {
+                type: "subHeading",
+                content: "Future-proof abilities:"    
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "The IGCSE gives you the digital literacy, teamwork, communication, and creativity necessary for the twenty-first century. You'll be ready to confront whatever obstacle the future throws your way You will be the one programming the robots with IGCSE, so forget about taking your jobs! Imagine cutting-edge teamwork, rapid invention, and problem-solving that the world hasn't yet begun to imagine."    
+              },
+            ],
+           
+          ],
+        },
+        {
+          heading: "However, let's face it—the IGCSE may be difficult. Tuition Highway is your reliable travel partner because of this!",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "The Tuition Highway is a virtual learning paradise. ",
+              },
+              {
+                type: "link",
+                content: "The Advantages of IGCSE Tuition",
+                url: "/blogs/the-advantages-of-igcse-tuition-advancing-your-academic-career"
+              },
+              {
+                type: "text",
+                content: " is we provide lively, participatory classes designed especially for IGCSE candidates. Like seasoned Sherpas, our knowledgeable professors will help you at every turn to ensure that you reach the pinnacle of academic achievement.",
+              }
+            ],
+            [
+              {
+                type: "text",
+                content: "Adventurers, do not fear! The proper equipment is necessary for even Everest, and Tuition Highway provides it. Like high-tech climbing gear, our interactive learning resources make even the toughest slopes feel like a fun walk. Not only do our knowledgeable guides show you the way, but they also offer survival advice, acknowledge your accomplishments, and encourage you on your adventure with virtual high fives!",
+              },
+              
+            ],
+            
+          ],
+        },
+        {
+          heading: "What makes Tuition Highway unique is as follows:",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "Personalized education: We are aware that every kid has a unique learning style. Our platform adjusts to your preferred learning style and pace to make sure you understand every idea.",
+              },
+              
+            ],
+            [
+              {
+                type: "subHeading",
+                content: "Interesting content:",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Put an end to dry lectures! Tuition Highway uses interactive tests, role-playing, and practical applications to make learning enjoyable. You nearly won’t even notice you’re studying since you’ll be so absorbed.",
+              },
+              
+            ],
+            [
+              {
+                type: "subHeading",
+                content: "Continuous assistance:",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "You can always count on us! Our committed instructors and support staff are there with just a click, ready to assist you with your inquiries and offer encouragement.",
+              },
+              
+            ],
+            [
+              {
+                type: "subHeading",
+                content: "Adaptable education:",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Learn anywhere, at any time! Our online platform provides you the opportunity to study at your own speed, whether it’s early morning or late at night, in your jammies or on a beach (we won’t judge!).",
+              },
+              
+            ],
+            
+          ],
+        },
+        {
+          heading: "Are you prepared to throw off the mundane and seize the exceptional, aspiring academic superstars?",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "Becoming a member of the Tuition Highway community means more than just completing your IGCSEs—it means stepping into a whole new level of academic adventure!",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Imagine climbing Mount Everest on a unicorn propelled by rockets, supported at every turn by a group of Sherpas who will give you high fives as you go. Tuition Highway is your entryway to a world where every subject erupts with passion and every exam feels like a victory lap around the globe! Forget dull textbooks and stuffy classrooms!",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Put an end to your uncertainties, calm your anxieties, and put on your intellectual spacesuit! With Tuition Highway, it’s time to take off and leave the mundane behind!",
+              },
+              
+            ],
+          ],
+        },
+        
+      ],
+  },
+  {
+    id: 4,
+    featuredImg: blogImg4,
+    slug: "enormous-exploration-of-electricity-and-circuits-in-igcse-physics-revealing-the-spark",
+    title:
+      "Enormous Exploration of Electricity and Circuits in IGCSE Physics: Revealing the Spark",
+      content: [
+        {
+          heading: "Overview",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "Electricity and circuits are important ideas that greatly influence how we perceive the world around us, and ",
+              },
+              {
+                type: "link",
+                content:
+                  "Physics",
+                  url: "/subjects/physics"
+              },
+              {
+                type: "text",
+                content:
+                  " provides an intriguing exploration of the basic elements of our existence. IGCSE Physics serves as a starting point, promoting an understanding of the basic principles that govern our universe. Beyond formulas and equations, it pushes students to investigate, challenge, and apply what they learn in order to solve cosmic riddles and use scientific knowledge to improve their daily lives. This blog post explores the fascinating realm of these ideas and emphasizes how important they are for both daily living and academic endeavors.",
+              },
+              
+            ],
+            
+            
+          ],
+        },
+       
+        {
+          heading: "Electricity: A Definitive Guide: From Atoms to Electrons",
+          para: [
+           
+            [
+              {
+                type: "text",
+                content: "IGCSE Physics explores the intriguing world of atoms, conductors, and insulators to create the foundation for understanding electricity. Understanding electrical phenomena such as resistance, voltage, and current—the holy trinity of electrical circuits—begins with this fundamental information.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Consider voltage to be the force that pushes water through a conduit and encourages electrons to flow through conductors at different rates depending on resistance. This electric charge flow is quantified by current, which is expressed in amperes. Ohm’s law (V = IR), the foundation of circuit analysis, encapsulates the lovely relationship between these three quantities.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Ohm’s law (V = IR), which was developed after ",
+              },
+              {
+                type: "link",
+                content: "German physicist Georg Ohm established the link between voltage, current, and resistance in 1827",
+                url: "https://www.britannica.com/science/Ohms-law"
+              },
+              {
+                type: "text",
+                content: ", is researched by Britannica. IGCSE Physics uses real-world experiments to illustrate Ohm’s law in addition to theoretical explanations. Students work with circuits, seeing directly how adjustments to one parameter affect the others. This participatory method strengthens comprehension and establishes a solid framework for additional research in physics and other fields.",
+              },
+              
+            ],
+           
+           
+          ],
+        },
+        {
+          heading: "Components and Circuits in Harmony: Mastering the Orchestra",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "Students enrolled in IGCSE Physics are prepared with knowledge of the various components that comprise the orchestra of circuits, including resistors, capacitors, diodes, and transistors. Students understand how the electronic devices that run our lives function by analyzing the connections between these parts. ",
+              },
+              {
+                type: "link",
+                content:
+                  "The worldwide semiconductor industry was estimated to be worth $555.9 billion in 2022, which comprises circuits.",
+                  url: "https://www.semiconductors.org/global-semiconductor-sales-increase-3-2-in-2022-despite-second-half-slowdown/#:~:text=WASHINGTON%E2%80%94Feb.,2021%20total%20of%20%24555.9%20billion."
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "Consider a parallel circuit as a busy urban market. Due to their own direct connections to the power supply, each shop (appliance) is able to function on its own. Parallel circuits are resilient enough that even if one shop fails, the others stay unaffected.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Conversely, series circuits resemble a chain reaction. Think of them as a line of dominoes that, when one falls, sets off the others. Comparably, in a series circuit, the current passes through each part in turn; if one fails, the circuit as a whole may be rendered completely inoperable."    
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "Students taking the IGCSE Physics course must comprehend the subtle differences between parallel and series circuits. They see directly how the two topologies differ in terms of voltage, current distribution, and general behavior by constructing and examining these circuits. This useful information is necessary to understand the wide variety of electrical devices we encounter every day."    
+              },
+            ],
+            
+           
+          ],
+        },
+        {
+          heading: "Overcoming the Distance: From Theory to Real-World Implementations",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "The way that electricity and circuits flow naturally into our daily lives is what makes them truly beautiful. Knowing circuits opens up a world of useful applications, from the simple lightbulb to the wonders of contemporary technology like cellphones and medical equipment.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Consider the ubiquitous smartphone as an example. Its elegant exterior conceals a symphony of intricate circuits that control every aspect of the device, including the processor, display, and battery. Understanding these circuits helps us appreciate the wonders of technology that IGCSE Physics has brought to life on a deeper level in addition to gaining technical information.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "This understanding cultivates awe and amazement at the pervasiveness of physics’ influence on the formation of our universe. It piques your interest and motivates us to learn more about the scientific ideas behind technology breakthroughs, giving us the tools we need to actively engage in and contribute to the rapidly changing fields of science and technology.",
+              },
+              
+            ],
+            
+          ],
+        },
+        {
+          heading: "The Revolution in IGCSE Physics Education: The Power of Online Learning",
+          para: [
+            [
+              {
+                type: "link",
+                content:
+                  "Online Tuition for the IGCSE Physics has become a game-changer",
+                  url: "/blogs/the-advantages-of-igcse-tuition-advancing-your-academic-career"
+              },
+              {
+                type: "text",
+                content:
+                  " in the current digital age. Online learning environments provide unmatched flexibility by accommodating a wide range of learning styles and schedules. This guarantees that everyone, everywhere, can receive top-notch physics education.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Complex topics are turned into immersive experiences through virtual labs, interactive simulations, and interesting online tools, which not only increase the effectiveness of learning but also make it fun. Collaborative technologies facilitate communication and build a positive learning environment, while personalized learning pathways adjust to each learner’s needs and pace of learning.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Additionally, students can study for tests with confidence and reinforce their understanding with the help of online platforms, which frequently offer a plethora of extra resources, practice exams, and instant feedback. In addition to fostering a greater understanding for the subject, this dynamic and flexible learning environment gives students the knowledge and abilities they need to succeed in their future academic and professional endeavors.",
+              },
+              
+            ],
+            
+            
+          ],
+        },
+        {
+          heading: "Conclusion",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "IGCSE Physics is a pathway to understanding the complex mechanisms of our world, not just a study about circuits and electrons.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Now, go out on this thrilling adventure.",
+              },
+              
+            ],
+            
+          ],
+        },
+        
+      ],
+  },
+  {
+    id: 5,
+    featuredImg: blogImg5,
+    slug: "confidently-conquering-the-igcse-mathematics-storm",
+    title: "Confidently conquering the IGCSE Mathematics Storm!",
+    content: [
+      {
+        heading: "Overview",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Electricity and circuits are important ideas that greatly influence how we perceive the world around us, and ",
+            },
+            {
+              type: "link",
+              content:
+                "Physics",
+                url: "/subjects/physics"
+            },
+            {
+              type: "text",
+              content:
+                " provides an intriguing exploration of the basic elements of our existence. IGCSE Physics serves as a starting point, promoting an understanding of the basic principles that govern our universe. Beyond formulas and equations, it pushes students to investigate, challenge, and apply what they learn in order to solve cosmic riddles and use scientific knowledge to improve their daily lives. This blog post explores the fascinating realm of these ideas and emphasizes how important they are for both daily living and academic endeavors.",
+            },
+            
+          ],
+          
+          
+        ],
+      },
+     
+      {
+        heading: "Electricity: A Definitive Guide: From Atoms to Electrons",
+        para: [
+         
+          [
+            {
+              type: "text",
+              content: "IGCSE Physics explores the intriguing world of atoms, conductors, and insulators to create the foundation for understanding electricity. Understanding electrical phenomena such as resistance, voltage, and current—the holy trinity of electrical circuits—begins with this fundamental information.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider voltage to be the force that pushes water through a conduit and encourages electrons to flow through conductors at different rates depending on resistance. This electric charge flow is quantified by current, which is expressed in amperes. Ohm’s law (V = IR), the foundation of circuit analysis, encapsulates the lovely relationship between these three quantities.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Ohm’s law (V = IR), which was developed after ",
+            },
+            {
+              type: "link",
+              content: "German physicist Georg Ohm established the link between voltage, current, and resistance in 1827",
+              url: "https://www.britannica.com/science/Ohms-law"
+            },
+            {
+              type: "text",
+              content: ", is researched by Britannica. IGCSE Physics uses real-world experiments to illustrate Ohm’s law in addition to theoretical explanations. Students work with circuits, seeing directly how adjustments to one parameter affect the others. This participatory method strengthens comprehension and establishes a solid framework for additional research in physics and other fields.",
+            },
+            
+          ],
+         
+         
+        ],
+      },
+      {
+        heading: "Components and Circuits in Harmony: Mastering the Orchestra",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Students enrolled in IGCSE Physics are prepared with knowledge of the various components that comprise the orchestra of circuits, including resistors, capacitors, diodes, and transistors. Students understand how the electronic devices that run our lives function by analyzing the connections between these parts. ",
+            },
+            {
+              type: "link",
+              content:
+                "The worldwide semiconductor industry was estimated to be worth $555.9 billion in 2022, which comprises circuits.",
+                url: "https://www.semiconductors.org/global-semiconductor-sales-increase-3-2-in-2022-despite-second-half-slowdown/#:~:text=WASHINGTON%E2%80%94Feb.,2021%20total%20of%20%24555.9%20billion."
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider a parallel circuit as a busy urban market. Due to their own direct connections to the power supply, each shop (appliance) is able to function on its own. Parallel circuits are resilient enough that even if one shop fails, the others stay unaffected.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Conversely, series circuits resemble a chain reaction. Think of them as a line of dominoes that, when one falls, sets off the others. Comparably, in a series circuit, the current passes through each part in turn; if one fails, the circuit as a whole may be rendered completely inoperable."    
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Students taking the IGCSE Physics course must comprehend the subtle differences between parallel and series circuits. They see directly how the two topologies differ in terms of voltage, current distribution, and general behavior by constructing and examining these circuits. This useful information is necessary to understand the wide variety of electrical devices we encounter every day."    
+            },
+          ],
+          
+         
+        ],
+      },
+      {
+        heading: "Overcoming the Distance: From Theory to Real-World Implementations",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "The way that electricity and circuits flow naturally into our daily lives is what makes them truly beautiful. Knowing circuits opens up a world of useful applications, from the simple lightbulb to the wonders of contemporary technology like cellphones and medical equipment.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider the ubiquitous smartphone as an example. Its elegant exterior conceals a symphony of intricate circuits that control every aspect of the device, including the processor, display, and battery. Understanding these circuits helps us appreciate the wonders of technology that IGCSE Physics has brought to life on a deeper level in addition to gaining technical information.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "This understanding cultivates awe and amazement at the pervasiveness of physics’ influence on the formation of our universe. It piques your interest and motivates us to learn more about the scientific ideas behind technology breakthroughs, giving us the tools we need to actively engage in and contribute to the rapidly changing fields of science and technology.",
+            },
+            
+          ],
+          
+        ],
+      },
+      {
+        heading: "The Revolution in IGCSE Physics Education: The Power of Online Learning",
+        para: [
+          [
+            {
+              type: "link",
+              content:
+                "Online Tuition for the IGCSE Physics has become a game-changer",
+                url: "/blogs/the-advantages-of-igcse-tuition-advancing-your-academic-career"
+            },
+            {
+              type: "text",
+              content:
+                " in the current digital age. Online learning environments provide unmatched flexibility by accommodating a wide range of learning styles and schedules. This guarantees that everyone, everywhere, can receive top-notch physics education.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Complex topics are turned into immersive experiences through virtual labs, interactive simulations, and interesting online tools, which not only increase the effectiveness of learning but also make it fun. Collaborative technologies facilitate communication and build a positive learning environment, while personalized learning pathways adjust to each learner’s needs and pace of learning.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Additionally, students can study for tests with confidence and reinforce their understanding with the help of online platforms, which frequently offer a plethora of extra resources, practice exams, and instant feedback. In addition to fostering a greater understanding for the subject, this dynamic and flexible learning environment gives students the knowledge and abilities they need to succeed in their future academic and professional endeavors.",
+            },
+            
+          ],
+          
+          
+        ],
+      },
+      {
+        heading: "Conclusion",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "IGCSE Physics is a pathway to understanding the complex mechanisms of our world, not just a study about circuits and electrons.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Now, go out on this thrilling adventure.",
+            },
+            
+          ],
+          
+        ],
+      },
+      
+    ],
+  },
+  {
+    id: 6,
+    featuredImg: blogImg6,
+    slug: "the-advantages-of-igcse-tuition-advancing-your-academic-career",
+    title: "The Advantages of IGCSE Tuition: Advancing Your Academic Career",
+    content: [
+      {
+        heading: "Overview",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Electricity and circuits are important ideas that greatly influence how we perceive the world around us, and ",
+            },
+            {
+              type: "link",
+              content:
+                "Physics",
+                url: "/subjects/physics"
+            },
+            {
+              type: "text",
+              content:
+                " provides an intriguing exploration of the basic elements of our existence. IGCSE Physics serves as a starting point, promoting an understanding of the basic principles that govern our universe. Beyond formulas and equations, it pushes students to investigate, challenge, and apply what they learn in order to solve cosmic riddles and use scientific knowledge to improve their daily lives. This blog post explores the fascinating realm of these ideas and emphasizes how important they are for both daily living and academic endeavors.",
+            },
+            
+          ],
+          
+          
+        ],
+      },
+     
+      {
+        heading: "Electricity: A Definitive Guide: From Atoms to Electrons",
+        para: [
+         
+          [
+            {
+              type: "text",
+              content: "IGCSE Physics explores the intriguing world of atoms, conductors, and insulators to create the foundation for understanding electricity. Understanding electrical phenomena such as resistance, voltage, and current—the holy trinity of electrical circuits—begins with this fundamental information.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider voltage to be the force that pushes water through a conduit and encourages electrons to flow through conductors at different rates depending on resistance. This electric charge flow is quantified by current, which is expressed in amperes. Ohm’s law (V = IR), the foundation of circuit analysis, encapsulates the lovely relationship between these three quantities.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Ohm’s law (V = IR), which was developed after ",
+            },
+            {
+              type: "link",
+              content: "German physicist Georg Ohm established the link between voltage, current, and resistance in 1827",
+              url: "https://www.britannica.com/science/Ohms-law"
+            },
+            {
+              type: "text",
+              content: ", is researched by Britannica. IGCSE Physics uses real-world experiments to illustrate Ohm’s law in addition to theoretical explanations. Students work with circuits, seeing directly how adjustments to one parameter affect the others. This participatory method strengthens comprehension and establishes a solid framework for additional research in physics and other fields.",
+            },
+            
+          ],
+         
+         
+        ],
+      },
+      {
+        heading: "Components and Circuits in Harmony: Mastering the Orchestra",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Students enrolled in IGCSE Physics are prepared with knowledge of the various components that comprise the orchestra of circuits, including resistors, capacitors, diodes, and transistors. Students understand how the electronic devices that run our lives function by analyzing the connections between these parts. ",
+            },
+            {
+              type: "link",
+              content:
+                "The worldwide semiconductor industry was estimated to be worth $555.9 billion in 2022, which comprises circuits.",
+                url: "https://www.semiconductors.org/global-semiconductor-sales-increase-3-2-in-2022-despite-second-half-slowdown/#:~:text=WASHINGTON%E2%80%94Feb.,2021%20total%20of%20%24555.9%20billion."
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider a parallel circuit as a busy urban market. Due to their own direct connections to the power supply, each shop (appliance) is able to function on its own. Parallel circuits are resilient enough that even if one shop fails, the others stay unaffected.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Conversely, series circuits resemble a chain reaction. Think of them as a line of dominoes that, when one falls, sets off the others. Comparably, in a series circuit, the current passes through each part in turn; if one fails, the circuit as a whole may be rendered completely inoperable."    
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Students taking the IGCSE Physics course must comprehend the subtle differences between parallel and series circuits. They see directly how the two topologies differ in terms of voltage, current distribution, and general behavior by constructing and examining these circuits. This useful information is necessary to understand the wide variety of electrical devices we encounter every day."    
+            },
+          ],
+          
+         
+        ],
+      },
+      {
+        heading: "Overcoming the Distance: From Theory to Real-World Implementations",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "The way that electricity and circuits flow naturally into our daily lives is what makes them truly beautiful. Knowing circuits opens up a world of useful applications, from the simple lightbulb to the wonders of contemporary technology like cellphones and medical equipment.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider the ubiquitous smartphone as an example. Its elegant exterior conceals a symphony of intricate circuits that control every aspect of the device, including the processor, display, and battery. Understanding these circuits helps us appreciate the wonders of technology that IGCSE Physics has brought to life on a deeper level in addition to gaining technical information.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "This understanding cultivates awe and amazement at the pervasiveness of physics’ influence on the formation of our universe. It piques your interest and motivates us to learn more about the scientific ideas behind technology breakthroughs, giving us the tools we need to actively engage in and contribute to the rapidly changing fields of science and technology.",
+            },
+            
+          ],
+          
+        ],
+      },
+      {
+        heading: "The Revolution in IGCSE Physics Education: The Power of Online Learning",
+        para: [
+          [
+            {
+              type: "link",
+              content:
+                "Online Tuition for the IGCSE Physics has become a game-changer",
+                url: "/blogs/the-advantages-of-igcse-tuition-advancing-your-academic-career"
+            },
+            {
+              type: "text",
+              content:
+                " in the current digital age. Online learning environments provide unmatched flexibility by accommodating a wide range of learning styles and schedules. This guarantees that everyone, everywhere, can receive top-notch physics education.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Complex topics are turned into immersive experiences through virtual labs, interactive simulations, and interesting online tools, which not only increase the effectiveness of learning but also make it fun. Collaborative technologies facilitate communication and build a positive learning environment, while personalized learning pathways adjust to each learner’s needs and pace of learning.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Additionally, students can study for tests with confidence and reinforce their understanding with the help of online platforms, which frequently offer a plethora of extra resources, practice exams, and instant feedback. In addition to fostering a greater understanding for the subject, this dynamic and flexible learning environment gives students the knowledge and abilities they need to succeed in their future academic and professional endeavors.",
+            },
+            
+          ],
+          
+          
+        ],
+      },
+      {
+        heading: "Conclusion",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "IGCSE Physics is a pathway to understanding the complex mechanisms of our world, not just a study about circuits and electrons.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Now, go out on this thrilling adventure.",
+            },
+            
+          ],
+          
+        ],
+      },
+      
+    ],
+  },
+  {
+    id: 7,
+    featuredImg: blogImg7,
+    slug: "untangling-the-mysterious-impact-of-a-level-tutors-on-student-success-lighting-academic-excellence",
+    title:
+      "Untangling the Mysterious Impact of A-Level Tutors on Student Success: Lighting Academic Excellence",
+      content: [
+        {
+          heading: "Overview",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "Electricity and circuits are important ideas that greatly influence how we perceive the world around us, and ",
+              },
+              {
+                type: "link",
+                content:
+                  "Physics",
+                  url: "/subjects/physics"
+              },
+              {
+                type: "text",
+                content:
+                  " provides an intriguing exploration of the basic elements of our existence. IGCSE Physics serves as a starting point, promoting an understanding of the basic principles that govern our universe. Beyond formulas and equations, it pushes students to investigate, challenge, and apply what they learn in order to solve cosmic riddles and use scientific knowledge to improve their daily lives. This blog post explores the fascinating realm of these ideas and emphasizes how important they are for both daily living and academic endeavors.",
+              },
+              
+            ],
+            
+            
+          ],
+        },
+       
+        {
+          heading: "Electricity: A Definitive Guide: From Atoms to Electrons",
+          para: [
+           
+            [
+              {
+                type: "text",
+                content: "IGCSE Physics explores the intriguing world of atoms, conductors, and insulators to create the foundation for understanding electricity. Understanding electrical phenomena such as resistance, voltage, and current—the holy trinity of electrical circuits—begins with this fundamental information.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Consider voltage to be the force that pushes water through a conduit and encourages electrons to flow through conductors at different rates depending on resistance. This electric charge flow is quantified by current, which is expressed in amperes. Ohm’s law (V = IR), the foundation of circuit analysis, encapsulates the lovely relationship between these three quantities.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Ohm’s law (V = IR), which was developed after ",
+              },
+              {
+                type: "link",
+                content: "German physicist Georg Ohm established the link between voltage, current, and resistance in 1827",
+                url: "https://www.britannica.com/science/Ohms-law"
+              },
+              {
+                type: "text",
+                content: ", is researched by Britannica. IGCSE Physics uses real-world experiments to illustrate Ohm’s law in addition to theoretical explanations. Students work with circuits, seeing directly how adjustments to one parameter affect the others. This participatory method strengthens comprehension and establishes a solid framework for additional research in physics and other fields.",
+              },
+              
+            ],
+           
+           
+          ],
+        },
+        {
+          heading: "Components and Circuits in Harmony: Mastering the Orchestra",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "Students enrolled in IGCSE Physics are prepared with knowledge of the various components that comprise the orchestra of circuits, including resistors, capacitors, diodes, and transistors. Students understand how the electronic devices that run our lives function by analyzing the connections between these parts. ",
+              },
+              {
+                type: "link",
+                content:
+                  "The worldwide semiconductor industry was estimated to be worth $555.9 billion in 2022, which comprises circuits.",
+                  url: "https://www.semiconductors.org/global-semiconductor-sales-increase-3-2-in-2022-despite-second-half-slowdown/#:~:text=WASHINGTON%E2%80%94Feb.,2021%20total%20of%20%24555.9%20billion."
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "Consider a parallel circuit as a busy urban market. Due to their own direct connections to the power supply, each shop (appliance) is able to function on its own. Parallel circuits are resilient enough that even if one shop fails, the others stay unaffected.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Conversely, series circuits resemble a chain reaction. Think of them as a line of dominoes that, when one falls, sets off the others. Comparably, in a series circuit, the current passes through each part in turn; if one fails, the circuit as a whole may be rendered completely inoperable."    
+              },
+            ],
+            [
+              {
+                type: "text",
+                content: "Students taking the IGCSE Physics course must comprehend the subtle differences between parallel and series circuits. They see directly how the two topologies differ in terms of voltage, current distribution, and general behavior by constructing and examining these circuits. This useful information is necessary to understand the wide variety of electrical devices we encounter every day."    
+              },
+            ],
+            
+           
+          ],
+        },
+        {
+          heading: "Overcoming the Distance: From Theory to Real-World Implementations",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "The way that electricity and circuits flow naturally into our daily lives is what makes them truly beautiful. Knowing circuits opens up a world of useful applications, from the simple lightbulb to the wonders of contemporary technology like cellphones and medical equipment.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Consider the ubiquitous smartphone as an example. Its elegant exterior conceals a symphony of intricate circuits that control every aspect of the device, including the processor, display, and battery. Understanding these circuits helps us appreciate the wonders of technology that IGCSE Physics has brought to life on a deeper level in addition to gaining technical information.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "This understanding cultivates awe and amazement at the pervasiveness of physics’ influence on the formation of our universe. It piques your interest and motivates us to learn more about the scientific ideas behind technology breakthroughs, giving us the tools we need to actively engage in and contribute to the rapidly changing fields of science and technology.",
+              },
+              
+            ],
+            
+          ],
+        },
+        {
+          heading: "The Revolution in IGCSE Physics Education: The Power of Online Learning",
+          para: [
+            [
+              {
+                type: "link",
+                content:
+                  "Online Tuition for the IGCSE Physics has become a game-changer",
+                  url: "/blogs/the-advantages-of-igcse-tuition-advancing-your-academic-career"
+              },
+              {
+                type: "text",
+                content:
+                  " in the current digital age. Online learning environments provide unmatched flexibility by accommodating a wide range of learning styles and schedules. This guarantees that everyone, everywhere, can receive top-notch physics education.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Complex topics are turned into immersive experiences through virtual labs, interactive simulations, and interesting online tools, which not only increase the effectiveness of learning but also make it fun. Collaborative technologies facilitate communication and build a positive learning environment, while personalized learning pathways adjust to each learner’s needs and pace of learning.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Additionally, students can study for tests with confidence and reinforce their understanding with the help of online platforms, which frequently offer a plethora of extra resources, practice exams, and instant feedback. In addition to fostering a greater understanding for the subject, this dynamic and flexible learning environment gives students the knowledge and abilities they need to succeed in their future academic and professional endeavors.",
+              },
+              
+            ],
+            
+            
+          ],
+        },
+        {
+          heading: "Conclusion",
+          para: [
+            [
+              {
+                type: "text",
+                content:
+                  "IGCSE Physics is a pathway to understanding the complex mechanisms of our world, not just a study about circuits and electrons.",
+              },
+              
+            ],
+            [
+              {
+                type: "text",
+                content: "Now, go out on this thrilling adventure.",
+              },
+              
+            ],
+            
+          ],
+        },
+        
+      ],
+  },
+  {
+    id: 8,
+    featuredImg: blogImg9,
+    slug: "benefits-of-learning-online-tuition",
+    title: "Benefits of Learning Online Tuition",
+    content: [
+      {
+        heading: "Overview",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Electricity and circuits are important ideas that greatly influence how we perceive the world around us, and ",
+            },
+            {
+              type: "link",
+              content:
+                "Physics",
+                url: "/subjects/physics"
+            },
+            {
+              type: "text",
+              content:
+                " provides an intriguing exploration of the basic elements of our existence. IGCSE Physics serves as a starting point, promoting an understanding of the basic principles that govern our universe. Beyond formulas and equations, it pushes students to investigate, challenge, and apply what they learn in order to solve cosmic riddles and use scientific knowledge to improve their daily lives. This blog post explores the fascinating realm of these ideas and emphasizes how important they are for both daily living and academic endeavors.",
+            },
+            
+          ],
+          
+          
+        ],
+      },
+     
+      {
+        heading: "Electricity: A Definitive Guide: From Atoms to Electrons",
+        para: [
+         
+          [
+            {
+              type: "text",
+              content: "IGCSE Physics explores the intriguing world of atoms, conductors, and insulators to create the foundation for understanding electricity. Understanding electrical phenomena such as resistance, voltage, and current—the holy trinity of electrical circuits—begins with this fundamental information.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider voltage to be the force that pushes water through a conduit and encourages electrons to flow through conductors at different rates depending on resistance. This electric charge flow is quantified by current, which is expressed in amperes. Ohm’s law (V = IR), the foundation of circuit analysis, encapsulates the lovely relationship between these three quantities.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Ohm’s law (V = IR), which was developed after ",
+            },
+            {
+              type: "link",
+              content: "German physicist Georg Ohm established the link between voltage, current, and resistance in 1827",
+              url: "https://www.britannica.com/science/Ohms-law"
+            },
+            {
+              type: "text",
+              content: ", is researched by Britannica. IGCSE Physics uses real-world experiments to illustrate Ohm’s law in addition to theoretical explanations. Students work with circuits, seeing directly how adjustments to one parameter affect the others. This participatory method strengthens comprehension and establishes a solid framework for additional research in physics and other fields.",
+            },
+            
+          ],
+         
+         
+        ],
+      },
+      {
+        heading: "Components and Circuits in Harmony: Mastering the Orchestra",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "Students enrolled in IGCSE Physics are prepared with knowledge of the various components that comprise the orchestra of circuits, including resistors, capacitors, diodes, and transistors. Students understand how the electronic devices that run our lives function by analyzing the connections between these parts. ",
+            },
+            {
+              type: "link",
+              content:
+                "The worldwide semiconductor industry was estimated to be worth $555.9 billion in 2022, which comprises circuits.",
+                url: "https://www.semiconductors.org/global-semiconductor-sales-increase-3-2-in-2022-despite-second-half-slowdown/#:~:text=WASHINGTON%E2%80%94Feb.,2021%20total%20of%20%24555.9%20billion."
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider a parallel circuit as a busy urban market. Due to their own direct connections to the power supply, each shop (appliance) is able to function on its own. Parallel circuits are resilient enough that even if one shop fails, the others stay unaffected.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Conversely, series circuits resemble a chain reaction. Think of them as a line of dominoes that, when one falls, sets off the others. Comparably, in a series circuit, the current passes through each part in turn; if one fails, the circuit as a whole may be rendered completely inoperable."    
+            },
+          ],
+          [
+            {
+              type: "text",
+              content: "Students taking the IGCSE Physics course must comprehend the subtle differences between parallel and series circuits. They see directly how the two topologies differ in terms of voltage, current distribution, and general behavior by constructing and examining these circuits. This useful information is necessary to understand the wide variety of electrical devices we encounter every day."    
+            },
+          ],
+          
+         
+        ],
+      },
+      {
+        heading: "Overcoming the Distance: From Theory to Real-World Implementations",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "The way that electricity and circuits flow naturally into our daily lives is what makes them truly beautiful. Knowing circuits opens up a world of useful applications, from the simple lightbulb to the wonders of contemporary technology like cellphones and medical equipment.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Consider the ubiquitous smartphone as an example. Its elegant exterior conceals a symphony of intricate circuits that control every aspect of the device, including the processor, display, and battery. Understanding these circuits helps us appreciate the wonders of technology that IGCSE Physics has brought to life on a deeper level in addition to gaining technical information.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "This understanding cultivates awe and amazement at the pervasiveness of physics’ influence on the formation of our universe. It piques your interest and motivates us to learn more about the scientific ideas behind technology breakthroughs, giving us the tools we need to actively engage in and contribute to the rapidly changing fields of science and technology.",
+            },
+            
+          ],
+          
+        ],
+      },
+      {
+        heading: "The Revolution in IGCSE Physics Education: The Power of Online Learning",
+        para: [
+          [
+            {
+              type: "link",
+              content:
+                "Online Tuition for the IGCSE Physics has become a game-changer",
+                url: "/blogs/the-advantages-of-igcse-tuition-advancing-your-academic-career"
+            },
+            {
+              type: "text",
+              content:
+                " in the current digital age. Online learning environments provide unmatched flexibility by accommodating a wide range of learning styles and schedules. This guarantees that everyone, everywhere, can receive top-notch physics education.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Complex topics are turned into immersive experiences through virtual labs, interactive simulations, and interesting online tools, which not only increase the effectiveness of learning but also make it fun. Collaborative technologies facilitate communication and build a positive learning environment, while personalized learning pathways adjust to each learner’s needs and pace of learning.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Additionally, students can study for tests with confidence and reinforce their understanding with the help of online platforms, which frequently offer a plethora of extra resources, practice exams, and instant feedback. In addition to fostering a greater understanding for the subject, this dynamic and flexible learning environment gives students the knowledge and abilities they need to succeed in their future academic and professional endeavors.",
+            },
+            
+          ],
+          
+          
+        ],
+      },
+      {
+        heading: "Conclusion",
+        para: [
+          [
+            {
+              type: "text",
+              content:
+                "IGCSE Physics is a pathway to understanding the complex mechanisms of our world, not just a study about circuits and electrons.",
+            },
+            
+          ],
+          [
+            {
+              type: "text",
+              content: "Now, go out on this thrilling adventure.",
+            },
+            
+          ],
+          
+        ],
+      },
+      
+    ],
+  },
+];
 
 const blogs = [
   {
     id: 1,
     featuredImg: blogImg2,
+    slug: "title-of-father-of-chemistry",
     title: "Who Really Holds the Title of “Father of Chemistry”?",
     content:
       "The quest to discover the fundamental nature of matter has fascinated curious minds for ages. The intriguing science of chemistry was created as a result of this engrossing voyage through the universe of atoms, molecules, and reactions. But who is truly deserving of the esteemed moniker “Father of Chemistry”? Like many historical questions, the solution is more complicated than one may think.",
@@ -1424,6 +3062,7 @@ const blogs = [
   {
     id: 2,
     featuredImg: blogImg3,
+    slug: "what-does-igcse-stand-for-far-beyond-attractive-letters-but-we-wont-debate-if-you-think-theyre-cool",
     title:
       "What Does IGCSE Stand For? Far Beyond Attractive Letters—But We Won't Debate if You Think They're Cool",
     content:
@@ -1433,6 +3072,7 @@ const blogs = [
   {
     id: 3,
     featuredImg: blogImg4,
+    slug: "enormous-exploration-of-electricity-and-circuits-in-igcse-physics-revealing-the-spark",
     title:
       "Enormous Exploration of Electricity and Circuits in IGCSE Physics: Revealing the Spark",
     content:
@@ -1442,6 +3082,7 @@ const blogs = [
   {
     id: 4,
     featuredImg: blogImg5,
+    slug: "confidently-conquering-the-igcse-mathematics-storm",
     title: "Confidently conquering the IGCSE Mathematics Storm!",
     content:
       "Do calculations give you the trembling? Does algebra make you cry? Is arithmetic making you feel a-log-rithmically lost? Worry not, brave learner; you are not lonely in your mathematics apprehension. As reported by medicalnewstoday.com, roughly 93% of all adults in the US suffer from some level of mathematics phobia. Furthermore, roughly seventeen percent of U.S. IGCSE Mathematics can be a powerful opponent, but like with any great fight, strategy and preparation are critical to winning success.",
@@ -1450,6 +3091,7 @@ const blogs = [
   {
     id: 5,
     featuredImg: blogImg6,
+    slug: "the-advantages-of-igcse-tuition-advancing-your-academic-career",
     title: "The Advantages of IGCSE Tuition: Advancing Your Academic Career",
     content:
       "The IGCSE, also referred to as the International General Certificate of Secondary Education, is an internationally renowned and widely respected credential for learners. As stated in medium, the IGCSE, developed over 25 years ago by Cambridge University International Examinations, now Cambridge Assessment International Education, is a globally recognized examination. A firm basis for both advanced study and continuing education is provided by the IGCSE tuition. The need for IGCSE tuition rises as the course becomes more and more well-known. We shall examine the several advantages of IGCSE tutoring in this article, illuminating how it may greatly improve your academic trajectory.",
@@ -1458,6 +3100,7 @@ const blogs = [
   {
     id: 6,
     featuredImg: blogImg7,
+    slug: "untangling-the-mysterious-impact-of-a-level-tutors-on-student-success-lighting-academic-excellence",
     title:
       "Untangling the Mysterious Impact of A-Level Tutors on Student Success: Lighting Academic Excellence",
     content:
@@ -1488,5 +3131,6 @@ export {
   enrollDetails,
   joinTutorDetails,
   blogs,
+  blogsMain,
   curriculumOffering,
 };
