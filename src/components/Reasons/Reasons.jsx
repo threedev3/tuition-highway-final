@@ -123,7 +123,7 @@ const Reasons = ({ demoRef }) => {
                     <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:hidden block text-center">
                       {item.wholeTitle}
                     </p>
-                    <p className="sm:text-sm text-sm text-headingColor text-center">
+                    <p className="sm:text-sm text-sm text-headingColor text-center max-w-52">
                       {item.description}
                     </p>
                   </div>

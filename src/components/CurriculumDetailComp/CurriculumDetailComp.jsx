@@ -30,14 +30,14 @@ const CurriculumDetailComp = ({ demoRef, curriculum }) => {
       >
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
           <div className="flex flex-col gap-8 xl:max-w-3xl lg:max-w-xl max-w-full">
-            <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
+            <h3 className="xl:text-[40px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
               About The Curriculum
             </h3>
             <div className="flex flex-col gap-6">
               {curriculum.content.map((point, index) => (
                 <div key={index} className="flex flex-row gap-4">
                   <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="xl:text-lg sm:text-base text-sm font-semibold">
+                  <p className="xl:text-base sm:text-base text-sm font-semibold">
                     {point}
                   </p>
                 </div>
@@ -66,7 +66,7 @@ const CurriculumDetailComp = ({ demoRef, curriculum }) => {
 
   return (
     <div>
-      <div className="relative md:py-12 py-8 px-6 max-w-full min-h-[40vh]">
+      <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]">
         <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
           <img src={fadedCircle} alt="" className="object-contain" />
         </div>

@@ -58,7 +58,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative md:py-20 py-10 px-6 max-w-full overflow-x-hidden">
+    <div className="relative md:py-20 py-10 sm:px-12 px-6 max-w-full overflow-x-hidden">
       <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out blur-md "></div>
 
       {/* <div className="relative z-10 max-w-[1400px] mx-auto md:flex md:flex-row md:items-center md:justify-between md:gap-10 flex flex-col gap-6 items-center justify-center ">

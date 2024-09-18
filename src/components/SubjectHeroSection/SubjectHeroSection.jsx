@@ -18,7 +18,7 @@ const SubjectHeroSection = ({ demoRef, title, description, btnText }) => {
   };
 
   return (
-    <div className="sm:py-20 py-12 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
+    <div className="sm:py-20 py-12 sm:px-12 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-10 justify-center items-center">
         <div className="flex flex-col gap-4 justify-center items-center">
           <div>
@@ -27,7 +27,7 @@ const SubjectHeroSection = ({ demoRef, title, description, btnText }) => {
             </h3>
           </div>
           <div>
-            <p className="text-white text-center max-w-xl capitalize">
+            <p className="xl:text-lg sm:text-lg min-[540px]:text-base text-sm text-white text-center max-w-lg capitalize">
               {description}
             </p>
           </div>

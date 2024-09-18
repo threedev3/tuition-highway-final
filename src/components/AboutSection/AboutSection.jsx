@@ -4,10 +4,10 @@ import { CheckIcon } from "@heroicons/react/24/outline";
 
 const AboutSection = () => {
   return (
-    <div className="relative md:py-20 py-12 px-6 max-w-full ">
+    <div className="relative md:py-20 py-12 sm:px-12 px-6 max-w-full ">
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 ">
         <div className="md:flex md:flex-row md:justify-between md:items-center flex flex-col gap-8">
-          <div className="flex flex-col gap-2 md:max-w-[65%]">
+          <div className="flex flex-col gap-2 lg:max-w-[65%]">
             <div className="flex flex-row gap-4 items-center ml-3">
               <div className="sm:h-4 sm:w-4 h-3 w-3 bg-orangeHeading"></div>
               <h4 className="text-headingColor sm:text-lg text-base">
@@ -44,7 +44,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="md:mx-0 mx-auto">
+          <div className="md:mx-0 mx-auto lg:block hidden">
             <img
               src={aboutImg}
               alt="aboutImg"

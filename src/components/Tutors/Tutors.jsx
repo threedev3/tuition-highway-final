@@ -55,7 +55,7 @@ const Tutors = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="md:py-20 py-12 px-6 max-w-full relative">
+    <div className="md:py-20 py-12 sm:px-12 px-6 max-w-full relative">
       <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out "></div>
 
       {/* <motion.div

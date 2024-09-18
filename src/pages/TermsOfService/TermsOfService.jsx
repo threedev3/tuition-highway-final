@@ -8,7 +8,7 @@ const TermsOfService = ({ demoRef }) => {
     <div>
       <SubjectHeroSection
         demoRef={demoRef}
-        title="Term Of Service"
+        title="Terms Of Service"
         description="The best and most secured service for our clients"
       />
       <TermsSection title="Terms of Service" />

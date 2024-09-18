@@ -11,7 +11,7 @@ const Learn = ({ firstHead, secondHead, description, style, textStyle }) => {
     console.log("Element is in view: ", isInView);
   }, [isInView]);
   return (
-    <div className="md:py-6 py-6 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
+    <div className="md:py-6 py-6 sm:px-12 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
       <div className="max-w-[1400px] mx-auto md:flex md:flex-row md:justify-evenly md:items-center md:gap-4 flex flex-col gap-4 justify-center items-center">
         <div className="flex xl:gap-12 sm:gap-6 gap-2 justify-between items-center">
           <div className="relative xl:w-[106px] min-[769px]:w-[85px] sm:w-20 w-16">

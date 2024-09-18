@@ -26,7 +26,7 @@ const TermsSection = ({ title }) => {
 
   return (
     <div>
-      <div className="relative md:py-12 py-8 px-6 max-w-full bg-subjectsBg">
+      <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full bg-subjectsBg">
         <div className="absolute -top-56 left-0 -z-10 w-56">
           <img src={fadedCircle} alt="" className="object-contain" />
         </div>

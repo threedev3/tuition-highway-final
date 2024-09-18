@@ -58,7 +58,7 @@ import { numbers } from "../../data/data";
 
 const TutorNumbers = () => {
   return (
-    <div className="relative sm:py-12 py-8 px-6 max-w-full bg-gradient-to-r from-startgrad to-endGrad">
+    <div className="relative sm:py-12 py-8 sm:px-12 px-6 max-w-full bg-gradient-to-r from-startgrad to-endGrad">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 justify-center items-stretch">
         <div className="sm:grid sm:grid-cols-4 lg:gap-32 md:gap-16 grid grid-cols-2 gap-4 place-content-between">
           {numbers.map((item, index) => {

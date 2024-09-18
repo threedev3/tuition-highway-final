@@ -13,7 +13,7 @@ const BlogsSection = () => {
     });
   };
   return (
-    <div className="relative md:py-20 py-12 px-6 max-w-full min-h-[50vh]">
+    <div className="relative md:py-20 py-12 sm:px-12 px-6 max-w-full min-h-[50vh]">
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 ">
         <div>
           <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-[22px] text-[20px] font-bold tracking-wide text-headingColor capitalize text-center">

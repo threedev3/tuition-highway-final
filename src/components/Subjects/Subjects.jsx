@@ -169,7 +169,7 @@ const Subjects = () => {
   }, []);
 
   return (
-    <div className="md:py-20 py-12 px-6 max-w-full relative bg-heroBg">
+    <div className="md:py-20 py-12 sm:px-12 px-6 max-w-full relative bg-heroBg">
       {/* <motion.div
         className="absolute md:top-10 md:left-10 sm:top-8 sm:left-8 top-2 left-2 md:w-24 sm:w-16 w-14 z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}

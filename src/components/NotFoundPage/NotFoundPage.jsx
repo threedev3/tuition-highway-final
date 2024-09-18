@@ -4,7 +4,7 @@ import React from "react";
 
 function NotFoundPage() {
   return (
-    <div className="relative max-w-full overflow-x-hidden ">
+    <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full overflow-x-hidden ">
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col gap-6 items-center justify-center min-h-96">
         <h1 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
           404 - Page Not Found

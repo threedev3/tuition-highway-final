@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-headingColor relative py-12 px-6 max-w-full overflow-x-hidden">
+    <div className="bg-headingColor relative py-12 sm:px-12 px-6 max-w-full overflow-x-hidden">
       <div className="max-w-[1400px] mx-auto flex flex-col justify-center gap-6">
         <div className="md:flex md:flex-row md:justify-between md:items-center md:gap-4 flex flex-col gap-8 border-b-2 border-b-footerBorder pb-8">
           <div className="flex flex-col items-start gap-6">

@@ -6,8 +6,8 @@ const ThankYouPage = () => {
   return (
     <div>
       <SubHeroSection
-        title="Thank You"
-        description="We appreciate you reaching out to us & we will get in touch shortly"
+        title="We've Received Your Message!"
+        description="Our team will be reviewing your inquiry and will respond promptly. In the meantime, feel free to explore our website."
         btnText="Back To Home"
       />
       <ThankYou />

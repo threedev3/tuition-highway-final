@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { curricula } from "../../data/data";
+import { Link, useNavigate } from "react-router-dom";
 
 const CurriculumSection = ({ demoRef }) => {
   const settings = {
@@ -58,6 +59,14 @@ const CurriculumSection = ({ demoRef }) => {
       });
     }
   };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative  max-w-full overflow-hidden sm:h-56 h-48">
@@ -87,11 +96,18 @@ const CurriculumSection = ({ demoRef }) => {
                 <div key={index} className="min-[493px]:px-2 lg:px-4 mx-auto">
                   {" "}
                   <div className="min-[493px]:p-4 rounded-md">
-                    <div className="text-white min-[1510px]:text-2xl sm:text-[22px] text-[17px] text-center font-semibold min-w-[200px]">
+                    <Link
+                      to={item.to}
+                      className="text-white min-[1510px]:text-2xl sm:text-[22px] text-[17px] text-center font-semibold min-w-[200px]"
+                      onClick={() => {
+                        // navigate(`/${item.to}`);
+                        scrollToTop();
+                      }}
+                    >
                       {" "}
                       <span className="block">{item.firstTitle}</span>
                       <span className="block">{item.secondTitle}</span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               ))}

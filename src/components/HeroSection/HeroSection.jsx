@@ -57,11 +57,11 @@ const HeroSection = ({ demoRef }) => {
 
   return (
     <div
-      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat bg-contain xl:bg-movedown lg:bg-bottom bg-bottom max-w-full py-12 px-6 overflow-hidden bg-heroBg relative"
+      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat bg-contain xl:bg-movedown lg:bg-bottom bg-bottom max-w-full py-12 sm:px-12 px-6 overflow-hidden bg-heroBg relative"
       style={{ height: heroHeight }}
     >
       <div className="max-w-[1400px] mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col justify-center items-center gap-16 h-full">
-        <div className="max-w-full mx-auto flex flex-col sm:gap-6 gap-4">
+        <div className="max-w-full  flex flex-col sm:gap-6 gap-4">
           <div className="xl:max-w-2xl sm:max-w-3xl ">
             <AnimatePresence mode="wait">
               {currentHeading === 0 ? (

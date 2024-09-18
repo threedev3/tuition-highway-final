@@ -6,7 +6,7 @@ import { enrollDetails } from "../../data/data";
 const EnrollDetails = ({ title, content, imgSrc }) => {
   return (
     <div>
-      <div className="relative md:py-12 py-8 px-6 max-w-full min-h-[40vh]">
+      <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]">
         <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
           <img src={fadedCircle} alt="" className="object-contain" />
         </div>
@@ -35,7 +35,7 @@ const EnrollDetails = ({ title, content, imgSrc }) => {
                 </div>
               </div>
 
-              <div className="lg:block flex justify-center">
+              <div className="lg:block hidden">
                 <img src={imgSrc} alt="" className="w-[450px] object-contain" />
               </div>
             </div>

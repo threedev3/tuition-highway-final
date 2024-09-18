@@ -10,8 +10,10 @@ import flexSchedule from "./flexSchedule.png";
 import compCurriculum from "./compCurriculum.png";
 import compreCurriculum from "./compreCurriculum.png";
 import curriculaImg from "./curricula.png";
-import personalLearning from "./online-learning.png";
-import proveResult from "./goal.png";
+// import personalLearning from "./online-learning.png";
+// import proveResult from "./goal.png";
+import personalLearning from "./personalizedLearningIcon.png";
+import proveResult from "./provenResultsIcon.png";
 
 // GIFs
 import computer from "./computer.gif";
@@ -21,11 +23,16 @@ import chemistry from "./chemistry.gif";
 import biology from "./biology.gif";
 import english from "./english.gif";
 import businessLaw from "./businessLaw.gif";
-import accounts from "./accounts.gif";
+// import businessLaw from "./businessLawGif.gif";
+// import accounts from "./accounts.gif";
+import accounts from "./accountsGif.gif";
 import sociology from "./sociology.gif";
 import psychology from "./psychology.gif";
 import stats from "./Stats.gif";
-import business from "./business.gif";
+// import business from "./business.gif";
+import business from "./businessGif.gif";
+// import business from "./BusinessANimated.gif";
+// import business from "./download.gif";
 
 // Avatars
 import avatar1 from "./avatar1.png";

@@ -134,7 +134,7 @@ const TutorForm = () => {
           Step 3
         </div>
       </div>
-      <div className=" xl:w-[700px] lg:w-[600px] sm:w-[600px] min-[450px]:w-[400px] min-[400px]:w-[350px] w-[300px] bg-contactBg p-8 rounded-lg rounded-tl-none shadow-lg ">
+      <div className=" xl:w-[700px] lg:w-[550px] sm:w-[600px] min-[450px]:w-[400px] min-[400px]:w-[350px] w-[300px] bg-contactBg p-8 rounded-lg rounded-tl-none shadow-lg ">
         <form
           className="transition-transform duration-500 ease-in-out "
           onSubmit={handleSubmit}

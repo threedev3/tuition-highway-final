@@ -16,7 +16,7 @@ const BlogDetailSection = ({ blog }) => {
           {blog.title}
         </h3>
       </div>
-      <div className="relative md:py-20 py-8 px-6 max-w-full min-h-[40vh]">
+      <div className="relative md:py-20 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]">
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-6 gap-8 ">
           {/* Blog details will appear here  */}
           {blog.content.map((section, index) => (
@@ -46,16 +46,19 @@ const BlogDetailSection = ({ blog }) => {
                             {textItem.content}
                           </a>
                         );
-                      } else if(textItem.type === "subHeading"){
+                      } else if (textItem.type === "subHeading") {
                         return (
                           <h3 className="sm:text-xl text-lg font-semibold text-headingColor mb-2">
                             {textItem.content}
                           </h3>
-                        )
+                        );
                       } else if (textItem.type === "list") {
                         // Handle list items
                         return (
-                          <ul key={textIndex} className="list-disc list-inside pl-5 text-headingColor">
+                          <ul
+                            key={textIndex}
+                            className="list-disc list-inside pl-5 text-headingColor"
+                          >
                             {textItem.content.map((listItem, listIndex) => (
                               <li key={listIndex} className="mb-2">
                                 {listItem}
@@ -63,11 +66,12 @@ const BlogDetailSection = ({ blog }) => {
                             ))}
                           </ul>
                         );
-                      }
-                      
-                      else {
+                      } else {
                         return (
-                          <span key={textIndex} className="text-base text-headingColor">
+                          <span
+                            key={textIndex}
+                            className="text-base text-headingColor"
+                          >
                             {textItem.content}
                           </span>
                         );

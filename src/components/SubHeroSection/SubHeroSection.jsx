@@ -1,7 +1,13 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SubHeroSection = ({ demoRef, title, description, btnText }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isThankyouPage = location.pathname === "/thankyou";
+
   const sections = {
     Demo: demoRef,
   };
@@ -16,9 +22,20 @@ const SubHeroSection = ({ demoRef, title, description, btnText }) => {
       });
     }
   };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const navigateHome = () => {
+    navigate("/");
+    scrollToTop();
+  };
 
   return (
-    <div className="sm:py-20 py-12 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
+    <div className="sm:py-20 py-12 sm:px-12 px-6 max-w-full relative bg-gradient-to-r from-startgrad to-endGrad">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-6 justify-center items-center">
         <div className="flex flex-col gap-2 justify-center items-center">
           <div>
@@ -27,7 +44,7 @@ const SubHeroSection = ({ demoRef, title, description, btnText }) => {
             </h3>
           </div>
           <div>
-            <p className="xl:text-xl sm:text-lg min-[540px]:text-base text-sm text-white text-center max-w-md capitalize">
+            <p className="xl:text-lg sm:text-lg min-[540px]:text-base text-sm text-white text-center max-w-lg capitalize">
               {description}
             </p>
           </div>
@@ -37,7 +54,10 @@ const SubHeroSection = ({ demoRef, title, description, btnText }) => {
           className="py-3 px-5 bg-white flex gap-1 rounded-full cursor-pointer"
           onClick={() => handleNavClick("Demo")}
         >
-          <button className="text-headingColor font-semibold">
+          <button
+            className="text-headingColor font-semibold"
+            onClick={isThankyouPage && navigateHome}
+          >
             {btnText ? btnText : "Free Demo"}
           </button>
           {!btnText && (

@@ -7,6 +7,7 @@ import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroS
 import Testimonials from "../../components/Testimonials/Testimonials";
 import SubjectSlider from "../../components/SubjectSlider/SubjectSlider";
 import SubjectDetailComp from "../../components/SubjectDetailComp/SubjectDetailComp";
+import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 
 const SubjectDetails = ({ demoRef }) => {
   const { slug } = useParams();
@@ -26,6 +27,7 @@ const SubjectDetails = ({ demoRef }) => {
       />
       <SubjectDetailComp demoRef={demoRef} subject={subject} />
       <Testimonials />
+      <CurriculumSection demoRef={demoRef} />
       <SubjectSlider demoRef={demoRef} />
 
       <div ref={demoRef}>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import contactImg from "../../assets/img/contactimg.png";
+import contactImg2 from "../../assets/img/freeDemo2.png";
 
 import "react-international-phone/style.css";
 
@@ -29,7 +30,7 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
   }, []);
 
   return (
-    <div className="sm:py-8 py-6 px-6 max-w-full relative">
+    <div className="sm:py-8 py-6 sm:px-12 px-6 max-w-full relative">
       {/* <motion.div
         className="absolute md:top-20 md:left-16 sm:top-8 sm:left-8 top-2 left-4  z-10"
         initial={{ opacity: 0, y: -50, scale: 0.5 }}
@@ -94,9 +95,14 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
           </p>
         </div>
 
-        <div className="lg:flex lg:flex-row lg:justify-between lg:items-start lg:gap-8 flex flex-col items-center gap-12 px-4">
-          <div className="w-auto">
-            <img src={contactImg} alt="" className="w-[500px] object-cover" />
+        <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-8 flex flex-col items-center gap-12 px-4">
+          <div className="lg:block hidden w-auto">
+            <img
+              src={isTutorPage ? contactImg2 : contactImg}
+              // src={contactImg}
+              alt=""
+              className="w-[500px] object-cover"
+            />
           </div>
 
           {/* Contact Form will be displayed here  */}

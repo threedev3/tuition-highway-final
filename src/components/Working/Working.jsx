@@ -161,7 +161,7 @@ const Working = () => {
 
   return (
     <div
-      className="sm:pt-8 xl:pb-4 py-6 px-6 max-w-full relative xl:h-[440px] lg:h-[450px] h-[400px] flex items-center overflow-x-hidden"
+      className="sm:pt-8 xl:pb-4 py-6 sm:px-12 px-6 max-w-full relative xl:h-[440px] lg:h-[450px] h-[400px] flex items-center overflow-x-hidden"
       ref={ref}
     >
       <div className="max-w-[1400px] mx-auto flex flex-col gap-4 justify-between  h-full w-full">
@@ -270,10 +270,10 @@ const Working = () => {
                       >
                         {/* Title and Subtitle */}
                         <div>
-                          <h3 className="font-bold text-lg text-headingColor mb-1 tracking-wide">
+                          <h3 className="font-bold xl:text-lg lg:text-base text-lg text-headingColor mb-1 tracking-wide">
                             {step.title}
                           </h3>
-                          <h4 className="font-semibold text-lg text-headingColor">
+                          <h4 className="font-semibold xl:text-lg lg:text-base text-lg text-headingColor">
                             {step.subtitle}
                           </h4>
                         </div>
