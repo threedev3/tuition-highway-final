@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Selector from "../Selector/Selector";
 import {
+  customStyles,
   ourCurriculum,
   selectedCountries,
   subjectsOffer,
@@ -8,6 +9,8 @@ import {
 import useFormValidation from "../../hooks/useFormValidation";
 import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
+import Select from "react-select";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const TutorForm = () => {
   const { errors, validateTutor } = useFormValidation();
@@ -77,24 +80,24 @@ const TutorForm = () => {
   };
 
   const countryObjects = selectedCountries.map((country, index) => ({
-    id: index + 1, // Ensure IDs are unique and start from 1
-    name: country,
+    value: country,
+    label: country,
   }));
 
   const subjectOptions = subjectsOffer.map((subject, index) => ({
-    id: index,
-    name: subject,
+    value: subject,
+    label: subject,
   }));
 
   const grades = Array.from({ length: 13 }, (_, i) => (i + 1).toString());
   const gradeOptions = grades.map((grade, index) => ({
-    id: index,
-    name: grade,
+    value: grade,
+    label: grade,
   }));
 
   const curriculumOptions = ourCurriculum.map((subject, index) => ({
-    id: index,
-    name: subject,
+    value: subject,
+    label: subject,
   }));
 
   const [currentStep, setCurrentStep] = useState(1);
@@ -223,13 +226,31 @@ const TutorForm = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
                         /> */}
 
-                  <Selector
+                  {/* <Selector
                     data={countryObjects}
                     selected={formValues.country}
                     setSelected={(country) =>
                       handleSelectorChange("country", country)
                     }
                     placeholder="Select Country"
+                  /> */}
+                  <Select
+                    // defaultValue={[colourOptions[2], colourOptions[3]]}
+                    name="country"
+                    options={countryObjects}
+                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
+                    classNamePrefix="select"
+                    value={formValues.country}
+                    onChange={(country) =>
+                      handleSelectorChange("country", country)
+                    }
+                    styles={customStyles} // Apply custom styles
+                    placeholder="Select Country"
+                    components={{
+                      DropdownIndicator: (props) => (
+                        <ChevronDownIcon className="w-5 h-5 text-black" />
+                      ),
+                    }}
                   />
                   {errors.country && (
                     <span className="text-red-600 sm:text-base text-sm">
@@ -259,13 +280,24 @@ const TutorForm = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] "
                         /> */}
 
-                  <Selector
-                    data={subjectOptions}
-                    selected={formValues.selectedSubject}
-                    setSelected={(subject) =>
+                  <Select
+                    // defaultValue={[colourOptions[2], colourOptions[3]]}
+                    isMulti
+                    name="subjects"
+                    options={subjectOptions}
+                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
+                    classNamePrefix="select"
+                    value={formValues.selectedSubject}
+                    onChange={(subject) =>
                       handleSelectorChange("selectedSubject", subject)
                     }
-                    placeholder="Subject You Teach"
+                    styles={customStyles} // Apply custom styles
+                    placeholder="Select Subjects"
+                    components={{
+                      DropdownIndicator: (props) => (
+                        <ChevronDownIcon className="w-5 h-5 text-black" />
+                      ),
+                    }}
                   />
                   {errors.selectedSubject && (
                     <span className="text-red-600 sm:text-base text-sm">
@@ -273,6 +305,8 @@ const TutorForm = () => {
                     </span>
                   )}
                 </div>
+              </div>
+              <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                   {/* <input
                           type="text"
@@ -280,13 +314,23 @@ const TutorForm = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
                         /> */}
 
-                  <Selector
-                    data={gradeOptions}
-                    selected={formValues.selectedGrade}
-                    setSelected={(grade) =>
+                  <Select
+                    // defaultValue={[colourOptions[2], colourOptions[3]]}
+                    name="grade"
+                    options={gradeOptions}
+                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
+                    classNamePrefix="select"
+                    value={formValues.selectedGrade}
+                    onChange={(grade) =>
                       handleSelectorChange("selectedGrade", grade)
                     }
-                    placeholder="Grade You Teach"
+                    styles={customStyles} // Apply custom styles
+                    placeholder="Select Grade"
+                    components={{
+                      DropdownIndicator: (props) => (
+                        <ChevronDownIcon className="w-5 h-5 text-black" />
+                      ),
+                    }}
                   />
                   {errors.selectedGrade && (
                     <span className="text-red-600 sm:text-base text-sm">
@@ -303,13 +347,23 @@ const TutorForm = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
                         /> */}
 
-                  <Selector
-                    data={curriculumOptions}
-                    selected={formValues.selectedCurriculum}
-                    setSelected={(curriculum) =>
+                  <Select
+                    // defaultValue={[colourOptions[2], colourOptions[3]]}
+                    name="curriculum"
+                    options={curriculumOptions}
+                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
+                    classNamePrefix="select"
+                    value={formValues.selectedCurriculum}
+                    onChange={(curriculum) =>
                       handleSelectorChange("selectedCurriculum", curriculum)
                     }
-                    placeholder="Curriculum You Teach"
+                    styles={customStyles} // Apply custom styles
+                    placeholder="Select Curriculum"
+                    components={{
+                      DropdownIndicator: (props) => (
+                        <ChevronDownIcon className="w-5 h-5 text-black" />
+                      ),
+                    }}
                   />
                   {errors.selectedCurriculum && (
                     <span className="text-red-600 sm:text-base text-sm">

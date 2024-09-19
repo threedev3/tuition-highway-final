@@ -2,15 +2,10 @@ import React, { useEffect, useState } from "react";
 import { fadedCircle, subjectImg } from "../../assets/img/images";
 import { motion, AnimatePresence } from "framer-motion";
 import Outcomes from "../Outcomes/Outcomes";
+import OutcomeAccordian from "../Accordian/OutcomeAccordian";
 
 const SubjectDetailComp = ({ demoRef, subject }) => {
-  // const initialCurriculum = Object.keys(subject.content)[0];
   const [activeView, setActiveView] = useState("");
-
-  useEffect(() => {
-    const initialCurriculum = Object.keys(subject.content || {})[0] || "";
-    setActiveView(initialCurriculum);
-  }, [subject]);
 
   const handleViewChange = (view) => {
     setActiveView(view);
@@ -31,13 +26,34 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
     }
   };
 
-  const renderItems = () => {
-    // const activeSubjectData = subject.content[activeView];
+  const [openIndex, setOpenIndex] = useState(null);
 
-    const activeSubjectData = subject.content?.[activeView] || [];
+  const handleAccordionClick = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  
+  const activeSubjectData = subject.content?.[activeView] || {};
+  const { description = [], learningOutcomes = [] } = activeSubjectData;
+  const isGeneralView = !activeView;
+
+
+  const outcomes = [
+    {
+      title: "Learning Outcomes",
+      answer: isGeneralView
+      ? subject.generalLearningOutcome  // Default learning outcome if no view is selected
+      : activeSubjectData?.learningOutcomes || [],
+    },
+    
+  ];
+
+  const renderItems = () => {
+   
+
+    
 
     console.log("activeSubjectData", activeSubjectData);
-
     console.log("Subject content", subject.content);
 
     return (
@@ -53,46 +69,35 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
             <h3 className="lg:text-[40px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
               About The Course
             </h3>
-            <div className="flex flex-col gap-6">
-              {/* <div className="flex flex-row gap-4">
-                  <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="lg:text-lg text-base font-semibold">
-                    Engage Your Child: Foster creativity and critical thinking
-                    with a curriculum designed to inspire exploration across
-                    academic disciplines.
-                  </p>
-                </div>
-                <div className="flex flex-row gap-4">
-                  <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5 "></div>
-                  <p className="lg:text-lg text-base font-semibold">
-                    Holistic Development: Balance academic and co-curricular
-                    activities to ensure well-rounded growth.
-                  </p>
-                </div>
-                <div className="flex flex-row gap-4">
-                  <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="lg:text-lg text-base font-semibold">
-                    Flexibility: Allow your child to personalize their learning
-                    path based on their interests and strengths.
-                  </p>
-                </div>
-                <div className="flex flex-row gap-4">
-                  <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="lg:text-lg text-base font-semibold">
-                    Global Recognition: The American Curriculum's SAT and ACT
-                    tests are recognized by top universities worldwide.
-                  </p>
-                </div> */}
+            {!activeView && (
+              <div className="flex flex-col gap-6">
+                {subject.generalData.map((point, index) => (
+                  <div key={index} className="flex flex-row gap-4">
+                    <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                    <p className="xl:text-base sm:text-base text-sm font-semibold">
+                      {point}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
 
-              {activeSubjectData.map((point, index) => (
-                <div key={index} className="flex flex-row gap-4">
-                  <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="xl:text-base sm:text-base text-sm font-semibold">
-                    {point}
-                  </p>
+            {activeView && (
+              <div className="flex flex-col gap-6 ">
+                {/* Render Description */}
+                {/* <div className="flex flex-col gap-4">
+                  <h4 className="text-lg font-bold">Description</h4> */}
+                  {description.map((point, index) => (
+                    <div key={index} className="flex flex-row gap-4">
+                      <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                      <p className="xl:text-base sm:text-base text-sm font-semibold">
+                        {point}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              // </div>
+            )}
 
             <button
               className="text-white font-semibold py-2 px-5 bg-orangeHeading rounded-md max-w-48"
@@ -137,30 +142,6 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
                 {curriculum}
               </motion.button>
             ))}
-            {/* <motion.button
-              onClick={() => handleViewChange("alevel")}
-              className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 ${
-                activeView === "alevel"
-                  ? "bg-activeBlueBtn text-white"
-                  : "bg-subjectBtn text-white"
-              }`}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", damping: 17 }}
-            >
-              A-Level
-            </motion.button>
-            <motion.button
-              onClick={() => handleViewChange("indian")}
-              className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 ${
-                activeView === "indian"
-                  ? "bg-activeBlueBtn text-white"
-                  : "bg-subjectBtn text-white"
-              }`}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", damping: 17 }}
-            >
-              Indian Curriculum
-            </motion.button> */}
           </div>
 
           <AnimatePresence>
@@ -168,7 +149,22 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
           </AnimatePresence>
         </div>
       </div>
-      <Outcomes />
+      {/* <Outcomes subject={subject} /> */}
+      <div className="relative md:py-12 py-8 px-6 max-w-full bg-subjectsBg ">
+        <div className="max-w-[1400px] mx-auto ">
+          <div className="max-w-full ">
+            {outcomes.map((item, index) => (
+              <OutcomeAccordian
+                key={index}
+                question={item.title}
+                answer={item.answer}
+                isOpen={openIndex === index}
+                onClick={() => handleAccordionClick(index)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

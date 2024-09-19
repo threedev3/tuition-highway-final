@@ -200,25 +200,149 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "maths",
     to: "/subjects/maths",
+    generalData: [
+      "Fundamental subject essential for problem-solving and logical thinking",
+      "Covers diverse areas from arithmetic to advanced calculus",
+      "Crucial for STEM fields and many aspects of daily life",
+      "Develops critical reasoning and analytical skills",
+      "Provides tools for understanding patterns and relationships in the world",
+      "Foundation for further studies in science, engineering, and technology",
+    ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
-      IGCSE: [
-        "Students opting for O-Level Maths or IGCSE Maths courses will find the classes for this subject designed to help them understand complex mathematical concepts.",
-        "Our IGCSE maths tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Maths or IGSCE Maths, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Maths.",
-        "From additional IGCSE tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and IGCSE Maths in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Maths course? Or are you preparing to appear for an Edexcel A-Level maths paper?",
-        "At Tuition Highway, our online A-level maths tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level mathematics including calculus, algebra, statistics, and more.",
-        "Maths is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      "Indian Curriculum": [
-        "Are you seeking help with complex topics in your CBSE or ISC Maths course? Or are you preparing for your board exams in Mathematics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Maths provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Mathematics, including calculus, algebra, statistics, and more.",
-        "Mathematics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      Primary: {
+        description: [
+          "Introduction to basic mathematical concepts",
+          "Focus on number sense and operations",
+          "Exploration of shapes and simple geometry",
+          "Development of early problem-solving skills",
+          "Integration of math into everyday situations",
+          "Building a strong foundation for future mathematical studies",
+        ],
+        learningOutcomes: [
+          "Master basic arithmetic operations (addition, subtraction, multiplication, division)",
+          "Understand place value and number systems",
+          "Recognize and describe common shapes and patterns",
+          "Develop early algebraic thinking through simple equations",
+          "Apply math skills to solve age-appropriate word problems",
+          "Gain confidence in mathematical reasoning and communication",
+        ],
+      },
+      Secondary: {
+        description: [
+          "Expansion of mathematical knowledge and skills",
+          "Introduction to more advanced algebraic concepts",
+          "Deeper exploration of geometry and trigonometry",
+          "Development of statistical and probabilistic thinking",
+          "Preparation for higher-level mathematics",
+          "Application of math to practical scenarios and other subjects",
+        ],
+        learningOutcomes: [
+          "Master algebraic manipulation and equation solving",
+          "Understand and apply geometric theorems and proofs",
+          "Develop proficiency in trigonometric functions and their applications",
+          "Analyze and interpret data using statistical methods",
+          "Solve complex word problems using multiple mathematical concepts",
+          "Prepare for advanced mathematics courses and standardized tests",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Comprehensive international mathematics qualification",
+          "Covers a wide range of mathematical topics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
+          "Develops strong problem-solving and analytical skills",
+          "Prepares students for further education and careers in STEM fields",
+          "Recognized by universities and employers worldwide",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various domains",
+          "Develop proficiency in algebraic manipulation and problem-solving",
+          "Apply geometric and trigonometric principles to real-world scenarios",
+          "Analyze and interpret statistical data and probability",
+          "Improve mathematical reasoning and proof techniques",
+          "Prepare for A-levels or other advanced mathematical studies",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Advanced mathematics qualification for post-16 students",
+          "In-depth study of pure mathematics, mechanics, and statistics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
+          "Essential for university courses in mathematics, physics, and engineering",
+          "Develops high-level problem-solving and analytical skills",
+          "Provides a strong foundation for STEM careers",
+        ],
+        learningOutcomes: [
+          "Master advanced algebraic techniques and calculus",
+          "Apply complex mathematical models to real-world problems",
+          "Develop sophisticated statistical analysis and probability skills",
+          "Understand and apply principles of mechanics in mathematical contexts",
+          "Improve logical reasoning and mathematical proof techniques",
+          "Prepare for university-level mathematics and related fields",
+        ],
+      },
+      "American Curriculum": {
+        description: [
+          "Aligned with Common Core State Standards for Mathematics",
+          "Emphasis on conceptual understanding and practical application",
+          "Covers a broad range of mathematical topics",
+          "Prepares students for SAT and ACT standardized tests",
+          "Develops critical thinking and problem-solving skills",
+          "Focuses on mathematical practices and content standards",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various strands",
+          "Develop strong problem-solving and modeling skills",
+          "Apply mathematics to real-world situations and other disciplines",
+          "Improve mathematical reasoning and argumentation abilities",
+          "Prepare for college-level mathematics and STEM courses",
+          "Achieve proficiency in standardized test mathematics sections",
+        ],
+      },
+      IB: {
+        description: [
+          "Comprehensive and rigorous international mathematics program",
+          "Offered at Standard Level (SL) and Higher Level (HL)",
+          "Emphasizes mathematical inquiry and application",
+          "Develops strong analytical and critical thinking skills",
+          "Prepares students for university studies in mathematics and related fields",
+          "Includes a mathematical exploration project",
+        ],
+        learningOutcomes: [
+          "Master advanced mathematical concepts and techniques",
+          "Develop proficiency in mathematical modeling and problem-solving",
+          "Apply mathematics to a wide range of real-world contexts",
+          "Improve research and independent learning skills through exploration",
+          "Prepare for university-level mathematics and STEM courses",
+          "Gain an international perspective on mathematical applications",
+        ],
+      },
+      CBSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various branches",
+          "Develop proficiency in algebraic manipulation and geometry",
+          "Apply mathematical principles to solve complex problems",
+          "Improve logical reasoning and mathematical communication skills",
+          "Prepare for higher education in mathematics and related fields in India",
+          "Achieve success in CBSE board exams and other competitive examinations",
+        ],
+      },
     },
   },
   {
@@ -231,25 +355,73 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "physics",
     to: "/subjects/physics",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
-        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
-        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
-        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
-        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
   {
@@ -262,25 +434,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "chemistry",
     to: "/subjects/chemistry",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "American Curriculum": [
-        "Students opting for O-Level Chemistry or American Curriculum Chemistry courses will find the classes for this subject designed to help them understand complex Chemistry concepts.",
-        "Our American Curriculum Chemistry tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Chemistry or American Curriculum Chemistry, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Chemistry.",
-        "From additional American Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and American Curriculum Chemistry in detail",
-      ],
-      SAT: [
-        "Do you need help in understanding complex topics for you're SAT Chemistry course? Or are you preparing to appear for an Edexcel SAT Chemistry paper?",
-        "At Tuition Highway, our online SAT Chemistry tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of SAT Chemistry including calculus, algebra, statistics, and more.",
-        "Chemistry is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Chemistry course? Or are you preparing for your board exams in Chemistry?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Chemistry, including calculus, algebra, statistics, and more.",
-        "Chemistry is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "American Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      SAT: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
   {
@@ -293,31 +505,82 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "english",
     to: "/subjects/english",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "International Baccalaureate": [
-        "Students opting for O-Level English or British Curriculum English courses will find the classes for this subject designed to help them understand complex English concepts.",
-        "Our British Curriculum English tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level English or British Curriculum English, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels English.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced English, our tutors are highly qualified to cover all topics of O-Level and British Curriculum English in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels English course? Or are you preparing to appear for an Edexcel A-Level English paper?",
-        "At Tuition Highway, our online A-level English tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level English including calculus, algebra, statistics, and more.",
-        "English is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IELTS: [
-        "Are you seeking help with complex topics in your IGCSE English course? Or are you preparing for your board exams in English?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 English provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of English, including calculus, algebra, statistics, and more.",
-        "English is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
-      "French Curriculum": [
-        "Are you seeking help with complex topics in your French Curriculum English course? Or are you preparing for your board exams in English?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 English provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of English, including calculus, algebra, statistics, and more.",
-        "English is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "International Baccalaureate": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IELTS: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "French Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
   {
@@ -330,25 +593,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "biology",
     to: "/subjects/biology",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "French Curriculum": [
-        "Students opting for O-Level Biology or French Curriculum Biology courses will find the classes for this subject designed to help them understand complex Biology concepts.",
-        "Our French Curriculum Biology tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Biology or French Curriculum Biology, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Biology.",
-        "From additional French Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and French Curriculum Biology in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Biology course? Or are you preparing to appear for an Edexcel A-Level Biology paper?",
-        "At Tuition Highway, our online A-level Biology tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Biology including calculus, algebra, statistics, and more.",
-        "Biology is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      SAT: [
-        "Are you seeking help with complex topics in your SAT Biology course? Or are you preparing for your board exams in Biology?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Biology provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Biology, including calculus, algebra, statistics, and more.",
-        "Biology is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "French Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      SAT: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
   {
@@ -361,25 +664,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "business",
     to: "/subjects/business",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
-        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
-        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
-        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
-        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
   {
@@ -392,25 +735,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "computer",
     to: "/subjects/computer",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Computer Science or British Curriculum Computer Science courses will find the classes for this subject designed to help them understand complex computing concepts.",
-        "Our British Curriculum Computer Science tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Computer Science or British Curriculum Computer Science, our online tutors will cover the subject in-depth, so you gain a clearer understanding of key topics such as programming, algorithms, and data structures.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as coding, network theory, and cybersecurity, our tutors are highly qualified to cover all topics in detail.",
-      ],
-      "A-Level": [
-        "Do you need help understanding complex topics for your A-Level Computer Science course? Or are you preparing to appear for an Edexcel A-Level Computer Science paper?",
-        "At Tuition Highway, our online A-level Computer Science tutors provide you with the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Computer Science, including programming languages, algorithms, and computational thinking.",
-        "Computer Science is an evolving field, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Computer Science course? Or are you preparing for your board exams in Computer Science?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Computer Science provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Computer Science, including programming, systems architecture, and databases.",
-        "Computer Science is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
 
@@ -424,25 +807,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "accounts",
     to: "/subjects/accounts",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
-        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
-        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
-        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
-        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
 
@@ -456,25 +879,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "economics",
     to: "/subjects/economics",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
-        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
-        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
-        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
-        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
 
@@ -488,25 +951,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "business-law",
     to: "/subjects/business-law",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
-        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
-        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
-        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
-        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
   {
@@ -519,25 +1022,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "sociology",
     to: "/subjects/sociology",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
-        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
-        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
-        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
-        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
   {
@@ -550,25 +1093,65 @@ const subjectsOffering = [
       "Follow the UK education system, emphasising subjects like English, Maths, and Sciences, leading to qualifications like GCSE, IGCSE and A-levels.",
     slug: "psychology",
     to: "/subjects/psychology",
+    generalData: [
+      "This course aims to provide an in-depth understanding of fundamental subjects.",
+      "Tailored for a variety of curriculums, covering subjects like mathematics and sciences.",
+      "Prepare students with analytical and problem-solving skills across multiple disciplines.",
+      "Enhances academic and co-curricular development to create a holistic learning environment.",
+      "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
     content: {
-      "British Curriculum": [
-        "Students opting for O-Level Physics or British Curriculum Physics courses will find the classes for this subject designed to help them understand complex Physics concepts.",
-        "Our British Curriculum Physics tutors have been selected carefully after undergoing a stringent process to ensure they bring the right set of experience and qualifications.",
-        "Whether you are opting for O-Level Physics or British Curriculum Physics, our online tutors will cover the subject in-depth, so you gain a clearer knowledge of O-Levels Physics.",
-        "From additional British Curriculum tutoring required across the syllabus or in specific areas such as algebra or geometry and advanced maths, our tutors are highly qualified to cover all topics of O-Level and British Curriculum Physics in detail",
-      ],
-      "A-Level": [
-        "Do you need help in understanding complex topics for you're a-Levels Physics course? Or are you preparing to appear for an Edexcel A-Level Physics paper?",
-        "At Tuition Highway, our online A-level Physics tutors will provide you the instant subject-specific guidance you need to excel in the subject.",
-        "Our competent tutors specialize in all areas of A-Level Physics including calculus, algebra, statistics, and more.",
-        "Physics is an adaptive subject and our innovative platform offers students the freedom to communicate effectively with their instructors and have their learning scheduled around their busy day.",
-      ],
-      IGCSE: [
-        "Are you seeking help with complex topics in your IGCSE Physics course? Or are you preparing for your board exams in Physics?",
-        "At Tuition Highway, our online tutors for Class 11 and 12 Physics provide you with the instant subject-specific guidance you need to excel.",
-        "Our experienced tutors specialize in all areas of Physics, including calculus, algebra, statistics, and more.",
-        "Physics is a dynamic subject, and our innovative platform offers students the flexibility to communicate effectively with their instructors and schedule their learning around their busy day.",
-      ],
+      "British Curriculum": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      "A-Level": {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
+      IGCSE: {
+        description: [
+          "Aligned with the Indian national curriculum for mathematics",
+          "Covers a comprehensive range of mathematical topics",
+          "Emphasizes both theoretical understanding and practical application",
+          "Prepares students for competitive exams and higher education in India",
+          "Develops strong problem-solving and analytical skills",
+          "Integrates technology and real-world applications in mathematics education",
+        ],
+        learningOutcomes: [
+          "Master comprehensive mathematical topics as per the CBSE syllabus",
+          "Prepare for competitive exams and higher education in India",
+          "Apply theoretical math to practical real-world scenarios",
+          "Develop strong analytical and problem-solving skills",
+          "Use technology to solve complex mathematical problems",
+        ],
+      },
     },
   },
 ];
@@ -1207,6 +1790,65 @@ const ourCurriculum = [
   "French Curriculum",
   "Indian CBSE",
 ];
+
+const customStyles = {
+  control: (provided, state) => ({
+    ...provided,
+    backgroundColor: "transparent",
+    border: "none",
+    borderBottom: state.isFocused
+      ? "2px solid #38383856" // focused border color
+      : "2px solid #38383856", // focused border color
+    // borderBottom: "2px solid #38383856",
+    padding: "0.5rem 2rem 0.5rem 0",
+    borderRadius: "0",
+    boxShadow: state.isFocused ? "none" : "none", // remove the blue box-shadow
+    outline: "none", // remove the default focus outline
+    WebkitTapHighlightColor: "transparent",
+    cursor: "pointer",
+    fontSize: "1rem", // text-sm in Tailwind
+    lineHeight: "1.25rem",
+    ...(state.selectProps.isMulti && {
+      height: "80px", // Apply height only for multi-select
+      overflowY: "auto", // Enable overflow only for multi-select
+    }),
+  }),
+  placeholder: (provided) => ({
+    ...provided,
+    color: "#383838", // placeholder color (text-gray-400)
+  }),
+  singleValue: (provided) => ({
+    ...provided,
+    color: "#383838", // value color (text-black)
+  }),
+  dropdownIndicator: (provided, state) => ({
+    ...provided,
+    color: "#383838", // dropdown arrow color (text-black)
+    paddingRight: "0.5rem",
+    display: state.isDisabled ? "none" : "block", // hide arrow when disabled
+  }),
+  indicatorSeparator: () => ({ display: "none" }), // remove separator
+  menu: (provided) => ({
+    ...provided,
+    borderRadius: "0.375rem", // rounded-md
+    border: "1px solid #38383856", // border (border-gray-300)
+    boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)", // slight shadow for the dropdown
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected
+      ? "#34ACD4" // selected background color (from your example)
+      : state.isFocused
+      ? "#F3F4F6" // focused background color (bg-gray-100)
+      : "white",
+    color: state.isSelected ? "white" : "#383838", // selected text color (text-white)
+    padding: "0.5rem 1rem", // padding for options
+    cursor: "pointer",
+    // ":hover": {
+    //   backgroundColor: "#F3F4F6", // hover background color
+    // },
+  }),
+};
 
 const socialIcons = [
   {
@@ -2992,4 +3634,5 @@ export {
   blogs,
   blogsMain,
   curriculumOffering,
+  customStyles,
 };

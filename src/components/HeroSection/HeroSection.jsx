@@ -57,7 +57,7 @@ const HeroSection = ({ demoRef }) => {
 
   return (
     <div
-      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat bg-contain xl:bg-movedown lg:bg-bottom bg-bottom max-w-full py-12 sm:px-12 px-6 overflow-hidden bg-heroBg relative"
+      className="h-[91vh] bg-[url('/src/assets/img/heroBg.png')] bg-no-repeat bg-contain xl:bg-movedown lg:bg-bottom bg-bottom max-w-full py-12 sm:px-12 px-6 overflow-hidden relative"
       style={{ height: heroHeight }}
     >
       <div className="max-w-[1400px] mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center flex flex-col justify-center items-center gap-16 h-full">

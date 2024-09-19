@@ -14,21 +14,18 @@ function OutcomeAccordian({ question, answer, isOpen, onClick }) {
     }
   }, [isOpen]);
 
+  console.log("answer: ", answer);
+
   return (
-    <div className="sm:px-8 px-2 py-6 mb-2 max-w-full " ref={accordianRef}>
+    <div className="sm:px-8 px-2 py-6 mb-2 w-full " ref={accordianRef}>
       <button
         className="flex items-start sm:gap-10 gap-5 w-full text-left focus:outline-none"
         onClick={onClick}
       >
         <div className="flex-shrink-0">
           <ArrowRightIcon color="#F46322" className="w-8" />
-          {/* <img
-            src={arrowRight}
-            alt=""
-            className="w-12 object-contain flex-shrink-0"
-          /> */}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
           <div className="flex justify-between items-center gap-10 w-full">
             <h4
               className="sm:text-2xl min-[396px]:text-xl text-lg text-headingColor "
@@ -72,12 +69,27 @@ function OutcomeAccordian({ question, answer, isOpen, onClick }) {
           </div>
           <div
             ref={contentRef}
-            className="overflow-hidden transition-all duration-500 ease-in-out pr-10"
-            style={{ height: "0px" }}
+            className="overflow-hidden transition-all duration-500 ease-in-out pr-10 "
+            style={{ height: "0px", width: "100%" }}
           >
-            <p className="mt-5 text-headingColor lg:text-base text-sm">
+            {/* <p className="mt-5 text-headingColor lg:text-base text-sm">
               {answer}
-            </p>
+            </p> */}
+            {/* <div  className="flex flex-row gap-4">
+                    <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                    <p className="xl:text-base sm:text-base text-sm font-semibold">
+                      {answer}
+                    </p>
+                  </div> */}
+
+            {answer.map((item, index) => (
+              <div className="flex flex-row gap-4 w-full mt-4" key={index}>
+                <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                <p className="xl:text-base sm:text-base text-sm font-semibold">
+                  {item}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </button>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Selector from "../Selector/Selector";
 import {
+  customStyles,
   ourCurriculum,
   selectedCountries,
   subjectsOffer,
@@ -8,6 +9,8 @@ import {
 import useFormValidation from "../../hooks/useFormValidation";
 import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
+import Select from "react-select";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const ContactUs = () => {
   const { errors, validateContactForm } = useFormValidation();
@@ -51,8 +54,8 @@ const ContactUs = () => {
   };
 
   const countryObjects = selectedCountries.map((country, index) => ({
-    id: index + 1, // Ensure IDs are unique and start from 1
-    name: country,
+    value: country, // Ensure IDs are unique and start from 1
+    label: country,
   }));
 
   return (
@@ -143,13 +146,31 @@ const ContactUs = () => {
                           className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
                         /> */}
 
-                <Selector
+                {/* <Selector
                   data={countryObjects}
                   selected={formValues.country}
                   setSelected={(country) =>
                     handleSelectorChange("country", country)
                   }
                   placeholder="Select Country"
+                /> */}
+                <Select
+                  // defaultValue={[colourOptions[2], colourOptions[3]]}
+                  name="country"
+                  options={countryObjects}
+                  // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
+                  classNamePrefix="select"
+                  value={formValues.country}
+                  onChange={(country) =>
+                    handleSelectorChange("country", country)
+                  }
+                  styles={customStyles} // Apply custom styles
+                  placeholder="Select Country"
+                  components={{
+                    DropdownIndicator: (props) => (
+                      <ChevronDownIcon className="w-5 h-5 text-black" />
+                    ),
+                  }}
                 />
                 {errors.country && (
                   <span className="text-red-600 sm:text-base text-sm">
