@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        heroBg: "#F9F9FD",
+        heroBg: "#fafafa",
         headingColor: "#383838",
         orangeHeading: "#F46322",
         toOrange: "#9F431A",
