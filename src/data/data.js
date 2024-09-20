@@ -441,6 +441,14 @@ const subjectsOffering = [
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
     ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
       "American Curriculum": {
         description: [
@@ -511,6 +519,14 @@ const subjectsOffering = [
       "Prepare students with analytical and problem-solving skills across multiple disciplines.",
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
       "International Baccalaureate": {
@@ -600,6 +616,14 @@ const subjectsOffering = [
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
     ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
       "French Curriculum": {
         description: [
@@ -671,6 +695,14 @@ const subjectsOffering = [
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
     ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
       "British Curriculum": {
         description: [
@@ -741,6 +773,14 @@ const subjectsOffering = [
       "Prepare students with analytical and problem-solving skills across multiple disciplines.",
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
       "British Curriculum": {
@@ -814,6 +854,14 @@ const subjectsOffering = [
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
     ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
       "British Curriculum": {
         description: [
@@ -885,6 +933,14 @@ const subjectsOffering = [
       "Prepare students with analytical and problem-solving skills across multiple disciplines.",
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
       "British Curriculum": {
@@ -958,6 +1014,14 @@ const subjectsOffering = [
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
     ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
       "British Curriculum": {
         description: [
@@ -1029,6 +1093,14 @@ const subjectsOffering = [
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
     ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
+    ],
     content: {
       "British Curriculum": {
         description: [
@@ -1099,6 +1171,14 @@ const subjectsOffering = [
       "Prepare students with analytical and problem-solving skills across multiple disciplines.",
       "Enhances academic and co-curricular development to create a holistic learning environment.",
       "Guided by experienced tutors ensuring a personalized and engaging learning journey.",
+    ],
+    generalLearningOutcome: [
+      "Master core mathematical concepts and operations",
+      "Develop strong problem-solving and analytical skills",
+      "Apply mathematical principles to real-world situations",
+      "Improve logical reasoning and critical thinking abilities",
+      "Gain confidence in tackling complex mathematical challenges",
+      "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
       "British Curriculum": {

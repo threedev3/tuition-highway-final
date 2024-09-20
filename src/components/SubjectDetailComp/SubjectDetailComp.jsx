@@ -32,27 +32,20 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  
   const activeSubjectData = subject.content?.[activeView] || {};
   const { description = [], learningOutcomes = [] } = activeSubjectData;
   const isGeneralView = !activeView;
-
 
   const outcomes = [
     {
       title: "Learning Outcomes",
       answer: isGeneralView
-      ? subject.generalLearningOutcome  // Default learning outcome if no view is selected
-      : activeSubjectData?.learningOutcomes || [],
+        ? subject.generalLearningOutcome // Default learning outcome if no view is selected
+        : activeSubjectData?.learningOutcomes || [],
     },
-    
   ];
 
   const renderItems = () => {
-   
-
-    
-
     console.log("activeSubjectData", activeSubjectData);
     console.log("Subject content", subject.content);
 
@@ -66,15 +59,15 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
       >
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
           <div className="flex flex-col gap-8 xl:max-w-3xl lg:max-w-xl max-w-full">
-            <h3 className="lg:text-[40px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
+            <h3 className="xl:text-[40px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
               About The Course
             </h3>
             {!activeView && (
               <div className="flex flex-col gap-6">
                 {subject.generalData.map((point, index) => (
                   <div key={index} className="flex flex-row gap-4">
-                    <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                    <p className="xl:text-base sm:text-base text-sm font-semibold">
+                    <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                    <p className="xl:text-base sm:text-sm text-sm font-semibold">
                       {point}
                     </p>
                   </div>
@@ -87,20 +80,20 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
                 {/* Render Description */}
                 {/* <div className="flex flex-col gap-4">
                   <h4 className="text-lg font-bold">Description</h4> */}
-                  {description.map((point, index) => (
-                    <div key={index} className="flex flex-row gap-4">
-                      <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                      <p className="xl:text-base sm:text-base text-sm font-semibold">
-                        {point}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                {description.map((point, index) => (
+                  <div key={index} className="flex flex-row gap-4">
+                    <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                    <p className="xl:text-base sm:text-sm text-sm font-semibold">
+                      {point}
+                    </p>
+                  </div>
+                ))}
+              </div>
               // </div>
             )}
 
             <button
-              className="text-white font-semibold py-2 px-5 bg-orangeHeading rounded-md max-w-48"
+              className="text-white font-semibold py-2 px-5 bg-orangeHeading rounded-md xl:max-w-48 max-w-40 xl:text-base text-sm"
               onClick={() => handleNavClick("Demo")}
             >
               Book A Free Trial
@@ -111,7 +104,7 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
             <img
               src={subject.heroImg}
               alt=""
-              className="w-[550px] object-contain"
+              className="w-[480px] object-contain"
             />
           </div>
         </div>
@@ -131,7 +124,7 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
               <motion.button
                 key={index}
                 onClick={() => handleViewChange(curriculum)}
-                className={`py-1.5 sm:px-6 px-4 rounded-full sm:text-base text-sm transition-all duration-300 sm:w-auto w-72 ${
+                className={`py-1.5 sm:px-6 px-4 rounded-full xl:text-base text-sm transition-all duration-300 sm:w-auto w-72 ${
                   activeView === curriculum
                     ? "bg-activeBlueBtn text-white"
                     : "bg-subjectBtn text-white"

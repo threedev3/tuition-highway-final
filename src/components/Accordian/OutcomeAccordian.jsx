@@ -84,8 +84,8 @@ function OutcomeAccordian({ question, answer, isOpen, onClick }) {
 
             {answer.map((item, index) => (
               <div className="flex flex-row gap-4 w-full mt-4" key={index}>
-                <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                <p className="xl:text-base sm:text-base text-sm font-semibold">
+                <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                <p className="xl:text-base sm:text-sm text-sm font-semibold">
                   {item}
                 </p>
               </div>
