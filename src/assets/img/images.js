@@ -119,6 +119,7 @@ import indianCurr from "./indianCurr.png";
 import ropeImg from "./ropeImg.png";
 import thankYouImg from "./thankYouImg.png";
 
+import learningOutcomesImg from "./learningOutcomes.png";
 // Export all images as an object
 export {
   icon1,
@@ -213,4 +214,5 @@ export {
   freeDemo,
   ropeImg,
   thankYouImg,
+  learningOutcomesImg,
 };
