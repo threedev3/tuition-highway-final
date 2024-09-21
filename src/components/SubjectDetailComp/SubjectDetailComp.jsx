@@ -122,7 +122,7 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
         // ref={tabsRef}
         className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]"
       >
-        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
+        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-48 w-40">
           <img src={fadedCircle} alt="" className="object-contain" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col lg:gap-16 md:gap-12 gap-8 ">
