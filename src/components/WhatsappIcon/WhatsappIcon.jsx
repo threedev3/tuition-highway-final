@@ -12,7 +12,7 @@ function WhatsappIcon() {
       className="fixed bottom-4 left-4 bg-green-500 hover:bg-green-600 text-white p-2 rounded-xl shadow-lg z-40"
     >
       <svg
-        className="h-9 w-9 fill-white e-font-icon-svg e-fab-whatsapp"
+        className="sm:h-9 h-8 sm:w-9 w-8 fill-white e-font-icon-svg e-fab-whatsapp"
         viewBox="0 0 448 512"
         xmlns="http://www.w3.org/2000/svg"
       >

@@ -120,6 +120,38 @@ h6 {
   padding-left: 0 !important;
 }
 
+@media (min-width: 1024px) {
+  .no-scrollbar-original::-webkit-scrollbar {
+    height: 5px;
+  }
+  .no-scrollbar-original::-webkit-scrollbar-track {
+    background: #888;
+  }
+
+  .no-scrollbar-original::-webkit-scrollbar-thumb {
+    background: #4292ad;
+  }
+}
+@media (min-width: 300px) and (max-width: 1024px) {
+  .no-scrollbar-original::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  height: 5px;
+  cursor: pointer;
+}
+.no-scrollbar::-webkit-scrollbar-track {
+  background: #888;
+  cursor: pointer;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: #4292ad;
+  cursor: pointer;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

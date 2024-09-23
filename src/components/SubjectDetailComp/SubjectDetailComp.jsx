@@ -7,8 +7,9 @@ import { learningOutcomesImg } from "../../assets/img/images";
 
 const SubjectDetailComp = ({ demoRef, subject }) => {
   const [activeView, setActiveView] = useState("");
-  // const [showFloatingTabs, setShowFloatingTabs] = useState(false);
-  // const tabsRef = useRef(null);
+  const [showFloatingTabs, setShowFloatingTabs] = useState(false);
+  const tabsRef = useRef(null);
+  const floatingTabsEnd = useRef(null);
 
   const handleViewChange = (view) => {
     setActiveView(view);
@@ -30,15 +31,20 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
   };
 
   // Scroll event listener to toggle floating tabs
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const tabsOffsetTop = tabsRef.current?.offsetTop || 0;
-  //     setShowFloatingTabs(window.scrollY > tabsOffsetTop + 100); // Show floating tabs after scrolling past the original ones
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const tabsOffsetTop = tabsRef.current?.offsetTop || 0;
+      setShowFloatingTabs(window.scrollY >= tabsOffsetTop); // Show floating tabs after scrolling past the original ones
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+      // const tabsOffsetTop2 = floatingTabsEnd.current?.offsetTop || 0;
+      // if (window.scrollY > tabsOffsetTop2) {
+      //   setShowFloatingTabs(false);
+      // }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const activeSubjectData = subject.content?.[activeView] || {};
   const { description = [], learningOutcomes = [] } = activeSubjectData;
@@ -119,14 +125,14 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
   return (
     <div>
       <div
-        // ref={tabsRef}
+        ref={tabsRef}
         className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]"
       >
-        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-48 w-40">
+        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-48 w-40 sm:block hidden">
           <img src={fadedCircle} alt="" className="object-contain" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col lg:gap-16 md:gap-12 gap-8 ">
-          <div className="flex sm:flex-row flex-col justify-center items-center flex-wrap gap-6">
+          {/* <div className="flex sm:flex-row flex-col justify-center items-center flex-wrap gap-6">
             {Object.keys(subject.content || {}).map((curriculum, index) => (
               <motion.button
                 key={index}
@@ -142,6 +148,24 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
                 {curriculum}
               </motion.button>
             ))}
+          </div> */}
+
+          <div className="flex flex-row lg:flex-wrap flex-nowrap lg:justify-center justify-start items-center overflow-x-auto no-scrollbar-original sm:gap-6 gap-3">
+            {Object.keys(subject.content || {}).map((curriculum, index) => (
+              <motion.button
+                key={index}
+                onClick={() => handleViewChange(curriculum)}
+                className={`sm:px-6 px-4 rounded-full sm:text-base text-xs sm:w-auto w-full sm:py-1.5 py-1 transition-all duration-300 whitespace-nowrap ${
+                  activeView === curriculum
+                    ? "bg-activeBlueBtn text-white"
+                    : "bg-subjectBtn text-white"
+                }`}
+                whileHover={{ scale: 1.05 }} // Slightly smaller hover scale for smaller screens
+                transition={{ type: "spring", damping: 17 }}
+              >
+                {curriculum}
+              </motion.button>
+            ))}
           </div>
 
           <AnimatePresence>
@@ -151,25 +175,29 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
       </div>
 
       {/* Floating Tabs */}
-      {/* {showFloatingTabs && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full px-6 py-2 flex justify-center gap-4 z-50">
-          {Object.keys(subject.content || {}).map((curriculum, index) => (
-            <button
-              key={index}
-              onClick={() => handleViewChange(curriculum)}
-              className={`py-1 px-4 rounded-full xl:text-base text-sm transition-all duration-300 ${
-                activeView === curriculum
-                  ? "bg-activeBlueBtn text-white"
-                  : "bg-subjectBtn text-white"
-              }`}
-            >
-              {curriculum}
-            </button>
-          ))}
+      {showFloatingTabs && (
+        <div className="w-[100%] fixed sm:top-[94.6px] top-[81.3px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg px-6 py-4 flex xl:justify-center justify-start gap-4 z-[15] overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x">
+          <div className="flex justify-center items-center gap-4">
+            {Object.keys(subject.content || {}).map((curriculum, index) => (
+              <button
+                key={index}
+                onClick={() => handleViewChange(curriculum)}
+                className={`sm:px-6 px-4 rounded-full sm:text-base text-xs sm:w-auto w-full sm:py-1.5 py-1 transition-all duration-300 whitespace-nowrap ${
+                  activeView === curriculum
+                    ? "bg-activeBlueBtn text-white"
+                    : "bg-subjectBtn text-white"
+                }`}
+              >
+                {curriculum}
+              </button>
+            ))}
+          </div>
         </div>
-      )} */}
-
-      <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full bg-subjectsBg ">
+      )}
+      <div
+        className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full bg-subjectsBg "
+        ref={floatingTabsEnd}
+      >
         <div className="max-w-[1400px] mx-auto ">
           <div className="max-w-full ">
             {outcomes.map((item, index) => (

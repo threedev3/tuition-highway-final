@@ -82,16 +82,16 @@ const Navbar = ({ demoRef }) => {
   return (
     <nav
       id="navbar"
-      className="bg-white py-4 sm:px-12 px-6 max-w-full shadow-md sticky top-0 z-20"
+      className="bg-white sm:py-4 py-3 sm:px-12 px-6 max-w-full shadow-sm sticky top-0 z-20"
     >
       <div className="">
         <div className="flex justify-between items-center max-w-[1400px] mx-auto">
-          <div className="w-[164px] cursor-pointer">
+          <div className=" cursor-pointer">
             <Link to={"/"}>
               <img
                 src={mainLogo}
                 alt="Logo"
-                className="object-cover"
+                className="sm:w-[164px] w-[150px] object-contain"
                 onClick={scrollToTop}
               />
             </Link>
@@ -129,7 +129,7 @@ const Navbar = ({ demoRef }) => {
         leave="transition-opacity duration-500"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-        className="fixed inset-0 z-30 bg-white px-6 py-6 overflow-y-auto"
+        className="fixed inset-0 z-50 bg-white px-6 py-6 overflow-y-auto"
       >
         <div className="max-w-[1400px] mx-auto">
           <div className="flex justify-end ">
