@@ -10,15 +10,16 @@ const PrivacyPolicy = ({ demoRef }) => {
         demoRef={demoRef}
         title="Privacy Policy"
         description="The best and most secured service for our clients"
+        btnText={"Back To Home"}
       />
       <PolicySection title="Privacy Policy" />
-      <div ref={demoRef}>
+      {/* <div ref={demoRef}>
         <ContactForm
           demoRef={demoRef}
           firstString={"Request a Free "}
           secondString={"Demo"}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

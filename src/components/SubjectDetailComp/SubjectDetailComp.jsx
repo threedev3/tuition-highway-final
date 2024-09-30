@@ -63,6 +63,8 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
     console.log("activeSubjectData", activeSubjectData);
     console.log("Subject content", subject.content);
 
+    console.log("Length", Object.keys(subject.content) < 6)
+
     return (
       <motion.div
         className=""
@@ -72,7 +74,7 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
         transition={{ duration: 0.5 }}
       >
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-10">
-          <div className="flex flex-col gap-6 xl:max-w-3xl lg:max-w-xl max-w-full">
+          <div className="flex flex-col gap-6 lg:max-w-[50%] max-w-full">
             <h3 className="xl:text-[36px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
               About The Course
             </h3>
@@ -114,7 +116,7 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
             <img
               src={subject.heroImg}
               alt=""
-              className="w-[480px] object-contain"
+              className="xl:w-[450px] w-[400px] object-contain"
             />
           </div>
         </div>
@@ -128,9 +130,9 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
         ref={tabsRef}
         className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]"
       >
-        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-48 w-40 sm:block hidden">
+        {/* <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-48 w-40 sm:block hidden">
           <img src={fadedCircle} alt="" className="object-contain" />
-        </div>
+        </div> */}
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col lg:gap-16 md:gap-12 gap-8 ">
           {/* <div className="flex sm:flex-row flex-col justify-center items-center flex-wrap gap-6">
             {Object.keys(subject.content || {}).map((curriculum, index) => (
@@ -156,14 +158,18 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
                 key={index}
                 onClick={() => handleViewChange(curriculum)}
                 className={`sm:px-6 px-4 rounded-full sm:text-base text-xs sm:w-auto w-full sm:py-1.5 py-1 transition-all duration-300 whitespace-nowrap ${
+                  curriculum === "igcse" || curriculum === "cbse"
+                    ? "uppercase"
+                    : "capitalize"
+                } ${
                   activeView === curriculum
                     ? "bg-activeBlueBtn text-white"
                     : "bg-subjectBtn text-white"
                 }`}
-                whileHover={{ scale: 1.05 }} // Slightly smaller hover scale for smaller screens
-                transition={{ type: "spring", damping: 17 }}
+                // whileHover={{ scale: 1.05 }} // Slightly smaller hover scale for smaller screens
+                // transition={{ type: "spring", damping: 17 }}
               >
-                {curriculum}
+                {curriculum.replace("-", " ")}
               </motion.button>
             ))}
           </div>
@@ -176,19 +182,23 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
 
       {/* Floating Tabs */}
       {showFloatingTabs && (
-        <div className="w-[100%] fixed sm:top-[94.6px] top-[81.3px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg px-6 py-4 flex xl:justify-center justify-start gap-4 z-[15] overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x">
+        <div className={`w-[100%] fixed sm:top-[94.6px] top-[81.3px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg  px-6 xl:py-4 py-3 flex lg:${Object.keys(subject.content).length < 6 ? "justify-center" : "justify-start"} justify-start gap-4 z-[15] overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x`}>
           <div className="flex justify-center items-center gap-4">
             {Object.keys(subject.content || {}).map((curriculum, index) => (
               <button
                 key={index}
                 onClick={() => handleViewChange(curriculum)}
-                className={`sm:px-6 px-4 rounded-full sm:text-base text-xs sm:w-auto w-full sm:py-1.5 py-1 transition-all duration-300 whitespace-nowrap ${
+                className={`sm:px-6 px-4 rounded-full sm:text-base text-xs sm:w-auto w-full xl:py-1.5 py-1 transition-all duration-300 whitespace-nowrap ${
+                  curriculum === "igcse" || curriculum === "cbse"
+                    ? "uppercase"
+                    : "capitalize"
+                } ${
                   activeView === curriculum
                     ? "bg-activeBlueBtn text-white"
                     : "bg-subjectBtn text-white"
                 }`}
               >
-                {curriculum}
+                {curriculum.replace("-", " ")}
               </button>
             ))}
           </div>
@@ -202,14 +212,14 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
           <div className="max-w-full ">
             {outcomes.map((item, index) => (
               <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
-                <div className="lg:block hidden">
+                <div className="lg:block hidden xl:max-w-xl">
                   <img
                     src={learningOutcomesImg}
                     alt=""
-                    className="w-[500px] object-contain"
+                    className="xl:w-[500px] w-[450px] object-contain"
                   />
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 lg:max-w-[50%] max-w-full">
                   <div className="w-full">
                     <h3 className="xl:text-[36px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
                       {item.title}

@@ -6,7 +6,7 @@ const SubHeroSection = ({ demoRef, title, description, btnText }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isThankyouPage = location.pathname === "/thankyou";
+  const isThankyouPage = location.pathname === "/thankyou" || location.pathname === "/faqs";
 
   const sections = {
     Demo: demoRef,
@@ -56,7 +56,7 @@ const SubHeroSection = ({ demoRef, title, description, btnText }) => {
         >
           <button
             className="text-headingColor font-semibold"
-            onClick={isThankyouPage && navigateHome}
+            onClick={isThankyouPage ? navigateHome : undefined}
           >
             {btnText ? btnText : "Free Demo"}
           </button>

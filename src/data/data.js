@@ -216,8 +216,9 @@ const subjectsOffering = [
       "Gain confidence in tackling complex mathematical challenges",
       "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
+
     content: {
-      Primary: {
+      primary: {
         description: [
           "Introduction to basic mathematical concepts",
           "Focus on number sense and operations",
@@ -235,7 +236,7 @@ const subjectsOffering = [
           "Gain confidence in mathematical reasoning and communication",
         ],
       },
-      Secondary: {
+      secondary: {
         description: [
           "Expansion of mathematical knowledge and skills",
           "Introduction to more advanced algebraic concepts",
@@ -253,7 +254,7 @@ const subjectsOffering = [
           "Prepare for advanced mathematics courses and standardized tests",
         ],
       },
-      IGCSE: {
+      igcse: {
         description: [
           "Comprehensive international mathematics qualification",
           "Covers a wide range of mathematical topics",
@@ -271,7 +272,7 @@ const subjectsOffering = [
           "Prepare for A-levels or other advanced mathematical studies",
         ],
       },
-      "A-Levels": {
+      "a-levels": {
         description: [
           "Advanced mathematics qualification for post-16 students",
           "In-depth study of pure mathematics, mechanics, and statistics",
@@ -289,7 +290,7 @@ const subjectsOffering = [
           "Prepare for university-level mathematics and related fields",
         ],
       },
-      "American Curriculum": {
+      "american-curriculum": {
         description: [
           "Aligned with Common Core State Standards for Mathematics",
           "Emphasis on conceptual understanding and practical application",
@@ -307,7 +308,7 @@ const subjectsOffering = [
           "Achieve proficiency in standardized test mathematics sections",
         ],
       },
-      "International Baccalaureate": {
+      "international-baccalaureate": {
         description: [
           "Comprehensive and rigorous international mathematics program",
           "Offered at Standard Level (SL) and Higher Level (HL)",
@@ -325,7 +326,7 @@ const subjectsOffering = [
           "Gain an international perspective on mathematical applications",
         ],
       },
-      CBSE: {
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for mathematics",
           "Covers a comprehensive range of mathematical topics",
@@ -372,7 +373,7 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers in STEM fields",
     ],
     content: {
-      Primary: {
+      primary: {
         description: [
           "Introduction to basic physical concepts and phenomena",
           "Exploration of forces, motion, and energy",
@@ -390,7 +391,7 @@ const subjectsOffering = [
           "Gain enthusiasm for scientific inquiry and experimentation",
         ],
       },
-      Secondary: {
+      secondary: {
         description: [
           "Expansion of physics knowledge and principles",
           "In-depth study of mechanics, waves, and electricity",
@@ -408,7 +409,7 @@ const subjectsOffering = [
           "Prepare for advanced physics courses and standardized tests",
         ],
       },
-      IGCSE: {
+      igcse: {
         description: [
           "Comprehensive international physics qualification",
           "Covers core physics topics with optional advanced content",
@@ -426,7 +427,7 @@ const subjectsOffering = [
           "Prepare for A-levels or other advanced physics studies",
         ],
       },
-      "A-levels": {
+      "a-levels": {
         description: [
           "Advanced physics qualification for post-16 students",
           "In-depth study of classical and modern physics",
@@ -444,7 +445,7 @@ const subjectsOffering = [
           "Prepare for university-level physics and related STEM fields",
         ],
       },
-      "American Curriculum": {
+      "american-curriculum": {
         description: [
           "Aligned with Next Generation Science Standards (NGSS)",
           "Emphasis on scientific practices and cross-cutting concepts",
@@ -462,7 +463,7 @@ const subjectsOffering = [
           "Achieve proficiency in standardized physics test sections",
         ],
       },
-      "International Baccalaureate": {
+      "international-baccalaureate": {
         description: [
           "Comprehensive and rigorous international physics program",
           "Offered at Standard Level (SL) and Higher Level (HL)",
@@ -480,7 +481,7 @@ const subjectsOffering = [
           "Gain an international perspective on physics applications and research",
         ],
       },
-      CBSE: {
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for physics",
           "Covers a comprehensive range of classical and modern physics topics",
@@ -527,7 +528,7 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers in chemistry-related fields",
     ],
     content: {
-      Primary: {
+      primary: {
         description: [
           "Introduction to basic chemical concepts and materials",
           "Exploration of states of matter and simple reactions",
@@ -545,7 +546,7 @@ const subjectsOffering = [
           "Gain enthusiasm for scientific inquiry and safe experimentation",
         ],
       },
-      Secondary: {
+      secondary: {
         description: [
           "Expansion of chemical knowledge and principles",
           "In-depth study of atomic structure and periodic table",
@@ -563,7 +564,7 @@ const subjectsOffering = [
           "Prepare for advanced chemistry courses and standardized tests",
         ],
       },
-      IGCSE: {
+      igcse: {
         description: [
           "Comprehensive international chemistry qualification",
           "Covers core chemistry topics with optional advanced content",
@@ -581,7 +582,7 @@ const subjectsOffering = [
           "Prepare for A-levels or other advanced chemistry studies",
         ],
       },
-      "A-levels": {
+      "a-levels": {
         description: [
           "Advanced chemistry qualification for post-16 students",
           "In-depth study of physical, organic, and inorganic chemistry",
@@ -599,7 +600,7 @@ const subjectsOffering = [
           "Prepare for university-level chemistry and related STEM fields",
         ],
       },
-      "American Curriculum": {
+      "american-curriculum": {
         description: [
           "Aligned with Next Generation Science Standards (NGSS)",
           "Emphasis on scientific practices and cross-cutting concepts",
@@ -617,7 +618,7 @@ const subjectsOffering = [
           "Achieve proficiency in standardized chemistry test sections",
         ],
       },
-      "International Baccalaureate": {
+      "international-baccalaureate": {
         description: [
           "Comprehensive and rigorous international chemistry program",
           "Offered at Standard Level (SL) and Higher Level (HL)",
@@ -635,7 +636,7 @@ const subjectsOffering = [
           "Gain an international perspective on chemistry applications and research",
         ],
       },
-      CBSE: {
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for chemistry",
           "Covers a comprehensive range of inorganic, organic, and physical chemistry",
@@ -837,7 +838,7 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers in biology-related fields",
     ],
     content: {
-      Primary: {
+      primary: {
         description: [
           "Introduction to basic concepts of living things and their environments",
           "Exploration of plant and animal life cycles",
@@ -855,7 +856,7 @@ const subjectsOffering = [
           "Gain enthusiasm for nature study and environmental awareness",
         ],
       },
-      Secondary: {
+      secondary: {
         description: [
           "Expansion of biological knowledge and principles",
           "In-depth study of cell biology and genetics",
@@ -873,7 +874,7 @@ const subjectsOffering = [
           "Prepare for advanced biology courses and standardized tests",
         ],
       },
-      IGCSE: {
+      igcse: {
         description: [
           "Comprehensive international biology qualification",
           "Covers core biology topics with optional advanced content",
@@ -891,7 +892,7 @@ const subjectsOffering = [
           "Prepare for A-levels or other advanced biology studies",
         ],
       },
-      "A-levels": {
+      "a-levels": {
         description: [
           "Advanced biology qualification for post-16 students",
           "In-depth study of molecular biology, physiology, and ecology",
@@ -909,7 +910,7 @@ const subjectsOffering = [
           "Prepare for university-level biology and related STEM fields",
         ],
       },
-      "American Curriculum": {
+      "american-curriculum": {
         description: [
           "Aligned with Next Generation Science Standards (NGSS)",
           "Emphasis on scientific practices and cross-cutting concepts",
@@ -927,7 +928,7 @@ const subjectsOffering = [
           "Achieve proficiency in standardized biology test sections",
         ],
       },
-      "International Baccalaureate": {
+      "international-baccalaureate": {
         description: [
           "Comprehensive and rigorous international biology program",
           "Offered at Standard Level (SL) and Higher Level (HL)",
@@ -945,7 +946,7 @@ const subjectsOffering = [
           "Gain an international perspective on biological applications and research",
         ],
       },
-      CBSE: {
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for biology",
           "Covers a comprehensive range of topics from molecular to ecosystem level",
@@ -992,7 +993,7 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers in business-related fields",
     ],
     content: {
-      IGCSE: {
+      igcse: {
         description: [
           "Comprehensive international business qualification",
           "Covers core business topics with practical applications",
@@ -1010,7 +1011,7 @@ const subjectsOffering = [
           "Prepare for A-levels or other advanced business studies",
         ],
       },
-      "A-levels": {
+      "a-levels": {
         description: [
           "Advanced business qualification for post-16 students",
           "In-depth study of business management, strategy, and economics",
@@ -1028,7 +1029,7 @@ const subjectsOffering = [
           "Prepare for university-level business and related social science fields",
         ],
       },
-      "American Curriculum": {
+      "american-curriculum": {
         description: [
           "Aligned with national standards for business education",
           "Emphasis on entrepreneurship and practical business skills",
@@ -1046,7 +1047,7 @@ const subjectsOffering = [
           "Achieve proficiency in business-related standardized tests",
         ],
       },
-      "International Baccalaureate": {
+      "international-baccalaureate": {
         description: [
           "Comprehensive and rigorous international business management program",
           "Offered at Standard Level (SL) and Higher Level (HL)",
@@ -1064,7 +1065,7 @@ const subjectsOffering = [
           "Gain an international perspective on business practices and ethics",
         ],
       },
-      CBSE: {
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for business studies",
           "Covers a comprehensive range of business and entrepreneurship topics",
@@ -1110,41 +1111,79 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
-      "British Curriculum": {
+      igcse: {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
+          "Comprehensive international mathematics qualification",
+          "Covers a wide range of mathematical topics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
           "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Prepares students for further education and careers in STEM fields",
+          "Recognized by universities and employers worldwide",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various domains",
+          "Develop proficiency in algebraic manipulation and problem-solving",
+          "Apply geometric and trigonometric principles to real-world scenarios",
+          "Analyze and interpret statistical data and probability",
+          "Improve mathematical reasoning and proof techniques",
+          "Prepare for A-levels or other advanced mathematical studies",
         ],
       },
-      "A-Level": {
+      "a-levels": {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
-          "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Advanced mathematics qualification for post-16 students",
+          "In-depth study of pure mathematics, mechanics, and statistics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
+          "Essential for university courses in mathematics, physics, and engineering",
+          "Develops high-level problem-solving and analytical skills",
+          "Provides a strong foundation for STEM careers",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master advanced algebraic techniques and calculus",
+          "Apply complex mathematical models to real-world problems",
+          "Develop sophisticated statistical analysis and probability skills",
+          "Understand and apply principles of mechanics in mathematical contexts",
+          "Improve logical reasoning and mathematical proof techniques",
+          "Prepare for university-level mathematics and related fields",
         ],
       },
-      IGCSE: {
+      "american-curriculum": {
+        description: [
+          "Aligned with Common Core State Standards for Mathematics",
+          "Emphasis on conceptual understanding and practical application",
+          "Covers a broad range of mathematical topics",
+          "Prepares students for SAT and ACT standardized tests",
+          "Develops critical thinking and problem-solving skills",
+          "Focuses on mathematical practices and content standards",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various strands",
+          "Develop strong problem-solving and modeling skills",
+          "Apply mathematics to real-world situations and other disciplines",
+          "Improve mathematical reasoning and argumentation abilities",
+          "Prepare for college-level mathematics and STEM courses",
+          "Achieve proficiency in standardized test mathematics sections",
+        ],
+      },
+      "international-baccalaureate": {
+        description: [
+          "Comprehensive and rigorous international mathematics program",
+          "Offered at Standard Level (SL) and Higher Level (HL)",
+          "Emphasizes mathematical inquiry and application",
+          "Develops strong analytical and critical thinking skills",
+          "Prepares students for university studies in mathematics and related fields",
+          "Includes a mathematical exploration project",
+        ],
+        learningOutcomes: [
+          "Master advanced mathematical concepts and techniques",
+          "Develop proficiency in mathematical modeling and problem-solving",
+          "Apply mathematics to a wide range of real-world contexts",
+          "Improve research and independent learning skills through exploration",
+          "Prepare for university-level mathematics and STEM courses",
+          "Gain an international perspective on mathematical applications",
+        ],
+      },
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for mathematics",
           "Covers a comprehensive range of mathematical topics",
@@ -1154,11 +1193,12 @@ const subjectsOffering = [
           "Integrates technology and real-world applications in mathematics education",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various branches",
+          "Develop proficiency in algebraic manipulation and geometry",
+          "Apply mathematical principles to solve complex problems",
+          "Improve logical reasoning and mathematical communication skills",
+          "Prepare for higher education in mathematics and related fields in India",
+          "Achieve success in CBSE board exams and other competitive examinations",
         ],
       },
     },
@@ -1191,7 +1231,7 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers in accounting and finance",
     ],
     content: {
-      IGCSE: {
+      igcse: {
         description: [
           "Comprehensive international accounting qualification",
           "Covers core accounting principles and practices",
@@ -1209,7 +1249,7 @@ const subjectsOffering = [
           "Prepare for A-levels or other advanced accounting studies",
         ],
       },
-      "A-Levels": {
+      "a-Levels": {
         description: [
           "Advanced accounting qualification for post-16 students",
           "In-depth study of financial and management accounting",
@@ -1227,7 +1267,7 @@ const subjectsOffering = [
           "Prepare for university-level accounting and related business fields",
         ],
       },
-      "American Curriculum": {
+      "american-curriculum": {
         description: [
           "Aligned with Generally Accepted Accounting Principles (GAAP)",
           "Emphasis on practical accounting skills and financial literacy",
@@ -1245,7 +1285,7 @@ const subjectsOffering = [
           "Achieve proficiency in accounting-related standardized tests",
         ],
       },
-      "International Baccalaureate": {
+      "international-baccalaureate": {
         description: [
           "Comprehensive and rigorous international accounting program",
           "Typically offered as part of the IB Business Management curriculum",
@@ -1263,7 +1303,7 @@ const subjectsOffering = [
           "Gain an international perspective on accounting practices and ethics",
         ],
       },
-      CBSE: {
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for accountancy",
           "Covers a comprehensive range of accounting and finance topics",
@@ -1310,41 +1350,79 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
-      "British Curriculum": {
+      igcse: {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
+          "Comprehensive international mathematics qualification",
+          "Covers a wide range of mathematical topics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
           "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Prepares students for further education and careers in STEM fields",
+          "Recognized by universities and employers worldwide",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various domains",
+          "Develop proficiency in algebraic manipulation and problem-solving",
+          "Apply geometric and trigonometric principles to real-world scenarios",
+          "Analyze and interpret statistical data and probability",
+          "Improve mathematical reasoning and proof techniques",
+          "Prepare for A-levels or other advanced mathematical studies",
         ],
       },
-      "A-Level": {
+      "a-levels": {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
-          "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Advanced mathematics qualification for post-16 students",
+          "In-depth study of pure mathematics, mechanics, and statistics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
+          "Essential for university courses in mathematics, physics, and engineering",
+          "Develops high-level problem-solving and analytical skills",
+          "Provides a strong foundation for STEM careers",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master advanced algebraic techniques and calculus",
+          "Apply complex mathematical models to real-world problems",
+          "Develop sophisticated statistical analysis and probability skills",
+          "Understand and apply principles of mechanics in mathematical contexts",
+          "Improve logical reasoning and mathematical proof techniques",
+          "Prepare for university-level mathematics and related fields",
         ],
       },
-      IGCSE: {
+      "american-curriculum": {
+        description: [
+          "Aligned with Common Core State Standards for Mathematics",
+          "Emphasis on conceptual understanding and practical application",
+          "Covers a broad range of mathematical topics",
+          "Prepares students for SAT and ACT standardized tests",
+          "Develops critical thinking and problem-solving skills",
+          "Focuses on mathematical practices and content standards",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various strands",
+          "Develop strong problem-solving and modeling skills",
+          "Apply mathematics to real-world situations and other disciplines",
+          "Improve mathematical reasoning and argumentation abilities",
+          "Prepare for college-level mathematics and STEM courses",
+          "Achieve proficiency in standardized test mathematics sections",
+        ],
+      },
+      "international-baccalaureate": {
+        description: [
+          "Comprehensive and rigorous international mathematics program",
+          "Offered at Standard Level (SL) and Higher Level (HL)",
+          "Emphasizes mathematical inquiry and application",
+          "Develops strong analytical and critical thinking skills",
+          "Prepares students for university studies in mathematics and related fields",
+          "Includes a mathematical exploration project",
+        ],
+        learningOutcomes: [
+          "Master advanced mathematical concepts and techniques",
+          "Develop proficiency in mathematical modeling and problem-solving",
+          "Apply mathematics to a wide range of real-world contexts",
+          "Improve research and independent learning skills through exploration",
+          "Prepare for university-level mathematics and STEM courses",
+          "Gain an international perspective on mathematical applications",
+        ],
+      },
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for mathematics",
           "Covers a comprehensive range of mathematical topics",
@@ -1354,11 +1432,12 @@ const subjectsOffering = [
           "Integrates technology and real-world applications in mathematics education",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various branches",
+          "Develop proficiency in algebraic manipulation and geometry",
+          "Apply mathematical principles to solve complex problems",
+          "Improve logical reasoning and mathematical communication skills",
+          "Prepare for higher education in mathematics and related fields in India",
+          "Achieve success in CBSE board exams and other competitive examinations",
         ],
       },
     },
@@ -1390,41 +1469,79 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
-      "British Curriculum": {
+      igcse: {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
+          "Comprehensive international mathematics qualification",
+          "Covers a wide range of mathematical topics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
           "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Prepares students for further education and careers in STEM fields",
+          "Recognized by universities and employers worldwide",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various domains",
+          "Develop proficiency in algebraic manipulation and problem-solving",
+          "Apply geometric and trigonometric principles to real-world scenarios",
+          "Analyze and interpret statistical data and probability",
+          "Improve mathematical reasoning and proof techniques",
+          "Prepare for A-levels or other advanced mathematical studies",
         ],
       },
-      "A-Level": {
+      "a-levels": {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
-          "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Advanced mathematics qualification for post-16 students",
+          "In-depth study of pure mathematics, mechanics, and statistics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
+          "Essential for university courses in mathematics, physics, and engineering",
+          "Develops high-level problem-solving and analytical skills",
+          "Provides a strong foundation for STEM careers",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master advanced algebraic techniques and calculus",
+          "Apply complex mathematical models to real-world problems",
+          "Develop sophisticated statistical analysis and probability skills",
+          "Understand and apply principles of mechanics in mathematical contexts",
+          "Improve logical reasoning and mathematical proof techniques",
+          "Prepare for university-level mathematics and related fields",
         ],
       },
-      IGCSE: {
+      "american-curriculum": {
+        description: [
+          "Aligned with Common Core State Standards for Mathematics",
+          "Emphasis on conceptual understanding and practical application",
+          "Covers a broad range of mathematical topics",
+          "Prepares students for SAT and ACT standardized tests",
+          "Develops critical thinking and problem-solving skills",
+          "Focuses on mathematical practices and content standards",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various strands",
+          "Develop strong problem-solving and modeling skills",
+          "Apply mathematics to real-world situations and other disciplines",
+          "Improve mathematical reasoning and argumentation abilities",
+          "Prepare for college-level mathematics and STEM courses",
+          "Achieve proficiency in standardized test mathematics sections",
+        ],
+      },
+      "international-baccalaureate": {
+        description: [
+          "Comprehensive and rigorous international mathematics program",
+          "Offered at Standard Level (SL) and Higher Level (HL)",
+          "Emphasizes mathematical inquiry and application",
+          "Develops strong analytical and critical thinking skills",
+          "Prepares students for university studies in mathematics and related fields",
+          "Includes a mathematical exploration project",
+        ],
+        learningOutcomes: [
+          "Master advanced mathematical concepts and techniques",
+          "Develop proficiency in mathematical modeling and problem-solving",
+          "Apply mathematics to a wide range of real-world contexts",
+          "Improve research and independent learning skills through exploration",
+          "Prepare for university-level mathematics and STEM courses",
+          "Gain an international perspective on mathematical applications",
+        ],
+      },
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for mathematics",
           "Covers a comprehensive range of mathematical topics",
@@ -1434,11 +1551,12 @@ const subjectsOffering = [
           "Integrates technology and real-world applications in mathematics education",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various branches",
+          "Develop proficiency in algebraic manipulation and geometry",
+          "Apply mathematical principles to solve complex problems",
+          "Improve logical reasoning and mathematical communication skills",
+          "Prepare for higher education in mathematics and related fields in India",
+          "Achieve success in CBSE board exams and other competitive examinations",
         ],
       },
     },
@@ -1469,41 +1587,79 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
-      "British Curriculum": {
+      igcse: {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
+          "Comprehensive international mathematics qualification",
+          "Covers a wide range of mathematical topics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
           "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Prepares students for further education and careers in STEM fields",
+          "Recognized by universities and employers worldwide",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various domains",
+          "Develop proficiency in algebraic manipulation and problem-solving",
+          "Apply geometric and trigonometric principles to real-world scenarios",
+          "Analyze and interpret statistical data and probability",
+          "Improve mathematical reasoning and proof techniques",
+          "Prepare for A-levels or other advanced mathematical studies",
         ],
       },
-      "A-Level": {
+      "a-levels": {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
-          "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Advanced mathematics qualification for post-16 students",
+          "In-depth study of pure mathematics, mechanics, and statistics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
+          "Essential for university courses in mathematics, physics, and engineering",
+          "Develops high-level problem-solving and analytical skills",
+          "Provides a strong foundation for STEM careers",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master advanced algebraic techniques and calculus",
+          "Apply complex mathematical models to real-world problems",
+          "Develop sophisticated statistical analysis and probability skills",
+          "Understand and apply principles of mechanics in mathematical contexts",
+          "Improve logical reasoning and mathematical proof techniques",
+          "Prepare for university-level mathematics and related fields",
         ],
       },
-      IGCSE: {
+      "american-curriculum": {
+        description: [
+          "Aligned with Common Core State Standards for Mathematics",
+          "Emphasis on conceptual understanding and practical application",
+          "Covers a broad range of mathematical topics",
+          "Prepares students for SAT and ACT standardized tests",
+          "Develops critical thinking and problem-solving skills",
+          "Focuses on mathematical practices and content standards",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various strands",
+          "Develop strong problem-solving and modeling skills",
+          "Apply mathematics to real-world situations and other disciplines",
+          "Improve mathematical reasoning and argumentation abilities",
+          "Prepare for college-level mathematics and STEM courses",
+          "Achieve proficiency in standardized test mathematics sections",
+        ],
+      },
+      "international-baccalaureate": {
+        description: [
+          "Comprehensive and rigorous international mathematics program",
+          "Offered at Standard Level (SL) and Higher Level (HL)",
+          "Emphasizes mathematical inquiry and application",
+          "Develops strong analytical and critical thinking skills",
+          "Prepares students for university studies in mathematics and related fields",
+          "Includes a mathematical exploration project",
+        ],
+        learningOutcomes: [
+          "Master advanced mathematical concepts and techniques",
+          "Develop proficiency in mathematical modeling and problem-solving",
+          "Apply mathematics to a wide range of real-world contexts",
+          "Improve research and independent learning skills through exploration",
+          "Prepare for university-level mathematics and STEM courses",
+          "Gain an international perspective on mathematical applications",
+        ],
+      },
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for mathematics",
           "Covers a comprehensive range of mathematical topics",
@@ -1513,11 +1669,12 @@ const subjectsOffering = [
           "Integrates technology and real-world applications in mathematics education",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various branches",
+          "Develop proficiency in algebraic manipulation and geometry",
+          "Apply mathematical principles to solve complex problems",
+          "Improve logical reasoning and mathematical communication skills",
+          "Prepare for higher education in mathematics and related fields in India",
+          "Achieve success in CBSE board exams and other competitive examinations",
         ],
       },
     },
@@ -1548,41 +1705,79 @@ const subjectsOffering = [
       "Prepare for advanced studies and careers requiring mathematical proficiency",
     ],
     content: {
-      "British Curriculum": {
+      igcse: {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
+          "Comprehensive international mathematics qualification",
+          "Covers a wide range of mathematical topics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
           "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Prepares students for further education and careers in STEM fields",
+          "Recognized by universities and employers worldwide",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various domains",
+          "Develop proficiency in algebraic manipulation and problem-solving",
+          "Apply geometric and trigonometric principles to real-world scenarios",
+          "Analyze and interpret statistical data and probability",
+          "Improve mathematical reasoning and proof techniques",
+          "Prepare for A-levels or other advanced mathematical studies",
         ],
       },
-      "A-Level": {
+      "a-levels": {
         description: [
-          "Aligned with the Indian national curriculum for mathematics",
-          "Covers a comprehensive range of mathematical topics",
-          "Emphasizes both theoretical understanding and practical application",
-          "Prepares students for competitive exams and higher education in India",
-          "Develops strong problem-solving and analytical skills",
-          "Integrates technology and real-world applications in mathematics education",
+          "Advanced mathematics qualification for post-16 students",
+          "In-depth study of pure mathematics, mechanics, and statistics",
+          "Offered by exam boards including Cambridge, Edexcel, and AQA",
+          "Essential for university courses in mathematics, physics, and engineering",
+          "Develops high-level problem-solving and analytical skills",
+          "Provides a strong foundation for STEM careers",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master advanced algebraic techniques and calculus",
+          "Apply complex mathematical models to real-world problems",
+          "Develop sophisticated statistical analysis and probability skills",
+          "Understand and apply principles of mechanics in mathematical contexts",
+          "Improve logical reasoning and mathematical proof techniques",
+          "Prepare for university-level mathematics and related fields",
         ],
       },
-      IGCSE: {
+      "american-curriculum": {
+        description: [
+          "Aligned with Common Core State Standards for Mathematics",
+          "Emphasis on conceptual understanding and practical application",
+          "Covers a broad range of mathematical topics",
+          "Prepares students for SAT and ACT standardized tests",
+          "Develops critical thinking and problem-solving skills",
+          "Focuses on mathematical practices and content standards",
+        ],
+        learningOutcomes: [
+          "Master core mathematical concepts across various strands",
+          "Develop strong problem-solving and modeling skills",
+          "Apply mathematics to real-world situations and other disciplines",
+          "Improve mathematical reasoning and argumentation abilities",
+          "Prepare for college-level mathematics and STEM courses",
+          "Achieve proficiency in standardized test mathematics sections",
+        ],
+      },
+      "international-baccalaureate": {
+        description: [
+          "Comprehensive and rigorous international mathematics program",
+          "Offered at Standard Level (SL) and Higher Level (HL)",
+          "Emphasizes mathematical inquiry and application",
+          "Develops strong analytical and critical thinking skills",
+          "Prepares students for university studies in mathematics and related fields",
+          "Includes a mathematical exploration project",
+        ],
+        learningOutcomes: [
+          "Master advanced mathematical concepts and techniques",
+          "Develop proficiency in mathematical modeling and problem-solving",
+          "Apply mathematics to a wide range of real-world contexts",
+          "Improve research and independent learning skills through exploration",
+          "Prepare for university-level mathematics and STEM courses",
+          "Gain an international perspective on mathematical applications",
+        ],
+      },
+      cbse: {
         description: [
           "Aligned with the Indian national curriculum for mathematics",
           "Covers a comprehensive range of mathematical topics",
@@ -1592,11 +1787,12 @@ const subjectsOffering = [
           "Integrates technology and real-world applications in mathematics education",
         ],
         learningOutcomes: [
-          "Master comprehensive mathematical topics as per the CBSE syllabus",
-          "Prepare for competitive exams and higher education in India",
-          "Apply theoretical math to practical real-world scenarios",
-          "Develop strong analytical and problem-solving skills",
-          "Use technology to solve complex mathematical problems",
+          "Master core mathematical concepts across various branches",
+          "Develop proficiency in algebraic manipulation and geometry",
+          "Apply mathematical principles to solve complex problems",
+          "Improve logical reasoning and mathematical communication skills",
+          "Prepare for higher education in mathematics and related fields in India",
+          "Achieve success in CBSE board exams and other competitive examinations",
         ],
       },
     },

@@ -7,9 +7,9 @@ const EnrollDetails = ({ title, content, imgSrc }) => {
   return (
     <div>
       <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]">
-        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
+        {/* <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
           <img src={fadedCircle} alt="" className="object-contain" />
-        </div>
+        </div> */}
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-20 gap-8 ">
           {/* <motion.div
             className=""
@@ -20,8 +20,8 @@ const EnrollDetails = ({ title, content, imgSrc }) => {
           > */}
           <div>
             <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
-              <div className="flex flex-col gap-8 xl:max-w-3xl lg:max-w-xl max-w-full">
-                <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
+              <div className="flex flex-col gap-8 lg:max-w-[50%] max-w-full">
+                <h3 className="xl:text-[42px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
                   {title}
                 </h3>
 

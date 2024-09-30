@@ -21,6 +21,7 @@ import CurriculumPage from "./pages/CurriculumPage/CurrculumPage";
 import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
 import FaqPage from "./pages/FaqPage/FaqPage";
 import BlogsDetails from "./pages/BlogsDetails/BlogsDetails";
+import SubjectDetailsCurriculum from "./pages/SubjectDetailsCurriculum/SubjectDetailsCurriculum";
 
 function App() {
   const demoRef = useRef(null);
@@ -41,6 +42,10 @@ function App() {
           <Route
             path="/subjects/:slug"
             element={<SubjectDetails demoRef={demoRef} />}
+          />
+          <Route
+            path="/subjects/:slug/:curriculumType"
+            element={<SubjectDetailsCurriculum demoRef={demoRef} />}
           />
           <Route path="/:slug" element={<CurriculumPage demoRef={demoRef} />} />
           <Route path="/about" element={<About demoRef={demoRef} />} />

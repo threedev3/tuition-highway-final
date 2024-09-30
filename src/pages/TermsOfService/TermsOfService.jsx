@@ -10,15 +10,16 @@ const TermsOfService = ({ demoRef }) => {
         demoRef={demoRef}
         title="Terms Of Service"
         description="The best and most secured service for our clients"
+        btnText={"Back To Home"}
       />
       <TermsSection title="Terms of Service" />
-      <div ref={demoRef}>
+      {/* <div ref={demoRef}>
         <ContactForm
           demoRef={demoRef}
           firstString={"Request a Free "}
           secondString={"Demo"}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
