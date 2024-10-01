@@ -87,7 +87,7 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
             isContactPage && (
               <div className="flex flex-col gap-8">
                 <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
-                  <MapPinIcon className="xl:w-10 lg:w-10 sm:w-8 min-[540px]:w-8 w-11" color="#008fbf" />
+                  <MapPinIcon className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0" color="#008fbf" />
                   <div className="flex flex-col gap-2 ">
                     <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">Address</h3>
                     <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">ASE Global LLC-FZ Business Centre, Meydan Hotel,
@@ -95,14 +95,14 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
                   </div>
                 </div>
                 <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
-                  <PhoneIcon className="xl:w-10 lg:w-6 sm:w-8 w-6" color="#008fbf" />
+                  <PhoneIcon className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0" color="#008fbf" />
                   <div className="flex flex-col gap-2 ">
                     <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">Call Us</h3>
                     <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">+971563511722</p>
                   </div>
                 </div>
                 <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
-                  <EnvelopeIcon className="xl:w-10 lg:w-6 sm:w-8 w-6" color="#008fbf" />
+                  <EnvelopeIcon className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0" color="#008fbf" />
                   <div className="flex flex-col gap-2 ">
                     <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">Email Us</h3>
                     <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">hello@tuitionhighway.com</p>
