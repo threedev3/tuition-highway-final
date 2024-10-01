@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import TutorForm from "../TutorForm/TutorForm";
 import ContactUs from "../ContactUs/ContactUs";
 import { AnimatePresence, motion } from "framer-motion";
+import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
 
 const ContactForm = ({ firstString, secondString, tagLine }) => {
   const location = useLocation();
@@ -31,31 +32,8 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
 
   return (
     <div className="sm:py-8 py-6 sm:px-12 px-6 max-w-full relative">
-      {/* <motion.div
-        className="absolute md:top-20 md:left-16 sm:top-8 sm:left-8 top-2 left-4  z-10"
-        initial={{ opacity: 0, y: -50, scale: 0.5 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={true}
-        transition={{
-          type: "spring",
-          stiffness: 70,
-          damping: 10,
-          duration: 0.6,
-          delay: 0.2,
-        }}
-      >
-        <img
-          src={heroIcon2}
-          alt=""
-          className="lg:w-16 md:w-14 sm:w-12 w-10 object-contain"
-        />
-      </motion.div> */}
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
-          {/* <TypewriterComp
-            firstString={firstString}
-            secondString={secondString}
-          /> */}
           <AnimatePresence mode="wait">
             {showDemoText ? (
               <motion.h3
@@ -89,23 +67,50 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
               </motion.h3>
             )}
           </AnimatePresence>
-          <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
+          <p className="xl:text-lg sm:text-lg text-base text-center max-w-4xl mx-auto">
             {tagLine ||
               "Experience our top-notch tutoring firsthand. Schedule your free session today and see how we can transform your academic journey."}
           </p>
         </div>
 
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-8 flex flex-col items-center gap-12 px-4">
-          <div className="lg:block hidden w-auto">
-            <img
-              src={isTutorPage ? contactImg2 : contactImg}
-              // src={contactImg}
-              alt=""
-              className="w-[500px] object-cover"
-            />
-          </div>
-
-          {/* Contact Form will be displayed here  */}
+          {!isContactPage && (
+            <div className="lg:block hidden w-auto">
+              <img
+                src={isTutorPage ? contactImg2 : contactImg}
+                alt=""
+                className="w-[500px] object-cover"
+              />
+            </div>
+          )}
+          {
+            isContactPage && (
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-row gap-6 items-center">
+                  <MapPinIcon width={36} color="#008fbf" />
+                  <div className="flex flex-col gap-2 max-w-sm">
+                    <h3 className="text-headingColor text-[22px]">Address</h3>
+                    <p className="text-headingColor text-base">ASE Global LLC-FZ Business Centre, Meydan Hotel,
+                    Nad Al Sheeba, Dubai, UAE</p>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-6 items-center">
+                  <PhoneIcon width={36} color="#008fbf" />
+                  <div className="flex flex-col gap-2 max-w-sm">
+                    <h3 className="text-headingColor text-[22px]">Call Us</h3>
+                    <p className="text-headingColor text-base">+971563511722</p>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-6 items-center">
+                  <EnvelopeIcon width={36} color="#008fbf" />
+                  <div className="flex flex-col gap-2 max-w-sm">
+                    <h3 className="text-headingColor text-[22px]">Email Us</h3>
+                    <p className="text-headingColor text-base">hello@tuitionhighway.com</p>
+                  </div>
+                </div>
+              </div>
+            )
+          }
           {isTutorPage ? (
             <TutorForm />
           ) : isContactPage ? (

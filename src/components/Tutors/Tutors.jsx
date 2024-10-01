@@ -87,7 +87,7 @@ const Tutors = () => {
           <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-headingColor">
             Our Top Rated Faculty
           </h3>
-          <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
+          <p className="xl:text-lg sm:text-lg text-base text-center max-w-4xl mx-auto">
             We unite you with the world's finest educators. Our meticulously
             selected, top-rated faculty brings unparalleled expertise and
             inspirational teaching directly to you, fueling your journey towards

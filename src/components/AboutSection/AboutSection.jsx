@@ -14,7 +14,7 @@ const AboutSection = () => {
                 Welcome To Tuition Highway
               </h4>
             </div>
-            <h3 className="lg:text-[46px] sm:text-4xl text-[27px] leading-9 font-bold tracking-wide text-headingColor capitalize">
+            <h3 className="xl:text-[42px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none font-bold text-headingColor capitalize">
               About the Company
             </h3>
 
@@ -54,7 +54,7 @@ const AboutSection = () => {
         </div>
 
         <div className="md:grid md:grid-cols-2 md:gap-8 grid grid-cols-1 gap-4">
-          <div className="flex gap-3 items-start border-2 border-borderColor p-3">
+          <div className="flex gap-3 items-start border-2 border-borderColor p-3 rounded-md">
             <div className="mt-0.5">
               <div className="rounded-full bg-orangeHeading p-0.5  flex-shrink-0">
                 <CheckIcon className="w-4 text-white font-bold flex-shrink-0" />
@@ -73,7 +73,7 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-3 items-start border-2 border-borderColor p-3">
+          <div className="flex gap-3 items-start border-2 border-borderColor p-3 rounded-md">
             <div className="mt-0.5">
               <div className="rounded-full bg-orangeHeading p-0.5  flex-shrink-0">
                 <CheckIcon className="w-4 text-white font-bold flex-shrink-0" />

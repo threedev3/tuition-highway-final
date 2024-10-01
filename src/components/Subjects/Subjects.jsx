@@ -201,7 +201,7 @@ const Subjects = () => {
               {isPopular ? "Popular Subjects" : "In-Demand Subjects"}
             </motion.h3>
           </AnimatePresence>
-          <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto">
+          <p className="xl:text-lg sm:text-lg text-base text-center max-w-4xl mx-auto">
             Our expert tutors cover all subjects across major curricula. Get
             personalized support to overcome academic challenges and excel in
             your studies.

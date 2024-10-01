@@ -157,7 +157,7 @@ const reasons = [
     firstTitle: "Proven",
     secondTitle: "Results",
     description:
-      "Over 90,000 live lessons in Maths, Physics, Computer Science, and more.",
+      "Students consistently achieve top grades and excel in their studies.",
     icon: proveResult,
   },
 ];
@@ -2656,16 +2656,69 @@ const termsAndConditionsData = [
 ];
 
 const enrollDetails = [
-  "Welcome to Tuition Highway, your trusted partner in personalised online tutoring. We understand that every child is unique, and so should be their learning journey.",
-  "Our experienced tutors are ready to meet your child's individual academic needs, whether it's building a solid foundation in a new subject or preparing for crucial examinations.",
-  "Don't let the stress of today's competitive education system hold your child back. Take the first step towards academic success with Tuition Highway.",
-  "Complete the form to schedule a free consultation and trial lessons with our expert tutors. Remember, this initial step is completely free and it could be the turning point in your child's academic journey.",
+  {
+    heading: "",
+    description:
+      "Welcome to Tuition Highway, your trusted partner in personalised online tutoring. We understand that every child is unique, and so should be their learning journey. ",
+  },
+  {
+    heading: "",
+    description:
+      "Our experienced tutors are ready to meet your child’s individual academic needs, whether it’s building a solid foundation in a new subject or preparing for crucial examinations.",
+  },
+  {
+    heading: "",
+    description:
+      "Don’t let the stress of today’s competitive education system hold your child back. Take the first step towards academic success with Tuition Highway. We cater to all major international curriculums and exam boards, equipping your child with the right tools to thrive in their studies.",
+  },
+  {
+    heading: "",
+    description:
+      "Complete the form to schedule a free consultation and trial lessons with our expert tutors. Remember, this initial step is completely free and it could be the turning point in your child’s academic journey.",
+  },
+  {
+    heading: "",
+    description:
+      "Embark on this transformative journey with Tuition Highway today!",
+  },
+  
 ];
 const joinTutorDetails = [
-  "Tuition Highway is committed to providing quality education, and a significant part of that commitment involves our careful and thorough process for selecting and verifying tutors.",
-  "We understand the importance of having skilled, knowledgeable, and reliable tutors, hence, we implement a robust selection process.",
-  "All prospective tutors submit an application which includes their educational background, qualifications, teaching experience, and areas of expertise.",
-  "We thoroughly review these applications to shortlist candidates who meet our initial criteria.",
+  {
+    heading: "",
+    description:
+      "Tuition Highway is dedicated to quality education through a rigorous tutor selection process. We prioritize skilled, knowledgeable, and reliable tutors to ensure high standards of teaching. Here are the key steps in our process:",
+  },
+  {
+    heading: "Application Screening: ",
+    description:
+      "We review candidates' qualifications, teaching experience, and expertise to shortlist those who meet our standards.",
+  },
+  {
+    heading: "Interview: ",
+    description:
+      "Shortlisted candidates are interviewed to assess communication skills, teaching philosophy, and curriculum knowledge.",
+  },
+  {
+    heading: "Teaching Demo: ",
+    description:
+      "Candidates conduct a demo to showcase their teaching style and ability to explain concepts effectively.",
+  },
+  {
+    heading: "Reference Checks and Verification: ",
+    description:
+      "We verify qualifications, past experience, and conduct background checks to ensure safety.",
+  },
+  {
+    heading: "Onboarding: ",
+    description:
+      "Successful candidates undergo an orientation on our platform and policies.",
+  },
+  {
+    heading: "Ongoing Evaluation: ",
+    description:
+      "Tutors are continuously evaluated based on student feedback and performance.",
+  },
 ];
 
 const blogsMain = [

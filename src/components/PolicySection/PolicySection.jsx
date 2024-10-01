@@ -34,7 +34,7 @@ const PolicySection = ({ title }) => {
           <div>
             <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
               <div className="flex flex-col gap-8  max-w-full">
-                <h3 className="xl:text-[46px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
+                <h3 className="xl:text-[42px] xl:leading-tight md:text-4xl sm:text-3xl text-3xl leading-none text-headingColor">
                   {title}
                 </h3>
 

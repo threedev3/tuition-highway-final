@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { fadedCircle, joinTutor } from "../../assets/img/images";
-import { motion } from "framer-motion";
-import { enrollDetails } from "../../data/data";
+import React from "react";
 
 const EnrollDetails = ({ title, content, imgSrc }) => {
   return (
     <div>
       <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]">
-        {/* <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
-          <img src={fadedCircle} alt="" className="object-contain" />
-        </div> */}
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-20 gap-8 ">
-          {/* <motion.div
-            className=""
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-          > */}
           <div>
             <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
               <div className="flex flex-col gap-8 lg:max-w-[50%] max-w-full">
@@ -29,7 +16,16 @@ const EnrollDetails = ({ title, content, imgSrc }) => {
                   {content.map((item, index) => (
                     <div className="flex flex-row gap-4" key={index}>
                       <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                      <p className="lg:text-lg text-base font-medium">{item}</p>
+                      <div className="">
+                        <p className="lg:text-lg text-base font-bold inline">
+                          {item.heading}
+                        </p>
+                        {item.description && (
+                          <p className="lg:text-lg text-base font-medium inline">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -40,7 +36,6 @@ const EnrollDetails = ({ title, content, imgSrc }) => {
               </div>
             </div>
           </div>
-          {/* </motion.div> */}
         </div>
       </div>
     </div>

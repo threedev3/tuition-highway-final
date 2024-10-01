@@ -90,7 +90,7 @@ const Reasons = ({ demoRef }) => {
             Your Fast Track To Top Grades
           </h3>
 
-          <p className="xl:text-xl sm:text-lg text-base text-center max-w-4xl mx-auto font-medium">
+          <p className="xl:text-lg sm:text-lg text-base text-center max-w-4xl mx-auto font-medium">
             Personalized tutoring by experts in all subjects. Progress
             monitoring and flexible scheduling ensure your academic success.
           </p>

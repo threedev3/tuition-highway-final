@@ -182,7 +182,7 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
 
       {/* Floating Tabs */}
       {showFloatingTabs && (
-        <div className={`w-[100%] fixed sm:top-[94.6px] top-[81.3px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg  px-6 xl:py-4 py-3 flex lg:${Object.keys(subject.content).length < 6 ? "justify-center" : "justify-start"} justify-start gap-4 z-[15] overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x`}>
+        <div className={`w-[100%] fixed sm:top-[94.6px] top-[81.3px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg  px-6 xl:py-4 py-3 flex xl:justify-center lg:${Object.keys(subject.content).length < 6 ? "justify-center" : "justify-start"} justify-start gap-4 z-[15] overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x`}>
           <div className="flex justify-center items-center gap-4">
             {Object.keys(subject.content || {}).map((curriculum, index) => (
               <button
