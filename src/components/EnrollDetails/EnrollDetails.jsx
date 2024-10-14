@@ -17,11 +17,11 @@ const EnrollDetails = ({ title, content, imgSrc }) => {
                     <div className="flex flex-row gap-4" key={index}>
                       <div className="w-4 h-4 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
                       <div className="">
-                        <p className="lg:text-lg text-base font-bold inline">
+                        <p className="lg:text-base text-base font-bold inline">
                           {item.heading}
                         </p>
                         {item.description && (
-                          <p className="lg:text-lg text-base font-medium inline">
+                          <p className="lg:text-base text-base font-medium inline">
                             {item.description}
                           </p>
                         )}

@@ -30,6 +30,10 @@ const ContactUs = () => {
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handlePhoneChange = (phone) => {
+    setFormValues((prev) => ({ ...prev, phone })); // Update only the phone field
+  };
+
   const handleSelectorChange = (field, value) => {
     setFormValues((prev) => ({ ...prev, [field]: value }));
   };
@@ -100,14 +104,23 @@ const ContactUs = () => {
             </div>
             <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                <input
+                {/* <input
                   type="text"
                   name="phone"
                   placeholder="WhatsApp/Mobile Number"
                   className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
                   value={formValues.phone}
                   onChange={handleInputChange}
-                />
+                /> */}
+                <div className="py-0.5 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor">
+                    <PhoneInput
+                      defaultCountry="pk"
+                      name="phone"
+                      value={formValues.phone}
+                      onChange={handlePhoneChange}
+                      placeholder="Phone Number"
+                    />
+                  </div>
                 {errors.phone && (
                   <span className="text-red-600 sm:text-base text-sm">
                     {errors.phone}

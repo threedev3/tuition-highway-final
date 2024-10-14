@@ -26,9 +26,7 @@ const useFormValidation = () => {
     // Check if Phone Number is valid (allow only digits)
     if (!values.phone) {
       newErrors.phone = "Phone Number is required";
-    } else if (!/^\d+$/.test(values.phone)) {
-      newErrors.phone = "Phone Number is invalid";
-    }
+    } 
 
     // Check if City is empty
     if (!values.city) {
