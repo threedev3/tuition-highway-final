@@ -11,8 +11,6 @@ import TutorForm from "../TutorForm/TutorForm";
 import ContactUs from "../ContactUs/ContactUs";
 import { AnimatePresence, motion } from "framer-motion";
 import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const ContactForm = ({ firstString, secondString, tagLine }) => {
@@ -79,20 +77,12 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-8 flex flex-col items-center gap-12 px-4">
           {!isContactPage && (
             <div className="lg:block hidden w-auto">
-              <LazyLoadImage
-                src={isTutorPage ? contactImg2 : contactImg}
-                alt={"alt"}
-                effect="blur"
-                // width={width}
-                // height={height}
-                className="w-[500px] object-cover"
-                // onClick={onClick}
-              />
-              {/* <img
+              
+              <img
                 src={isTutorPage ? contactImg2 : contactImg}
                 alt=""
                 className="w-[500px] object-cover"
-              /> */}
+              />
             </div>
           )}
           {isContactPage && (

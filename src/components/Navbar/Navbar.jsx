@@ -6,7 +6,6 @@ import { Transition } from "@headlessui/react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { navigationData } from "../../data/data";
-import LazyImage from "../LazyLoadImage/LazyImage";
 
 const Navbar = ({ demoRef }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,19 +88,13 @@ const Navbar = ({ demoRef }) => {
         <div className="flex justify-between items-center max-w-[1400px] mx-auto">
           <div className=" cursor-pointer">
             <Link to={"/"}>
-              <LazyImage
+              
+              <img
                 src={mainLogo}
-                alt="Logo"
-                // width="300px"
-                // height="auto"
+                alt=""
                 className="sm:w-[164px] w-[150px] object-contain"
                 onClick={scrollToTop}
               />
-              {/* <img
-                src={mainLogo}
-                alt=""
-                
-              /> */}
             </Link>
           </div>
 

@@ -3,7 +3,6 @@ import Accordian from "../Accordian/Accordian";
 import faqImg from "../../assets/img/faqimg.png";
 import { faqs } from "../../data/data";
 import TypewriterComp from "../Typewriter/Typewriter";
-import LazyImage from "../LazyLoadImage/LazyImage";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -41,14 +40,8 @@ const Faq = () => {
           </div>
 
           <div className="lg:block hidden  w-auto">
-          <LazyImage
-                src={faqImg}
-                alt="faq"
-                // width="300px"
-                // height="auto"
-                className="w-[450px] object-cover"
-              />
-            {/* <img src={faqImg} alt="" className="w-[450px] object-cover" /> */}
+          
+            <img src={faqImg} alt="" className="w-[450px] object-cover" />
           </div>
         </div>
       </div>

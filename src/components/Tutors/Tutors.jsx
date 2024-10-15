@@ -7,7 +7,6 @@ import { tutors } from "../../data/data";
 import Slider from "react-slick";
 import TypewriterComp from "../Typewriter/Typewriter";
 import { useNavigate } from "react-router-dom";
-import LazyImage from "../LazyLoadImage/LazyImage";
 
 const Tutors = () => {
   var settings = {
@@ -107,14 +106,8 @@ const Tutors = () => {
       after:border-[0px] hover:after:border-[40px] after:translate-x-0 hover:after:translate-x-0 my-4 mx-2"
                 >
                   <div className="w-auto mx-auto">
-                  <LazyImage
-                              src={tutor.icon}
-                              alt={"tutor"}
-                              // width="300px"
-                              // height="auto"
-                              className="object-cover"
-                            />
-                    {/* <img src={tutor.icon} alt="" className="object-cover" /> */}
+                  
+                    <img src={tutor.icon} alt="" className="object-cover" />
                   </div>
 
                   <div className="max-w-[246px] flex flex-col gap-1">

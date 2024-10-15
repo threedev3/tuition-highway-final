@@ -7,7 +7,6 @@ import { reasons } from "../../data/data.js";
 import ReactCardFlip from "react-card-flip";
 import TypewriterComp from "../Typewriter/Typewriter.jsx";
 import Slider from "react-slick";
-import LazyImage from "../LazyLoadImage/LazyImage.jsx";
 
 const Reasons = ({ demoRef }) => {
   var settings = {
@@ -106,18 +105,12 @@ const Reasons = ({ demoRef }) => {
 
                 <motion.div className="flex flex-col gap-4 transition-shadow duration-300 group xl:min-h-[200px] min-h-[200px] my-4 mx-2 px-3">
                   <div className=" mx-auto">
-                    <LazyImage
+                   
+                    <img
                       src={item.icon}
                       alt={item.title}
-                      // width="300px"
-                      // height="auto"
                       className="w-20 h-20 object-contain"
                     />
-                    {/* <img
-                      src={item.icon}
-                      alt={item.title}
-                      className="w-20 h-20 object-contain"
-                    /> */}
                   </div>
                   <div className="flex flex-col gap-4 justify-center items-center mx-auto">
                     <p className="xl:text-xl text-lg text-headingColor font-semibold min-[444px]:block hidden text-center">

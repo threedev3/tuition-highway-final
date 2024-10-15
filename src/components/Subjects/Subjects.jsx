@@ -8,7 +8,6 @@ import TypewriterComp from "../Typewriter/Typewriter";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import Slider from "react-slick";
-import LazyImage from "../LazyLoadImage/LazyImage";
 
 const Subjects = () => {
   const [showAllSubjects, setShowAllSubjects] = useState(false);
@@ -291,18 +290,12 @@ const Subjects = () => {
                   <div
                     className={`flex-shrink-0 flex justify-center items-center sm:w-[90px] w-[80px] h-[90px] sm:h-[90px]`}
                   >
-                    <LazyImage
+                   
+                    <img
                       src={item.mainImg}
                       alt={item.title}
-                      // width="300px"
-                      // height="auto"
                       className="object-contain w-full h-full"
                     />
-                    {/* <img
-                      src={item.mainImg}
-                      alt={item.title}
-                      className="object-contain w-full h-full"
-                    /> */}
                   </div>
                   <div className="flex flex-col gap-1 w-full">
                     <p className="sm:text-xl text-lg font-semibold">
@@ -336,18 +329,12 @@ const Subjects = () => {
                           <div
                             className={`flex-shrink-0 flex justify-center items-center sm:w-[90px] w-[80px] h-[90px] sm:h-[90px]`}
                           >
-                            <LazyImage
+                           
+                            <img
                               src={item.mainImg}
                               alt={item.title}
-                              // width="300px"
-                              // height="auto"
                               className="object-contain w-full h-full"
                             />
-                            {/* <img
-                              src={item.mainImg}
-                              alt={item.title}
-                              className="object-contain w-full h-full"
-                            /> */}
                           </div>
                           <div className="flex flex-col gap-1 w-full">
                             <p className="sm:text-xl text-lg font-semibold">
