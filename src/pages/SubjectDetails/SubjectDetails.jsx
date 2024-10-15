@@ -9,7 +9,7 @@ import SubjectSlider from "../../components/SubjectSlider/SubjectSlider";
 import SubjectDetailComp from "../../components/SubjectDetailComp/SubjectDetailComp";
 import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 
-const SubjectDetails = ({ demoRef }) => {
+const SubjectDetails = ({ demoRef, handleNavClick }) => {
   const { slug } = useParams();
 
   const subject = subjectsOffering.find((s) => s.slug === slug);
@@ -21,14 +21,14 @@ const SubjectDetails = ({ demoRef }) => {
   return (
     <div>
       <SubjectHeroSection
-        demoRef={demoRef}
         title={subject.title}
         description="Paving the way with smart online tutoring solutions for IGCSE & A-Levels"
+        handleNavClick={handleNavClick}
       />
-      <SubjectDetailComp demoRef={demoRef} subject={subject} />
+      <SubjectDetailComp subject={subject} handleNavClick={handleNavClick} />
       <Testimonials />
-      <CurriculumSection demoRef={demoRef} />
-      <SubjectSlider demoRef={demoRef} />
+      <CurriculumSection handleNavClick={handleNavClick} />
+      <SubjectSlider handleNavClick={handleNavClick} />
 
       <div ref={demoRef}>
         <ContactForm

@@ -2,26 +2,13 @@ import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const SubHeroSection = ({ demoRef, title, description, btnText }) => {
+const SubHeroSection = ({ title, description, btnText, handleNavClick }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const isThankyouPage = location.pathname === "/thankyou" || location.pathname === "/faqs";
 
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

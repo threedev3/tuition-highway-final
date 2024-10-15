@@ -111,13 +111,13 @@ import BlogsDetails from "./pages/BlogsDetails/BlogsDetails";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import { blogsMain, curriculumOffering } from "./data/data";
 
-const SlugRoute = ({ demoRef }) => {
+const SlugRoute = ({ demoRef, handleNavClick }) => {
   const { slug } = useParams();
 
   // Check if the slug exists in the curriculum data
   const curriculum = curriculumOffering.find((c) => c.slug === slug);
   if (curriculum) {
-    return <CurriculumPage demoRef={demoRef} />;
+    return <CurriculumPage demoRef={demoRef} handleNavClick={handleNavClick}  />;
   }
 
   // Check if the slug exists in the blogs data

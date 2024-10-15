@@ -2,26 +2,19 @@ import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const SubjectHeroSection = ({ demoRef, title, description, btnText, curriculumType }) => {
-  const navigate = useNavigate()
+const SubjectHeroSection = ({
+  title,
+  description,
+  btnText,
+  curriculumType,
+  handleNavClick,
+}) => {
+  const navigate = useNavigate();
   const location = useLocation();
 
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const isPrivacyPolicyPage = location.pathname === "/privacy-policy" || location.pathname === "/terms-conditions" ;
+  const isPrivacyPolicyPage =
+    location.pathname === "/privacy-policy" ||
+    location.pathname === "/terms-conditions";
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -44,7 +37,9 @@ const SubjectHeroSection = ({ demoRef, title, description, btnText, curriculumTy
             </h3>
           </div>
           <div>
-            <p className={`xl:text-lg sm:text-lg min-[540px]:text-base text-sm text-white text-center max-w-lg capitalize`}>
+            <p
+              className={`xl:text-lg sm:text-lg min-[540px]:text-base text-sm text-white text-center max-w-lg capitalize`}
+            >
               {description}
             </p>
           </div>
@@ -54,7 +49,10 @@ const SubjectHeroSection = ({ demoRef, title, description, btnText, curriculumTy
           className="py-2 px-5 bg-orangeHeading  flex gap-1 rounded-md cursor-pointer"
           onClick={() => handleNavClick("Demo")}
         >
-          <button className="text-white font-semibold" onClick={isPrivacyPolicyPage ? navigateHome : undefined}>
+          <button
+            className="text-white font-semibold"
+            onClick={isPrivacyPolicyPage ? navigateHome : undefined}
+          >
             {btnText || "Book A Free Trial"}
           </button>
         </div>

@@ -8,7 +8,7 @@ import ReactCardFlip from "react-card-flip";
 import TypewriterComp from "../Typewriter/Typewriter.jsx";
 import Slider from "react-slick";
 
-const Reasons = ({ demoRef }) => {
+const Reasons = ({ handleNavClick }) => {
   var settings = {
     dots: false,
     infinite: false,
@@ -56,30 +56,6 @@ const Reasons = ({ demoRef }) => {
     ],
   };
 
-  const [flippedCards, setFlippedCards] = useState({});
-
-  const handleMouseEnter = (index) => {
-    setFlippedCards((prev) => ({ ...prev, [index]: true }));
-  };
-
-  const handleMouseLeave = (index) => {
-    setFlippedCards((prev) => ({ ...prev, [index]: false }));
-  };
-
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <div className="relative md:py-20 py-12 px-6 max-w-full">

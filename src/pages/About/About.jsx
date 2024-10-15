@@ -5,13 +5,15 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import Learn from "../../components/Learn/Learn";
 import AboutSection from "../../components/AboutSection/AboutSection";
 
-const About = ({ demoRef }) => {
+const About = ({ demoRef, handleNavClick }) => {
   return (
     <div>
       <SubHeroSection
         demoRef={demoRef}
         title="ABOUT US"
         description="Paving the way with smart online tutoring solutions for IGCSE, A-Levels, IB & other Curriculums"
+        handleNavClick={handleNavClick}
+
       />
       <AboutSection />
       <Learn

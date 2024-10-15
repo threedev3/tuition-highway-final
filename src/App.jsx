@@ -20,52 +20,61 @@ import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
 import FaqPage from "./pages/FaqPage/FaqPage";
 import SubjectDetailsCurriculum from "./pages/SubjectDetailsCurriculum/SubjectDetailsCurriculum";
 import SlugRoute from "./slugRoutes";
+import { useScrollToSection } from "./hooks/useScrollToSection";
 
 function App() {
   const demoRef = useRef(null);
+
+  // Define the sections with their refs
+  const sections = {
+    Demo: demoRef,
+  };
+
+  // Use the custom hook and pass the sections object
+  const handleNavClick = useScrollToSection(sections);
   return (
     <>
       <Router>
-        <Navbar demoRef={demoRef} />
+        <Navbar  handleNavClick={handleNavClick} />
         <Routes>
-          <Route path="/" element={<Home demoRef={demoRef} />} />
+          <Route path="/" element={<Home demoRef={demoRef} handleNavClick={handleNavClick} />} />
           <Route
             path="/testimonials"
-            element={<TestimonialsPage demoRef={demoRef} />}
+            element={<TestimonialsPage demoRef={demoRef} handleNavClick={handleNavClick} />}
           />
-          <Route
-            path="/courses"
-            element={<SubjectsPage demoRef={demoRef} />}
-          />
+          <Route path="/courses" element={<SubjectsPage demoRef={demoRef} handleNavClick={handleNavClick} />} />
           <Route
             path="/subjects/:slug"
-            element={<SubjectDetails demoRef={demoRef} />}
+            element={<SubjectDetails demoRef={demoRef} handleNavClick={handleNavClick} />}
           />
           <Route
             path="/subjects/:slug/:curriculumType"
-            element={<SubjectDetailsCurriculum demoRef={demoRef} />}
+            element={<SubjectDetailsCurriculum demoRef={demoRef} handleNavClick={handleNavClick} />}
           />
-         
-        <Route path="/:slug" element={<SlugRoute demoRef={demoRef} />} />
-          <Route path="/about-us" element={<About demoRef={demoRef} />} />
-          <Route path="/contact-us" element={<ContactPage demoRef={demoRef} />} />
-          <Route path="/blogs" element={<Blogs demoRef={demoRef} />} />
+
+          <Route path="/:slug" element={<SlugRoute demoRef={demoRef} handleNavClick={handleNavClick} />} />
+          <Route path="/about-us" element={<About demoRef={demoRef} handleNavClick={handleNavClick} />} />
+          <Route
+            path="/contact-us"
+            element={<ContactPage demoRef={demoRef} handleNavClick={handleNavClick} />}
+          />
+          <Route path="/blogs" element={<Blogs demoRef={demoRef} handleNavClick={handleNavClick} />} />
 
           <Route
             path="/free-demo"
-            element={<TakingDemoPage demoRef={demoRef} />}
+            element={<TakingDemoPage demoRef={demoRef} handleNavClick={handleNavClick} />}
           />
           <Route
             path="/join-as-a-tutor"
-            element={<JoinTutor demoRef={demoRef} />}
+            element={<JoinTutor demoRef={demoRef} handleNavClick={handleNavClick} />}
           />
           <Route
             path="/privacy-policy"
-            element={<PrivacyPolicy demoRef={demoRef} />}
+            element={<PrivacyPolicy demoRef={demoRef} handleNavClick={handleNavClick} />}
           />
           <Route
             path="/terms-conditions"
-            element={<TermsOfService demoRef={demoRef} />}
+            element={<TermsOfService demoRef={demoRef} handleNavClick={handleNavClick} />}
           />
           <Route path="/faqs" element={<FaqPage />} />
           <Route path="/thankyou" element={<ThankYouPage />} />

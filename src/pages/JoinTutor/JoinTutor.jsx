@@ -5,20 +5,20 @@ import EnrollDetails from "../../components/EnrollDetails/EnrollDetails";
 import { joinTutorDetails } from "../../data/data";
 import { joinTutor } from "../../assets/img/images";
 
-const JoinTutor = ({ demoRef }) => {
+const JoinTutor = ({ demoRef, handleNavClick }) => {
   return (
     <div>
       <SubjectHeroSection
-        demoRef={demoRef}
         title="Join As a Tutor"
         description="Join our team of dedicated professionals and make a difference in students lives globally"
         btnText={"Join Now"}
+        handleNavClick={handleNavClick}
       />
       <EnrollDetails
-        demoRef={demoRef}
         title="Join As a Tutor Now"
         content={joinTutorDetails}
         imgSrc={joinTutor}
+        
       />
       <div ref={demoRef}>
         <ContactForm

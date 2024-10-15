@@ -10,7 +10,7 @@ import SubjectDetailComp from "../../components/SubjectDetailComp/SubjectDetailC
 import CurriculumDetailComp from "../../components/CurriculumDetailComp/CurriculumDetailComp";
 import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 
-const CurriculumPage = ({ demoRef }) => {
+const CurriculumPage = ({ demoRef, handleNavClick }) => {
   const { slug } = useParams();
 
   const curriculum = curriculumOffering.find((s) => s.slug === slug);
@@ -21,14 +21,14 @@ const CurriculumPage = ({ demoRef }) => {
   return (
     <div>
       <SubjectHeroSection
-        demoRef={demoRef}
         title={curriculum.title}
         description="Give your child a head start by enrolling them in our comprehensive American Curriculum program, all from the comfort of your home."
+        handleNavClick={handleNavClick}
       />
-      <CurriculumDetailComp demoRef={demoRef} curriculum={curriculum} />
+      <CurriculumDetailComp  curriculum={curriculum} handleNavClick={handleNavClick} />
       <Testimonials />
-      <CurriculumSection demoRef={demoRef} />
-      <SubjectSlider demoRef={demoRef} />
+      <CurriculumSection handleNavClick={handleNavClick} />
+      <SubjectSlider  handleNavClick={handleNavClick} />
 
       <div ref={demoRef}>
         <ContactForm

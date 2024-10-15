@@ -10,7 +10,7 @@ import SubjectDetailComp from "../../components/SubjectDetailComp/SubjectDetailC
 import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 import SubjectDetailCompCurriculum from "../../components/SubjectDetailCompCurriculum/SubjectDetailCompCurriculum";
 
-const SubjectDetailsCurriculum = ({ demoRef }) => {
+const SubjectDetailsCurriculum = ({ demoRef, handleNavClick }) => {
   const { slug, curriculumType } = useParams();
 
   const subject = subjectsOffering.find((s) => s.slug === slug);
@@ -21,25 +21,38 @@ const SubjectDetailsCurriculum = ({ demoRef }) => {
 
   const curriculumData = subject.content?.[curriculumType];
 
-//   console.log("Curriculum data", curriculumData);
+  //   console.log("Curriculum data", curriculumData);
 
   if (!curriculumData) {
     return <NotFoundPage />;
   }
 
-  return (   
+  return (
     <div>
       <SubjectHeroSection
-        demoRef={demoRef}
-        title={(curriculumType === "igcse" || curriculumType === "cbse" ? curriculumType.toUpperCase() : curriculumType.replace("-", " "))  + " " + subject.title  }
-        description={`Explore ${curriculumType === "igcse" || curriculumType === "cbse" ? curriculumType.replace("-", " ").toUpperCase() : curriculumType.replace("-", " ")} in ${subject.title}`}
+        title={
+          (curriculumType === "igcse" || curriculumType === "cbse"
+            ? curriculumType.toUpperCase()
+            : curriculumType.replace("-", " ")) +
+          " " +
+          subject.title
+        }
+        description={`Explore ${
+          curriculumType === "igcse" || curriculumType === "cbse"
+            ? curriculumType.replace("-", " ").toUpperCase()
+            : curriculumType.replace("-", " ")
+        } in ${subject.title}`}
         curriculumType={curriculumType}
+        handleNavClick={handleNavClick}
       />
-      <SubjectDetailCompCurriculum demoRef={demoRef} subject={subject} curriculumData={curriculumData} />
+      <SubjectDetailCompCurriculum
+        subject={subject}
+        curriculumData={curriculumData}
+        handleNavClick={handleNavClick}
+      />
       <Testimonials />
-      <CurriculumSection demoRef={demoRef} />
-      <SubjectSlider demoRef={demoRef} />
-
+      <CurriculumSection  handleNavClick={handleNavClick} />
+      <SubjectSlider  handleNavClick={handleNavClick} />
       <div ref={demoRef}>
         <ContactForm
           demoRef={demoRef}

@@ -4,16 +4,17 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import TestimonialsList from "../../components/TestimonialsList/TestimonialsList";
 import SubjectSlider from "../../components/SubjectSlider/SubjectSlider";
 
-const TestimonialsPage = ({ demoRef }) => {
+const TestimonialsPage = ({ demoRef, handleNavClick }) => {
   return (
     <div>
       <SubHeroSection
         demoRef={demoRef}
         title="SUCCESS STORIES"
         description="Recommended by hundreds of delighted parents"
+        handleNavClick={handleNavClick}
       />
       <TestimonialsList />
-      <SubjectSlider demoRef={demoRef} />
+      <SubjectSlider demoRef={demoRef} handleNavClick={handleNavClick}  />
       <div ref={demoRef}>
         <ContactForm
           demoRef={demoRef}

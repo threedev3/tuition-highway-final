@@ -11,14 +11,14 @@ import Working from "../../components/Working/Working";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import Faq from "../../components/Faq/Faq";
 
-const Home = ({ demoRef }) => {
+const Home = ({ demoRef, handleNavClick }) => {
   return (
     <div>
-      <HeroSection demoRef={demoRef} />
+      <HeroSection handleNavClick={handleNavClick} />
       <TutorNumbers />
-      <Reasons demoRef={demoRef} />
+      <Reasons handleNavClick={handleNavClick} />
       <Subjects />
-      <CurriculumSection demoRef={demoRef} />
+      <CurriculumSection handleNavClick={handleNavClick} />
       {/* <FreeDemo demoRef={demoRef} /> */}
       <Tutors />
       <Learn

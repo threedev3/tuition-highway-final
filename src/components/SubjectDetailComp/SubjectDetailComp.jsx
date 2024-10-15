@@ -4,7 +4,7 @@ import Outcomes from "../Outcomes/Outcomes";
 import OutcomeAccordian from "../Accordian/OutcomeAccordian";
 import { learningOutcomesImg } from "../../assets/img/images";
 
-const SubjectDetailComp = ({ demoRef, subject }) => {
+const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
   const [activeView, setActiveView] = useState("");
   const [showFloatingTabs, setShowFloatingTabs] = useState(false);
   const tabsRef = useRef(null);
@@ -14,20 +14,7 @@ const SubjectDetailComp = ({ demoRef, subject }) => {
     setActiveView(view);
   };
 
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
+ 
 
   // Scroll event listener to toggle floating tabs
   useEffect(() => {

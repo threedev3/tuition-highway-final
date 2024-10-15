@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import { heroSectionImg } from "../../assets/img/images";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
-const HeroSection = ({ demoRef }) => {
+const HeroSection = ({ handleNavClick }) => {
   const [heroHeight, setHeroHeight] = useState("100vh");
 
   useEffect(() => {
@@ -24,20 +24,6 @@ const HeroSection = ({ demoRef }) => {
     };
   }, []);
 
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const [currentHeading, setCurrentHeading] = useState(0);
   const [isHeadingDone, setIsHeadingDone] = useState(false);

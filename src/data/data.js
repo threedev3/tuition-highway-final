@@ -1,8 +1,6 @@
 import {
-
   expertTutor,
   flexSchedule,
-
   curriculaImg,
   personalLearning,
   proveResult,
@@ -17,9 +15,7 @@ import {
   sociology,
   psychology,
   business,
-
   sociologySubject,
-
   mathsSub,
   chemistrySub,
   biologySub,
@@ -63,7 +59,6 @@ import {
   britishImg,
   americanImg,
   ibImg,
-
   frenchCurr,
   indianCurr,
 } from "../assets/img/images";
@@ -2665,7 +2660,6 @@ const enrollDetails = [
     description:
       "Embark on this transformative journey with Tuition Highway today!",
   },
-  
 ];
 const joinTutorDetails = [
   {

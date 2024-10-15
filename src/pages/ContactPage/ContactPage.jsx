@@ -4,14 +4,14 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import EnrollDetails from "../../components/EnrollDetails/EnrollDetails";
 import { enrollDetails } from "../../data/data";
 
-const ContactPage = ({ demoRef }) => {
+const ContactPage = ({ demoRef, handleNavClick }) => {
   return (
     <div>
       <SubjectHeroSection
-        demoRef={demoRef}
         title="Contact Us"
         description="Paving the way with smart online tutoring solutions for IGCSE, A-Levels, IB & other Curriculums"
         btnText="Contact Now"
+        handleNavClick={handleNavClick}
       />
 
       <div ref={demoRef}>

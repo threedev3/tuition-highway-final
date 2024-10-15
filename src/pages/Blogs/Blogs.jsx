@@ -5,13 +5,13 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import Learn from "../../components/Learn/Learn";
 import BlogsSection from "../../components/BlogsSection/BlogsSection";
 
-const Blogs = ({ demoRef }) => {
+const Blogs = ({ demoRef, handleNavClick }) => {
   return (
     <div>
       <SubHeroSection
-        demoRef={demoRef}
         title="Blogs"
         description="Achieving Academic Excellence with Tuition Highway"
+        handleNavClick={handleNavClick}
       />
       <BlogsSection />
       <Learn

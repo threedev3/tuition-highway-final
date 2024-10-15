@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { curricula } from "../../data/data";
 import { Link, useNavigate } from "react-router-dom";
 
-const CurriculumSection = ({ demoRef }) => {
+const CurriculumSection = ({ handleNavClick }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -45,20 +45,6 @@ const CurriculumSection = ({ demoRef }) => {
     ],
   };
 
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

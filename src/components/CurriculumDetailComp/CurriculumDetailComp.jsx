@@ -2,21 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Outcomes from "../Outcomes/Outcomes";
 
-const CurriculumDetailComp = ({ demoRef, curriculum }) => {
-  const sections = {
-    Demo: demoRef,
-  };
+const CurriculumDetailComp = ({curriculum, handleNavClick }) => {
 
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const renderItems = () => {
     return (

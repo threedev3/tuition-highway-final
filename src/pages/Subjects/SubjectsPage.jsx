@@ -4,16 +4,16 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 import SubjectsList from "../../components/SubjectsList/SubjectsList";
 
-const SubjectsPage = ({ demoRef }) => {
+const SubjectsPage = ({ demoRef, handleNavClick }) => {
   return (
     <div>
       <SubHeroSection
-        demoRef={demoRef}
         title="Explore Our Comprehensive Subject Offerings"
         description="Paving the way with smart online tutoring solutions for IGCSE & A- Levels"
+        handleNavClick={handleNavClick}
       />
-      <SubjectsList demoRef={demoRef} />
-      <CurriculumSection demoRef={demoRef} />
+      <SubjectsList  handleNavClick={handleNavClick} />
+      <CurriculumSection handleNavClick={handleNavClick} />
       <div ref={demoRef}>
         <ContactForm
           demoRef={demoRef}

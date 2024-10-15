@@ -5,25 +5,12 @@ import Outcomes from "../Outcomes/Outcomes";
 import OutcomeAccordian from "../Accordian/OutcomeAccordian";
 import { learningOutcomesImg } from "../../assets/img/images";
 
-const SubjectDetailCompCurriculum = ({ demoRef, subject, curriculumData }) => {
+const SubjectDetailCompCurriculum = ({ demoRef, subject, curriculumData, handleNavClick }) => {
   // const [activeView, setActiveView] = useState("");
   const tabsRef = useRef(null);
   // const floatingTabsEnd = useRef(null);
 
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
+ 
 
   useEffect(() => {
     console.log("Curriculum Data", curriculumData);

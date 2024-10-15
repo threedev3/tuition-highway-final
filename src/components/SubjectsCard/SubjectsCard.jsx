@@ -2,24 +2,9 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-const SubjectsCard = ({ item, demoRef }) => {
+const SubjectsCard = ({ item, handleNavClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
-
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const scrollToTop = () => {
     window.scrollTo({

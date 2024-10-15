@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { subjectsOffering } from "../../data/data";
 import SubjectsCard from "../SubjectsCard/SubjectsCard";
 
-const SubjectSlider = ({ demoRef }) => {
+const SubjectSlider = ({ handleNavClick }) => {
   var settings = {
     dots: true,
     infinite: true,
@@ -54,7 +54,7 @@ const SubjectSlider = ({ demoRef }) => {
         <div className="slider-container w-auto cursor-pointer ">
           <Slider {...settings}>
             {subjectsOffering.map((item, index) => (
-              <SubjectsCard item={item} key={index} demoRef={demoRef} />
+              <SubjectsCard item={item} key={index} handleNavClick={handleNavClick} />
             ))}
           </Slider>
         </div>

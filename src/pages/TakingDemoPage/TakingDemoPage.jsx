@@ -5,19 +5,20 @@ import EnrollDetails from "../../components/EnrollDetails/EnrollDetails";
 import { enrollDetails } from "../../data/data";
 import { freeDemo } from "../../assets/img/images";
 
-const TakingDemoPage = ({ demoRef }) => {
+const TakingDemoPage = ({ demoRef, handleNavClick }) => {
   return (
     <div>
       <SubjectHeroSection
-        demoRef={demoRef}
         title="Take A Free Demo"
         description="Experience our personalised, high-quality online lessons and simplify your child’s educational journey"
+        handleNavClick={handleNavClick}
       />
       <EnrollDetails
-        demoRef={demoRef}
         title="Start Your Free Trial Now!"
         content={enrollDetails}
         imgSrc={freeDemo}
+        handleNavClick={handleNavClick}
+
       />
       <div ref={demoRef}>
         <ContactForm

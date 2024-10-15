@@ -7,26 +7,11 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { navigationData } from "../../data/data";
 
-const Navbar = ({ demoRef }) => {
+const Navbar = ({ handleNavClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState(null);
   const [activeItem, setActiveItem] = useState(null); // State to track the active item
   const location = useLocation(); // Hook to get the current location
-
-  const sections = {
-    Demo: demoRef,
-  };
-
-  const handleNavClick = (section) => {
-    const targetRef = sections[section];
-
-    if (targetRef && targetRef.current) {
-      window.scrollTo({
-        top: targetRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const scrollToTop = () => {
     window.scrollTo({
