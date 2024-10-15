@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import { TypeAnimation } from "react-type-animation";
 import { heroSectionImg } from "../../assets/img/images";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import LazyImage from "../LazyLoadImage/LazyImage";
 
 const HeroSection = ({ demoRef }) => {
   const [heroHeight, setHeroHeight] = useState("100vh");
@@ -205,7 +206,14 @@ const HeroSection = ({ demoRef }) => {
         </div>
 
         <div className="lg:w-[40%] w-[70%]">
-          <img src={heroSectionImg} alt="" className="w-full object-contain" />
+          <LazyImage
+            src={heroSectionImg}
+            alt="Image 1"
+            // width="300px"
+            // height="auto"
+            className="w-full object-contain"
+          />
+          {/* <img src={heroSectionImg} alt="" className="w-full object-contain" /> */}
         </div>
       </div>
     </div>

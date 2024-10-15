@@ -11,6 +11,9 @@ import TutorForm from "../TutorForm/TutorForm";
 import ContactUs from "../ContactUs/ContactUs";
 import { AnimatePresence, motion } from "framer-motion";
 import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 const ContactForm = ({ firstString, secondString, tagLine }) => {
   const location = useLocation();
@@ -76,41 +79,69 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-8 flex flex-col items-center gap-12 px-4">
           {!isContactPage && (
             <div className="lg:block hidden w-auto">
-              <img
+              <LazyLoadImage
+                src={isTutorPage ? contactImg2 : contactImg}
+                alt={"alt"}
+                effect="blur"
+                // width={width}
+                // height={height}
+                className="w-[500px] object-cover"
+                // onClick={onClick}
+              />
+              {/* <img
                 src={isTutorPage ? contactImg2 : contactImg}
                 alt=""
                 className="w-[500px] object-cover"
-              />
+              /> */}
             </div>
           )}
-          {
-            isContactPage && (
-              <div className="flex flex-col gap-8">
-                <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
-                  <MapPinIcon className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0" color="#008fbf" />
-                  <div className="flex flex-col gap-2 ">
-                    <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">Address</h3>
-                    <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">ASE Global LLC-FZ Business Centre, Meydan Hotel,
-                    Nad Al Sheeba, Dubai, UAE</p>
-                  </div>
-                </div>
-                <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
-                  <PhoneIcon className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0" color="#008fbf" />
-                  <div className="flex flex-col gap-2 ">
-                    <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">Call Us</h3>
-                    <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">+971563511722</p>
-                  </div>
-                </div>
-                <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
-                  <EnvelopeIcon className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0" color="#008fbf" />
-                  <div className="flex flex-col gap-2 ">
-                    <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">Email Us</h3>
-                    <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">hello@tuitionhighway.com</p>
-                  </div>
+          {isContactPage && (
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
+                <MapPinIcon
+                  className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0"
+                  color="#008fbf"
+                />
+                <div className="flex flex-col gap-2 ">
+                  <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">
+                    Address
+                  </h3>
+                  <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">
+                    ASE Global LLC-FZ Business Centre, Meydan Hotel, Nad Al
+                    Sheeba, Dubai, UAE
+                  </p>
                 </div>
               </div>
-            )
-          }
+              <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
+                <PhoneIcon
+                  className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0"
+                  color="#008fbf"
+                />
+                <div className="flex flex-col gap-2 ">
+                  <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">
+                    Call Us
+                  </h3>
+                  <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">
+                    +971563511722
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row xl:gap-6 lg:gap-3 sm:gap-6 gap-6 items-center">
+                <EnvelopeIcon
+                  className="xl:w-8 lg:w-6 sm:w-8 w-6 flex-shrink-0"
+                  color="#008fbf"
+                />
+                <div className="flex flex-col gap-2 ">
+                  <h3 className="text-headingColor xl:text-[22px] lg:text-xl sm:text-[22px] text-lg">
+                    Email Us
+                  </h3>
+                  <p className="text-headingColor xl:text-base lg:text-sm sm:text-base text-sm">
+                    hello@tuitionhighway.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
           {isTutorPage ? (
             <TutorForm />
           ) : isContactPage ? (

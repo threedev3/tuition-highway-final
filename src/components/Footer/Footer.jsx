@@ -3,6 +3,7 @@ import footerLogo from "../../assets/img/footerLogo.png";
 
 import { products, company, resources, socialIcons } from "../../data/data.js";
 import { Link, useNavigate } from "react-router-dom";
+import LazyImage from "../LazyLoadImage/LazyImage.jsx";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,22 +24,37 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-6">
             <div className="w-48">
               <Link to={"/"}>
-                <img
+                <LazyImage
+                  src={footerLogo}
+                  alt="footer"
+                  // width="300px"
+                  // height="auto"
+                  className="object-cover cursor-pointer"
+                  onClick={scrollToTop}
+                />
+                {/* <img
                   src={footerLogo}
                   alt=""
                   className="object-cover cursor-pointer"
                   onClick={scrollToTop}
-                />
+                /> */}
               </Link>
             </div>
             <div className="flex gap-5 items-center ml-4">
               {socialIcons.map((item, index) => (
                 <Link to={item.to} target="_blank" key={index}>
-                  <img
+                  <LazyImage
+                    src={item.icon}
+                    alt={item.alt}
+                    // width="300px"
+                    // height="auto"
+                    className="cursor-pointer"
+                  />
+                  {/* <img
                     src={item.icon}
                     alt={item.alt}
                     className="cursor-pointer"
-                  />
+                  /> */}
                 </Link>
               ))}
             </div>
