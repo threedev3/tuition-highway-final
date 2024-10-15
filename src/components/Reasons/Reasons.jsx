@@ -7,7 +7,6 @@ import { reasons } from "../../data/data.js";
 import ReactCardFlip from "react-card-flip";
 import TypewriterComp from "../Typewriter/Typewriter.jsx";
 import Slider from "react-slick";
-import { ropeImg } from "../../assets/img/images.js";
 
 const Reasons = ({ demoRef }) => {
   var settings = {
@@ -97,9 +96,7 @@ const Reasons = ({ demoRef }) => {
         </div>
 
         <div className="slider-container cursor-pointer w-auto relative">
-          {/* <motion.div className="absolute left-[12%] right-[10%] top-[10%]">
-            <img src={ropeImg} alt="" className="" />
-          </motion.div> */}
+        
           <Slider {...settings}>
             {reasons.map((item, index) => (
               <motion.div key={index} className="relative w-full h-full">

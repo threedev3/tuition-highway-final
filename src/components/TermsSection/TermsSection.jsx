@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fadedCircle, subjectImg } from "../../assets/img/images";
+import { fadedCircle } from "../../assets/img/images";
 import { privacyPolicyData, termsAndConditionsData } from "../../data/data";
 
 const TermsSection = ({ title }) => {

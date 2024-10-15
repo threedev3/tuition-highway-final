@@ -8,6 +8,7 @@ import Testimonials from "../../components/Testimonials/Testimonials";
 import SubjectSlider from "../../components/SubjectSlider/SubjectSlider";
 import SubjectDetailComp from "../../components/SubjectDetailComp/SubjectDetailComp";
 import CurriculumDetailComp from "../../components/CurriculumDetailComp/CurriculumDetailComp";
+import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 
 const CurriculumPage = ({ demoRef }) => {
   const { slug } = useParams();
@@ -17,7 +18,6 @@ const CurriculumPage = ({ demoRef }) => {
   if (!curriculum) {
     return <NotFoundPage />;
   }
-
   return (
     <div>
       <SubjectHeroSection
@@ -27,6 +27,7 @@ const CurriculumPage = ({ demoRef }) => {
       />
       <CurriculumDetailComp demoRef={demoRef} curriculum={curriculum} />
       <Testimonials />
+      <CurriculumSection demoRef={demoRef} />
       <SubjectSlider demoRef={demoRef} />
 
       <div ref={demoRef}>

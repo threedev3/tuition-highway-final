@@ -1,13 +1,8 @@
 import {
-  icon1,
-  icon2,
-  icon3,
-  icon4,
-  icon5,
+
   expertTutor,
   flexSchedule,
-  compCurriculum,
-  compreCurriculum,
+
   curriculaImg,
   personalLearning,
   proveResult,
@@ -22,18 +17,9 @@ import {
   sociology,
   psychology,
   business,
-  mathsSubject,
-  physicsSubject,
-  chemistrySubject,
-  biologySubject,
-  englishSubject,
-  businessLawSubject,
-  accountsSubject,
+
   sociologySubject,
-  psychologySubject,
-  businessSubject,
-  economicsSubject,
-  computerSubject,
+
   mathsSub,
   chemistrySub,
   biologySub,
@@ -77,9 +63,7 @@ import {
   britishImg,
   americanImg,
   ibImg,
-  onlineHomeImg,
-  indianImg,
-  frenchImg,
+
   frenchCurr,
   indianCurr,
 } from "../assets/img/images";
@@ -87,15 +71,15 @@ import {
 const navigationData = {
   "Main Pages": [
     { title: "Home", to: "/" },
-    { title: "About Us", to: "/about" },
-    { title: "Subjects", to: "/subjects" },
+    { title: "About Us", to: "/about-us" },
+    { title: "Subjects", to: "/courses" },
     { title: "Testimonials", to: "/testimonials" },
-    { title: "Join As a Tutor", to: "/joinastutor" },
-    { title: "Taking a Demo", to: "/takingdemo" },
+    { title: "Join As a Tutor", to: "/join-as-a-tutor" },
+    { title: "Taking a Demo", to: "/free-demo" },
     { title: "Blogs", to: "/blogs" },
-    { title: "Contact Us", to: "/contact" },
+    { title: "Contact Us", to: "/contact-us" },
     { title: "FAQs", to: "/faqs" },
-    { title: "Privacy Policy", to: "/privacypolicy" },
+    { title: "Privacy Policy", to: "/privacy-policy" },
   ],
   "What We Teach": [
     { title: "British Curriculum", to: "/british-curriculum" },
@@ -2177,21 +2161,21 @@ const faqs = [
 const products = [
   {
     title: "Join As Tutor",
-    to: "/joinastutor",
+    to: "/join-as-a-tutor",
   },
   {
     title: "Free Demo",
-    to: "/takingdemo",
+    to: "/free-demo",
   },
   {
     title: "About Us",
-    to: "/about",
+    to: "/about-us",
   },
 ];
 const company = [
   {
     title: "Subjects",
-    to: "/subjects",
+    to: "/courses",
   },
   {
     title: "Testimonials",
@@ -2205,15 +2189,15 @@ const company = [
 const resources = [
   {
     title: "Privacy Policy",
-    to: "/privacypolicy",
+    to: "/privacy-policy",
   },
   {
     title: "Terms of Service",
-    to: "/termsofservice",
+    to: "/terms-conditions",
   },
   {
     title: "Contact Us",
-    to: "/contact",
+    to: "/contact-us",
   },
   {
     title: "FAQs",

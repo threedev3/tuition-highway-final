@@ -56,7 +56,7 @@ const BlogsSection = () => {
                     className="cursor-pointer"
                   > */}
                   <Link
-                    to={`/blogs/american-curriculum-failing-our-students`}
+                    to={`/american-curriculum-failing-our-students`}
                     target="_blank"
                     className="cursor-pointer"
                   >
@@ -121,7 +121,7 @@ const BlogsSection = () => {
                           }}> */}
 
                         <Link
-                          to={`/blogs/${blog.slug}`}
+                          to={`/${blog.slug}`}
                           target="_blank"
                           className="cursor-pointer"
                         >
@@ -212,7 +212,7 @@ const BlogsSection = () => {
                   </p> */}
 
                   <Link
-                    to={`/blogs/benefits-of-learning-online-tuition`}
+                    to={`/benefits-of-learning-online-tuition`}
                     target="_blank"
                     className="cursor-pointer"
                   >

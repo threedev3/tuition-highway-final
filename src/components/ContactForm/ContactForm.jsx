@@ -16,8 +16,8 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
   const location = useLocation();
 
   // Check if the current route is the "Join as a Tutor" page
-  const isTutorPage = location.pathname === "/joinastutor";
-  const isContactPage = location.pathname === "/contact";
+  const isTutorPage = location.pathname === "/join-as-a-tutor";
+  const isContactPage = location.pathname === "/contact-us";
 
   const [showDemoText, setShowDemoText] = useState(true);
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { fadedCircle, subjectImg } from "../../assets/img/images";
+import { fadedCircle } from "../../assets/img/images";
 import { motion, AnimatePresence } from "framer-motion";
 import Outcomes from "../Outcomes/Outcomes";
 import OutcomeAccordian from "../Accordian/OutcomeAccordian";

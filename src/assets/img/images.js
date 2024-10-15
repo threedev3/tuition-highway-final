@@ -1,17 +1,8 @@
-// Icons
-import icon1 from "./icon1.png";
-import icon2 from "./icon2.png";
-import icon3 from "./icon3.png";
-import icon4 from "./icon4.png";
-import icon5 from "./icon5.png";
+
 
 import expertTutor from "./expertTutor.png";
 import flexSchedule from "./flexSchedule.png";
-import compCurriculum from "./compCurriculum.png";
-import compreCurriculum from "./compreCurriculum.png";
 import curriculaImg from "./curricula.png";
-// import personalLearning from "./online-learning.png";
-// import proveResult from "./goal.png";
 import personalLearning from "./personalizedLearningIcon.png";
 import proveResult from "./provenResultsIcon.png";
 
@@ -32,7 +23,6 @@ import stats from "./Stats.gif";
 // import business from "./business.gif";
 import business from "./businessGif.gif";
 // import business from "./BusinessANimated.gif";
-// import business from "./download.gif";
 
 // Avatars
 import avatar1 from "./avatar1.png";
@@ -63,7 +53,6 @@ import learningImg2 from "./learningImg2.png";
 import aboutImg from "./aboutImg.png";
 
 import fadedCircle from "./fadedCircle.png";
-import subjectImg from "./subjectImg.png";
 
 import heroSectionImg from "./heroSectionImg.png";
 
@@ -82,18 +71,8 @@ import joinTutor from "../../assets/img/joinTutor.png";
 import freeDemo from "../../assets/img/freeDemo.png";
 
 // Subjects hero images
-import mathsSubject from "./mathsSubject.png";
-import physicsSubject from "./physicsSubject.png";
-import chemistrySubject from "./chemistrySubject.png";
-import biologySubject from "./biologySubject.png";
-import englishSubject from "./englishSubject.png";
-import businessLawSubject from "./businessLawSubject.png";
 import accountsSubject from "./accountsSubject.png";
 import sociologySubject from "./sociologySubject.png";
-import psychologySubject from "./psychologySubject.png";
-import economicsSubject from "./economicsSubject.png";
-import businessSubject from "./businessSubject.png";
-import computerSubject from "./computerSubject.png";
 import mathsSub from "./mathsSub.png";
 import chemistrySub from "./chemistrySub.png";
 import biologySub from "./biologySub.png";
@@ -110,27 +89,17 @@ import economicsSub from "./economicsSub.svg";
 import britishImg from "./britishImg.png";
 import americanImg from "./americanImg.png";
 import ibImg from "./ibImg.png";
-import onlineHomeImg from "./onlineHomeImg.png";
-import indianImg from "./indianImg.png";
-import frenchImg from "./frenchImg.png";
 import frenchCurr from "./frenchCurr.png";
 import indianCurr from "./indianCurr.png";
 
-import ropeImg from "./ropeImg.png";
 import thankYouImg from "./thankYouImg.png";
 
 import learningOutcomesImg from "./learningOutcomes.png";
 // Export all images as an object
 export {
-  icon1,
-  icon2,
-  icon3,
-  icon4,
-  icon5,
+
   expertTutor,
   flexSchedule,
-  compCurriculum,
-  compreCurriculum,
   curriculaImg,
   personalLearning,
   proveResult,
@@ -146,18 +115,8 @@ export {
   psychology,
   stats,
   business,
-  mathsSubject,
-  physicsSubject,
-  chemistrySubject,
-  biologySubject,
-  englishSubject,
-  businessLawSubject,
   accountsSubject,
   sociologySubject,
-  psychologySubject,
-  businessSubject,
-  economicsSubject,
-  computerSubject,
   mathsSub,
   chemistrySub,
   biologySub,
@@ -172,9 +131,6 @@ export {
   britishImg,
   americanImg,
   ibImg,
-  onlineHomeImg,
-  indianImg,
-  frenchImg,
   frenchCurr,
   indianCurr,
   avatar1,
@@ -199,7 +155,6 @@ export {
   learningImg2,
   aboutImg,
   fadedCircle,
-  subjectImg,
   heroSectionImg,
   blogImg1,
   blogImg2,
@@ -212,7 +167,6 @@ export {
   blogImg9,
   joinTutor,
   freeDemo,
-  ropeImg,
   thankYouImg,
   learningOutcomesImg,
 };

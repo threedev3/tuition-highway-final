@@ -21,7 +21,7 @@ const SubjectHeroSection = ({ demoRef, title, description, btnText, curriculumTy
     }
   };
 
-  const isPrivacyPolicyPage = location.pathname === "/privacypolicy" || location.pathname === "/termsofservice" ;
+  const isPrivacyPolicyPage = location.pathname === "/privacy-policy" || location.pathname === "/terms-conditions" ;
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

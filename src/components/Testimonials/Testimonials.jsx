@@ -13,7 +13,7 @@ const Testimonials = () => {
   var settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: true,
     arrows: false,
@@ -23,7 +23,7 @@ const Testimonials = () => {
     cssEase: "ease",
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -31,7 +31,7 @@ const Testimonials = () => {
         },
       },
       {
-        breakpoint: 920,
+        breakpoint: 1070,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -39,11 +39,13 @@ const Testimonials = () => {
         },
       },
       {
-        breakpoint: 560,
+        breakpoint: 620,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
+    dots: false,
+
         },
       },
     ],
@@ -100,7 +102,7 @@ const Testimonials = () => {
             </h3>
           </div>
         </div>
-        <div className="min-[1200px]:max-w-7xl lg:max-w-[980px] md:max-w-[700px] max-w-[560px] px-5">
+        <div className="min-[1400px]:max-w-full min-[1200px]:max-w-full lg:max-w-full md:max-w-full max-w-full ">
           <div className="slider-container w-auto cursor-pointer sm:mx-0 mx-auto">
             <Slider ref={sliderRef} {...settings}>
               {testimonials.map((item, index) => (
