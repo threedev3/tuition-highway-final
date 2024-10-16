@@ -54,7 +54,7 @@ function App() {
             }
           />
           <Route
-            path="/subjects/:slug"
+            path="/courses/:slug"
             element={
               <SubjectDetails
                 demoRef={demoRef}
@@ -63,7 +63,7 @@ function App() {
             }
           />
           <Route
-            path="/subjects/:slug/:curriculumType"
+            path="/courses/:slug/:curriculumType"
             element={
               <SubjectDetailsCurriculum
                 demoRef={demoRef}
