@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-
 import aGrade from "../../assets/img/aGrade.png";
 import sprinklesGif from "../../assets/img/sprinkles.gif";
 import Slider from "react-slick";
@@ -123,21 +122,21 @@ const Working = () => {
     cssEase: "ease",
     responsive: [
       {
-        breakpoint: 1024, // Medium devices
+        breakpoint: 1024,
         settings: {
           slidesToShow: slidesToShow,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // Small devices
+        breakpoint: 768,
         settings: {
           slidesToShow: slidesToShow,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // Extra small devices
+        breakpoint: 480,
         settings: {
           slidesToShow: slidesToShow,
           slidesToScroll: 1,

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { fadedCircle } from "../../assets/img/images";
-import { privacyPolicyData, termsAndConditionsData } from "../../data/data";
+import { termsAndConditionsData } from "../../data/data";
 
 const TermsSection = ({ title }) => {
   const renderContentWithLinks = (content) => {
@@ -39,7 +39,6 @@ const TermsSection = ({ title }) => {
                 </h3>
 
                 <div className="flex flex-col gap-6">
-                  {/* Terms data will appear here  */}
                   {termsAndConditionsData.map((section, index) => (
                     <div key={index} className="flex flex-col gap-3">
                       <h4 className="text-2xl font-semibold text-headingColor">
@@ -52,7 +51,6 @@ const TermsSection = ({ title }) => {
                           </li>
                         ))}
 
-                        {/* Render contact information if it exists */}
                         {section.contactInformation && (
                           <li className="pl-2 mt-4 flex flex-col gap-3">
                             <span className="font-semibold text-lg">

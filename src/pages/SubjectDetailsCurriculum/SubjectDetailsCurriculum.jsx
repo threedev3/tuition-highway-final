@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { subjectsOffering } from "../../data/data";
 import NotFoundPage from "../../components/NotFoundPage/NotFoundPage";
 import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroSection";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import SubjectSlider from "../../components/SubjectSlider/SubjectSlider";
-import SubjectDetailComp from "../../components/SubjectDetailComp/SubjectDetailComp";
 import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 import SubjectDetailCompCurriculum from "../../components/SubjectDetailCompCurriculum/SubjectDetailCompCurriculum";
 
@@ -20,8 +19,6 @@ const SubjectDetailsCurriculum = ({ demoRef, handleNavClick }) => {
   }
 
   const curriculumData = subject.content?.[curriculumType];
-
-  //   console.log("Curriculum data", curriculumData);
 
   if (!curriculumData) {
     return <NotFoundPage />;
@@ -51,8 +48,8 @@ const SubjectDetailsCurriculum = ({ demoRef, handleNavClick }) => {
         handleNavClick={handleNavClick}
       />
       <Testimonials />
-      <CurriculumSection  handleNavClick={handleNavClick} />
-      <SubjectSlider  handleNavClick={handleNavClick} />
+      <CurriculumSection handleNavClick={handleNavClick} />
+      <SubjectSlider handleNavClick={handleNavClick} />
       <div ref={demoRef}>
         <ContactForm
           demoRef={demoRef}

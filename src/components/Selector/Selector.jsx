@@ -10,7 +10,7 @@ export default function Selector({ data, selected, setSelected, placeholder }) {
           const selectedOption = data.find(
             (item) => item.id === parseInt(e.target.value)
           );
-          setSelected(selectedOption || null); // Ensure the selectedOption is set correctly
+          setSelected(selectedOption || null); 
         }}
         className={clsx(
           "w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs",

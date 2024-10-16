@@ -1,6 +1,5 @@
 import React from "react";
 import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroSection";
-import ContactForm from "../../components/ContactForm/ContactForm";
 import TermsSection from "../../components/TermsSection/TermsSection";
 
 const TermsOfService = ({ demoRef }) => {
@@ -13,13 +12,7 @@ const TermsOfService = ({ demoRef }) => {
         btnText={"Back To Home"}
       />
       <TermsSection title="Terms of Service" />
-      {/* <div ref={demoRef}>
-        <ContactForm
-          demoRef={demoRef}
-          firstString={"Request a Free "}
-          secondString={"Demo"}
-        />
-      </div> */}
+      
     </div>
   );
 };

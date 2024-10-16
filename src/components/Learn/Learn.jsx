@@ -26,14 +26,13 @@ const Learn = ({ firstHead, secondHead, description, style, textStyle }) => {
                 animate={
                   isInView
                     ? {
-                        scale: [1, 1.3, 1], // Scale up and back to original size
-                        rotate: [0, 4, -12, 0], // Shake effect
+                        scale: [1, 1.3, 1], 
+                        rotate: [0, 4, -12, 0], 
                         transition: {
-                          duration: 2, // Total animation duration
-                          ease: "easeInOut", // Smooth easing
+                          ease: "easeInOut", 
                         },
                       }
-                    : { scale: 1 } // No animation when not in view
+                    : { scale: 1 } 
                 }
               />
             </div>

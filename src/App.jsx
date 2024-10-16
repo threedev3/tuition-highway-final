@@ -1,4 +1,3 @@
-import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -25,56 +24,111 @@ import { useScrollToSection } from "./hooks/useScrollToSection";
 function App() {
   const demoRef = useRef(null);
 
-  // Define the sections with their refs
   const sections = {
     Demo: demoRef,
   };
 
-  // Use the custom hook and pass the sections object
   const handleNavClick = useScrollToSection(sections);
   return (
     <>
       <Router>
-        <Navbar  handleNavClick={handleNavClick} />
+        <Navbar handleNavClick={handleNavClick} />
         <Routes>
-          <Route path="/" element={<Home demoRef={demoRef} handleNavClick={handleNavClick} />} />
+          <Route
+            path="/"
+            element={<Home demoRef={demoRef} handleNavClick={handleNavClick} />}
+          />
           <Route
             path="/testimonials"
-            element={<TestimonialsPage demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <TestimonialsPage
+                demoRef={demoRef}
+                handleNavClick={handleNavClick}
+              />
+            }
           />
-          <Route path="/courses" element={<SubjectsPage demoRef={demoRef} handleNavClick={handleNavClick} />} />
+          <Route
+            path="/courses"
+            element={
+              <SubjectsPage demoRef={demoRef} handleNavClick={handleNavClick} />
+            }
+          />
           <Route
             path="/subjects/:slug"
-            element={<SubjectDetails demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <SubjectDetails
+                demoRef={demoRef}
+                handleNavClick={handleNavClick}
+              />
+            }
           />
           <Route
             path="/subjects/:slug/:curriculumType"
-            element={<SubjectDetailsCurriculum demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <SubjectDetailsCurriculum
+                demoRef={demoRef}
+                handleNavClick={handleNavClick}
+              />
+            }
           />
 
-          <Route path="/:slug" element={<SlugRoute demoRef={demoRef} handleNavClick={handleNavClick} />} />
-          <Route path="/about-us" element={<About demoRef={demoRef} handleNavClick={handleNavClick} />} />
+          <Route
+            path="/:slug"
+            element={
+              <SlugRoute demoRef={demoRef} handleNavClick={handleNavClick} />
+            }
+          />
+          <Route
+            path="/about-us"
+            element={
+              <About demoRef={demoRef} handleNavClick={handleNavClick} />
+            }
+          />
           <Route
             path="/contact-us"
-            element={<ContactPage demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <ContactPage demoRef={demoRef} handleNavClick={handleNavClick} />
+            }
           />
-          <Route path="/blogs" element={<Blogs demoRef={demoRef} handleNavClick={handleNavClick} />} />
+          <Route
+            path="/blogs"
+            element={
+              <Blogs demoRef={demoRef} handleNavClick={handleNavClick} />
+            }
+          />
 
           <Route
             path="/free-demo"
-            element={<TakingDemoPage demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <TakingDemoPage
+                demoRef={demoRef}
+                handleNavClick={handleNavClick}
+              />
+            }
           />
           <Route
             path="/join-as-a-tutor"
-            element={<JoinTutor demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <JoinTutor demoRef={demoRef} handleNavClick={handleNavClick} />
+            }
           />
           <Route
             path="/privacy-policy"
-            element={<PrivacyPolicy demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <PrivacyPolicy
+                demoRef={demoRef}
+                handleNavClick={handleNavClick}
+              />
+            }
           />
           <Route
             path="/terms-conditions"
-            element={<TermsOfService demoRef={demoRef} handleNavClick={handleNavClick} />}
+            element={
+              <TermsOfService
+                demoRef={demoRef}
+                handleNavClick={handleNavClick}
+              />
+            }
           />
           <Route path="/faqs" element={<FaqPage />} />
           <Route path="/thankyou" element={<ThankYouPage />} />

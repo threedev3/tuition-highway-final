@@ -31,7 +31,6 @@ h6 {
 .custom-border::before {
   content: "";
   position: absolute;
-  /* top: 0; */
   right: -8.5px;
   top: -8.5px;
   width: 16px;
@@ -56,21 +55,7 @@ h6 {
     margin-top: 10px;
   }
 }
-/* @media (min-width: 450px) {
-  .slick-dots li button:before {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 408px) {
-  .slick-dots li button:before {
-    margin-top: 30px;
-  }
-}
-@media (max-width: 408px) {
-  .slick-dots {
-    bottom: 0;
-  }
-} */
+
 @media (max-width: 450px) {
   .slick-dots {
     display: none !important;
@@ -98,23 +83,6 @@ h6 {
     font-size: 18px; /* Example size for medium screens */
   }
 }
-
-/* .select__control,
-.css-13cymwt-control {
-  padding-right: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: transparent !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 2px !important;
-  border-radius: 0 !important;
-  border-bottom-color: #38383856 !important;
-  appearance: none;
-  width: 100%;
-  text-transform: none;
-} */
 
 .css-hlgwow {
   padding-left: 0 !important;

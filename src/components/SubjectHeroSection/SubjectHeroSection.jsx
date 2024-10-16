@@ -1,12 +1,10 @@
 import React from "react";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const SubjectHeroSection = ({
   title,
   description,
   btnText,
-  curriculumType,
   handleNavClick,
 }) => {
   const navigate = useNavigate();

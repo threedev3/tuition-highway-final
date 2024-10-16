@@ -42,7 +42,6 @@ const SubjectsCard = ({ item, handleNavClick }) => {
         <div className="text-headingColor xl:text-base text-sm md:min-h-28 sm:min-h-[70px] min-[346px]:min-h-[60px] min-h-[70px] font-medium">
           {item.description}
         </div>
-        {/* Conditional rendering with animation */}
         <div className="lg:block hidden">
           <AnimatePresence>
             {isHovered && (

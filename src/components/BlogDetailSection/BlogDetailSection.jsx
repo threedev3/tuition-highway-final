@@ -18,22 +18,18 @@ const BlogDetailSection = ({ blog }) => {
       </div>
       <div className="relative md:py-20 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]">
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-6 gap-8 ">
-          {/* Blog details will appear here  */}
           {blog.content.map((section, index) => (
             <div key={index} className="blog-section flex flex-col gap-4">
-              {/* Section Heading */}
               {section.heading && (
                 <h2 className="sm:text-3xl text-xl font-bold text-headingColor">
                   {section.heading}
                 </h2>
               )}
 
-              {/* Paragraphs */}
               {section.para &&
                 section.para.map((paraContent, paraIndex) => (
                   <div key={paraIndex}>
                     {paraContent.map((textItem, textIndex) => {
-                      // Check if textItem is a link or plain text
                       if (textItem.type === "link") {
                         return (
                           <a
@@ -53,7 +49,6 @@ const BlogDetailSection = ({ blog }) => {
                           </h3>
                         );
                       } else if (textItem.type === "list") {
-                        // Handle list items
                         return (
                           <ul
                             key={textIndex}

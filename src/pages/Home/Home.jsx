@@ -19,7 +19,6 @@ const Home = ({ demoRef, handleNavClick }) => {
       <Reasons handleNavClick={handleNavClick} />
       <Subjects />
       <CurriculumSection handleNavClick={handleNavClick} />
-      {/* <FreeDemo demoRef={demoRef} /> */}
       <Tutors />
       <Learn
         firstHead="Satisfaction Guaranteed!"

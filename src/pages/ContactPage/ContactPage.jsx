@@ -1,8 +1,7 @@
 import React from "react";
 import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroSection";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import EnrollDetails from "../../components/EnrollDetails/EnrollDetails";
-import { enrollDetails } from "../../data/data";
+
 
 const ContactPage = ({ demoRef, handleNavClick }) => {
   return (

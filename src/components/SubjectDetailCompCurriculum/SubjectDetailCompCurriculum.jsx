@@ -1,38 +1,21 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { fadedCircle } from "../../assets/img/images";
 import { motion, AnimatePresence } from "framer-motion";
-import Outcomes from "../Outcomes/Outcomes";
-import OutcomeAccordian from "../Accordian/OutcomeAccordian";
+
 import { learningOutcomesImg } from "../../assets/img/images";
 
-const SubjectDetailCompCurriculum = ({ demoRef, subject, curriculumData, handleNavClick }) => {
-  // const [activeView, setActiveView] = useState("");
+const SubjectDetailCompCurriculum = ({
+  subject,
+  curriculumData,
+  handleNavClick,
+}) => {
   const tabsRef = useRef(null);
-  // const floatingTabsEnd = useRef(null);
-
- 
 
   useEffect(() => {
     console.log("Curriculum Data", curriculumData);
   }, [curriculumData]);
 
-  // const activeSubjectData = subject.content?.[activeView] || {};
-  // const { description = [], learningOutcomes = [] } = activeSubjectData;
-  // const isGeneralView = !activeView;
-
-  // const outcomes = [
-  //   {
-  //     title: "Learning Outcomes",
-  //     answer: isGeneralView
-  //       ? subject.generalLearningOutcome
-  //       : activeSubjectData?.learningOutcomes || [],
-  //   },
-  // ];
-
   const renderItems = () => {
-    // console.log("activeSubjectData", activeSubjectData);
-    // console.log("Subject content", subject.content);
-
     return (
       <motion.div
         className=""
@@ -46,22 +29,12 @@ const SubjectDetailCompCurriculum = ({ demoRef, subject, curriculumData, handleN
             <h3 className="xl:text-[36px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
               About The Course
             </h3>
-            {/* <div className="flex flex-col gap-6">
-              {subject.generalData.map((point, index) => (
-                <div key={index} className="flex flex-row gap-4">
-                  <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="xl:text-base sm:text-sm text-sm font-semibold">
-                    {point}
-                  </p>
-                </div>
-              ))}
-            </div> */}
 
             <div className="flex flex-col gap-6 ">
               {curriculumData.description.map((point, index) => (
                 <div key={index} className="flex flex-row gap-4">
                   <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="xl:text-base sm:text-sm text-sm font-semibold">
+                  <p className="xl:text-base sm:text-sm text-sm font-medium">
                     {point}
                   </p>
                 </div>
@@ -94,9 +67,7 @@ const SubjectDetailCompCurriculum = ({ demoRef, subject, curriculumData, handleN
         ref={tabsRef}
         className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]"
       >
-        <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-48 w-40 sm:block hidden">
-          <img src={fadedCircle} alt="" className="object-contain" />
-        </div>
+        
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col lg:gap-16 md:gap-12 gap-8 ">
           <AnimatePresence>
             <div className="">{renderItems()}</div>
@@ -104,40 +75,35 @@ const SubjectDetailCompCurriculum = ({ demoRef, subject, curriculumData, handleN
         </div>
       </div>
 
-      <div
-        className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full bg-subjectsBg "
-        // ref={floatingTabsEnd}
-      >
+      <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full bg-subjectsBg ">
         <div className="max-w-[1400px] mx-auto ">
           <div className="max-w-full ">
-            {/* {curriculumData.learningOutcomes.map((item, index) => ( */}
-              <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
-                <div className="lg:block hidden">
-                  <img
-                    src={learningOutcomesImg}
-                    alt=""
-                    className="w-[500px] object-contain"
-                  />
+            <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-4 flex flex-col gap-6">
+              <div className="lg:block hidden">
+                <img
+                  src={learningOutcomesImg}
+                  alt=""
+                  className="w-[500px] object-contain"
+                />
+              </div>
+              <div className="flex flex-col gap-6">
+                <div className="w-full">
+                  <h3 className="xl:text-[36px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
+                    Learning Outcomes
+                  </h3>
                 </div>
-                <div className="flex flex-col gap-6">
-                  <div className="w-full">
-                    <h3 className="xl:text-[36px] xl:leading-tight md:text-4xl sm:text-3xl text-[27px] lg:leading-[3.5rem] leading-8 font-extrabold text-headingColor">
-                      Learning Outcomes
-                    </h3>
-                  </div>
-                  <div className="flex flex-col gap-4 w-full">
-                    {curriculumData.learningOutcomes.map((item, index) => (
-                      <div className="flex flex-row gap-4 w-full" key={index}>
-                        <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                        <p className="xl:text-base sm:text-sm text-sm font-semibold">
-                          {item}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                <div className="flex flex-col gap-4 w-full">
+                  {curriculumData.learningOutcomes.map((item, index) => (
+                    <div className="flex flex-row gap-4 w-full" key={index}>
+                      <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
+                      <p className="xl:text-base sm:text-sm text-sm font-medium">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
-            {/* ))} */}
+            </div>
           </div>
         </div>
       </div>

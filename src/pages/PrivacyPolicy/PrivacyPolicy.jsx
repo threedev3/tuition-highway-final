@@ -1,6 +1,5 @@
 import React from "react";
 import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroSection";
-import ContactForm from "../../components/ContactForm/ContactForm";
 import PolicySection from "../../components/PolicySection/PolicySection";
 
 const PrivacyPolicy = ({ demoRef }) => {
@@ -13,13 +12,7 @@ const PrivacyPolicy = ({ demoRef }) => {
         btnText={"Back To Home"}
       />
       <PolicySection title="Privacy Policy" />
-      {/* <div ref={demoRef}>
-        <ContactForm
-          demoRef={demoRef}
-          firstString={"Request a Free "}
-          secondString={"Demo"}
-        />
-      </div> */}
+      
     </div>
   );
 };

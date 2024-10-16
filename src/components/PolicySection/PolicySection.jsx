@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { fadedCircle } from "../../assets/img/images";
 import { privacyPolicyData } from "../../data/data";
 
@@ -39,7 +39,6 @@ const PolicySection = ({ title }) => {
                 </h3>
 
                 <div className="flex flex-col gap-6">
-                  {/* Policy data will appear here  */}
                   {privacyPolicyData.map((section, index) => (
                     <div key={index} className="flex flex-col gap-4">
                       <h4 className="text-2xl font-semibold text-headingColor">

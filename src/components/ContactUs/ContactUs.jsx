@@ -1,13 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Selector from "../Selector/Selector";
-import {
-  customStyles,
-  ourCurriculum,
-  selectedCountries,
-  subjectsOffer,
-} from "../../data/data";
+import React, { useState } from "react";
+import { customStyles, selectedCountries } from "../../data/data";
 import useFormValidation from "../../hooks/useFormValidation";
-import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
 import Select from "react-select";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -24,14 +17,13 @@ const ContactUs = () => {
     message: "",
   });
 
-  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
   const handlePhoneChange = (phone) => {
-    setFormValues((prev) => ({ ...prev, phone })); // Update only the phone field
+    setFormValues((prev) => ({ ...prev, phone }));
   };
 
   const handleSelectorChange = (field, value) => {
@@ -42,7 +34,6 @@ const ContactUs = () => {
     e.preventDefault();
 
     if (validateContactForm(formValues)) {
-      // Form is valid, proceed with submission
       console.log("Form Submitted", formValues);
       setFormValues({
         fullName: "",
@@ -58,7 +49,7 @@ const ContactUs = () => {
   };
 
   const countryObjects = selectedCountries.map((country, index) => ({
-    value: country, // Ensure IDs are unique and start from 1
+    value: country,
     label: country,
   }));
 
@@ -104,36 +95,20 @@ const ContactUs = () => {
             </div>
             <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                {/* <input
-                  type="text"
-                  name="phone"
-                  placeholder="WhatsApp/Mobile Number"
-                  className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
-                  value={formValues.phone}
-                  onChange={handleInputChange}
-                /> */}
                 <div className="py-0.5 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor">
-                    <PhoneInput
-                      defaultCountry="pk"
-                      name="phone"
-                      value={formValues.phone}
-                      onChange={handlePhoneChange}
-                      placeholder="Phone Number"
-                    />
-                  </div>
+                  <PhoneInput
+                    defaultCountry="pk"
+                    name="phone"
+                    value={formValues.phone}
+                    onChange={handlePhoneChange}
+                    placeholder="Phone Number"
+                  />
+                </div>
                 {errors.phone && (
                   <span className="text-red-600 sm:text-base text-sm">
                     {errors.phone}
                   </span>
                 )}
-                {/* <div className="py-0.5 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm">
-                          <PhoneInput
-                            defaultCountry="pk"
-                            value={phone}
-                            onChange={(phone) => setPhone(phone)}
-                            placeholder="Country"
-                          />
-                        </div> */}
               </div>
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                 <input
@@ -153,31 +128,15 @@ const ContactUs = () => {
             </div>
             <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                {/* <input
-                          type="text"
-                          placeholder="Country"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
-                        /> */}
-
-                {/* <Selector
-                  data={countryObjects}
-                  selected={formValues.country}
-                  setSelected={(country) =>
-                    handleSelectorChange("country", country)
-                  }
-                  placeholder="Select Country"
-                /> */}
                 <Select
-                  // defaultValue={[colourOptions[2], colourOptions[3]]}
                   name="country"
                   options={countryObjects}
-                  // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
                   classNamePrefix="select"
                   value={formValues.country}
                   onChange={(country) =>
                     handleSelectorChange("country", country)
                   }
-                  styles={customStyles} // Apply custom styles
+                  styles={customStyles}
                   placeholder="Select Country"
                   components={{
                     DropdownIndicator: (props) => (
@@ -194,12 +153,6 @@ const ContactUs = () => {
             </div>
             <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
               <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                {/* <input
-                          type="email"
-                          placeholder="Curriculum"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
-                        /> */}
-
                 <textarea
                   name="message"
                   placeholder="Any Message"

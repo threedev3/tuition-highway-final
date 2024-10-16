@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Outcomes from "../Outcomes/Outcomes";
 
 const CurriculumDetailComp = ({curriculum, handleNavClick }) => {
 
@@ -23,7 +22,7 @@ const CurriculumDetailComp = ({curriculum, handleNavClick }) => {
               {curriculum.content.map((point, index) => (
                 <div key={index} className="flex flex-row gap-4">
                   <div className="sm:w-4 sm:h-4 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                  <p className="xl:text-base sm:text-base text-sm font-semibold">
+                  <p className="xl:text-base sm:text-base text-sm font-medium">
                     {point}
                   </p>
                 </div>
@@ -53,16 +52,13 @@ const CurriculumDetailComp = ({curriculum, handleNavClick }) => {
   return (
     <div>
       <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]">
-        {/* <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-56 w-40">
-          <img src={fadedCircle} alt="" className="object-contain" />
-        </div> */}
+      
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col sm:gap-20 gap-8 ">
           <AnimatePresence>
             <div className="">{renderItems()}</div>
           </AnimatePresence>
         </div>
       </div>
-      {/* <Outcomes /> */}
     </div>
   );
 };

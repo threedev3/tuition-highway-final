@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import { useNavigate, useParams } from "react-router-dom";
-import { curriculumOffering, subjectsOffering } from "../../data/data";
+import { useParams } from "react-router-dom";
+import { curriculumOffering } from "../../data/data";
 import NotFoundPage from "../../components/NotFoundPage/NotFoundPage";
 import SubjectHeroSection from "../../components/SubjectHeroSection/SubjectHeroSection";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import SubjectSlider from "../../components/SubjectSlider/SubjectSlider";
-import SubjectDetailComp from "../../components/SubjectDetailComp/SubjectDetailComp";
 import CurriculumDetailComp from "../../components/CurriculumDetailComp/CurriculumDetailComp";
 import CurriculumSection from "../../components/CurriculumSection/CurriculumSection";
 
@@ -25,10 +24,13 @@ const CurriculumPage = ({ demoRef, handleNavClick }) => {
         description="Give your child a head start by enrolling them in our comprehensive American Curriculum program, all from the comfort of your home."
         handleNavClick={handleNavClick}
       />
-      <CurriculumDetailComp  curriculum={curriculum} handleNavClick={handleNavClick} />
+      <CurriculumDetailComp
+        curriculum={curriculum}
+        handleNavClick={handleNavClick}
+      />
       <Testimonials />
       <CurriculumSection handleNavClick={handleNavClick} />
-      <SubjectSlider  handleNavClick={handleNavClick} />
+      <SubjectSlider handleNavClick={handleNavClick} />
 
       <div ref={demoRef}>
         <ContactForm

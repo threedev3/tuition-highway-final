@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Outcomes from "../Outcomes/Outcomes";
-import OutcomeAccordian from "../Accordian/OutcomeAccordian";
 import { learningOutcomesImg } from "../../assets/img/images";
 
 const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
@@ -14,18 +12,10 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
     setActiveView(view);
   };
 
- 
-
-  // Scroll event listener to toggle floating tabs
   useEffect(() => {
     const handleScroll = () => {
       const tabsOffsetTop = tabsRef.current?.offsetTop || 0;
-      setShowFloatingTabs(window.scrollY >= tabsOffsetTop); // Show floating tabs after scrolling past the original ones
-
-      // const tabsOffsetTop2 = floatingTabsEnd.current?.offsetTop || 0;
-      // if (window.scrollY > tabsOffsetTop2) {
-      //   setShowFloatingTabs(false);
-      // }
+      setShowFloatingTabs(window.scrollY >= tabsOffsetTop);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -49,7 +39,7 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
     console.log("activeSubjectData", activeSubjectData);
     console.log("Subject content", subject.content);
 
-    console.log("Length", Object.keys(subject.content) < 6)
+    console.log("Length", Object.keys(subject.content) < 6);
 
     return (
       <motion.div
@@ -69,7 +59,7 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
                 {subject.generalData.map((point, index) => (
                   <div key={index} className="flex flex-row gap-4">
                     <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                    <p className="xl:text-base sm:text-sm text-sm font-semibold">
+                    <p className="xl:text-base sm:text-sm text-sm font-medium">
                       {point}
                     </p>
                   </div>
@@ -82,7 +72,7 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
                 {description.map((point, index) => (
                   <div key={index} className="flex flex-row gap-4">
                     <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                    <p className="xl:text-base sm:text-sm text-sm font-semibold">
+                    <p className="xl:text-base sm:text-sm text-sm font-medium">
                       {point}
                     </p>
                   </div>
@@ -116,28 +106,7 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
         ref={tabsRef}
         className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full min-h-[40vh]"
       >
-        {/* <div className="absolute xl:-top-56 -top-48 left-0 -z-10 xl:w-48 w-40 sm:block hidden">
-          <img src={fadedCircle} alt="" className="object-contain" />
-        </div> */}
         <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col lg:gap-16 md:gap-12 gap-8 ">
-          {/* <div className="flex sm:flex-row flex-col justify-center items-center flex-wrap gap-6">
-            {Object.keys(subject.content || {}).map((curriculum, index) => (
-              <motion.button
-                key={index}
-                onClick={() => handleViewChange(curriculum)}
-                className={`py-1.5 sm:px-6 px-4 rounded-full xl:text-base text-sm transition-all duration-300 sm:w-auto w-72 ${
-                  activeView === curriculum
-                    ? "bg-activeBlueBtn text-white"
-                    : "bg-subjectBtn text-white"
-                }`}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", damping: 17 }}
-              >
-                {curriculum}
-              </motion.button>
-            ))}
-          </div> */}
-
           <div className="flex flex-row lg:flex-wrap flex-nowrap lg:justify-center justify-start items-center overflow-x-auto no-scrollbar-original sm:gap-6 gap-3">
             {Object.keys(subject.content || {}).map((curriculum, index) => (
               <motion.button
@@ -152,8 +121,6 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
                     ? "bg-activeBlueBtn text-white"
                     : "bg-subjectBtn text-white"
                 }`}
-                // whileHover={{ scale: 1.05 }} // Slightly smaller hover scale for smaller screens
-                // transition={{ type: "spring", damping: 17 }}
               >
                 {curriculum.replace("-", " ")}
               </motion.button>
@@ -166,9 +133,14 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
         </div>
       </div>
 
-      {/* Floating Tabs */}
       {showFloatingTabs && (
-        <div className={`w-[100%] fixed sm:top-[94.6px] top-[81.3px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg  px-6 xl:py-4 py-3 flex xl:justify-center lg:${Object.keys(subject.content).length < 6 ? "justify-center" : "justify-start"} justify-start gap-4 z-[15] overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x`}>
+        <div
+          className={`w-[100%] fixed sm:top-[89.3px] top-[81.3px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg  px-6 xl:py-4 py-3 flex xl:justify-center lg:${
+            Object.keys(subject.content).length < 6
+              ? "justify-center"
+              : "justify-start"
+          } justify-start gap-4 z-[15] overflow-x-auto no-scrollbar whitespace-nowrap touch-pan-x`}
+        >
           <div className="flex justify-center items-center gap-4">
             {Object.keys(subject.content || {}).map((curriculum, index) => (
               <button
@@ -215,7 +187,7 @@ const SubjectDetailComp = ({ demoRef, subject, handleNavClick }) => {
                     {item.answer.map((item, index) => (
                       <div className="flex flex-row gap-4 w-full">
                         <div className="sm:w-3 sm:h-3 w-3 h-3 bg-blueBtn rounded-full flex-shrink-0 mt-1.5"></div>
-                        <p className="xl:text-base sm:text-sm text-sm font-semibold">
+                        <p className="xl:text-base sm:text-sm text-sm font-medium">
                           {item}
                         </p>
                       </div>

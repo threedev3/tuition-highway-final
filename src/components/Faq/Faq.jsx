@@ -1,11 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, {  useState } from "react";
 import Accordian from "../Accordian/Accordian";
 import faqImg from "../../assets/img/faqimg.png";
 import { faqs } from "../../data/data";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  const faqHead = useRef(null);
 
   const handleAccordionClick = (index) => {
     setOpenIndex(openIndex === index ? null : index);

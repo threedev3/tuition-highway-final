@@ -55,24 +55,22 @@ import aboutImg from "./aboutImg.png";
 import fadedCircle from "./fadedCircle.png";
 
 import heroSectionImg2 from "./heroSectionImg2.webp";
-import heroSectionImg from "./heroSectionImg.png";
 
 // blog images
-import blogImg1 from "./blogImg1.png";
-import blogImg2 from "./blogImg2.png";
-import blogImg3 from "./blogImg3.png";
-import blogImg4 from "./blogImg4.png";
-import blogImg5 from "./blogImg5.png";
-import blogImg6 from "./blogImg6.png";
-import blogImg7 from "./blogImg7.png";
-import blogImg8 from "./blogImg8.png";
-import blogImg9 from "./blogImg9.png";
+import blogImg1 from "./blogImg1.webp";
+import blogImg2 from "./blogImg2.webp";
+import blogImg3 from "./blogImg3.webp";
+import blogImg4 from "./blogImg4.webp";
+import blogImg5 from "./blogImg5.webp";
+import blogImg6 from "./blogImg6.webp";
+import blogImg7 from "./blogImg7.jpg";
+import blogImg8 from "./blogImg8.jpg";
+import blogImg9 from "./blogImg9.jpg";
 
 import joinTutor from "../../assets/img/joinTutor.png";
 import freeDemo from "../../assets/img/freeDemo.png";
 
 // Subjects hero images
-import accountsSubject from "./accountsSubject.png";
 import sociologySubject from "./sociologySubject.png";
 import mathsSub from "./mathsSub.png";
 import chemistrySub from "./chemistrySub.png";
@@ -116,7 +114,6 @@ export {
   psychology,
   stats,
   business,
-  accountsSubject,
   sociologySubject,
   mathsSub,
   chemistrySub,
@@ -156,7 +153,6 @@ export {
   learningImg2,
   aboutImg,
   fadedCircle,
-  heroSectionImg,
   heroSectionImg2,
   blogImg1,
   blogImg2,

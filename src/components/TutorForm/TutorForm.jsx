@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Selector from "../Selector/Selector";
+import React, { useState } from "react";
 import {
   customStyles,
   ourCurriculum,
@@ -7,7 +6,6 @@ import {
   subjectsOffer,
 } from "../../data/data";
 import useFormValidation from "../../hooks/useFormValidation";
-import { motion } from "framer-motion";
 import { PhoneInput } from "react-international-phone";
 import Select from "react-select";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -31,14 +29,13 @@ const TutorForm = () => {
     reasonforTeach: "",
   });
 
-  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
   const handlePhoneChange = (phone) => {
-    setFormValues((prev) => ({ ...prev, phone })); // Update only the phone field
+    setFormValues((prev) => ({ ...prev, phone }));
   };
 
   const handleSelectorChange = (field, value) => {
@@ -47,12 +44,12 @@ const TutorForm = () => {
 
   const handleFileChange = (e) => {
     const files = Array.from(e.target.files);
-    console.log("Selected Files: ", files); // Debugging: Log the selected files as an array
+    console.log("Selected Files: ", files);
 
     if (files.length > 0) {
       setFormValues((prev) => ({
         ...prev,
-        uploadedResume: [...prev.uploadedResume, ...files], // Append the new files to the existing ones
+        uploadedResume: [...prev.uploadedResume, ...files],
       }));
     }
   };
@@ -61,7 +58,6 @@ const TutorForm = () => {
     e.preventDefault();
 
     if (validateTutor(formValues)) {
-      // Form is valid, proceed with submission
       console.log("Form Submitted", formValues);
       setFormValues({
         fullName: "",
@@ -110,9 +106,6 @@ const TutorForm = () => {
     if (currentStep < 3) setCurrentStep(currentStep + 1);
   };
 
-  // const handlePrev = () => {
-  //   if (currentStep > 1) setCurrentStep(currentStep - 1);
-  // };
   return (
     <div>
       <div className="flex ">
@@ -183,14 +176,6 @@ const TutorForm = () => {
               </div>
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                    type="text"
-                    name="phone"
-                    placeholder="WhatsApp/Mobile Number"
-                    className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor"
-                    value={formValues.phone}
-                    onChange={handleInputChange}
-                  /> */}
                   <div className="py-0.5 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor">
                     <PhoneInput
                       defaultCountry="pk"
@@ -205,14 +190,6 @@ const TutorForm = () => {
                       {errors.phone}
                     </span>
                   )}
-                  {/* <div className="py-0.5 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm">
-                          <PhoneInput
-                            defaultCountry="pk"
-                            value={phone}
-                            onChange={(phone) => setPhone(phone)}
-                            placeholder="Country"
-                          />
-                        </div> */}
                 </div>
 
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
@@ -233,31 +210,15 @@ const TutorForm = () => {
               </div>
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="text"
-                          placeholder="Country"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm"
-                        /> */}
-
-                  {/* <Selector
-                    data={countryObjects}
-                    selected={formValues.country}
-                    setSelected={(country) =>
-                      handleSelectorChange("country", country)
-                    }
-                    placeholder="Select Country"
-                  /> */}
                   <Select
-                    // defaultValue={[colourOptions[2], colourOptions[3]]}
                     name="country"
                     options={countryObjects}
-                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
                     classNamePrefix="select"
                     value={formValues.country}
                     onChange={(country) =>
                       handleSelectorChange("country", country)
                     }
-                    styles={customStyles} // Apply custom styles
+                    styles={customStyles}
                     placeholder="Select Country"
                     components={{
                       DropdownIndicator: (props) => (
@@ -287,24 +248,16 @@ const TutorForm = () => {
             <div className="sm:space-y-6">
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="text"
-                          placeholder="Subject"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] "
-                        /> */}
-
                   <Select
-                    // defaultValue={[colourOptions[2], colourOptions[3]]}
                     isMulti
                     name="subjects"
                     options={subjectOptions}
-                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
                     classNamePrefix="select"
                     value={formValues.selectedSubject}
                     onChange={(subject) =>
                       handleSelectorChange("selectedSubject", subject)
                     }
-                    styles={customStyles} // Apply custom styles
+                    styles={customStyles}
                     placeholder="Select Subjects"
                     components={{
                       DropdownIndicator: (props) => (
@@ -321,23 +274,15 @@ const TutorForm = () => {
               </div>
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="text"
-                          placeholder="Grade/Year"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
-                        /> */}
-
                   <Select
-                    // defaultValue={[colourOptions[2], colourOptions[3]]}
                     name="grade"
                     options={gradeOptions}
-                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
                     classNamePrefix="select"
                     value={formValues.selectedGrade}
                     onChange={(grade) =>
                       handleSelectorChange("selectedGrade", grade)
                     }
-                    styles={customStyles} // Apply custom styles
+                    styles={customStyles}
                     placeholder="Select Grade"
                     components={{
                       DropdownIndicator: (props) => (
@@ -354,23 +299,15 @@ const TutorForm = () => {
               </div>
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="email"
-                          placeholder="Curriculum"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
-                        /> */}
-
                   <Select
-                    // defaultValue={[colourOptions[2], colourOptions[3]]}
                     name="curriculum"
                     options={curriculumOptions}
-                    // className="w-full py-2 pr-8 border-b-2 border-b-borderColor bg-transparent placeholder:text-headingColor sm:placeholder:text-base placeholder:text-xs"
                     classNamePrefix="select"
                     value={formValues.selectedCurriculum}
                     onChange={(curriculum) =>
                       handleSelectorChange("selectedCurriculum", curriculum)
                     }
-                    styles={customStyles} // Apply custom styles
+                    styles={customStyles}
                     placeholder="Select Curriculum"
                     components={{
                       DropdownIndicator: (props) => (
@@ -385,14 +322,7 @@ const TutorForm = () => {
                   )}
                 </div>
               </div>
-              {/* Add more fields as needed */}
               <div className="text-right">
-                {/* <button
-                        onClick={handlePrev}
-                        className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg shadow-lg hover:bg-gray-400 mr-4"
-                      >
-                        Previous
-                      </button> */}
                 <button
                   onClick={handleNext}
                   className="bg-blueHeading mt-8 text-white px-6 py-2 rounded-full shadow-lg "
@@ -406,12 +336,6 @@ const TutorForm = () => {
             <div className="sm:space-y-6">
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col ">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="text"
-                          placeholder="Subject"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] "
-                        /> */}
-
                   <input
                     type="text"
                     name="qualification"
@@ -427,12 +351,6 @@ const TutorForm = () => {
                   )}
                 </div>
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="text"
-                          placeholder="Grade/Year"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
-                        /> */}
-
                   <input
                     type="text"
                     name="teachingExperience"
@@ -450,12 +368,6 @@ const TutorForm = () => {
               </div>
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="email"
-                          placeholder="Curriculum"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
-                        /> */}
-
                   <input
                     type="text"
                     name="remunerationPerHour"
@@ -481,7 +393,7 @@ const TutorForm = () => {
                     name="uploadedResume"
                     className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none sm:placeholder:text-base placeholder:text-sm"
                     onChange={handleFileChange}
-                    multiple // Allow multiple file uploads
+                    multiple
                   />
                   {errors.uploadedResume && (
                     <span className="text-red-600 sm:text-base text-sm">
@@ -492,12 +404,6 @@ const TutorForm = () => {
               </div>
               <div className="sm:flex sm:flex-row sm:justify-between sm:items-center sm:gap-8 flex flex-col">
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
-                  {/* <input
-                          type="email"
-                          placeholder="Curriculum"
-                          className="py-2 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px]"
-                        /> */}
-
                   <textarea
                     name="reasonforTeach"
                     placeholder="Reason For Teach"
@@ -514,14 +420,7 @@ const TutorForm = () => {
                 </div>
               </div>
 
-              {/* Add more fields as needed */}
               <div className="text-right">
-                {/* <button
-                        onClick={handlePrev}
-                        className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg shadow-lg hover:bg-gray-400 mr-4"
-                      >
-                        Previous
-                      </button> */}
                 <button className="bg-orangeHeading  mt-8 text-white px-6 py-2 rounded-full shadow-lg hover:bg-orange-600">
                   Submit
                 </button>
