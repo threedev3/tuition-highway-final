@@ -52,7 +52,6 @@ const CurriculumSection = ({ handleNavClick }) => {
     });
   };
 
-  const navigate = useNavigate();
 
   return (
     <div className="relative  max-w-full overflow-hidden sm:h-56 h-48">
@@ -86,7 +85,6 @@ const CurriculumSection = ({ handleNavClick }) => {
                       to={item.to}
                       className="text-white min-[1510px]:text-2xl sm:text-[22px] text-[17px] text-center font-semibold min-w-[200px]"
                       onClick={() => {
-                        // navigate(`/${item.to}`);
                         scrollToTop();
                       }}
                     >

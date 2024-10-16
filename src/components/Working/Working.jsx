@@ -7,20 +7,19 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { stepsContent } from "../../data/data";
-import TypewriterComp from "../Typewriter/Typewriter";
 
 const Working = () => {
   const [showSteps, setShowSteps] = useState(true);
   const [showImage, setShowImage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [slidesToShow, setSlidesToShow] = useState(6); // Default slides to show
+  const [slidesToShow, setSlidesToShow] = useState(6);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    const stepDuration = 8000; // Show steps for 8 seconds
-    const imageDuration = 4000; // Show images for 4 seconds
+    const stepDuration = 8000;
+    const imageDuration = 4000;
 
     let showStepsTimeout;
     let showImageTimeout;
@@ -55,18 +54,6 @@ const Working = () => {
   const handleAfterChange = (index) => {
     setCurrentSlide(index);
   };
-
-  // const stepVariants = {
-  //   hidden: { opacity: 0, y: 50 },
-  //   visible: (i) => ({
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       delay: i * 0.2,
-  //       duration: 0.5,
-  //     },
-  //   }),
-  // };
 
   const imageVariants = {
     hidden: { scale: 0 },
@@ -166,11 +153,6 @@ const Working = () => {
     >
       <div className="max-w-[1400px] mx-auto flex flex-col gap-4 justify-between  h-full w-full">
         <div className="flex flex-col gap-6 items-center text-headingColor">
-          {/* <TypewriterComp
-            firstString="Easy Steps Towards"
-            secondString="Top Grades"
-          /> */}
-
           <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-headingColor">
             Easy Steps Towards Top Grades
           </h3>
@@ -187,57 +169,10 @@ const Working = () => {
               >
                 <Slider {...settings}>
                   {stepsContent.map((step, index) => (
-                    // <motion.div
-                    //   key={index}
-                    //   // variants={stepVariants}
-                    //   className="relative flex flex-col items-start px-2 py-6 "
-                    // >
-                    //   {index >= 0 && (
-                    //     <motion.div
-                    //       className="absolute -left-6 right-0 top-12 border-t-2 border-orangeHeading z-0"
-                    //       initial={{ width: 0 }}
-                    //       animate={{ width: "100%" }}
-                    //       // transition={{ duration: 1, delay: index * 0.3 }}
-                    //     ></motion.div>
-                    //   )}
-                    //   <motion.div
-                    //     className="z-10 w-14 h-14 flex items-center justify-center rounded-full border-4 border-orangeHeading bg-white text-headingColor font-bold font-MontserratBold text-2xl relative hover:bg-gradient-to-r hover:from-orangeHeading hover:to-toOrange hover:border-0 hover:text-white transition-colors duration-500"
-                    //     initial={{ scale: 0 }}
-                    //     animate={{ scale: 1 }}
-                    //     transition={{
-                    //       type: "spring",
-                    //       duration: 0.5,
-                    //       delay: index * 0.3,
-                    //     }}
-                    //   >
-                    //     {step.stepNumber}
-                    //   </motion.div>
-
-                    //   <motion.div
-                    //     className="mt-4 flex flex-col gap-2"
-                    //     initial={{ opacity: 0, y: 10 }}
-                    //     animate={{ opacity: 1, y: 0 }}
-                    //     transition={{ duration: 0.5, delay: index * 0.3 }}
-                    //   >
-                    //     <div>
-                    //       <h3 className="font-bold text-lg text-headingColor">
-                    //         {step.title}
-                    //       </h3>
-                    //       <h3 className="font-bold text-lg text-headingColor">
-                    //         {step.subtitle}
-                    //       </h3>
-                    //     </div>
-                    //     <p className="text-sm text-headingColor">
-                    //       {step.description}
-                    //     </p>
-                    //   </motion.div>
-                    // </motion.div>
-
                     <motion.div
                       key={index}
                       className="relative flex flex-col items-start px-4 py-8 "
                     >
-                      {/* Horizontal line with smooth width expansion */}
                       {index >= 0 && (
                         <motion.div
                           className="absolute -left-8 top-14 h-1 bg-orangeHeading z-0"
@@ -247,7 +182,6 @@ const Working = () => {
                         />
                       )}
 
-                      {/* Step Number with Gradient Background */}
                       <motion.div
                         className="z-10 xl:w-16 xl:h-16 md:h-14 md:w-14 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-orangeHeading to-toOrange text-white font-bold text-2xl relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-700 transition-colors duration-500 shadow-md"
                         initial={{ scale: 0 }}
@@ -261,14 +195,12 @@ const Working = () => {
                         {step.stepNumber}
                       </motion.div>
 
-                      {/* Step Details */}
                       <motion.div
                         className="mt-6 flex flex-col gap-4"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.3 }}
                       >
-                        {/* Title and Subtitle */}
                         <div>
                           <h3 className="font-bold xl:text-lg lg:text-base text-lg text-headingColor mb-1 tracking-wide">
                             {step.title}
@@ -278,7 +210,6 @@ const Working = () => {
                           </h4>
                         </div>
 
-                        {/* Description */}
                         <p className="text-sm text-gray-600 leading-relaxed">
                           {step.description}
                         </p>
@@ -300,14 +231,16 @@ const Working = () => {
                   key="sprinklesGif"
                   src={sprinklesGif}
                   alt="Sprinkles GIF"
-                  className="xl:h-[319px] lg:h-[341px] md:h-[288px] sm:h-[280px] h-[257px] object-contain"
+                  className=" object-contain"
+                  width={320}
                   variants={gifVariants}
                 />
                 <motion.img
                   key="aGrade"
                   src={aGrade}
                   alt="Additional Image"
-                  className="w-36 h-36 object-contain absolute "
+                  className="object-contain absolute "
+                  width={130}
                   variants={imageVariants}
                 />
               </motion.div>

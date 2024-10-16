@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import contactImg from "../../assets/img/contactimg.png";
 import contactImg2 from "../../assets/img/freeDemo2.png";
-
 import "react-international-phone/style.css";
-
-import TypewriterComp from "../Typewriter/Typewriter";
 import DemoForm from "../DemoForm/DemoForm";
 import { useLocation } from "react-router-dom";
 import TutorForm from "../TutorForm/TutorForm";
@@ -12,23 +9,20 @@ import ContactUs from "../ContactUs/ContactUs";
 import { AnimatePresence, motion } from "framer-motion";
 import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
 
-
-const ContactForm = ({ firstString, secondString, tagLine }) => {
+const ContactForm = ({ tagLine }) => {
   const location = useLocation();
 
-  // Check if the current route is the "Join as a Tutor" page
   const isTutorPage = location.pathname === "/join-as-a-tutor";
   const isContactPage = location.pathname === "/contact-us";
 
   const [showDemoText, setShowDemoText] = useState(true);
 
   useEffect(() => {
-    // Toggle the state every 3 seconds (3000 milliseconds)
     const interval = setInterval(() => {
       setShowDemoText((prev) => !prev);
     }, 3000);
 
-    return () => clearInterval(interval); // Clean up the interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -76,12 +70,12 @@ const ContactForm = ({ firstString, secondString, tagLine }) => {
 
         <div className="lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-8 flex flex-col items-center gap-12 px-4">
           {!isContactPage && (
-            <div className="lg:block hidden w-auto">
-              
+            <div className="lg:block hidden ">
               <img
                 src={isTutorPage ? contactImg2 : contactImg}
                 alt=""
-                className="w-[500px] object-cover"
+                className=" object-cover"
+                width={500}
               />
             </div>
           )}

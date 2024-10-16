@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { learningImg2 } from "../../assets/img/images.js";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
@@ -19,7 +19,8 @@ const Learn = ({ firstHead, secondHead, description, style, textStyle }) => {
               <motion.img
                 src={learningImg2}
                 alt=""
-                className="w-full object-contain"
+                className="object-contain"
+                width={110}
                 ref={ref}
                 initial={{ scale: 1 }}
                 animate={

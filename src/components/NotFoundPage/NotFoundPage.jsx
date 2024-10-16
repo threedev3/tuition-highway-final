@@ -1,8 +1,21 @@
 // src/pages/NotFound/NotFound.jsx
 
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function NotFoundPage() {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 3000); 
+ 
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
+
   return (
     <div className="relative md:py-12 py-8 sm:px-12 px-6 max-w-full overflow-x-hidden ">
       <div className="relative z-10 max-w-[1400px] mx-auto flex flex-col gap-6 items-center justify-center min-h-96">

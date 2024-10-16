@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CustomButton from "../CustomButton/CustomButton";
 import Typewriter from "typewriter-effect";
-import { TypeAnimation } from "react-type-animation";
 import { heroSectionImg } from "../../assets/img/images";
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 const HeroSection = ({ handleNavClick }) => {
   const [heroHeight, setHeroHeight] = useState("100vh");
@@ -24,11 +22,9 @@ const HeroSection = ({ handleNavClick }) => {
     };
   }, []);
 
-
   const [currentHeading, setCurrentHeading] = useState(0);
   const [isHeadingDone, setIsHeadingDone] = useState(false);
 
-  // Function to switch to the next heading
   const switchHeading = () => {
     setCurrentHeading((prev) => (prev + 1) % 3);
     setIsHeadingDone(false);
@@ -36,7 +32,7 @@ const HeroSection = ({ handleNavClick }) => {
 
   useEffect(() => {
     if (isHeadingDone) {
-      const timer = setTimeout(switchHeading, 2000); // Wait for 1 second before switching
+      const timer = setTimeout(switchHeading, 2000);
       return () => clearTimeout(timer);
     }
   }, [isHeadingDone]);
@@ -74,7 +70,7 @@ const HeroSection = ({ handleNavClick }) => {
 
                           .pauseFor(1000)
                           .callFunction(() => {
-                            setIsHeadingDone(true); // Set heading done to true when done typing
+                            setIsHeadingDone(true);
                           })
                           .start();
                       }}
@@ -112,7 +108,7 @@ const HeroSection = ({ handleNavClick }) => {
                           )
                           .pauseFor(1000)
                           .callFunction(() => {
-                            setIsHeadingDone(true); // Set heading done to true when done typing
+                            setIsHeadingDone(true);
                           })
                           .start();
                       }}
@@ -150,7 +146,7 @@ const HeroSection = ({ handleNavClick }) => {
                           )
                           .pauseFor(1000)
                           .callFunction(() => {
-                            setIsHeadingDone(true); // Set heading done to true when done typing
+                            setIsHeadingDone(true); 
                           })
                           .start();
                       }}
@@ -169,17 +165,6 @@ const HeroSection = ({ handleNavClick }) => {
             </AnimatePresence>
           </div>
 
-          {/* <div className="max-w-3xl mx-auto">
-            <p className="text-headingColor xl:text-xl sm:text-lg text-base ">
-              We all want to score top grades in our exams. Our expert tutors
-              help students worldwide achieve their dreams of A
-              <sup className="text-headingColor lg:text-xl sm:text-lg text-base">
-                +
-              </sup>{" "}
-              grades.
-            </p>
-          </div> */}
-
           <motion.div
             className="w-fit"
             whileHover={{ scale: 1.1 }}
@@ -190,9 +175,13 @@ const HeroSection = ({ handleNavClick }) => {
           </motion.div>
         </div>
 
-        <div className="lg:w-[40%] w-[70%]">
-         
-          <img src={heroSectionImg} alt="" className="w-full object-contain" />
+        <div className="">
+          <img
+            src={heroSectionImg}
+            alt=""
+            className=" object-contain"
+            width={500}
+          />
         </div>
       </div>
     </div>

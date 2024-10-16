@@ -5,7 +5,6 @@ import CustomButton from "../CustomButton/CustomButton";
 import { motion } from "framer-motion";
 import { tutors } from "../../data/data";
 import Slider from "react-slick";
-import TypewriterComp from "../Typewriter/Typewriter";
 import { useNavigate } from "react-router-dom";
 
 const Tutors = () => {
@@ -58,32 +57,9 @@ const Tutors = () => {
     <div className="md:py-20 py-12 sm:px-12 px-6 max-w-full relative">
       <div className="absolute inset-0 bg-heroBg transition-all duration-500 ease-in-out "></div>
 
-      {/* <motion.div
-        className="absolute md:top-10 md:left-10 sm:top-8 sm:left-8 top-2 left-4  z-10"
-        initial={{ opacity: 0, y: -50, scale: 0.5 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={true}
-        transition={{
-          type: "spring",
-          stiffness: 70,
-          damping: 10,
-          duration: 0.6,
-          delay: 0.2,
-        }}
-      >
-        <img
-          src={pencil}
-          alt=""
-          className="lg:w-16 md:w-14 sm:w-12 w-10 object-contain"
-        />
-      </motion.div> */}
-
-      {/* <div className="absolute top-10 left-0 w-36 -z-10">
-        <img src={homework} alt="" className="object-contain" />
-      </div> */}
+     
       <div className="max-w-[1400px] mx-auto flex flex-col sm:gap-12 gap-8 z-10 relative">
         <div className="flex flex-col gap-6 items-center text-headingColor ">
-          {/* <TypewriterComp firstString="Our Top Rated" secondString="Faculty" /> */}
           <h3 className="xl:text-[42px] xl:leading-tight lg:text-4xl lg:leading-tight md:text-[40px] md:leading-10 min-[540px]:text-3xl min-[346px]:text-2xl text-[22px] font-bold tracking-wide text-center text-headingColor">
             Our Top Rated Faculty
           </h3>
@@ -105,9 +81,9 @@ const Tutors = () => {
       after:opacity-0 hover:after:opacity-100 after:transition-all after:duration-500 
       after:border-[0px] hover:after:border-[40px] after:translate-x-0 hover:after:translate-x-0 my-4 mx-2"
                 >
-                  <div className="w-auto mx-auto">
+                  <div >
                   
-                    <img src={tutor.icon} alt="" className="object-cover" />
+                    <img src={tutor.icon} alt="" width={80} className="object-contain" />
                   </div>
 
                   <div className="max-w-[246px] flex flex-col gap-1">

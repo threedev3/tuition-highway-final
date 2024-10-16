@@ -10,8 +10,8 @@ import { navigationData } from "../../data/data";
 const Navbar = ({ handleNavClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState(null);
-  const [activeItem, setActiveItem] = useState(null); // State to track the active item
-  const location = useLocation(); // Hook to get the current location
+  const [activeItem, setActiveItem] = useState(null);
+  const location = useLocation();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -27,14 +27,12 @@ const Navbar = ({ handleNavClick }) => {
   };
 
   useEffect(() => {
-    // Toggle body overflow based on the menu state
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
 
-    // Cleanup overflow style on unmount
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -52,17 +50,15 @@ const Navbar = ({ handleNavClick }) => {
   }, [expandedSection]);
 
   useEffect(() => {
-    // Set active item based on the current path
     setActiveItem(location.pathname);
   }, [location]);
 
   const handleItemClick = (to) => {
-    setActiveItem(to); // Update the active item
-    scrollToTop(); // Scroll to the top
-    setIsOpen(false); // Close the menu
+    setActiveItem(to);
+    scrollToTop();
+    setIsOpen(false); 
   };
 
-  // Combined navigation data
 
   return (
     <nav
@@ -73,12 +69,12 @@ const Navbar = ({ handleNavClick }) => {
         <div className="flex justify-between items-center max-w-[1400px] mx-auto">
           <div className=" cursor-pointer">
             <Link to={"/"}>
-              
               <img
                 src={mainLogo}
                 alt=""
-                className="sm:w-[164px] w-[150px] object-contain"
+                className=" object-contain"
                 onClick={scrollToTop}
+                width={150}
               />
             </Link>
           </div>
@@ -127,7 +123,6 @@ const Navbar = ({ handleNavClick }) => {
             </button>
           </div>
           <div className="flex flex-col gap-8 h-full">
-            {/* Grid layout for medium and larger screens */}
             <div className="hidden md:grid lg:grid-cols-3 md:grid-cols-3 gap-6">
               {Object.entries(navigationData).map(([section, items]) => (
                 <div key={section}>
@@ -160,7 +155,6 @@ const Navbar = ({ handleNavClick }) => {
               ))}
             </div>
 
-            {/* Accordion layout for smaller screens */}
             <div className="md:hidden">
               {Object.entries(navigationData).map(
                 ([section, items], index, array) => (
