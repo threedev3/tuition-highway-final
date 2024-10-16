@@ -54,6 +54,7 @@ import aboutImg from "./aboutImg.png";
 
 import fadedCircle from "./fadedCircle.png";
 
+import heroSectionImg2 from "./heroSectionImg2.webp";
 import heroSectionImg from "./heroSectionImg.png";
 
 // blog images
@@ -156,6 +157,7 @@ export {
   aboutImg,
   fadedCircle,
   heroSectionImg,
+  heroSectionImg2,
   blogImg1,
   blogImg2,
   blogImg3,

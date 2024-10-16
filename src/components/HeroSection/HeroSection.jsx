@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CustomButton from "../CustomButton/CustomButton";
 import Typewriter from "typewriter-effect";
-import { heroSectionImg } from "../../assets/img/images";
+import { heroSectionImg, heroSectionImg2 } from "../../assets/img/images";
 
 const HeroSection = ({ handleNavClick }) => {
   const [heroHeight, setHeroHeight] = useState("100vh");
@@ -177,7 +177,7 @@ const HeroSection = ({ handleNavClick }) => {
 
         <div className="">
           <img
-            src={heroSectionImg}
+            src={heroSectionImg2}
             alt=""
             className=" object-contain"
             width={500}
