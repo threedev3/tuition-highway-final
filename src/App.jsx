@@ -53,17 +53,17 @@ function App() {
               <SubjectsPage demoRef={demoRef} handleNavClick={handleNavClick} />
             }
           />
-          <Route
-            path="/courses/:slug"
+          {/* <Route
+            path="/:slug"
             element={
               <SubjectDetails
                 demoRef={demoRef}
                 handleNavClick={handleNavClick}
               />
             }
-          />
+          /> */}
           <Route
-            path="/courses/:slug/:curriculumType"
+            path="/:slug/:curriculumType"
             element={
               <SubjectDetailsCurriculum
                 demoRef={demoRef}

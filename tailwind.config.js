@@ -16,7 +16,7 @@ export default {
         borderColor: "#38383856",
         blogBorder: "#ededed",
         footerBg: "#00295B",
-        footerText: "#A9A8A8",
+        footerText: "#dadada",
         footerBorder: "#9B9B9B",
         startgrad: "#0AA9CD",
         endGrad: "#041741",

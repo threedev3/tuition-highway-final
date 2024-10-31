@@ -35,6 +35,10 @@ import fbIcon from "./fbIcon.png";
 import instaIcon from "./instaIcon.png";
 import linkedIn from "./linkedIn.png";
 
+import visa from "./visa.png";
+import master from "./master.png";
+import applePay from "./applePay.png";
+
 // Subjects Offering Images
 import sub1 from "./sub1.png";
 import sub2 from "./sub2.png";
@@ -138,6 +142,9 @@ export {
   fbIcon,
   instaIcon,
   linkedIn,
+  visa,
+  master,
+  applePay,
   sub1,
   sub2,
   sub3,

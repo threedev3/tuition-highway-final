@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import mainLogo from "../../assets/img/mainLogo.png";
+import logo from "../../assets/img/logo.png";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import CustomButton from "../CustomButton/CustomButton";
 import { Transition } from "@headlessui/react";
@@ -70,7 +70,7 @@ const Navbar = ({ handleNavClick }) => {
           <div className=" cursor-pointer">
             <Link to={"/"}>
               <img
-                src={mainLogo}
+                src={logo}
                 alt=""
                 className=" object-contain"
                 onClick={scrollToTop}

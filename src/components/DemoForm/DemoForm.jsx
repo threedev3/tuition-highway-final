@@ -177,7 +177,7 @@ const DemoForm = () => {
                 <div className="flex-1 flex flex-col gap-1 sm:mb-0 mb-3">
                   <div className="py-0.5 border-b-2 border-b-borderColor bg-transparent focus:outline-none focus:border-b-[3px] sm:placeholder:text-base placeholder:text-sm placeholder:text-headingColor">
                     <PhoneInput
-                      defaultCountry="pk"
+                      defaultCountry="ae"
                       name="phone"
                       value={formValues.phone}
                       onChange={handlePhoneChange}

@@ -14,7 +14,7 @@ const SubjectsCard = ({ item, handleNavClick }) => {
   };
 
   const handleSubjectClick = () => {
-    navigate(`/subjects/${item.slug}`);
+    navigate(`/${item.slug}`);
     scrollToTop();
   };
 
